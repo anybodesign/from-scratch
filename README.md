@@ -1,5 +1,5 @@
 # From Scratch
 
-A wordPress Starter Theme
+A WordPress Starter Theme
 
 **Work in Progress :)**
