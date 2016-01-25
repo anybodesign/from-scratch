@@ -1,0 +1,364 @@
+/*!
+Theme Name: From Scratch
+Author: Thomas Villain
+Author URI: http://anybodesign.com/
+Description: A WordPress Starter Theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fromscratch
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import 'sass/variables.scss';
+@import 'sass/mixins.scss';
+
+
+/* ------------------------- */
+/* = Basics
+/* ------------------------- */
+
+html, body, #wrapper {
+	width: 100%; 
+	height: 100%; 
+}
+
+body {
+	text-size-adjust: none;
+}
+
+#wrapper {}
+
+[class*=col-] {}   /* @Note : gutters padding override */
+
+
+
+/* ------------------------- */
+/* = Header
+/* ------------------------- */
+
+
+#site_head {}
+
+.site-title {
+	
+	a {
+		
+	}
+}
+
+.site-desc {}
+
+
+
+
+/* ------------------------- */
+/* = Nav
+/* ------------------------- */
+
+
+// Skiplinks
+
+.skiplinks-nav {
+	position: absolute; 
+	padding-top: 0;
+}
+.skiplinks-menu {
+	
+	a {
+		position: absolute; top: -65px;
+		transition: all .2s ease-in;
+	
+		&:focus {top: -5px;}
+
+	}
+}
+
+
+// Main nav
+
+
+#menu {}
+
+.main-menu {
+	
+	& > li {
+		position: relative;
+		
+		a {}
+		a:hover, &.current-menu-item a {}
+		
+		.sub-menu {
+			display: none;
+			
+			& > li {
+				
+				a {}
+				a:hover, &.current-menu-item a {}
+			}
+		}
+		
+	}
+	
+	@include responsive(medium-screens) {
+		display: none;
+	}
+}
+
+.sub-menu-unfold {
+	position: absolute;
+	top: 0; right: 0;
+	display: block;
+	height: 100%; width: 26px;
+	border: 0; border-radius: 0; padding: 0;
+	background: transparent !important;
+	
+	&::after, &::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 10px;
+		height: 2px; width: 16px;
+		background-color: #000;
+		@include transition(all);
+	}
+	&::after {
+		left: 10px;
+		transform: rotate(-45deg);
+	}
+	&::before {
+		left: 0;
+		transform: rotate(45deg);
+	}
+	
+	span {
+		@include a11y-hidden();
+	}
+	
+	&.sub-menu-opened::after {left: 5px; transform: rotate(45deg);}
+	&.sub-menu-opened::before {left: 5px; transform: rotate(-45deg);}
+}
+
+
+
+#menu-toggle {
+	display: none;
+	
+	@include responsive(medium-screens) {
+		
+		// Hamburger Menu
+		
+		display: block; 
+		height: 23px; width: 23px;
+		position: relative;
+		border: 0; border-radius: 0; padding: 0;
+		cursor: pointer;
+		@include a11y-hide(60px);
+	
+		span {
+			position: absolute; 
+			top: 10px; right: 0;
+		}
+		span, span::after, span::before {
+			display: block;
+			width: 23px; height: 3px;
+			background-color: #000;
+			transition: all .3s linear;
+		}
+		span::after, span::before {
+			position: absolute;
+			content: ""; 
+		}
+		span::after {bottom: -9px; left: 0;}
+		span::before {top: -9px; left: 0;}
+
+		&.menu-opened span {
+			background-color: transparent; 
+			height: 1px;
+		}
+		&.menu-opened span::after {
+			top: 0;
+			transform: rotate(45deg);
+			background-color: #c00;
+		}
+		&.menu-opened span::before {
+			top: 0;
+			transform: rotate(-45deg);
+			background-color: #c00;
+		}
+		
+	}
+}
+
+
+
+/* ------------------------- */
+/* = Typography
+/* ------------------------- */
+
+
+h1, h2, h3, h4, h5, h6,
+.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+	font-family: $font-regular;
+	font-weight: normal;
+}
+
+p, 
+ul, ol, dl, 
+blockquote, 
+pre, 
+td, th, 
+textarea,
+label, figcaption, hgroup, address,
+small {
+	font-family: $font-regular;
+}
+
+b, strong {}
+i, em {}
+
+a {
+	
+	&:hover {
+	
+	}
+}
+
+
+// Images
+
+
+figure {
+	
+	img {width: 100%; height: auto;}
+}
+
+a img {}
+a:hover img {}
+
+
+// Alignments
+
+
+.alignleft {
+	display: inline; float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline; float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	display: block; clear: both; 
+	margin: 0 auto;
+}
+
+
+// Forms
+
+
+// Forms - Customs
+
+.formfield-radio input[type="radio"] + label:before,
+.formfield-checkbox input[type="checkbox"] + label:before {}
+
+.formfield-radio input[type="radio"] + label:before {}
+.formfield-radio input[type="radio"]:checked + label:before {}
+
+.formfield-checkbox input[type="checkbox"] + label:before {}
+.formfield-checkbox input[type="checkbox"]:checked + label:before {}
+
+.formfield-select--container {}
+.formfield-select--container:after {}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {}
+
+
+// CF7 Response
+
+div.wpcf7-response-output {
+	margin: 10px 0 0 0 !important; padding: 5px !important;
+	font-family: Helvetica, Arial, sans-serif;
+}
+span.wpcf7-not-valid-tip {color: #c00;}
+div.wpcf7-validation-errors {
+	border: 0 !important; background-color: #c00; color: #fff !important;
+}
+div.wpcf7-mail-sent-ok {
+	border: 0 !important; background-color: #9c0; color: #fff !important;
+}
+
+
+
+
+/* ------------------------- */
+/* = Content
+/* ------------------------- */
+
+
+#content {}
+
+
+
+/* ------------------------- */
+/* = Footer
+/* ------------------------- */
+
+
+#site_foot {}
+
+
+.footer-nav, .footer-copyright {
+	display: inline-block; 
+	vertical-align: baseline;
+}
+
+.footer-menu {
+	margin: 0;
+	
+	li {display: inline;}
+}
+
+
+/* ------------------------- */
+/* = Helpers
+/* ------------------------- */
+
+
+.clearfix {clear: both; float: none;}
+.floatl {float: left;} 
+.floatr {float: right;}
+
+.txtr {text-align: right;} 
+.txtl {text-align: left;} 
+.txtc {text-align: center;}
+
+
+/* ------------------------- */
+/* = Fonts
+/* ------------------------- */
+
+/*
+
+@font-face {
+	font-family: 'xxx';
+	src: url('fonts/xxx.eot');
+	src: url('fonts/xxx.eot?#iefix') format('embedded-opentype'),
+		url('fonts/xxx.woff') format('woff'),
+		url('fonts/xxx.ttf') format('truetype'),
+		url('fonts/xxx.svg#xxx') format('svg');
+		font-weight: normal;
+	font-style: normal;
+}
+
+*/

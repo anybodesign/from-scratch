@@ -1,0 +1,6 @@
+config.codekit
+screenshot.psd
+.DS_Store
+.codekit-cache
+.sass-cache
+_trash
