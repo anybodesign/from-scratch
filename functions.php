@@ -1,5 +1,7 @@
 <?php
 
+// Theme Setup
+
 if ( ! function_exists( 'from_scratch_setup' ) ) :
 
 function from_scratch_setup() {
@@ -7,7 +9,7 @@ function from_scratch_setup() {
 	
 	// I18n
 	
-	load_theme_textdomain( 'fromscratch', get_template_directory() . '/language' );
+	load_theme_textdomain( 'fromscratch', get_template_directory() . '/languages' );
 	
 	
 	// Theme Support
@@ -23,6 +25,18 @@ function from_scratch_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
+	) );
+
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+		'gallery',
+		'status',
+		'audio',
+		'chat',
 	) );
 
 
@@ -57,7 +71,7 @@ add_action( 'after_setup_theme', 'from_scratch_setup' );
 
 // Enqueue JS & CSS
 
-function fs_scripts_load() {
+function from_scratch_scripts_load() {
     if (!is_admin()) {
 
 		// JS 
@@ -87,21 +101,15 @@ function fs_scripts_load() {
 			'prid', 
 			get_template_directory_uri() . '/css/prid.css',
 			array(), 
-			'1.6.3', 
+			'1.7', 
 			'screen' 
 		);
 		
-		wp_enqueue_style( 
-			'style', 
-			get_stylesheet_uri(), 
-			array(), 
-			'1.0', 
-			'screen'
-		);
+		wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri() );
 
 	}
 }    
-add_action('wp_enqueue_scripts', 'fs_scripts_load');
+add_action('wp_enqueue_scripts', 'from_scratch_scripts_load');
 
 
 // Custom settings
@@ -109,28 +117,31 @@ add_action('wp_enqueue_scripts', 'fs_scripts_load');
 include( dirname( __FILE__ ) . '/inc/custom-settings.php' );
 
 
+// Custom template tags
+
+// require get_template_directory() . '/inc/template-tags.php';
+
+
 // Widgets
 
-
-if (function_exists('register_sidebar'))
-
+function from_scratch_widgets_init() {
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Primary Widgets Area', 'fromscratch' ),
-		'id'			=>	'widgets_primary',
+		'id'			=>	'widgets_area1',
 		'description' 	=> 	'',
 		'before_widget' => 	'',
 		'after_widget' 	=> 	'',
-		'before_title' 	=> 	'',
-		'after_title' 	=> 	'',
+		'before_title' 	=> 	'<h3 class="widget-title">',
+		'after_title' 	=> 	'</h3>',
 	));
-
+}
+add_action( 'widgets_init', 'from_scratch_widgets_init' );
 
 
 // Favicons 
 
-
-function favicon_link() {
+function from_scratch_favicon_link() {
     echo '<link rel="shortcut icon" href="'. get_stylesheet_directory_uri() .'/img/favicon.png">' . "\n";
     echo '<link rel="apple-touch-icon" sizes="152x152" href="'. get_stylesheet_directory_uri() .'/img/apple-touch-icon-152x152.png">' . "\n";
 }
-add_action( 'wp_head', 'favicon_link' );
+add_action( 'wp_head', 'from_scratch_favicon_link' );

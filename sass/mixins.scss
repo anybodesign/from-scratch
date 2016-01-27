@@ -9,7 +9,7 @@
 	overflow: hidden;
 }
 
-@mixin a11y-hidden($width: 2px, $height: 2px) {
+@mixin a11y-hidden($width: 1px, $height: 1px) {
 	position: absolute;
 	display: block; 
 	width: $width;

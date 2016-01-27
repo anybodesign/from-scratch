@@ -1,30 +1,33 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
- * The Template for displaying articles.
+ * The template for displaying all single posts.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
  * @subpackage From_Scratch
  * @since From Scratch 1.0
  */
 get_header(); ?>
-					<div class="col-12">
-					<?php while (have_posts()) : the_post(); ?>
-						
-						<article class="post">
-							<figure class="post-figure">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-							</figure>
-							<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-							<?php the_content(); ?>
-						</article>
-						
-					<?php endwhile; ?>
-					</div>	
 
-
-	  				<?php if ( comments_open() ) : ?>
-	  					<?php comments_template('', true ); ?>
-					<?php endif;?>
-
+				<div id="primary" class="content-area" role="main">
+					
+					<div class="row">
+						<div class="col-12">
+		
+						<?php while (have_posts()) : the_post(); ?>
+				
+							<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				
+						<?php endwhile; ?>
+				
+		  				<?php if ( comments_open() || get_comments_number() ) : ?>
+		  					<?php comments_template(); ?>
+						<?php endif;?>
+							
+						</div>					
+					</div>
+				
+				</div> <? // END primary ?>
 
 <?php get_footer(); ?>

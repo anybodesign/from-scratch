@@ -31,10 +31,10 @@ if ( post_password_required() ) {
 					
 					<?php
 					$comments_args = array(
-				        'comment_notes_after' => '',
-				        'logged_in_as' => '',
-				        'title_reply' => __("Do we talk about it?","fromscratch"),
-				        'label_submit' => __("Add my comment!","fromscratch")
+				       	//'comment_notes_after' => '',
+				        //'logged_in_as' => '',
+				        'title_reply' => __('Do we talk about it?', 'fromscratch'),
+				        'label_submit' => __('Add my comment!', 'fromscratch')
 					);
 					
 					comment_form($comments_args);

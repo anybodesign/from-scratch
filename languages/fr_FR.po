@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2016-01-25 21:48+0100\n"
-"PO-Revision-Date: 2016-01-25 21:48+0100\n"
+"POT-Creation-Date: 2016-01-26 13:13+0100\n"
+"PO-Revision-Date: 2016-01-26 13:14+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -20,17 +20,17 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: _trash/taxonomy.php:32 archive.php:44 category.php:35 home.php:39
-#: index.php:39
+#: _trash/category.php:35 _trash/home.php:39 _trash/taxonomy.php:32
+#: archive.php:44 index.php:33
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: _trash/taxonomy.php:33 archive.php:45 category.php:36 home.php:40
-#: index.php:40
+#: _trash/category.php:36 _trash/home.php:40 _trash/taxonomy.php:33
+#: archive.php:45 index.php:34
 msgid "Next page"
 msgstr "Page suivante"
 
-#: _trash/taxonomy.php:37 archive.php:49 category.php:40
+#: _trash/category.php:40 _trash/taxonomy.php:37 archive.php:49
 msgid "Sorry! Couldn’t find any post!"
 msgstr "Désolé ! Impossible de trouver des articles !"
 
@@ -50,23 +50,23 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: functions.php:32
+#: functions.php:44
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:33
+#: functions.php:45
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:43
+#: functions.php:55
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: functions.php:118
+#: functions.php:122
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: header.php:27
+#: header.php:29
 msgid ""
 "Your browser should be <a href=\"http://browsehappy.com\">updated</a> to "
 "improve your experience."
@@ -74,28 +74,28 @@ msgstr ""
 "Votre navigateur doit être <a href=\"http://browsehappy.com\">mis à jour</a> "
 "afin d'améliorer votre expérience."
 
-#: header.php:34
+#: header.php:36
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:35
+#: header.php:37
 msgid "Go to main content\t"
 msgstr "Aller au contenu principal\t"
 
-#: header.php:42 header.php:44
+#: header.php:44 header.php:46
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
 
-#: header.php:56
+#: header.php:58
 msgid "Unfold navigation menu"
 msgstr "Déplier le menu de navigation"
 
-#: header.php:56
+#: header.php:58
 msgid "Menu"
 msgstr "Menu"
 
 #: inc/custom-settings.php:10 inc/custom-settings.php:11
-#: inc/custom-settings.php:111
+#: inc/custom-settings.php:125
 msgid "Custom Settings"
 msgstr "Réglages personnalisés"
 
@@ -119,17 +119,35 @@ msgstr "URL Twitter"
 msgid "Facebook URL"
 msgstr "URL Facebook"
 
-#: inc/custom-settings.php:96
+#: inc/custom-settings.php:62
+msgid "Google+ URL"
+msgstr "URL Google+"
+
+#: inc/custom-settings.php:110
 msgid "The site’s copyright, displayed in the footer"
 msgstr "Copyright du site, affiché dans le pied de page"
 
-#: inc/custom-settings.php:101
+#: inc/custom-settings.php:115
 msgid "Enter your Social Networks URLs"
 msgstr "Entrez les URLs de vos réseaux sociaux"
+
+#: index.php:35
+msgid "Page"
+msgstr "Page"
 
 #: search.php:11
 msgid "Search results"
 msgstr "Résultats de la recherche"
+
+#. translators: %s: Name of current post.
+#: template-parts/content.php:32
+#, php-format
+msgid "Continue reading %s"
+msgstr "Lire la suite de l'article %s"
+
+#: template-parts/content.php:40
+msgid "Pages:"
+msgstr "Pages :"
 
 #. Theme Name of the plugin/theme
 msgid "From Scratch"

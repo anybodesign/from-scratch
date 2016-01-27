@@ -1,17 +1,14 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
- * The front page template file.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
+ * Template Name: Custom page template
  *
  * @package WordPress
  * @subpackage From_Scratch
  * @since From Scratch 1.0
  */
-
 get_header(); ?>
 
-				<div id="primary" class="content-area" role="main">
+				<div id="primary" class="content-area has-sidebar" role="main">
 					
 					<div class="row">
 						<div class="col-12">
@@ -22,21 +19,33 @@ get_header(); ?>
 			
 						<?php endwhile; ?>
 						
+						
+						<?php if ( comments_open() || get_comments_number() ) : ?>
+					  		<?php comments_template(); ?>
+						<?php endif;?>
+							
 						</div>					
 					</div>
 					
-					
+
 					
 					<?php 
 						
-						// Custom Post type Loop
+						// Custom Tax Query Loop
 						
 						$args = array(
 							'posts_per_page' 	=> 4,
 							'post_type' 		=> 'your-post-type',
-							'meta_key'			=> 'your-meta-key',
-							'orderby'			=> 'meta_value',
-							'order'				=> 'DESC'
+							'orderby'			=> 'title',
+							'order'				=> 'ASC',
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'your-taxonomy',
+									'terms' => 'your-term',
+									'field' => 'slug',
+								),
+							),
+
 						);
 						$query = new WP_Query($args);
 					?>						
@@ -57,8 +66,11 @@ get_header(); ?>
 
 					<?php endif; ?>
 					<?php wp_reset_postdata(); ?>
-
 				
 				</div> <? // END primary ?>
+	
+	
+				<?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>

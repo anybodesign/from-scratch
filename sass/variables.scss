@@ -3,6 +3,12 @@
 // -------------------------
 
 
+// Grid Padding
+
+
+$grid-padding: 0.3125em;
+
+
 // Colors
 
 
@@ -17,6 +23,8 @@ $background-color: #fff;
 
 $font-fallback: Helvetica, Arial, sans-serif;
 $font-regular:  $font-fallback;
+$font-bold:  $font-fallback;
+$font-italic:  $font-fallback;
 
 
 // Media Queries

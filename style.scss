@@ -29,9 +29,12 @@ body {
 	text-size-adjust: none;
 }
 
-#wrapper {}
+#container {
+	margin: 0 auto;
+	max-width: 960px;
+}
 
-[class*=col-] {}   /* @Note : gutters padding override */
+[class*=col-] {}   // @Note : gutters padding override
 
 
 
@@ -80,7 +83,7 @@ body {
 // Main nav
 
 
-#menu {}
+#site_nav {}
 
 .main-menu {
 	
@@ -212,6 +215,7 @@ pre,
 td, th, 
 textarea,
 label, figcaption, hgroup, address,
+time, span,
 small {
 	font-family: $font-regular;
 }
@@ -299,15 +303,35 @@ div.wpcf7-mail-sent-ok {
 }
 
 
-
-
 /* ------------------------- */
 /* = Content
 /* ------------------------- */
 
 
-#content {}
+#site_content {}
 
+#primary.has-sidebar, #secondary {
+	display: inline-block;
+	margin-right: -$grid-padding;
+}
+#primary.has-sidebar {
+	width: 75%;
+}	
+#secondary {
+	width: 25%;
+	padding-left: $grid-padding *2;
+}
+
+
+
+/* ------------------------- */
+/* = Posts
+/* ------------------------- */
+
+
+.nav-links {
+	font-family: $font-regular;
+}
 
 
 /* ------------------------- */
@@ -326,7 +350,7 @@ div.wpcf7-mail-sent-ok {
 .footer-menu {
 	margin: 0;
 	
-	li {display: inline;}
+	li {display: inline; margin: 0 .25em;}
 }
 
 
@@ -334,8 +358,14 @@ div.wpcf7-mail-sent-ok {
 /* = Helpers
 /* ------------------------- */
 
+.screen-reader-text {
+	@include a11y-hidden();
+}
 
-.clearfix {clear: both; float: none;}
+.clearfix {
+	clear: both;
+	float: none;
+}
 .floatl {float: left;} 
 .floatr {float: right;}
 
@@ -348,7 +378,7 @@ div.wpcf7-mail-sent-ok {
 /* = Fonts
 /* ------------------------- */
 
-/*
+/* Add your own fonts
 
 @font-face {
 	font-family: 'xxx';

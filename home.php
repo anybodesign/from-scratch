@@ -2,44 +2,52 @@
 /**
  * The main template file.
  *
+ * @link http://codex.wordpress.org/Template_Hierarchy
+ *
  * @package WordPress
  * @subpackage From_Scratch
  * @since From Scratch 1.0
  */
 get_header(); ?>
-					<div class="col-12">
-					<?php while (have_posts()) : the_post(); ?>
-						
-						<h1 class="post-title"><?php post_type_archive_title(); ?></h1>
-						<?php if ( 'page' == get_option('show_on_front') && get_option('page_for_posts') && is_home() ) : the_post(); $page_for_posts_id = get_option('page_for_posts'); setup_postdata(get_page($page_for_posts_id)); ?>
-						<?php the_content(); ?>
-						<?php rewind_posts(); endif; ?>
-						
-					<?php endwhile; ?>
-					</div>	
+
+				<div id="primary" class="content-area has-sidebar" role="main">
+
+					<div class="row">
+						<div class="col-12">
+		
+						<?php if ( have_posts() ) : ?>
+				
+							<?php if ( is_home() && ! is_front_page() ) { ?>
+								<header>
+									<h1 class="page-title"><?php single_post_title(); ?></h1>
+								</header>
+							<?php } ?>
+				
+				
+							<?php while ( have_posts() ) : the_post(); ?>
+				
+								<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				
+							<?php endwhile; ?>
+				
+							<?php the_posts_pagination(array(
+									'prev_text'          => __( 'Previous page', 'fromscratch' ),
+									'next_text'          => __( 'Next page', 'fromscratch' ),
+									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fromscratch' ) . ' </span>',
+								)); ?>
+				
+						<?php else : ?>
+		
+							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 					
-					
-					
-					<?php if (have_posts()) : ?>
-					<div class="col-12">
-					<?php while (have_posts()) : the_post(); ?>
-						
-						<article class="post">
-							<figure class="post-figure">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-							</figure>
-							<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<?php the_excerpt(); ?>
-						</article>
-						
-					<?php endwhile; ?>
-					</div>	
-					
-					<div class="col-12" id="navigation">
-						<p class="prev"><?php previous_posts_link( __( 'Previous page','fromscratch') ); ?></p>
-						<p class="next"><?php next_posts_link( __( 'Next page','fromscratch') ); ?></p>
+						<?php endif; ?>	
+							
+		
+						</div>					
 					</div>
-					
-					<?php endif; ?>
+				
+				</div> <? // END site_main ?>
+				
+				<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

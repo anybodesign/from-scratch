@@ -1,6 +1,8 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
- * The template for displaying Archive pages.
+ * The template for displaying archive pages.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
  * @subpackage From_Scratch
@@ -8,46 +10,42 @@
  */
 
 get_header(); ?>
-					<div class="col-12">
-						<h1 class="page-title"><?php single_cat_title(); ?> : 
-							<?php if ( is_day() ) : ?>
-							<?php printf( get_the_date() ); ?>
-							<?php elseif ( is_month() ) : ?>
-							<?php printf( get_the_date('F Y') ); ?>
-							<?php elseif ( is_year() ) : ?>
-							<?php printf( get_the_date('Y') ); ?>
-							<?php else : ?>
-							<?php endif; ?>
-						</h1>
-						<?php if ( category_description() ) : ?>
-						<p><?php echo category_description(); ?></p>
-						<?php endif; ?>				
-					</div>	
 
-
-					<?php if (have_posts()) : ?>
-					<div class="col-12">
-					<?php while (have_posts()) : the_post(); ?>
-						
-						<article class="post">
-							<figure class="post-figure">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-							</figure>
-							<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<?php the_excerpt(); ?>
-						</article>
-						
-					<?php endwhile; ?>
-					</div>	
+				<div id="primary" class="content-area has-sidebar" role="main">
 					
-					<div class="col-12" id="navigation">
-						<p class="prev"><?php previous_posts_link( __( 'Previous page','fromscratch') ); ?></p>
-						<p class="next"><?php next_posts_link( __( 'Next page','fromscratch') ); ?></p>
+					<div class="row">
+						<div class="col-12">
+		
+						<?php if ( have_posts() ) : ?>
+				
+							<header class="page-header">
+								<?php
+									the_archive_title( '<h1 class="page-title">', '</h1>' );
+									the_archive_description( '<div class="taxonomy-desc">', '</div>' );
+								?>
+							</header>				
+				
+							<?php while ( have_posts() ) : the_post(); ?>
+				
+								<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				
+							<?php endwhile; ?>
+				
+							<?php the_posts_navigation(); ?>
+				
+						<?php else : ?>
+		
+							<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					
+						<?php endif; ?>	
+							
+		
+						</div>					
 					</div>
-					
-					<?php else:  ?>
-					<p><?php _e( 'Sorry! Couldn’t find any post!' ); ?></p>
+				
+				</div> <? // END site_main ?>
+				
+				<?php get_sidebar(); ?>
 
-					<?php endif; ?>
 
 <?php get_footer(); ?>

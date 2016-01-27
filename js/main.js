@@ -19,8 +19,6 @@ jQuery(document).ready(function() {
 	
 	// Sub-levels
 	
-	//jQuery('.menu-item-has-children').append('<button class="sub-menu-unfold"><span>Unfold Sub-Menu</span></button>');
-	
 	jQuery('.sub-menu-unfold').click(function() {
 		jQuery(this).parent().parent().find('ul').slideToggle();
 		jQuery(this).toggleClass('sub-menu-opened');
