@@ -30,12 +30,10 @@ body {
 }
 
 #container {
+	position: relative;
 	margin: 0 auto;
 	max-width: 960px;
 }
-
-[class*=col-] {}   // @Note : gutters padding override
-
 
 
 /* ------------------------- */
@@ -43,7 +41,9 @@ body {
 /* ------------------------- */
 
 
-#site_head {}
+#site_head {
+	position: relative;
+}
 
 .site-title {
 	
@@ -72,6 +72,8 @@ body {
 	
 	a {
 		position: absolute; top: -65px;
+		padding: $grid-padding;
+		background-color: #fff;
 		transition: all .2s ease-in;
 	
 		&:focus {top: -5px;}
@@ -89,13 +91,29 @@ body {
 	
 	& > li {
 		position: relative;
+		display: inline-block;
+		margin-right: 5px;
+		
+		@include responsive(medium-screens) {
+			display: block;
+		}
 		
 		a {}
 		a:hover, &.current-menu-item a {}
 		
+		&.menu-item-has-children {
+			padding-right: 16px;	
+		}
+		
 		.sub-menu {
 			display: none;
+			position: absolute;
+			background-color: #fff; 
 			
+			@include responsive(medium-screens) {
+				position: relative;
+			}
+		
 			& > li {
 				
 				a {}
@@ -114,7 +132,7 @@ body {
 	position: absolute;
 	top: 0; right: 0;
 	display: block;
-	height: 100%; width: 26px;
+	height: 100%; width: 14px;
 	border: 0; border-radius: 0; padding: 0;
 	background: transparent !important;
 	
@@ -122,13 +140,13 @@ body {
 		content: "";
 		display: block;
 		position: absolute;
-		top: 10px;
-		height: 2px; width: 16px;
+		top: 11px;
+		height: 2px; width: 8px;
 		background-color: #000;
 		@include transition(all);
 	}
 	&::after {
-		left: 10px;
+		left: 5px;
 		transform: rotate(-45deg);
 	}
 	&::before {
@@ -140,8 +158,8 @@ body {
 		@include a11y-hidden();
 	}
 	
-	&.sub-menu-opened::after {left: 5px; transform: rotate(45deg);}
-	&.sub-menu-opened::before {left: 5px; transform: rotate(-45deg);}
+	&.sub-menu-opened::after {left: 2px; transform: rotate(45deg);}
+	&.sub-menu-opened::before {left: 2px; transform: rotate(-45deg);}
 }
 
 
