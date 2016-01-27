@@ -69,7 +69,7 @@ body {
   }
 }
 .main-menu > li.menu-item-has-children {
-  padding-right: 16px;
+  padding-right: 20px;
 }
 .main-menu > li .sub-menu {
   display: none;

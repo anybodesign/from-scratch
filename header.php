@@ -36,7 +36,7 @@
 			<nav class="col-12  skiplinks-nav" role="navigation">
 				<ul class="skiplinks-menu">
 					<li><a href="#site_nav"><?php _e('Go to main menu', 'fromscratch'); ?></a></li>
-					<li><a href="#site_main"><?php _e('Go to main content	', 'fromscratch'); ?></a></li>
+					<li><a href="#site_content"><?php _e('Go to main content	', 'fromscratch'); ?></a></li>
 				</ul>
 			</nav>
 	
