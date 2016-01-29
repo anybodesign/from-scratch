@@ -1,4 +1,4 @@
-<?php
+<?php if ( !defined('ABSPATH') ) die();
 
 // Theme Setup
 
@@ -115,11 +115,6 @@ add_action('wp_enqueue_scripts', 'from_scratch_scripts_load');
 // Custom settings
 
 include( dirname( __FILE__ ) . '/inc/custom-settings.php' );
-
-
-// Custom template tags
-
-// require get_template_directory() . '/inc/template-tags.php';
 
 
 // Widgets
