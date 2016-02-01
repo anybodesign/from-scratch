@@ -50,7 +50,7 @@ function from_scratch_setup() {
 
 	// Sub-menus
 	
-	function menu_set_dropdown( $sorted_menu_items, $args ) {
+	function from_scratch_submenu( $sorted_menu_items, $args ) {
 	    $returns = array();
 	    foreach ( $sorted_menu_items as $key => $obj ) {
 	        if (in_array('menu-item-has-children', $obj->classes)) {
@@ -60,7 +60,8 @@ function from_scratch_setup() {
 	    }
 	    return $returns;
 	}
-	add_filter( 'wp_nav_menu_objects', 'menu_set_dropdown', 10, 2 );
+	add_filter( 'wp_nav_menu_objects', 'from_scratch_submenu', 10, 2 );
+
 
 }
 endif;
