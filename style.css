@@ -89,38 +89,33 @@ body {
 
 .sub-menu-unfold {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   display: block;
-  height: 100%;
-  width: 14px;
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
   border: 0;
-  border-radius: 0;
+  border-radius: 8px;
   padding: 0;
-  background: transparent !important;
+  background: #ccc !important;
 }
 .sub-menu-unfold::after, .sub-menu-unfold::before {
   content: "";
   display: block;
   position: absolute;
-  top: 11px;
+  top: 7px;
+  left: 3px;
   height: 2px;
-  width: 8px;
+  width: 10px;
   background-color: #000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .sub-menu-unfold::after {
-  left: 5px;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.sub-menu-unfold::before {
-  left: 0;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 .sub-menu-unfold span {
   position: absolute;
@@ -134,16 +129,28 @@ body {
   overflow: hidden;
 }
 .sub-menu-unfold.sub-menu-opened::after {
-  left: 2px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .sub-menu-unfold.sub-menu-opened::before {
-  left: 2px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+@media only screen and (max-width: 768px) {
+  .sub-menu-unfold {
+    height: 24px;
+    width: 24px;
+    top: 0;
+    margin-top: 0;
+    border-radius: 12px;
+  }
+  .sub-menu-unfold::after, .sub-menu-unfold::before {
+    top: 11px;
+    left: 4px;
+    width: 16px;
+  }
 }
 
 #menu-toggle {

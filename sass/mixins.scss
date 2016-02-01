@@ -21,7 +21,7 @@
 	overflow: hidden;	
 }
 
-@mixin transition($property) {
+@mixin transition($property: all) {
 	transition: $property .2s ease-in-out;
 }
 

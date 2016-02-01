@@ -130,36 +130,44 @@ body {
 
 .sub-menu-unfold {
 	position: absolute;
-	top: 0; right: 0;
+	top: 50%; right: 0;
 	display: block;
-	height: 100%; width: 14px;
-	border: 0; border-radius: 0; padding: 0;
-	background: transparent !important;
+	height: 16px; width: 16px;
+	margin-top: -8px;
+	border: 0; border-radius: 8px; padding: 0;
+	background: #ccc !important;
 	
 	&::after, &::before {
 		content: "";
 		display: block;
 		position: absolute;
-		top: 11px;
-		height: 2px; width: 8px;
+		top: 7px; left: 3px;
+		height: 2px; width: 10px;
 		background-color: #000;
-		@include transition(all);
+		@include transition();
 	}
 	&::after {
-		left: 5px;
-		transform: rotate(-45deg);
+		transform: rotate(-90deg);
 	}
-	&::before {
-		left: 0;
-		transform: rotate(45deg);
-	}
+	&::before {}
 	
 	span {
 		@include a11y-hidden();
 	}
 	
-	&.sub-menu-opened::after {left: 2px; transform: rotate(45deg);}
-	&.sub-menu-opened::before {left: 2px; transform: rotate(-45deg);}
+	&.sub-menu-opened::after {transform: rotate(45deg);}
+	&.sub-menu-opened::before {transform: rotate(-45deg);}
+	
+	@include responsive(medium-screens) {
+		height: 24px; width: 24px;
+		top: 0; margin-top: 0;
+		border-radius: 12px;
+		
+		&::after, &::before {
+			top: 11px; left: 4px;
+			width: 16px;
+		} 
+	}
 }
 
 
