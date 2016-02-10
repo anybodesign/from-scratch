@@ -16,7 +16,7 @@
 				<div class="col-12">				
 					
 					<p class="footer-copyright">
-						© <?php echo date(' Y '); if (get_option('from_scratch_settings')['from_scratch_copyright']) { echo get_option('from_scratch_settings')['from_scratch_copyright']; } else { echo esc_url( bloginfo( 'name' ) ); } ?>
+						© <?php echo date(' Y '); if (get_option( 'from_scratch_settings' )['from_scratch_copyright']) { echo get_option( 'from_scratch_settings' )['from_scratch_copyright']; } else { echo esc_url( bloginfo( 'name' ) ); } ?>
 					</p>
 					
 					<nav class="footer-nav">

@@ -9,9 +9,7 @@
  * @since From Scratch 1.0
  */
 ?><!DOCTYPE html>
-<!--[if IE 8]><html class="ie8" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 9]><html class="ie9" <?php language_attributes(); ?>><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +18,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
-	<!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/js/html5.js"></script><![endif]-->
 </head>
 
 <body <?php body_class(); ?>>

@@ -94,7 +94,7 @@ body {
 		display: inline-block;
 		margin-right: 5px;
 		
-		@include responsive(medium-screens) {
+		@include responsive(medium) {
 			display: block;
 		}
 		
@@ -110,7 +110,7 @@ body {
 			position: absolute;
 			background-color: #fff; 
 			
-			@include responsive(medium-screens) {
+			@include responsive(medium) {
 				position: relative;
 			}
 		
@@ -123,7 +123,7 @@ body {
 		
 	}
 	
-	@include responsive(medium-screens) {
+	@include responsive(medium) {
 		display: none;
 	}
 }
@@ -158,7 +158,7 @@ body {
 	&.sub-menu-opened::after {transform: rotate(45deg);}
 	&.sub-menu-opened::before {transform: rotate(-45deg);}
 	
-	@include responsive(medium-screens) {
+	@include responsive(medium) {
 		height: 24px; width: 24px;
 		top: 0; margin-top: 0;
 		border-radius: 12px;
@@ -175,7 +175,7 @@ body {
 #menu-toggle {
 	display: none;
 	
-	@include responsive(medium-screens) {
+	@include responsive(medium) {
 		
 		// Hamburger Menu
 		

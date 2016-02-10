@@ -77,7 +77,7 @@ function from_scratch_scripts_load() {
 
 		// JS 
 		
-		wp_enqueue_script('jquery');
+		wp_enqueue_script( 'jquery' );
 
 		wp_enqueue_script(
 			'from-scratch-skip-link-focus-fix', 
@@ -110,7 +110,7 @@ function from_scratch_scripts_load() {
 
 	}
 }    
-add_action('wp_enqueue_scripts', 'from_scratch_scripts_load');
+add_action( 'wp_enqueue_scripts', 'from_scratch_scripts_load' );
 
 
 // Custom settings
@@ -132,12 +132,3 @@ function from_scratch_widgets_init() {
 	));
 }
 add_action( 'widgets_init', 'from_scratch_widgets_init' );
-
-
-// Favicons 
-
-function from_scratch_favicon_link() {
-    echo '<link rel="shortcut icon" href="'. get_stylesheet_directory_uri() .'/img/favicon.png">' . "\n";
-    echo '<link rel="apple-touch-icon" sizes="152x152" href="'. get_stylesheet_directory_uri() .'/img/apple-touch-icon-152x152.png">' . "\n";
-}
-add_action( 'wp_head', 'from_scratch_favicon_link' );

@@ -63,7 +63,7 @@ body {
   display: inline-block;
   margin-right: 5px;
 }
-@media only screen and (max-width: medium-screens) {
+@media only screen and (max-width: 768px) {
   .main-menu > li {
     display: block;
   }
@@ -76,12 +76,12 @@ body {
   position: absolute;
   background-color: #fff;
 }
-@media only screen and (max-width: medium-screens) {
+@media only screen and (max-width: 768px) {
   .main-menu > li .sub-menu {
     position: relative;
   }
 }
-@media only screen and (max-width: medium-screens) {
+@media only screen and (max-width: 768px) {
   .main-menu {
     display: none;
   }
@@ -138,7 +138,7 @@ body {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-@media only screen and (max-width: medium-screens) {
+@media only screen and (max-width: 768px) {
   .sub-menu-unfold {
     height: 24px;
     width: 24px;
@@ -156,7 +156,7 @@ body {
 #menu-toggle {
   display: none;
 }
-@media only screen and (max-width: medium-screens) {
+@media only screen and (max-width: 768px) {
   #menu-toggle {
     display: block;
     height: 23px;
