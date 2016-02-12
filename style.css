@@ -2,11 +2,13 @@
 Theme Name: From Scratch
 Author: Thomas Villain
 Author URI: http://anybodesign.com/
-Description: A WordPress Starter Theme
+Theme URI: https://github.com/anybodesign/from-scratch
+Description: A WordPress Starter Theme using Prid'
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fromscratch
+Tags: white, minimalist, responsive
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -114,7 +116,6 @@ body {
 }
 .sub-menu-unfold::after {
   -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 .sub-menu-unfold span {
@@ -130,12 +131,10 @@ body {
 }
 .sub-menu-unfold.sub-menu-opened::after {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .sub-menu-unfold.sub-menu-opened::before {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 @media only screen and (max-width: 768px) {
@@ -202,14 +201,12 @@ body {
   #menu-toggle.menu-opened span::after {
     top: 0;
     -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     background-color: #c00;
   }
   #menu-toggle.menu-opened span::before {
     top: 0;
     -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
     background-color: #c00;
   }

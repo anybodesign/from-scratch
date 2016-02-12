@@ -29,7 +29,7 @@ get_header(); ?>
 					
 					<?php 
 						
-						// Custom Post type Loop
+						// Custom Post type Loop 
 						
 						$args = array(
 							'posts_per_page' 	=> 4,
@@ -59,6 +59,6 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 
 				
-				</div> <? // END primary ?>
+				</div> <?php // END primary ?>
 
 <?php get_footer(); ?>

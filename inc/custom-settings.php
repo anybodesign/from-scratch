@@ -6,7 +6,7 @@ add_action( 'admin_init', 'from_scratch_settings_init' );
 
 function from_scratch_add_admin_menu(  ) { 
 
-	add_menu_page( 
+	add_theme_page( 
 		__( 'Custom Settings', 'fromscratch' ), 
 		__( 'Custom Settings', 'fromscratch' ), 
 		'manage_options', 
@@ -107,7 +107,7 @@ function from_scratch_google_render(  ) {
 
 function from_scratch_settings_section1_callback(  ) { 
 
-	echo __( 'The site’s copyright, displayed in the footer', 'fromscratch' );
+	echo __( 'The site&rsquo;s copyright, displayed in the footer', 'fromscratch' );
 
 }
 function from_scratch_settings_section2_callback(  ) { 

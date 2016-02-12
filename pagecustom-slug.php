@@ -67,7 +67,7 @@ get_header(); ?>
 					<?php endif; ?>
 					<?php wp_reset_postdata(); ?>
 				
-				</div> <? // END primary ?>
+				</div> <?php // END primary ?>
 	
 	
 				<?php get_sidebar(); ?>

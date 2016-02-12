@@ -9,14 +9,14 @@
  * @since From Scratch 1.0
  */
 ?>
-		</div> <? // END content ?>
+		</div> <?php // END content ?>
 		
 
 			<footer id="site_foot" class="row" role="contentinfo">
 				<div class="col-12">				
 					
 					<p class="footer-copyright">
-						© <?php echo date(' Y '); if (get_option( 'from_scratch_settings' )['from_scratch_copyright']) { echo get_option( 'from_scratch_settings' )['from_scratch_copyright']; } else { echo esc_url( bloginfo( 'name' ) ); } ?>
+						&copy; <?php echo date(' Y '); if (get_option( 'from_scratch_settings' )['from_scratch_copyright']) { echo get_option( 'from_scratch_settings' )['from_scratch_copyright']; } else { echo esc_url( bloginfo( 'name' ) ); } ?>
 					</p>
 					
 					<nav class="footer-nav">
@@ -31,8 +31,8 @@
 				</div>
 			</footer>
 		
-	</div> <? // END container ?>
-</div> <? // END wrapper ?>
+	</div> <?php // END container ?>
+</div> <?php // END wrapper ?>
 
 <?php wp_footer(); ?>
 

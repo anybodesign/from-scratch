@@ -43,7 +43,7 @@ get_header(); ?>
 						</div>					
 					</div>
 				
-				</div> <? // END site_main ?>
+				</div> <?php // END site_main ?>
 				
 				<?php get_sidebar(); ?>
 

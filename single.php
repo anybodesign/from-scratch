@@ -28,6 +28,6 @@ get_header(); ?>
 						</div>					
 					</div>
 				
-				</div> <? // END primary ?>
+				</div> <?php // END primary ?>
 
 <?php get_footer(); ?>
