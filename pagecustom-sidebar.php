@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
- * Template Name: Custom page template
+ * Template Name: Custom page template with Sidebar
  *
  * @package WordPress
  * @subpackage From_Scratch

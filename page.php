@@ -10,7 +10,7 @@
  */
 get_header(); ?>
 
-				<div id="primary" class="content-area" role="main">
+				<main id="primary" class="content-area" role="main">
 					
 					<div class="row">
 						<div class="col-12">
@@ -29,6 +29,6 @@ get_header(); ?>
 						</div>					
 					</div>
 				
-				</div> <?php // END primary ?>
+				</main> <?php // END primary ?>
 	
 <?php get_footer(); ?>

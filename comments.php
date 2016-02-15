@@ -22,6 +22,10 @@ if ( post_password_required() ) {
 								wp_list_comments();
 							?>
 						</ol>
+						
+						<div>
+							<?php paginate_comments_links(); ?>
+						</div>
 				
 					<?php endif;?>
 				

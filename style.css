@@ -8,7 +8,7 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fromscratch
-Tags: white, minimalist, responsive
+Tags: white
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -60,6 +60,9 @@ body {
   top: -5px;
 }
 
+.main-menu {
+  display: none;
+}
 .main-menu > li {
   position: relative;
   display: inline-block;
@@ -75,30 +78,30 @@ body {
 }
 .main-menu > li .sub-menu {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #fff;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .main-menu > li .sub-menu {
-    position: relative;
+    position: absolute;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .main-menu {
-    display: none;
+    display: block;
   }
 }
 
 .sub-menu-unfold {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
   display: block;
-  height: 16px;
-  width: 16px;
-  margin-top: -8px;
+  height: 24px;
+  width: 24px;
+  margin-top: 0;
   border: 0;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0;
   background: #ccc !important;
 }
@@ -106,10 +109,10 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 7px;
-  left: 3px;
-  height: 2px;
-  width: 10px;
+  top: 11px;
+  left: 4px;
+  width: 16px;
+  height: 3px;
   background-color: #000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -137,78 +140,79 @@ body {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .sub-menu-unfold {
-    height: 24px;
-    width: 24px;
-    top: 0;
-    margin-top: 0;
-    border-radius: 12px;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    margin-top: -8px;
+    border-radius: 8px;
   }
   .sub-menu-unfold::after, .sub-menu-unfold::before {
-    top: 11px;
-    left: 4px;
-    width: 16px;
+    top: 7px;
+    left: 3px;
+    width: 10px;
+    height: 2px;
   }
 }
 
 #menu-toggle {
-  display: none;
+  display: block;
+  height: 23px;
+  width: 23px;
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  text-indent: 60px;
+  white-space: nowrap;
+  overflow: hidden;
 }
-@media only screen and (max-width: 768px) {
+#menu-toggle span {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+#menu-toggle span, #menu-toggle span::after, #menu-toggle span::before {
+  display: block;
+  width: 23px;
+  height: 3px;
+  background-color: #000;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+#menu-toggle span::after, #menu-toggle span::before {
+  position: absolute;
+  content: "";
+}
+#menu-toggle span::after {
+  bottom: -9px;
+  left: 0;
+}
+#menu-toggle span::before {
+  top: -9px;
+  left: 0;
+}
+#menu-toggle.menu-opened span {
+  background-color: transparent;
+  height: 1px;
+}
+#menu-toggle.menu-opened span::after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #c00;
+}
+#menu-toggle.menu-opened span::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #c00;
+}
+@media only screen and (min-width: 768px) {
   #menu-toggle {
-    display: block;
-    height: 23px;
-    width: 23px;
-    position: relative;
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-    cursor: pointer;
-    text-indent: 60px;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  #menu-toggle span {
-    position: absolute;
-    top: 10px;
-    right: 0;
-  }
-  #menu-toggle span, #menu-toggle span::after, #menu-toggle span::before {
-    display: block;
-    width: 23px;
-    height: 3px;
-    background-color: #000;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-  }
-  #menu-toggle span::after, #menu-toggle span::before {
-    position: absolute;
-    content: "";
-  }
-  #menu-toggle span::after {
-    bottom: -9px;
-    left: 0;
-  }
-  #menu-toggle span::before {
-    top: -9px;
-    left: 0;
-  }
-  #menu-toggle.menu-opened span {
-    background-color: transparent;
-    height: 1px;
-  }
-  #menu-toggle.menu-opened span::after {
-    top: 0;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    background-color: #c00;
-  }
-  #menu-toggle.menu-opened span::before {
-    top: 0;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    background-color: #c00;
+    display: none;
   }
 }
 
@@ -233,9 +237,26 @@ small {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+b, strong {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+i, em {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 figure img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption .wp-caption-text {
+  text-align: left;
 }
 
 .alignleft {
@@ -298,8 +319,69 @@ div.wpcf7-mail-sent-ok {
 /* ------------------------- */
 /* = Posts
 /* ------------------------- */
+.sticky {
+  display: block;
+}
+
 .nav-links {
   font-family: Helvetica, Arial, sans-serif;
+}
+
+/* ------------------------- */
+/* = Comments
+/* ------------------------- */
+.bypostauthor {
+  display: block;
+}
+
+/* ------------------------- */
+/* = Galleries
+/* ------------------------- */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-caption {
+  display: block;
 }
 
 /* ------------------------- */
@@ -365,12 +447,8 @@ div.wpcf7-mail-sent-ok {
 
 @font-face {
 	font-family: 'xxx';
-	src: url('fonts/xxx.eot');
-	src: url('fonts/xxx.eot?#iefix') format('embedded-opentype'),
-		url('fonts/xxx.woff') format('woff'),
-		url('fonts/xxx.ttf') format('truetype'),
-		url('fonts/xxx.svg#xxx') format('svg');
-		font-weight: normal;
+	src: url('fonts/xxx.woff') format('woff');
+	font-weight: normal;
 	font-style: normal;
 }
 

@@ -21,10 +21,11 @@ $background-color: #fff;
 // Fonts
 
 
-$font-fallback: Helvetica, Arial, sans-serif;
-$font-regular:  $font-fallback;
-$font-bold:  $font-fallback;
-$font-italic:  $font-fallback;
+$font-stack: Helvetica, Arial, sans-serif;
+$font-title:  $font-stack;
+$font-regular:  $font-stack;
+$font-bold:  $font-stack;
+$font-italic:  $font-stack;
 
 
 // Media Queries

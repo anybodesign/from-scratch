@@ -25,16 +25,13 @@
 	transition: $property .2s ease-in-out;
 }
 
-@mixin rounded($radius) {
-	border-radius: $radius;
-}
-
 @mixin linkblock() {
 	content: "";
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: 100;	
 }
+
 
 
 @mixin responsive($width) {
@@ -56,6 +53,31 @@
 	}
 	@else {
 		@media only screen and (max-width: $width) {
+			@content;
+		}
+	}
+}
+
+
+@mixin rwd($width) {
+	
+	@if $width == wide {
+		@media only screen and (min-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == medium {
+		@media only screen and (min-width: $width-medium) {
+			@content;
+		}
+	}
+	@else if $width == small {
+		@media only screen and (min-width: $width-small) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (min-width: $width) {
 			@content;
 		}
 	}

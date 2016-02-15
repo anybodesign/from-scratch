@@ -9,7 +9,6 @@
  * @since From Scratch 1.0
  */
 get_header(); ?>
-		
 				<div id="primary" class="content-area has-sidebar" role="main">
 
 					<div class="row">
@@ -47,7 +46,8 @@ get_header(); ?>
 					</div>
 				
 				</div> <?php // END site_main ?>
-				
+
+	
 				<?php get_sidebar(); ?>
-			
+							
 <?php get_footer(); ?>

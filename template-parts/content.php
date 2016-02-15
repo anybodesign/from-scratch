@@ -22,7 +22,7 @@
 							<?php if ( is_single() ) { ?>
 								<h1 class="post-title"><?php the_title(); ?></h1>
 							<?php } else { ?>
-								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></h2>
+								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
 							<?php } ?>
 							
 							<?php get_template_part('template-parts/post', 'meta'); ?>							
@@ -38,11 +38,21 @@
 							?>
 						</div>
 						
-						<?php 
-							wp_link_pages(array(
-								'before' => '<footer class="post-footer"><div class="page-links">' . esc_html__( 'Pages:', 'fromscratch' ),
-								'after'  => '</div></footer>',
-							));
-						?>
+						<footer class="post-footer">
+							<?php $posttags = get_the_tags(); if ($posttags) { ?>
+							  	<div class="tag-links">
+									<p><?php _e( 'Tagged with:', 'fromscratch' ); ?></p>
+									<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
+							  	</div>
+							<?php } ?>					
+							
+							<?php 
+								wp_link_pages(array(
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fromscratch' ),
+									'after'  => '</div>',
+								));
+							?>
+						</footer>
+						
 																		
 					</article>
