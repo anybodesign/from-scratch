@@ -12,7 +12,7 @@
 
 							<div class="post-meta">
 								<p class="meta-infos">
-									<?php _e( 'Posted on&nbsp;', 'fromscratch' ); ?><?php the_time('j F Y'); ?>
+									<?php _e( 'Posted on&nbsp;', 'fromscratch' ); ?><?php echo the_time( get_option('date_format') ); ?>
 									<?php _e( 'by&nbsp;', 'fromscratch' ); ?><?php the_author(); ?>
 									<?php _e( 'in&nbsp;', 'fromscratch' ); ?><?php the_category(', '); ?>
 								</p>
