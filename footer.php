@@ -19,6 +19,7 @@
 						&copy; <?php echo date(' Y '); if (get_option( 'from_scratch_settings' )['from_scratch_copyright']) { echo get_option( 'from_scratch_settings' )['from_scratch_copyright']; } else { echo esc_url( bloginfo( 'name' ) ); } ?>
 					</p>
 					
+					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
 					<nav class="footer-nav">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
@@ -27,6 +28,7 @@
 							));
 					?>
 					</nav>
+					<?php endif; ?>
 					
 				</div>
 			</footer>

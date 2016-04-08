@@ -1,6 +1,12 @@
 <?php if ( !defined('ABSPATH') ) die();
 
-// Theme Setup
+// Content width
+
+if ( ! isset( $content_width ) )
+	$content_width = 640;
+
+
+// From Scratch Theme Setup
 
 if ( ! function_exists( 'from_scratch_setup' ) ) :
 
@@ -15,6 +21,7 @@ function from_scratch_setup() {
 	// Theme Support
 	
 	add_editor_style( array('css/editor-style.css') );
+	
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -40,32 +47,66 @@ function from_scratch_setup() {
 	) );
 
 
-	// Menus
+	// Custom Background
 	
-	register_nav_menus( array(
-		'main_menu' =>  esc_html__( 'Main Menu', 'fromscratch' ),
-		'footer_menu' => esc_html__( 'Footer Menu', 'fromscratch' )
-	));
+	$background_args = array(
+		'default-color'          => '#ffffff',
+		'default-image'          => '',
+		'default-repeat'         => '',
+		'default-position-x'     => '',
+		//'wp-head-callback'       => 'fromscratch_custom_bg',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	);
+	add_theme_support( 'custom-background', $background_args );
 
 
-	// Sub-menus BETA
+	// Custom Header
 	
-	function from_scratch_submenu( $sorted_menu_items, $args ) {
-	    $returns = array();
-	    foreach ( $sorted_menu_items as $key => $obj ) {
-	        if (in_array('menu-item-has-children', $obj->classes)) {
-	            $obj->title .= '<button class="sub-menu-unfold"><span>'.__("Unfold Sub-Menu","fromscratch").'</span></button>';
-	        }
-	        $returns[$key] = $obj;
-	    }
-	    return $returns;
-	}
-	add_filter( 'wp_nav_menu_objects', 'from_scratch_submenu', 10, 2 );
-
+	$header_args = array(
+		'default-image'          => '',
+		'width'                  => 0,
+		'height'                 => 0,
+		'flex-width'             => true,
+		'flex-height'            => true,
+		'uploads'                => true,
+		'random-default'         => false,
+		'header-text'            => true,
+		'default-text-color'     => '#ffffff',
+		//'wp-head-callback'       => 'fromscratch_custom_header',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	);
+	add_theme_support( 'custom-header', $header_args );
 
 }
 endif;
 add_action( 'after_setup_theme', 'from_scratch_setup' );
+
+
+
+// Menus
+
+register_nav_menus( array(
+	'main_menu' =>  esc_html__( 'Main Menu', 'fromscratch' ),
+	'footer_menu' => esc_html__( 'Footer Menu', 'fromscratch' )
+));
+
+
+
+// Sub-menus BETA
+
+function from_scratch_submenu( $sorted_menu_items, $args ) {
+    $returns = array();
+    foreach ( $sorted_menu_items as $key => $obj ) {
+        if (in_array('menu-item-has-children', $obj->classes)) {
+            $obj->title .= '<button class="sub-menu-unfold"><span>'.__("Unfold Sub-Menu","fromscratch").'</span></button>';
+        }
+        $returns[$key] = $obj;
+    }
+    return $returns;
+}
+add_filter( 'wp_nav_menu_objects', 'from_scratch_submenu', 10, 2 );
 
 
 
@@ -114,19 +155,6 @@ function from_scratch_scripts_load() {
 	}
 }    
 add_action( 'wp_enqueue_scripts', 'from_scratch_scripts_load' );
-
-
-// Content width
-
-function from_scratch_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'from_scratch_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'from_scratch_content_width', 0 );
-
-
-// Customizer
-
-require get_template_directory() . '/inc/customizer.php';
 
 
 // Custom settings

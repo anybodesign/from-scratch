@@ -1,0 +1,99 @@
+// -------------------------
+// = Typography
+// -------------------------
+
+
+h1, h2, h3, h4, h5, h6,
+.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+	font-family: $font-bold;
+	font-weight: normal;
+}
+
+p, 
+ul, ol, dl, 
+blockquote, 
+pre, 
+td, th, 
+textarea,
+label, figcaption, hgroup, address,
+time, span,
+small {
+	font-family: $font-regular;
+}
+
+b, strong {
+	font-family: $font-bold;
+}
+i, em {
+	font-family: $font-italic;
+}
+
+a {
+	
+	&:hover {
+	
+	}
+}
+
+
+// Images
+
+
+figure {
+	
+	img {
+		display: block;
+		width: 100%; height: auto;
+	}
+}
+
+a img {}
+a:hover img {}
+
+
+// Captions
+
+
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	
+	.wp-caption-text {
+		text-align: left;
+	}
+
+}
+
+// Alignments
+
+
+.alignleft {
+	display: inline; float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline; float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	display: block; clear: both; 
+	margin: 0 auto;
+}
+
+
+// Forms
+
+
+// CF7 Response
+
+div.wpcf7-response-output {
+	margin: 10px 0 0 0 !important; padding: 5px !important;
+	font-family: $font-regular;
+}
+span.wpcf7-not-valid-tip {color: #c00;}
+div.wpcf7-validation-errors {
+	border: 0 !important; background-color: #c00; color: #fff !important;
+}
+div.wpcf7-mail-sent-ok {
+	border: 0 !important; background-color: #9c0; color: #fff !important;
+}

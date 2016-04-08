@@ -52,7 +52,8 @@
 				<?php } ?>
 							
 			</div>
-		
+			
+			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
 			<nav id="site_nav" class="col-12" role="navigation">
 				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'fromscratch'); ?>"><?php _e('Menu', 'fromscratch'); ?><span></span></button>
 				<?php wp_nav_menu( array(
@@ -62,6 +63,7 @@
 					));
 				?>
 			</nav>
+			<?php endif; ?>
 			
 		</header>
 		
