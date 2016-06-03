@@ -12,7 +12,7 @@
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
+						<?php if ( 'from-scratch' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 						</figure>
@@ -32,7 +32,7 @@
 							<?php
 								the_content(sprintf(
 									
-									wp_kses( __( 'Continue reading %s', 'fromscratch' ), array( 'span' => array( 'class' => array() ) ) ),
+									wp_kses( __( 'Continue reading %s', 'from-scratch' ), array( 'span' => array( 'class' => array() ) ) ),
 									the_title( '<span class="screen-reader-text">"', '"</span>', false )
 								));
 							?>
@@ -41,14 +41,14 @@
 						<footer class="post-footer">
 							<?php $posttags = get_the_tags(); if ($posttags) { ?>
 							  	<div class="tag-links">
-									<p><?php _e( 'Tagged with:', 'fromscratch' ); ?></p>
+									<p><?php _e( 'Tagged with:', 'from-scratch' ); ?></p>
 									<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 							  	</div>
 							<?php } ?>					
 							
 							<?php 
 								wp_link_pages(array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fromscratch' ),
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'from-scratch' ),
 									'after'  => '</div>',
 								));
 							?>

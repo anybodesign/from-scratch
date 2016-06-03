@@ -17,7 +17,7 @@
 							<?php the_content(); ?>
 						</div>
 
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
+						<?php if ( 'from-scratch' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 						</figure>

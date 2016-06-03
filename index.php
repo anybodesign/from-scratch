@@ -30,9 +30,9 @@ get_header(); ?>
 							<?php endwhile; ?>
 				
 							<?php the_posts_pagination(array(
-									'prev_text'          => __( 'Previous page', 'fromscratch' ),
-									'next_text'          => __( 'Next page', 'fromscratch' ),
-									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fromscratch' ) . ' </span>',
+									'prev_text'          => __( 'Previous page', 'from-scratch' ),
+									'next_text'          => __( 'Next page', 'from-scratch' ),
+									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'from-scratch' ) . ' </span>',
 								)); ?>
 				
 						<?php else : ?>

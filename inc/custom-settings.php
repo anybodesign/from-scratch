@@ -7,8 +7,8 @@ add_action( 'admin_init', 'from_scratch_settings_init' );
 function from_scratch_add_admin_menu(  ) { 
 
 	add_theme_page( 
-		__( 'Custom Settings', 'fromscratch' ), 
-		__( 'Custom Settings', 'fromscratch' ), 
+		__( 'Custom Settings', 'from-scratch' ), 
+		__( 'Custom Settings', 'from-scratch' ), 
 		'manage_options', 
 		'from_scratch', 
 		'from_scratch_options_page' );
@@ -22,20 +22,20 @@ function from_scratch_settings_init(  ) {
 
 	add_settings_section(
 		'from_scratch_pluginPage_section1', 
-		__( 'Site Settings', 'fromscratch' ), 
+		__( 'Site Settings', 'from-scratch' ), 
 		'from_scratch_settings_section1_callback', 
 		'pluginPage'
 	);
 	add_settings_section(
 		'from_scratch_pluginPage_section2', 
-		__( 'Social Networks', 'fromscratch' ), 
+		__( 'Social Networks', 'from-scratch' ), 
 		'from_scratch_settings_section2_callback', 
 		'pluginPage'
 	);
 
 	add_settings_field( 
 		'from_scratch_copyright', 
-		__( 'Copyright', 'fromscratch' ), 
+		__( 'Copyright', 'from-scratch' ), 
 		'from_scratch_copyright_render', 
 		'pluginPage', 
 		'from_scratch_pluginPage_section1' 
@@ -43,7 +43,7 @@ function from_scratch_settings_init(  ) {
 
 	add_settings_field( 
 		'from_scratch_twitter', 
-		__( 'Twitter URL', 'fromscratch' ), 
+		__( 'Twitter URL', 'from-scratch' ), 
 		'from_scratch_twitter_render', 
 		'pluginPage', 
 		'from_scratch_pluginPage_section2' 
@@ -51,7 +51,7 @@ function from_scratch_settings_init(  ) {
 
 	add_settings_field( 
 		'from_scratch_facebook', 
-		__( 'Facebook URL', 'fromscratch' ), 
+		__( 'Facebook URL', 'from-scratch' ), 
 		'from_scratch_facebook_render', 
 		'pluginPage', 
 		'from_scratch_pluginPage_section2' 
@@ -59,7 +59,7 @@ function from_scratch_settings_init(  ) {
 	
 	add_settings_field( 
 		'from_scratch_google', 
-		__( 'Google+ URL', 'fromscratch' ), 
+		__( 'Google+ URL', 'from-scratch' ), 
 		'from_scratch_google_render', 
 		'pluginPage', 
 		'from_scratch_pluginPage_section2' 
@@ -107,12 +107,12 @@ function from_scratch_google_render(  ) {
 
 function from_scratch_settings_section1_callback(  ) { 
 
-	echo __( 'The site&rsquo;s copyright, displayed in the footer', 'fromscratch' );
+	echo __( 'The site&rsquo;s copyright, displayed in the footer', 'from-scratch' );
 
 }
 function from_scratch_settings_section2_callback(  ) { 
 
-	echo __( 'Enter your Social Networks URLs', 'fromscratch' );
+	echo __( 'Enter your Social Networks URLs', 'from-scratch' );
 
 }
 
@@ -122,7 +122,7 @@ function from_scratch_options_page(  ) { ?>
 
 	<form action='options.php' method='post'>
 		
-		<h1><?php _e( 'Custom Settings', 'fromscratch' ); ?></h1>
+		<h1><?php _e( 'Custom Settings', 'from-scratch' ); ?></h1>
 		
 		<?php
 		settings_fields( 'pluginPage' );

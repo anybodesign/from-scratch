@@ -25,24 +25,24 @@
 <div id="wrapper">
 	<div id="container">
 		
-	<!--[if lte IE 9]><div id="ie"><div><p><?php _e('Your browser should be <a href="http://browsehappy.com">updated</a> to improve your experience.', 'fromscratch'); ?></p></div></div><![endif]-->
+	<!--[if lte IE 9]><div id="ie"><div><p><?php _e('Your browser should be <a href="http://browsehappy.com">updated</a> to improve your experience.', 'from-scratch'); ?></p></div></div><![endif]-->
 	
 		
 		<header id="site_head" class="row" role="banner">
 			
 			<nav class="col-12  skiplinks-nav" role="navigation">
 				<ul class="skiplinks-menu">
-					<li><a href="#site_nav"><?php _e('Go to main menu', 'fromscratch'); ?></a></li>
-					<li><a href="#site_content"><?php _e('Go to main content	', 'fromscratch'); ?></a></li>
+					<li><a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a></li>
+					<li><a href="#site_content"><?php _e('Go to main content	', 'from-scratch'); ?></a></li>
 				</ul>
 			</nav>
 	
 	
 			<div class="col-12 site-brand">
 				<?php if ( is_front_page() ) { ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fromscratch'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php } else { ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fromscratch'); ?>"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>"><?php bloginfo( 'name' ); ?></a></p>
 				<?php } ?>
 	
 				<?php 
@@ -55,13 +55,13 @@
 			
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
 			<nav id="site_nav" class="col-12" role="navigation">
-				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'fromscratch'); ?>"><?php _e('Menu', 'fromscratch'); ?><span></span></button>
+				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'from-scratch'); ?>"><?php _e('Menu', 'from-scratch'); ?><span></span></button>
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',
 					'menu_class'		=>	'main-menu',
 					'container'			=>	false,
 					'walker'			=>	new from_scratch_subnav_walker(),
-					//'after'				=>	' <button class="sub-menu-unfold"><span>'.__("Unfold Sub-Menu","fromscratch").'</span></button>'
+					//'after'				=>	' <button class="sub-menu-unfold"><span>'.__("Unfold Sub-Menu","from-scratch").'</span></button>'
 					));
 				?>
 			</nav>

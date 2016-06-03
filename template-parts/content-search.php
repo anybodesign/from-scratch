@@ -12,7 +12,7 @@
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
+						<?php if ( 'from-scratch' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 						</figure>
@@ -30,7 +30,7 @@
 
 						<?php 
 							wp_link_pages(array(
-								'before' => '<footer class="post-footer"><div class="page-links">' . esc_html__( 'Pages:', 'fromscratch' ),
+								'before' => '<footer class="post-footer"><div class="page-links">' . esc_html__( 'Pages:', 'from-scratch' ),
 								'after'  => '</div></footer>',
 							));
 						?>

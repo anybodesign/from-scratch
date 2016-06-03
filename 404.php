@@ -18,9 +18,9 @@ get_header(); ?>
 		
 							<section class="error-404 not-found">
 								<header class="page-header">
-									<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'fromscratch' ); ?></h1>
+									<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'from-scratch' ); ?></h1>
 								</header>
-								<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'fromscratch' ); ?></p>
+								<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'from-scratch' ); ?></p>
 								<?php get_search_form(); ?>		
 							</section>						
 						</div>					

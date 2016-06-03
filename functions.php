@@ -15,7 +15,7 @@ function from_scratch_setup() {
 	
 	// I18n
 	
-	load_theme_textdomain( 'fromscratch', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'from-scratch', get_template_directory() . '/languages' );
 	
 	
 	// Theme Support
@@ -54,7 +54,7 @@ function from_scratch_setup() {
 		'default-image'          => '',
 		'default-repeat'         => '',
 		'default-position-x'     => '',
-		//'wp-head-callback'       => 'fromscratch_custom_bg',
+		//'wp-head-callback'       => 'from_scratch_custom_bg',
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => '',
 	);
@@ -73,7 +73,7 @@ function from_scratch_setup() {
 		'random-default'         => false,
 		'header-text'            => true,
 		'default-text-color'     => '#ffffff',
-		//'wp-head-callback'       => 'fromscratch_custom_header',
+		//'wp-head-callback'       => 'from_scratch_custom_header',
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => '',
 	);
@@ -87,17 +87,19 @@ add_action( 'after_setup_theme', 'from_scratch_setup' );
 
 // Admin Bar Disabled
 
+/*
 if ( ! current_user_can( 'manage_options' ) ) {
     add_filter('show_admin_bar', '__return_false');
 }
+*/
 
 
 
 // Menus
 
 register_nav_menus( array(
-	'main_menu' =>  esc_html__( 'Main Menu', 'fromscratch' ),
-	'footer_menu' => esc_html__( 'Footer Menu', 'fromscratch' )
+	'main_menu' =>  esc_html__( 'Main Menu', 'from-scratch' ),
+	'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' )
 ));
 
 
@@ -162,11 +164,11 @@ include( dirname( __FILE__ ) . '/inc/custom-settings.php' );
 
 function from_scratch_widgets_init() {
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Primary Widgets Area', 'fromscratch' ),
+		'name'			=>	esc_html__( 'Primary Widgets Area', 'from-scratch' ),
 		'id'			=>	'widgets_area1',
-		'description' 	=> 	'',
-		'before_widget' => 	'',
-		'after_widget' 	=> 	'',
+		'description' 	=> 	'from-scratch',
+		'before_widget' => 	'from-scratch',
+		'after_widget' 	=> 	'from-scratch',
 		'before_title' 	=> 	'<h3 class="widget-title">',
 		'after_title' 	=> 	'</h3>',
 	));
