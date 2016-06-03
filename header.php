@@ -59,7 +59,9 @@
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',
 					'menu_class'		=>	'main-menu',
-					'container'			=>	false
+					'container'			=>	false,
+					'walker'			=>	new from_scratch_subnav_walker(),
+					//'after'				=>	' <button class="sub-menu-unfold"><span>'.__("Unfold Sub-Menu","fromscratch").'</span></button>'
 					));
 				?>
 			</nav>

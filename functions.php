@@ -85,6 +85,14 @@ add_action( 'after_setup_theme', 'from_scratch_setup' );
 
 
 
+// Admin Bar Disabled
+
+if ( ! current_user_can( 'manage_options' ) ) {
+    add_filter('show_admin_bar', '__return_false');
+}
+
+
+
 // Menus
 
 register_nav_menus( array(
@@ -93,21 +101,9 @@ register_nav_menus( array(
 ));
 
 
+// Sub-menus Walker // http://wordpress.stackexchange.com/questions/88604/bootstrap-drop-down-menu-with-wp-nav-menu
 
-// Sub-menus BETA
-
-function from_scratch_submenu( $sorted_menu_items, $args ) {
-    $returns = array();
-    foreach ( $sorted_menu_items as $key => $obj ) {
-        if (in_array('menu-item-has-children', $obj->classes)) {
-            $obj->title .= '<button class="sub-menu-unfold"><span>'.__("Unfold Sub-Menu","fromscratch").'</span></button>';
-        }
-        $returns[$key] = $obj;
-    }
-    return $returns;
-}
-add_filter( 'wp_nav_menu_objects', 'from_scratch_submenu', 10, 2 );
-
+include( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 
 
 // Enqueue JS & CSS
