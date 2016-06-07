@@ -60,8 +60,7 @@
 					'theme_location'	=> 	'main_menu',
 					'menu_class'		=>	'main-menu',
 					'container'			=>	false,
-					'walker'			=>	new from_scratch_subnav_walker(),
-					//'after'				=>	' <button class="sub-menu-unfold"><span>'.__("Unfold Sub-Menu","from-scratch").'</span></button>'
+					'walker'			=>	new from_scratch_subnav_walker()
 					));
 				?>
 			</nav>

@@ -4,7 +4,7 @@ class from_scratch_subnav_walker extends Walker_Nav_Menu {
 
    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
        
-       $item_html = 'from-scratch';
+       $item_html = '';
        parent::start_el($item_html, $item, $depth, $args);
 
        if ( $item->is_dropdown ) {
