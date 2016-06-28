@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2016-02-10 10:00+0100\n"
-"PO-Revision-Date: 2016-02-10 10:02+0100\n"
+"POT-Creation-Date: 2016-06-07 17:14+0200\n"
+"PO-Revision-Date: 2016-06-07 17:16+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -30,51 +30,35 @@ msgstr ""
 "Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
 "une recherche?"
 
-#: _trash/category.php:35 _trash/taxonomy.php:32 home.php:34 index.php:34
-msgid "Previous page"
-msgstr "Page précédente"
-
-#: _trash/category.php:36 _trash/taxonomy.php:33 home.php:35 index.php:35
-msgid "Next page"
-msgstr "Page suivante"
-
-#: _trash/category.php:40 _trash/taxonomy.php:37
-msgid "Sorry! Couldn’t find any post!"
-msgstr "Désolé ! Impossible de trouver des articles !"
-
 #: comments.php:18
 msgid "They talk about it"
 msgstr "Ils en parlent"
 
-#: comments.php:29
+#: comments.php:33
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: comments.php:36
+#: comments.php:40
 msgid "Do we talk about it?"
 msgstr "On en discute ?"
 
-#: comments.php:37
+#: comments.php:41
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: functions.php:46
+#: functions.php:101
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:47
+#: functions.php:102
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:57
-msgid "Unfold Sub-Menu"
-msgstr "Déplier le sous-menu"
-
-#: functions.php:125
+#: functions.php:167
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: header.php:31
+#: header.php:28
 msgid ""
 "Your browser should be <a href=\"http://browsehappy.com\">updated</a> to "
 "improve your experience."
@@ -82,29 +66,25 @@ msgstr ""
 "Votre navigateur doit être <a href=\"http://browsehappy.com\">mis à jour</a> "
 "afin d'améliorer votre expérience."
 
-#: header.php:38
+#: header.php:34
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:39
+#: header.php:35
 msgid "Go to main content\t"
 msgstr "Aller au contenu principal\t"
 
-#: header.php:46 header.php:48
+#: header.php:42 header.php:44
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
 
-#: header.php:60
+#: header.php:57
 msgid "Unfold navigation menu"
 msgstr "Déplier le menu de navigation"
 
-#: header.php:60
+#: header.php:57
 msgid "Menu"
 msgstr "Menu"
-
-#: home.php:36 index.php:36
-msgid "Page"
-msgstr "Page"
 
 #: inc/custom-settings.php:10 inc/custom-settings.php:11
 #: inc/custom-settings.php:125
@@ -136,12 +116,28 @@ msgid "Google+ URL"
 msgstr "URL Google+"
 
 #: inc/custom-settings.php:110
-msgid "The site’s copyright, displayed in the footer"
-msgstr "Copyright du site, affiché dans le pied de page"
+msgid "The site&rsquo;s copyright, displayed in the footer"
+msgstr "Le copyright du site, affiché dans le footer"
 
 #: inc/custom-settings.php:115
 msgid "Enter your Social Networks URLs"
 msgstr "Entrez les URLs de vos réseaux sociaux"
+
+#: inc/subnav-walker.php:12
+msgid "Unfold Sub-Menu"
+msgstr "Déplier le sous-menu"
+
+#: index.php:33
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: index.php:34
+msgid "Next page"
+msgstr "Page suivante"
+
+#: index.php:35
+msgid "Page"
+msgstr "Page"
 
 #: search.php:19
 #, php-format
@@ -175,7 +171,7 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-search.php:33 template-parts/content.php:43
+#: template-parts/content-search.php:33 template-parts/content.php:51
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -184,13 +180,37 @@ msgstr "Pages :"
 msgid "Continue reading %s"
 msgstr "Lire la suite de l'article %s"
 
+#: template-parts/content.php:44
+msgid "Tagged with:"
+msgstr "Étiquetté&nbsp;:"
+
+#: template-parts/post-meta.php:15
+msgid "Posted on&nbsp;"
+msgstr "Posté le&nbsp;"
+
+#: template-parts/post-meta.php:16
+msgid "by&nbsp;"
+msgstr "par&nbsp;"
+
+#: template-parts/post-meta.php:17
+msgid "in&nbsp;"
+msgstr "dans&nbsp;"
+
+#: template-parts/post-meta.php:22
+msgid "Comment(s)"
+msgstr "Commentaire(s)"
+
 #. Theme Name of the plugin/theme
 msgid "From Scratch"
 msgstr "From Scratch"
 
+#. Theme URI of the plugin/theme
+msgid "https://github.com/anybodesign/from-scratch"
+msgstr "https://github.com/anybodesign/from-scratch"
+
 #. Description of the plugin/theme
-msgid "A WordPress Starter Theme"
-msgstr "Un starter thème pour WordPress"
+msgid "A WordPress Starter Theme using Prid'"
+msgstr "Un starter thème WordPress utilisant Prid'"
 
 #. Author of the plugin/theme
 msgid "Thomas Villain"
@@ -199,6 +219,15 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "http://anybodesign.com/"
 msgstr "http://anybodesign.com/"
+
+#~ msgid "Sorry! Couldn’t find any post!"
+#~ msgstr "Désolé ! Impossible de trouver des articles !"
+
+#~ msgid "The site’s copyright, displayed in the footer"
+#~ msgstr "Copyright du site, affiché dans le pied de page"
+
+#~ msgid "A WordPress Starter Theme"
+#~ msgstr "Un starter thème pour WordPress"
 
 #~ msgid "Search results"
 #~ msgstr "Résultats de la recherche"

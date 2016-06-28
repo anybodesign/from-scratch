@@ -6,7 +6,7 @@
 // Grid Padding
 
 
-$grid-padding: 0.3125em;
+$grid-padding: 0.3125em; 	// @note: The padding gutter! equiv. 5px
 
 
 // Colors
@@ -28,9 +28,13 @@ $font-bold:  $font-stack;
 $font-italic:  $font-stack;
 
 
-// Media Queries
+// Break-Points
 
 
-$width-small: 480px;
-$width-medium: 768px;
-$width-large: 1280px; 
+$width-tiny: 22.563em; 		// @note: 361px
+$width-small: 30.063em; 	// @note: 481px
+$width-medium: 48.063em;	// @note: 769px
+$width-large: 60.063em; 	// @note: 961px
+$width-wide: 75.063em; 		// @note: 1201px
+
+

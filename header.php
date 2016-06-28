@@ -27,7 +27,6 @@
 		
 	<!--[if lte IE 9]><div id="ie"><div><p><?php _e('Your browser should be <a href="http://browsehappy.com">updated</a> to improve your experience.', 'from-scratch'); ?></p></div></div><![endif]-->
 	
-		
 		<header id="site_head" class="row" role="banner">
 			
 			<nav class="col-12  skiplinks-nav" role="navigation">

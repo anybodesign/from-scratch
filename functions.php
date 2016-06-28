@@ -85,16 +85,6 @@ add_action( 'after_setup_theme', 'from_scratch_setup' );
 
 
 
-// Admin Bar Disabled
-
-/*
-if ( ! current_user_can( 'manage_options' ) ) {
-    add_filter('show_admin_bar', '__return_false');
-}
-*/
-
-
-
 // Menus
 
 register_nav_menus( array(

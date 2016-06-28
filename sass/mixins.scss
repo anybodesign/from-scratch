@@ -59,6 +59,8 @@
 }
 
 
+// Mobile First
+
 @mixin rwd($width) {
 	
 	@if $width == wide {
