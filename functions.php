@@ -131,10 +131,10 @@ function from_scratch_scripts_load() {
 		// CSS
 		
 		wp_enqueue_style( 
-			'prid', 
-			get_template_directory_uri() . '/css/prid.css',
+			'pridx', 
+			get_template_directory_uri() . '/css/pridx.css',
 			array(), 
-			'1.7', 
+			'1.0', 
 			'screen' 
 		);
 		
@@ -156,9 +156,9 @@ function from_scratch_widgets_init() {
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Primary Widgets Area', 'from-scratch' ),
 		'id'			=>	'widgets_area1',
-		'description' 	=> 	'from-scratch',
-		'before_widget' => 	'from-scratch',
-		'after_widget' 	=> 	'from-scratch',
+		'description' 	=> 	'',
+		'before_widget' => 	'',
+		'after_widget' 	=> 	'',
 		'before_title' 	=> 	'<h3 class="widget-title">',
 		'after_title' 	=> 	'</h3>',
 	));

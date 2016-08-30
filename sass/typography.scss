@@ -15,7 +15,8 @@ blockquote,
 pre, 
 td, th, 
 textarea,
-label, figcaption, hgroup, address,
+label, legend, figcaption, 
+hgroup, address,
 time, span,
 small {
 	font-family: $font-regular;
@@ -38,14 +39,6 @@ a {
 
 // Images
 
-
-figure {
-	
-	img {
-		display: block;
-		width: 100%; height: auto;
-	}
-}
 
 a img {
 	

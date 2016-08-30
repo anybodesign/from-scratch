@@ -31,10 +31,8 @@ $font-italic:  $font-stack;
 // Break-Points
 
 
-$width-tiny: 22.563em; 		// @note: 361px
-$width-small: 30.063em; 	// @note: 481px
-$width-medium: 48.063em;	// @note: 769px
-$width-large: 60.063em; 	// @note: 961px
-$width-wide: 75.063em; 		// @note: 1201px
-
-
+$width-tiny: 22.500em; 		// @note: 360px  - base 16px
+$width-small: 30em; 		// @note: 480px
+$width-medium: 48em;		// @note: 768px
+$width-large: 64em; 		// @note: 1024px
+$width-wide: 80em;	 		// @note: 1280px

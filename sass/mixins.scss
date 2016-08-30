@@ -34,36 +34,16 @@
 
 
 
-@mixin responsive($width) {
-	
-	@if $width == wide {
-		@media only screen and (max-width: $width-large) {
-			@content;
-		}
-	}
-	@else if $width == medium {
-		@media only screen and (max-width: $width-medium) {
-			@content;
-		}
-	}
-	@else if $width == small {
-		@media only screen and (max-width: $width-small) {
-			@content;
-		}
-	}
-	@else {
-		@media only screen and (max-width: $width) {
-			@content;
-		}
-	}
-}
-
-
 // Mobile First
 
 @mixin rwd($width) {
 	
 	@if $width == wide {
+		@media only screen and (min-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == large {
 		@media only screen and (min-width: $width-large) {
 			@content;
 		}
@@ -78,8 +58,50 @@
 			@content;
 		}
 	}
+	@else if $width == tiny {
+		@media only screen and (min-width: $width-tiny) {
+			@content;
+		}
+	}
 	@else {
 		@media only screen and (min-width: $width) {
+			@content;
+		}
+	}
+}
+
+
+// Desktop First
+
+@mixin desktop($width) {
+	
+	@if $width == wide {
+		@media only screen and (max-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == large {
+		@media only screen and (max-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == medium {
+		@media only screen and (max-width: $width-medium) {
+			@content;
+		}
+	}
+	@else if $width == small {
+		@media only screen and (max-width: $width-small) {
+			@content;
+		}
+	}
+	@else if $width == tiny {
+		@media only screen and (max-width: $width-tiny) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (max-width: $width) {
 			@content;
 		}
 	}
