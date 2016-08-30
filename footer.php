@@ -32,6 +32,7 @@
 					
 				</div>
 			</footer>
+
 		
 	</div> <?php // END container ?>
 </div> <?php // END wrapper ?>
