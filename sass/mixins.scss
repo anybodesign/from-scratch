@@ -39,7 +39,7 @@
 @mixin rwd($width) {
 	
 	@if $width == wide {
-		@media only screen and (min-width: $width-large) {
+		@media only screen and (min-width: $width-wide) {
 			@content;
 		}
 	}
