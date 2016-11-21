@@ -32,6 +32,16 @@
 	z-index: 100;	
 }
 
+@mixin img-opacity($opacity: .5) {
+	a img {
+		transition: opacity .2s ease-in-out;
+	}
+	a:hover img,
+	a:focus img {
+		opacity: $opacity;
+	}	
+}
+
 
 
 // Mobile First
@@ -39,7 +49,7 @@
 @mixin rwd($width) {
 	
 	@if $width == wide {
-		@media only screen and (min-width: $width-large) {
+		@media only screen and (min-width: $width-wide) {
 			@content;
 		}
 	}
@@ -58,11 +68,6 @@
 			@content;
 		}
 	}
-	@else if $width == tiny {
-		@media only screen and (min-width: $width-tiny) {
-			@content;
-		}
-	}
 	@else {
 		@media only screen and (min-width: $width) {
 			@content;
@@ -76,7 +81,7 @@
 @mixin desktop($width) {
 	
 	@if $width == wide {
-		@media only screen and (max-width: $width-large) {
+		@media only screen and (max-width: $width-wide) {
 			@content;
 		}
 	}
@@ -92,11 +97,6 @@
 	}
 	@else if $width == small {
 		@media only screen and (max-width: $width-small) {
-			@content;
-		}
-	}
-	@else if $width == tiny {
-		@media only screen and (max-width: $width-tiny) {
 			@content;
 		}
 	}

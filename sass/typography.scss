@@ -7,6 +7,14 @@ h1, h2, h3, h4, h5, h6,
 .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
 	font-family: $font-bold;
 	font-weight: normal;
+
+	b, strong {
+		font-weight: normal;
+	}
+	i, em {
+		font-style: normal;
+	}
+	
 }
 
 p, 
@@ -24,9 +32,11 @@ small {
 
 b, strong {
 	font-family: $font-bold;
+	font-weight: normal;
 }
 i, em {
 	font-family: $font-italic;
+	font-style: normal;
 }
 
 a {

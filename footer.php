@@ -12,7 +12,9 @@
 		</div> <?php // END content ?>
 		
 
-			<footer id="site_foot" class="row" role="contentinfo">
+		<footer role="contentinfo" id="site_foot">
+			
+			<div class="row inner">
 				<div class="col-12">				
 					
 					<p class="footer-copyright">
@@ -31,10 +33,11 @@
 					<?php endif; ?>
 					
 				</div>
-			</footer>
+			</div>
+			
+		</footer>
 
 		
-	</div> <?php // END container ?>
 </div> <?php // END wrapper ?>
 
 <?php wp_footer(); ?>

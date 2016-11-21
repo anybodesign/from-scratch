@@ -23,13 +23,13 @@
 <body <?php body_class(); ?>>
 
 <div id="wrapper">
-	<div id="container">
+	
+	
+	<header role="banner" id="site_head">
 		
-		
-		<header id="site_head" class="row" role="banner">
+		<div class="row inner">
 			
-			
-			<nav class="col-12  skiplinks-nav" role="navigation">
+			<nav class="col-12 skiplinks-nav" role="navigation">
 				<ul class="skiplinks-menu">
 					<li><a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a></li>
 					<li><a href="#site_content"><?php _e('Go to main content	', 'from-scratch'); ?></a></li>
@@ -53,7 +53,7 @@
 			</div>
 			
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-			<nav id="site_nav" class="col-12" role="navigation">
+			<nav class="col-12" role="navigation" id="site_nav">
 				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'from-scratch'); ?>"><?php _e('Menu', 'from-scratch'); ?><span></span></button>
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',
@@ -64,10 +64,11 @@
 				?>
 			</nav>
 			<?php endif; ?>
-			
-			
-		</header>
-		
-		
-		
-			<div id="site_content">
+
+		</div>
+
+	</header>
+	
+	
+	
+		<div id="site_content">

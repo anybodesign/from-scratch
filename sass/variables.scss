@@ -22,17 +22,16 @@ $background-color: #fff;
 
 
 $font-stack: Helvetica, Arial, sans-serif;
-$font-title:  $font-stack;
-$font-regular:  $font-stack;
-$font-bold:  $font-stack;
-$font-italic:  $font-stack;
+$font-title: $font-stack;
+$font-regular: $font-stack;
+$font-bold: $font-stack;
+$font-italic: $font-stack;
 
 
 // Break-Points
 
 
-$width-tiny: 22.500em; 		// @note: 360px  - base 16px
-$width-small: 30em; 		// @note: 480px
-$width-medium: 48em;		// @note: 768px
-$width-large: 64em; 		// @note: 1024px
+$width-small: 25em; 		// @note: 400px
+$width-medium: 40em;		// @note: 640px
+$width-large: 50em; 		// @note: 800px
 $width-wide: 80em;	 		// @note: 1280px
