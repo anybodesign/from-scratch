@@ -134,7 +134,7 @@ function from_scratch_scripts_load() {
 			'pridx', 
 			get_template_directory_uri() . '/css/pridx.css',
 			array(), 
-			'1.0', 
+			'1.2', 
 			'screen' 
 		);
 		
