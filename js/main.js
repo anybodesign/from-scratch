@@ -29,16 +29,17 @@ jQuery(document).ready(function() {
 	
 	jQuery('.sub-menu-unfold').click(function() {
 		
-		jQuery(this).next('.sub-menu').slideToggle();
-		jQuery(this).toggleClass('sub-menu-opened');
-			
-			if (jQuery(this).hasClass('sub-menu-opened')) {
-				jQuery(this).attr('aria-expanded','true');
-			} else {
-				jQuery(this).attr('aria-expanded','false');
-			}
-			
-		return false;
+		    if(jQuery(this).hasClass('sub-menu-opened')) {
+		        jQuery(this).removeClass('sub-menu-opened');
+				jQuery(this).next('.sub-menu').slideUp();
+		    
+		    } else {
+	
+				jQuery(this).parent().parent().find('.sub-menu-opened').removeClass('sub-menu-opened');
+				jQuery('.sub-menu').slideUp();
+		        jQuery(this).addClass('sub-menu-opened');
+		        jQuery(this).next('.sub-menu').slideDown();
+		    }
 	});
 	
 
