@@ -3,29 +3,12 @@
 // -------------------------
 
 
-// Grid Padding
+// Grid Padding & Max Width
 
 
 $grid-padding: 0.3125em; 	// @note: The padding gutter! equiv. 5px
+$max-width: 75em;			// @note: 1200px
 
-
-// Colors
-
-
-$primary-color: #000;
-$secondary-color: #000;
-$third-color: #000;
-$background-color: #fff;
-
-
-// Fonts
-
-
-$font-stack: Helvetica, Arial, sans-serif;
-$font-title: $font-stack;
-$font-regular: $font-stack;
-$font-bold: $font-stack;
-$font-italic: $font-stack;
 
 
 // Break-Points
@@ -35,3 +18,72 @@ $width-small: 25em; 		// @note: 400px
 $width-medium: 40em;		// @note: 640px
 $width-large: 50em; 		// @note: 800px
 $width-wide: 80em;	 		// @note: 1280px
+
+
+
+// Colors
+
+
+$primary-color: #303030;
+$secondary-color: #606060;
+$third-color: #404040;
+$text-color: #303030;
+$bg-color: #fff;
+
+
+// Fonts
+
+
+/* Your custom fonts :)
+	
+$fontface-regular: url('fonts/bitter-regular.woff') format('woff');
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-italic: url('fonts/bitter-italic.woff') format('woff');	
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-bold: url('fonts/bitter-bold.woff') format('woff');
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-bolditalic: url('fonts/bitter-bolditalic.woff') format('woff');
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-title: url('fonts/share-bold.woff') format('woff');
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title;
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+
+
+$font-stack: Helvetica, Arial, sans-serif;
+
+$font-title: 'Title', $font-stack;
+$font-regular: 'Regular', $font-stack;
+$font-italic: 'Italic', $font-stack;
+$font-bold: 'Bold', $font-stack;
+$font-bolditalic: 'BoldItalic', $font-stack;
+
+$font-mono: 'Andale Mono', Courier, monospace;

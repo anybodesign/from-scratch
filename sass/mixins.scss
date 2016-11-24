@@ -42,6 +42,13 @@
 	}	
 }
 
+@mixin pre-stroke() {
+	content: "–";
+	display: block;
+	margin-bottom: .25em;
+}
+
+
 
 
 // Mobile First

@@ -3,9 +3,24 @@
 // -------------------------
 
 
+// Basics
+
+html {
+	font-size: .625em; 				/* fallback IE8+ */
+	font-size: calc(1em * .625); 	/* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+body {
+	font-size: 1.6em; 				/* base font-size is equivalent "14px" */
+    line-height: 1.5;
+}
+
+
+// Typography
+
 h1, h2, h3, h4, h5, h6,
 .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-	font-family: $font-bold;
+	color: $primary-color;
+	font-family: $font-title;
 	font-weight: normal;
 
 	b, strong {
@@ -15,6 +30,49 @@ h1, h2, h3, h4, h5, h6,
 		font-style: normal;
 	}
 	
+}
+
+h1, 
+.h1-like {
+    font-size:  1.75em; 		/* equiv 28px */
+    font-size: 2.8rem;
+    line-height: 1.7142;
+    margin: 0 0 .8571em 0;
+}
+h2, 
+.h2-like {
+    font-size:  1.625em; 		/* equiv 26px */
+     font-size: 2.6rem;
+   line-height: 1.8462;
+    margin: 0 0 .9231em 0;
+}
+h3, 
+.h3-like {
+    font-size:  1.5em; 			/* equiv 24px */
+    font-size: 2.4rem;
+	line-height:  1;
+    margin: 0 0  1em 0;
+}
+h4, 
+.h4-like {
+    font-size:  1.375em; 		/* equiv 22px */
+    font-size: 2.2rem;
+    line-height:  1.0909;
+    margin: 0 0  1.0909em 0;
+}
+h5, 
+.h5-like {
+    font-size:  1.25em; 		/* equiv 20px */
+    font-size: 2rem;
+    line-height:  1.2;
+    margin: 0 0  1.2em 0;
+}
+h6, 
+.h6-like {
+    font-size:  1.125em; 		/* equiv 18px */
+    font-size: 1.8rem;
+    line-height:  1.3333;
+    margin: 0 0  1.3333em 0;
 }
 
 p, 
@@ -27,7 +85,12 @@ label, legend, figcaption,
 hgroup, address,
 time, span,
 small {
+    font-size: 1em;				/* equiv 16px */ 			
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
 	font-family: $font-regular;
+	color: $primary-color;
 }
 
 b, strong {
@@ -39,27 +102,183 @@ i, em {
 	font-style: normal;
 }
 
+li p,
+li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 a {
-	
-	&:hover {
-	
-	}
+	color: inherit;
+	background-color: transparent;
+}
+a:hover {
+	text-decoration: none;
+}
+
+q,
+blockquote {
+	max-width: 75%;
+	padding: .75em 0 .75em 1.5em;
+	border-left: #999 2px solid;
+}
+q,
+blockquote,
+blockquote p {
+	font-family: $font-bolditalic;
+	font-style: normal;
+	font-size: 2rem;
+}
+blockquote p {
+	margin-bottom: 0;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 75%;
+}
+
+
+// Code stuff
+
+
+code, pre, samp, kbd {
+	white-space: pre-line; // IE fix
+	white-space: pre-wrap;
+	font-family: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+	font-size: 1em;
+	line-height: 1;
+}
+
+kbd {
+	padding: 0 2px;
+	border: 1px solid #999;
+	border-radius : 2px;
+}
+
+code, pre {
+	background-color: #eee;
+	color: #999;
+}
+code {padding: .5em;}
+
+pre {
+	padding: .5em 1.5em;
+	border: #ccc 1px dashed;
+	white-space: pre-line;
+}
+
+mark {
+	padding: .5em;
+	background: #ff0;
+}
+
+.error {
+	padding: .5em;
+	background: red; color: #fff;
+}
+
+
+// Max values
+
+
+img, td,
+blockquote, code, pre,
+textarea, input, video {
+	max-width: 100%;
+}
+
+
+// Lists
+
+
+ul, ol {padding-left: 1.5em;}
+
+ul {list-style-type: circle;}
+ol {list-style-type: decimal;}
+
+nav ul, nav ol {
+	padding: 0; 
+	margin: 0; 
+	list-style-type: none;
+}
+
+li ul, li ol {
+	margin-top: 0; 
+	margin-bottom: 0;
 }
 
 
 // Images
 
 
-a img {
-	
+img {
+	height: auto;
+	border: 0;
+	border-style: none;
 }
-a:hover img {
-	
+
+figure {
+	margin: 0 0 1em 0;
+	overflow: hidden;
+}
+figure img {
+	display: block;
+	width: 100%; height: auto;
+}
+figcaption {
+	font-size: .85em; line-height: 1;
+	margin: .5em 0;
 }
 
 
-// Captions
+// Tables
 
+
+.table-container {
+	width: 100%; overflow-x: auto;
+}
+
+table {
+    margin-bottom: 1.5em;
+}
+thead {}
+thead th {}
+
+td, th {
+	padding: .5em;
+	border: #ccc 1px solid;
+	vertical-align: middle;
+}
+
+// Misc
+
+
+hr {
+  box-sizing: content-box;
+  height: 0; 
+  overflow: visible;
+}
+
+
+// WP Captions
 
 .wp-caption {
 	margin-bottom: 1.5em;
@@ -67,11 +286,17 @@ a:hover img {
 	
 	.wp-caption-text {
 		text-align: left;
+		font-family: $font-mono;
+		font-size: 1.2rem;
+		
+		&::before {
+			@include pre-stroke();
+		}
 	}
 
 }
 
-// Alignments
+// WP Alignments
 
 
 .alignleft {
@@ -88,19 +313,41 @@ a:hover img {
 }
 
 
-// Forms
+// Buttons 
+
+.action-btn,
+button.action-btn,
+input[type=submit].action-btn {
+	display: inline-block;
+	padding: $grid-padding $grid-padding*2;
+	font-size: 1.6rem;
+	font-family: $font-bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: $primary-color;
+	color: #fff;
+	transition: background .2s linear;
+}
+.action-btn:hover,
+.action-btn:focus,
+button.action-btn:hover,
+button.action-btn:focus,
+input[type=submit].action-btn:hover,
+input[type=submit].action-btn:focus {
+	background-color: lighten($primary-color, 10%);
+}
 
 
-// CF7 Response
 
-div.wpcf7-response-output {
-	margin: 10px 0 0 0 !important; padding: 5px !important;
-	font-family: $font-regular;
-}
-span.wpcf7-not-valid-tip {color: #c00;}
-div.wpcf7-validation-errors {
-	border: 0 !important; background-color: #c00; color: #fff !important;
-}
-div.wpcf7-mail-sent-ok {
-	border: 0 !important; background-color: #9c0; color: #fff !important;
-}
+/* ------------------------------
+//
+//  Print
+// 
+// ------------------------------ */
+
+
+@media print {
+	
+	[class*="col-"] {display: block; float: left;}   // @fix: FF print issue
+
+}	

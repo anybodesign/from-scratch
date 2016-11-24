@@ -4,7 +4,7 @@ Author: Thomas Villain
 Author URI: http://anybodesign.com/
 Theme URI: https://github.com/anybodesign/from-scratch
 Description: A WordPress Starter Theme using Pridx'
-Version: 1.4
+Version: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: from-scratch
@@ -16,6 +16,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import 'sass/variables.scss';
 @import 'sass/mixins.scss';
+
+@import 'sass/typography.scss';
+@import 'sass/forms.scss';
 
 
 /* ------------------------- */
@@ -34,10 +37,12 @@ body {
 #site_content, .inner {
 	position: relative;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: $max-width;
 }
 
-[class*="col-"] { padding: $grid-padding; }
+[class*="col-"] { 
+	padding: $grid-padding; 
+}
 
 
 /* ------------------------- */
@@ -276,15 +281,6 @@ body {
 }
 
 
-
-/* ------------------------- */
-/* = Typography
-/* ------------------------- */
-
-
-@import 'sass/typography.scss';
-
-
 /* ------------------------- */
 /* = Content
 /* ------------------------- */
@@ -441,18 +437,3 @@ body {
 .txtl {text-align: left;} 
 .txtc {text-align: center;}
 
-
-/* ------------------------- */
-/* = Fonts
-/* ------------------------- */
-
-/* Add your own fonts
-
-@font-face {
-	font-family: 'xxx';
-	src: url('fonts/xxx.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-*/
