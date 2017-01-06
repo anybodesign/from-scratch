@@ -4,7 +4,7 @@ Author: Thomas Villain
 Author URI: http://anybodesign.com/
 Theme URI: https://github.com/anybodesign/from-scratch
 Description: A WordPress Starter Theme using Pridx'
-Version: 1.5
+Version: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: from-scratch
@@ -16,6 +16,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import 'sass/variables.scss';
 @import 'sass/mixins.scss';
+
 
 @import 'sass/typography.scss';
 @import 'sass/forms.scss';
@@ -70,220 +71,14 @@ body {
 /* = Nav
 /* ------------------------- */
 
+@import 'sass/nav.scss';
 
-// Skiplinks
-
-.skiplinks-nav {
-	position: absolute; 
-	padding-top: 0;
-}
-.skiplinks-menu {
-	
-	a {
-		position: absolute; top: -65px;
-		padding: $grid-padding;
-		background-color: #fff;
-		transition: all .2s ease-in;
-	
-		&:focus {top: -5px;}
-
-	}
-}
-
-
-// Main nav
-
-
-#site_nav {}
-
-.main-menu {
-	
-	display: none;
-	
-	& > li {
-		position: relative;
-		display: block;
-		
-		@include rwd(medium) {
-			display: inline-block;
-			margin-right: $grid-padding;
-		}
-		
-		a {
-			
-		}
-		a:hover, a:focus,
-		&.current-menu-item a {
-			
-		}
-		
-		// If Menu item has children
-		
-		&.menu-item-has-children {
-			padding-right: 20px;
-
-			@include rwd(wide) {
-				padding: 0;
-				
-				&:hover > .sub-menu,
-				&:focus > .sub-menu {
-					visibility: visible;
-					opacity: 1;
-				}
-			}
-				
-		}
-		
-		// Sub-Menus behaviors
-		
-		.sub-menu {
-			display: none;
-			position: relative;
-			
-			@include rwd(medium) {
-				position: absolute;
-				min-width: 100%;
-				z-index: 100;
-			}
-
-			@include rwd(wide) {
-				display: block;
-				visibility: hidden;
-				opacity: 0;
-				transition: opacity .2s ease-in-out;
-			}
-			
-			
-		
-			& > li {
-
-				a {
-					display: block;
-				}
-				a:hover, a:focus,
-				&.current-menu-item a {
-					
-				}
-			}
-			
-			.current-menu-item &,
-			.current-menu-ancestor & {
-				
-			}			
-		}
-		
-	}
-	
-	@include rwd(medium) {
-		display: block;
-	}
-	
-}
-
-.sub-menu-unfold {
-	position: absolute;
-	top: 0; right: 0;
-	display: block;
-	height: 24px; width: 24px;
-	margin-top: 0;
-	border: 0; border-radius: 12px; padding: 0;
-	background: #ccc !important;
-	
-	&::after, &::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 11px; left: 4px;
-		width: 16px; height: 3px;
-		background-color: #000;
-		@include transition();
-	}
-	&::after {
-		transform: rotate(-90deg);
-	}
-	&::before {}
-	
-	span {
-		@include a11y-hidden();
-	}
-	
-	&.sub-menu-opened::after {transform: rotate(45deg);}
-	&.sub-menu-opened::before {transform: rotate(-45deg);}
-	
-	@include rwd(medium) {
-		height: 16px; width: 16px;
-		top: 50%; margin-top: -8px;
-		border-radius: 8px;
-		
-		&::after, &::before {
-			top: 7px; left: 3px;
-			width: 10px; height: 2px;
-		} 
-	}
-	
-	@include rwd(wide) {
-		display: none;
-	}
-}
-
-
-
-#menu-toggle {
-
-	// Hamburger Menu
-	
-	display: block; 
-	height: 23px; width: 23px;
-	position: relative;
-	border: 0; border-radius: 0; padding: 0;
-	cursor: pointer;
-	@include a11y-hide(60px);
-
-	span {
-		position: absolute; 
-		top: 10px; right: 0;
-	}
-	span, span::after, span::before {
-		display: block;
-		width: 23px; height: 3px;
-		background-color: #000;
-		transition: all .3s linear;
-	}
-	span::after, span::before {
-		position: absolute;
-		content: ""; 
-	}
-	span::after {bottom: -9px; left: 0;}
-	span::before {top: -9px; left: 0;}
-
-	&.menu-opened span {
-		background-color: transparent; 
-		height: 1px;
-	}
-	&.menu-opened span::after {
-		top: 0;
-		transform: rotate(45deg);
-		background-color: #c00;
-	}
-	&.menu-opened span::before {
-		top: 0;
-		transform: rotate(-45deg);
-		background-color: #c00;
-	}
-
-	&:hover {
-		background-color: transparent;
-	}	
-	
-	@include rwd(medium) {
-		display: none;				
-	}
-}
 
 
 /* ------------------------- */
 /* = Content
 /* ------------------------- */
+
 
 
 #site_content {}
@@ -306,90 +101,7 @@ body {
 /* = Posts
 /* ------------------------- */
 
-.sticky {
-	display: block;
-}
-
-.tag-links {
-	
-}
-
-.nav-links {
-	font-family: $font-regular;
-}
-
-.page-links {
-	
-}
-
-.meta-infos {
-	
-}
-
-/* ------------------------- */
-/* = Comments
-/* ------------------------- */
-
-.meta-comments {
-	
-}
-
-.bypostauthor {
-	display: block;
-}
-
-
-/* ------------------------- */
-/* = Galleries
-/* ------------------------- */
-
-
-.gallery {
-	margin-bottom: 1.5em;
-}
-
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-
-.gallery-caption {
-	display: block;
-}
+@import 'sass/posts.scss';
 
 
 
