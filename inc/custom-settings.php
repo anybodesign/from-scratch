@@ -26,12 +26,6 @@ function from_scratch_settings_init(  ) {
 		'from_scratch_settings_section1_callback', 
 		'pluginPage'
 	);
-	add_settings_section(
-		'from_scratch_pluginPage_section2', 
-		__( 'Social Networks', 'from-scratch' ), 
-		'from_scratch_settings_section2_callback', 
-		'pluginPage'
-	);
 
 	add_settings_field( 
 		'from_scratch_copyright', 
@@ -40,31 +34,6 @@ function from_scratch_settings_init(  ) {
 		'pluginPage', 
 		'from_scratch_pluginPage_section1' 
 	);
-
-	add_settings_field( 
-		'from_scratch_twitter', 
-		__( 'Twitter URL', 'from-scratch' ), 
-		'from_scratch_twitter_render', 
-		'pluginPage', 
-		'from_scratch_pluginPage_section2' 
-	);
-
-	add_settings_field( 
-		'from_scratch_facebook', 
-		__( 'Facebook URL', 'from-scratch' ), 
-		'from_scratch_facebook_render', 
-		'pluginPage', 
-		'from_scratch_pluginPage_section2' 
-	);
-	
-	add_settings_field( 
-		'from_scratch_google', 
-		__( 'Google+ URL', 'from-scratch' ), 
-		'from_scratch_google_render', 
-		'pluginPage', 
-		'from_scratch_pluginPage_section2' 
-	);
-
 
 }
 
@@ -77,30 +46,6 @@ function from_scratch_copyright_render(  ) {
 	<?php
 
 }
-function from_scratch_twitter_render(  ) { 
-
-	$options = get_option( 'from_scratch_settings' );
-	?>
-	<input type='text' name='from_scratch_settings[from_scratch_twitter]' value='<?php echo $options['from_scratch_twitter']; ?>'>
-	<?php
-
-}
-function from_scratch_facebook_render(  ) { 
-
-	$options = get_option( 'from_scratch_settings' );
-	?>
-	<input type='text' name='from_scratch_settings[from_scratch_facebook]' value='<?php echo $options['from_scratch_facebook']; ?>'>
-	<?php
-
-}
-function from_scratch_google_render(  ) { 
-
-	$options = get_option( 'from_scratch_settings' );
-	?>
-	<input type='text' name='from_scratch_settings[from_scratch_google]' value='<?php echo $options['from_scratch_google']; ?>'>
-	<?php
-
-}
 
 
 // Settings Callbacks
@@ -108,11 +53,6 @@ function from_scratch_google_render(  ) {
 function from_scratch_settings_section1_callback(  ) { 
 
 	echo __( 'The site&rsquo;s copyright, displayed in the footer', 'from-scratch' );
-
-}
-function from_scratch_settings_section2_callback(  ) { 
-
-	echo __( 'Enter your Social Networks URLs', 'from-scratch' );
 
 }
 
