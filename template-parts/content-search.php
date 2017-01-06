@@ -12,7 +12,7 @@
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						
-						<?php if ( 'from-scratch' != get_the_post_thumbnail() ) { ?>
+						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 						</figure>
