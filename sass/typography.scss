@@ -92,6 +92,11 @@ small {
 	font-family: $font-regular;
 	color: $primary-color;
 }
+span {
+	font-family: inherit;
+	color: inherit;
+	font-size: inherit;
+}
 
 b, strong {
 	font-family: $font-bold;
@@ -249,24 +254,54 @@ figcaption {
 }
 
 
-// Tables
+// Tables (responsive)
 
 
 .table-container {
-	width: 100%; overflow-x: auto;
+	width: 100%; 
+	overflow-x: auto;
 }
 
 table {
+    width: 100%;
     margin-bottom: 1.5em;
 }
-thead {}
-thead th {}
+thead {
+	display: none;
+}
 
 td, th {
+	display: block;
+	vertical-align: middle;
+	margin-bottom: 0;
 	padding: .5em;
 	border: #ccc 1px solid;
-	vertical-align: middle;
+	
+	thead &, 
+	tbody &, 
+	tfoot & {
+		border-top: 0;
+	}
+	tbody &:first-child,
+	thead & {
+		border-top: #ccc 1px solid;
+	}
+	
 }
+
+@include rwd(medium) {
+	thead {
+		display: table-row-group;
+	}
+	tr {
+		display: table-row;
+	}
+	td, th {
+		display: table-cell;
+	}
+}
+
+
 
 // Misc
 
