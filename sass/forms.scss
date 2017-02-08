@@ -135,7 +135,7 @@ input[type="submit"]:hover {
 
 .formfield-radio input[type="radio"],
 .formfield-checkbox input[type="checkbox"] {
-	visibility: hidden; 
+	opacity: 0; 
 	position: absolute; 
 	top: 0; 
 	left: 0;
@@ -194,7 +194,8 @@ input[type="submit"]:hover {
 
 
 .formfield-select--container {
-	position: relative; overflow: hidden;
+	position: relative; 
+	overflow: hidden;
 	background-color: #fff;
 	border: #ccc 1px solid;
 	margin: 0 0 1.5em 0;
