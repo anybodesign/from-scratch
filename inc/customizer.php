@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage From_Scratch
- * @since From Scratch 1.0
+ * @since From Scratch 1.8
  */
  
  
@@ -13,7 +13,7 @@
 function fs_customize_register($wp_customize) {
 	 
 	// Create Some Sections
-		$wp_customize->add_section('fs_color_section', array(
+	$wp_customize->add_section('fs_color_section', array(
 		'title' 		=> __('Theme Colors', 'from-scratch'),
 		'description' 	=> __('Colors customisation', 'from-scratch'),
 		'priority'		=> 30,
@@ -60,7 +60,8 @@ function fs_customize_register($wp_customize) {
 	// Footer text
 	
 	$wp_customize->add_setting('footer_text', array(
-		'default'			=> '',
+		'default'				=> '',
+		'sanitize_callback'		=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('footer_text_ctrl', array(
 		'label'			=> __('Custom footer text', 'from-scratch'),
@@ -72,7 +73,8 @@ function fs_customize_register($wp_customize) {
 	// WP Credits
 	
 	$wp_customize->add_setting('display_wp', array(
-		'default'	=> true,
+		'default'				=> true,
+		'sanitize_callback'		=> 'fs_customizer_sanitize_checkbox'
 	));
 	
 	$wp_customize->add_control('display_wp_ctrl', array(
@@ -84,11 +86,13 @@ function fs_customize_register($wp_customize) {
 	
 	// Site logo
 	
-	$wp_customize->add_setting('site_logo');
+	$wp_customize->add_setting('site_logo', array(
+		'default'				=> '',
+		'sanitize_callback'		=> 'esc_url_raw'
+	));
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
 		'label'			=> __('Site Logo', 'from-scratch'),
-		//'description'	=> __('Upload your logo.', 'from-scratch'),		
 		'section'		=> 'title_tagline',
 		'settings'		=> 'site_logo',
 	)));
@@ -99,6 +103,15 @@ function fs_customize_register($wp_customize) {
 }
 add_action('customize_register', 'fs_customize_register');
 
+
+// Sanitize
+
+function fs_customizer_sanitize_checkbox( $input ) {
+	if ( $input === true || $input === '1' ) {
+		return '1';
+	}
+	return '';
+}
 
 
 // Customizer Colors Output

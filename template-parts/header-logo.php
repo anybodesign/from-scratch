@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage From_Scratch
- * @since From Scratch 1.0
+ * @since From Scratch 1.8
  */
 ?>
 
