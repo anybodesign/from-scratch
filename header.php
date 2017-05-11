@@ -32,16 +32,20 @@
 			<nav class="col-12 skiplinks-nav" role="navigation">
 				<ul class="skiplinks-menu">
 					<li><a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a></li>
-					<li><a href="#site_content"><?php _e('Go to main content	', 'from-scratch'); ?></a></li>
+					<li><a href="#site_content"><?php _e('Go to main content', 'from-scratch'); ?></a></li>
 				</ul>
 			</nav>
 	
 	
 			<div class="col-12 site-brand">
 				<?php if ( is_front_page() ) { ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title">
+					<?php get_template_part('template-parts/header', 'logo'); ?>
+				</h1>
 				<?php } else { ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title">
+					<?php get_template_part('template-parts/header', 'logo'); ?>
+				</p>
 				<?php } ?>
 	
 				<?php 

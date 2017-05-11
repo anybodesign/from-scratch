@@ -18,7 +18,15 @@
 				<div class="col-12">				
 					
 					<p class="footer-copyright">
-						&copy; <?php echo date(' Y '); if (get_option( 'from_scratch_settings' )['from_scratch_copyright']) { echo get_option( 'from_scratch_settings' )['from_scratch_copyright']; } else { echo esc_url( bloginfo( 'name' ) ); } ?>
+						<?php if(get_theme_mod('footer_text')) {
+							echo get_theme_mod('footer_text', ''); 
+						} else {
+							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
+						} ?>
+						
+						<?php if(get_theme_mod('display_wp') == true) { ?>
+						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'from-scratch'); ?></a>
+						<?php } ?>
 					</p>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
