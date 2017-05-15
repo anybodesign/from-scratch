@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-05-11 10:34+0200\n"
-"PO-Revision-Date: 2017-05-11 10:34+0200\n"
+"POT-Creation-Date: 2017-05-15 09:56+0200\n"
+"PO-Revision-Date: 2017-05-15 09:56+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:21
+#: 404.php:20
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! Page introuvable."
 
@@ -102,19 +102,19 @@ msgstr "Couleur primaire"
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: inc/customizer.php:66
+#: inc/customizer.php:67
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:67
+#: inc/customizer.php:68
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:80
+#: inc/customizer.php:82
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:90
+#: inc/customizer.php:95
 msgid "Site Logo"
 msgstr "Logo du site"
 
@@ -122,19 +122,19 @@ msgstr "Logo du site"
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:33
+#: index.php:32
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:34
+#: index.php:33
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:35
+#: index.php:34
 msgid "Page"
 msgstr "Page"
 
-#: search.php:19
+#: search.php:18
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
@@ -208,8 +208,8 @@ msgid "https://github.com/anybodesign/from-scratch"
 msgstr "https://github.com/anybodesign/from-scratch"
 
 #. Description of the plugin/theme
-msgid "A WordPress Starter Theme using Pridx'"
-msgstr "Un starter thème WordPress utilisant Pridx'"
+msgid "A WordPress Starter Theme using Prid’x"
+msgstr "Un starter thème WordPress utilisant Prid’x"
 
 #. Author of the plugin/theme
 msgid "Thomas Villain"
