@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-				<div class="row inner xxx">
+				<div class="row inner">
 					
 					<div class="col-12">
 	
