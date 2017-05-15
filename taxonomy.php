@@ -11,41 +11,39 @@
 
 get_header(); ?>
 
-				<div id="primary" class="content-area has-sidebar" role="main">
+				<div class="row inner">
 					
-					<div class="row">
-						<div class="col-12">
-		
-						<?php if ( have_posts() ) : ?>
+					<div class="col-9">
+	
+					<?php if ( have_posts() ) : ?>
+			
+						<header class="page-header">
+							<?php
+								the_archive_title( '<h1 class="page-title">', '</h1>' );
+								the_archive_description( '<div class="taxonomy-desc">', '</div>' );
+							?>
+						</header>				
+			
+						<?php while ( have_posts() ) : the_post(); ?>
+			
+							<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+			
+						<?php endwhile; ?>
+			
+						<?php the_posts_navigation(); ?>
+			
+					<?php else : ?>
+	
+						<?php get_template_part( 'template-parts/content', 'none' ); ?>
 				
-							<header class="page-header">
-								<?php
-									the_archive_title( '<h1 class="page-title">', '</h1>' );
-									the_archive_description( '<div class="taxonomy-desc">', '</div>' );
-								?>
-							</header>				
-				
-							<?php while ( have_posts() ) : the_post(); ?>
-				
-								<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-				
-							<?php endwhile; ?>
-				
-							<?php the_posts_navigation(); ?>
-				
-						<?php else : ?>
-		
-							<?php get_template_part( 'template-parts/content', 'none' ); ?>
-					
-						<?php endif; ?>	
-							
-		
-						</div>					
-					</div>
-				
-				</div> <?php // END site_main ?>
-				
-				<?php get_sidebar(); ?>
+					<?php endif; ?>	
+	
+					</div>	
 
+					<div class="col-3">
+						<?php get_sidebar(); ?>
+					</div>
+									
+				</div>
 
 <?php get_footer(); ?>

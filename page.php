@@ -10,25 +10,21 @@
  */
 get_header(); ?>
 
-				<main id="primary" class="content-area" role="main">
-					
-					<div class="row">
-						<div class="col-12">
-		
-						<?php while ( have_posts() ) : the_post(); ?>
-			
-							<?php get_template_part( 'template-parts/content', 'page' ); ?>
-			
-						<?php endwhile; ?>
-						
-						
-						<?php if ( comments_open() || get_comments_number() ) : ?>
-					  		<?php comments_template(); ?>
-						<?php endif;?>
-							
-						</div>					
-					</div>
-				
-				</main> <?php // END primary ?>
+				<div class="row inner">
+					<div class="col-12">
 	
+					<?php while ( have_posts() ) : the_post(); ?>
+		
+						<?php get_template_part( 'template-parts/content', 'page' ); ?>
+		
+					<?php endwhile; ?>
+					
+					
+					<?php if ( comments_open() || get_comments_number() ) : ?>
+				  		<?php comments_template(); ?>
+					<?php endif;?>
+						
+					</div>					
+				</div>
+				
 <?php get_footer(); ?>

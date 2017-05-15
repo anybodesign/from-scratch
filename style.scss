@@ -3,8 +3,8 @@ Theme Name: From Scratch
 Author: Thomas Villain
 Author URI: https://anybodesign.com/
 Theme URI: https://github.com/anybodesign/from-scratch
-Description: A WordPress Starter Theme using Pridx'
-Version: 1.8
+Description: A WordPress Starter Theme using Prid’x
+Version: 1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: from-scratch
@@ -37,7 +37,7 @@ body {
 	text-size-adjust: none;
 }
 
-#site_content, .inner {
+.inner {
 	position: relative;
 	margin: 0 auto;
 	max-width: $max-width;
@@ -85,17 +85,6 @@ body {
 
 #site_content {}
 
-#primary.has-sidebar, #secondary {
-	display: inline-block;
-	margin-right: -$grid-padding;
-}
-#primary.has-sidebar {
-	width: 75%;
-}	
-#secondary {
-	width: 25%;
-	padding-left: $grid-padding *2;
-}
 
 
 

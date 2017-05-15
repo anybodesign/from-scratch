@@ -8,30 +8,20 @@
  */
 get_header(); ?>
 
-				<div id="primary" class="content-area has-sidebar" role="main">
+				<div class="row inner">
 					
-					<div class="row">
-						<div class="col-12">
+					<div class="col-9">
+	
+					<?php while ( have_posts() ) : the_post(); ?>
 		
-						<?php while ( have_posts() ) : the_post(); ?>
-			
-							<?php get_template_part( 'template-parts/content', 'page' ); ?>
-			
-						<?php endwhile; ?>
-						
-						
-						<?php if ( comments_open() || get_comments_number() ) : ?>
-					  		<?php comments_template(); ?>
-						<?php endif;?>
-							
-						</div>					
-					</div>
-					
+						<?php get_template_part( 'template-parts/content', 'page' ); ?>
+		
+					<?php endwhile; ?>
 
-					
+
 					<?php 
 						
-						// Custom Tax Query Loop
+						// Custom Tax Query Loop Example
 						
 						$args = array(
 							'posts_per_page' 	=> 4,
@@ -52,25 +42,22 @@ get_header(); ?>
 				
 					<?php if ($query->have_posts()) : ?>
 										
-					<div class="row">
-						<div class="col-12">
+						<?php while ($query->have_posts()) : $query->the_post(); ?>
+					
+							<?php get_template_part( 'template-parts/content' ); ?>
 
-							<?php while ($query->have_posts()) : $query->the_post(); ?>
-						
-								<?php get_template_part( 'template-parts/content' ); ?>
-
-							<?php endwhile; ?>
-
-						</div>					
-					</div>
+						<?php endwhile; ?>
 
 					<?php endif; ?>
 					<?php wp_reset_postdata(); ?>
-				
-				</div> <?php // END primary ?>
-	
-	
-				<?php get_sidebar(); ?>
 
-
+					</div>
+					
+					
+					<div class="col-3">
+						<?php get_sidebar(); ?>
+					</div>
+					
+				</div>	
+						
 <?php get_footer(); ?>

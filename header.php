@@ -75,4 +75,4 @@
 	
 	
 	
-		<div id="site_content">
+		<main id="site_content" class="content-area" role="main">

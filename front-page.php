@@ -11,25 +11,22 @@
 
 get_header(); ?>
 
-				<div id="primary" class="content-area" role="main">
+				<div class="row inner xxx">
 					
-					<div class="row">
-						<div class="col-12">
+					<div class="col-12">
+	
+					<?php while ( have_posts() ) : the_post(); ?>
 		
-						<?php while ( have_posts() ) : the_post(); ?>
-			
-							<?php get_template_part( 'template-parts/content', 'page' ); ?>
-			
-						<?php endwhile; ?>
-						
-						</div>					
-					</div>
+						<?php get_template_part( 'template-parts/content', 'page' ); ?>
+		
+					<?php endwhile; ?>
 					
+					</div>
 					
 					
 					<?php 
 						
-						// Custom Post type Loop 
+						// Custom Post type Loop Example
 						
 						$args = array(
 							'posts_per_page' 	=> 4,
@@ -42,23 +39,20 @@ get_header(); ?>
 					?>						
 				
 					<?php if ($query->have_posts()) : ?>
+					
+					<div class="col-12">
 										
-					<div class="row">
-						<div class="col-12">
+						<?php while ($query->have_posts()) : $query->the_post(); ?>
+					
+							<?php get_template_part( 'template-parts/content' ); ?>
 
-							<?php while ($query->have_posts()) : $query->the_post(); ?>
-						
-								<?php get_template_part( 'template-parts/content' ); ?>
-
-							<?php endwhile; ?>
-
-						</div>					
+						<?php endwhile; ?>
+					
 					</div>
-
+					
 					<?php endif; ?>
 					<?php wp_reset_postdata(); ?>
-
-				
-				</div> <?php // END primary ?>
+									
+				</div>
 
 <?php get_footer(); ?>

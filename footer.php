@@ -9,7 +9,7 @@
  * @since From Scratch 1.0
  */
 ?>
-		</div> <?php // END content ?>
+		</main> <?php // END content ?>
 		
 
 		<footer role="contentinfo" id="site_foot">

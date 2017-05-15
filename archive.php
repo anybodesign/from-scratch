@@ -11,9 +11,8 @@
 
 get_header(); ?>
 
-				<div id="primary" class="content-area has-sidebar" role="main">
-					
-					<div class="row">
+					<div class="row inner">
+						
 						<div class="col-12">
 		
 						<?php if ( have_posts() ) : ?>
@@ -38,14 +37,13 @@ get_header(); ?>
 							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 					
 						<?php endif; ?>	
-							
 		
-						</div>					
+						</div>
+
+						<div class="col-3">
+							<?php get_sidebar(); ?>
+						</div>
+											
 					</div>
 				
-				</div> <?php // END site_main ?>
-				
-				<?php get_sidebar(); ?>
-
-
 <?php get_footer(); ?>
