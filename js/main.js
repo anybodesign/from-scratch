@@ -1,46 +1,73 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 	
 	
 	// Responsive Main Menu
 
-	jQuery('#menu-toggle').click(function() {
-		jQuery('.main-menu').slideToggle();
-		jQuery(this).toggleClass('menu-opened');
+	$('#menu-toggle').click(function() {
+		$('.main-menu').slideToggle();
+		$(this).toggleClass('menu-opened');
 			
-			if (jQuery(this).hasClass('menu-opened')) {
-				jQuery('.main-menu').attr('aria-expanded','true');
+			if ($(this).hasClass('menu-opened')) {
+				$('.main-menu').attr('aria-expanded','true');
 			} else {
-				jQuery('.main-menu').attr('aria-expanded','false');
+				$('.main-menu').attr('aria-expanded','false');
 			}
 			
 		return false;
 	});
 
-		jQuery(window).resize(function() {
-			if (jQuery(window).width() > 640) {
-		    	jQuery('.main-menu').show().removeAttr('style').removeAttr('aria-expanded');
-		    	jQuery('.sub-menu').show().removeAttr('style');
-		    	jQuery('#menu-toggle').removeClass('menu-opened');
+		$(window).resize(function() {
+			if ($(window).width() > 640) {
+		    	$('.main-menu').show().removeAttr('style').removeAttr('aria-expanded');
+		    	$('.sub-menu').show().removeAttr('style');
+		    	$('#menu-toggle').removeClass('menu-opened');
 			}
 		});
 	
 	
 	// Sub-Menus Toggle Button
 	
-	jQuery('.sub-menu-unfold').click(function() {
+	$('.sub-menu-unfold').click(function() {
 		
-		    if(jQuery(this).hasClass('sub-menu-opened')) {
-		        jQuery(this).removeClass('sub-menu-opened');
-				jQuery(this).next('.sub-menu').slideUp();
+		    if($(this).hasClass('sub-menu-opened')) {
+		        $(this).removeClass('sub-menu-opened');
+				$(this).next('.sub-menu').slideUp();
 		    
 		    } else {
 	
-				jQuery(this).parent().parent().find('.sub-menu-opened').removeClass('sub-menu-opened');
-				jQuery('.sub-menu').slideUp();
-		        jQuery(this).addClass('sub-menu-opened');
-		        jQuery(this).next('.sub-menu').slideDown();
+				$(this).parent().parent().find('.sub-menu-opened').removeClass('sub-menu-opened');
+				$('.sub-menu').slideUp();
+		        $(this).addClass('sub-menu-opened');
+		        $(this).next('.sub-menu').slideDown();
 		    }
 	});
+	
+
+	// Responsive Players
+			
+	$(window).on('load',function() {
+		
+		$("iframe").each(function() {
+			
+			if($(this).is("[src*=youtube], [src*=vimeo]")) {
+				var yt_width = $(this).width();
+				$( this ).attr('style','height: '+yt_width/1.77+'px');
+			}
+		});
+		
+	});	
+
+	$(window).on('resize',function() {
+
+		$("iframe").each(function() {
+			if($(this).is("[src*=youtube], [src*=vimeo]")) {
+				var yt_width = $(this).width();
+				$( this ).attr('style','height: '+yt_width/1.77+'px');
+			}
+		});
+		
+	});	
+	
 	
 
 });
