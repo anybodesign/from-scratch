@@ -142,3 +142,4 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	__FILE__,
 	'from-scratch'
 );
+$myUpdateChecker->setBranch('master');
