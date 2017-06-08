@@ -131,3 +131,14 @@ function from_scratch_widgets_init() {
 	));
 }
 add_action( 'widgets_init', 'from_scratch_widgets_init' );
+
+
+
+// Auto-Updater
+
+require 'inc/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/anybodesign/from-scratch/',
+	__FILE__,
+	'from-scratch'
+);
