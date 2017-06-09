@@ -18,11 +18,6 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content', 'page' ); ?>
 		
 					<?php endwhile; ?>
-					
-					
-					<?php if ( comments_open() || get_comments_number() ) : ?>
-				  		<?php comments_template(); ?>
-					<?php endif;?>
 						
 					</div>					
 				</div>

@@ -30,6 +30,9 @@
 		<div class="row inner">
 			
 			<nav class="col-12 skiplinks-nav" role="navigation">
+				
+				<?php // The Skiplinks ?>
+				
 				<ul class="skiplinks-menu">
 					<li><a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a></li>
 					<li><a href="#site_content"><?php _e('Go to main content', 'from-scratch'); ?></a></li>
@@ -56,6 +59,8 @@
 							
 			</div>
 			
+			<?php // The main menu location ?>
+			
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
 			<nav class="col-12" role="navigation" id="site_nav">
 				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'from-scratch'); ?>"><?php _e('Menu', 'from-scratch'); ?><span></span></button>
@@ -75,4 +80,4 @@
 	
 	
 	
-		<main id="site_content" class="content-area" role="main">
+		<main class="content-area" role="main" id="site_content">

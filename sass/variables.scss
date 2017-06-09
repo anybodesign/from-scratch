@@ -32,10 +32,9 @@ $bg-color: #fff;
 
 
 // Fonts
+// Define your custom fonts :)
 
-
-/* Your custom fonts :)
-	
+/* 
 $fontface-regular: url('fonts/bitter-regular.woff') format('woff');
 @font-face {
 	font-family: 'Regular';
@@ -78,7 +77,11 @@ $fontface-title: url('fonts/share-bold.woff') format('woff');
 */
 
 
+// Customize your Font-Stack
+
 $font-stack: Helvetica, Arial, sans-serif;
+
+// The Fonts
 
 $font-title: 'Title', $font-stack;
 $font-regular: 'Regular', $font-stack;
@@ -86,4 +89,5 @@ $font-italic: 'Italic', $font-stack;
 $font-bold: 'Bold', $font-stack;
 $font-bolditalic: 'BoldItalic', $font-stack;
 
-$font-mono: 'Andale Mono', Courier, monospace;
+$font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+

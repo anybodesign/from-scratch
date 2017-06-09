@@ -1,16 +1,18 @@
-// -------------------------
-// = Typography
-// -------------------------
+// ------------------------------
+//
+// = Typography & Markup Elements
+//
+// ------------------------------
 
 
 // Basics
 
 html {
-	font-size: .625em; 				/* fallback IE8+ */
-	font-size: calc(1em * .625); 	/* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+	font-size: .625em; 				// fallback IE8+
+	font-size: calc(1em * .625); 	// IE9-IE11 math fixing. See http://bit.ly/1g4X0bX
 }
 body {
-	font-size: 1.6em; 				/* base font-size is equivalent "14px" */
+	font-size: 1.6em; 				// base font-size is equivalent "14px"
     line-height: 1.5;
 }
 
@@ -29,50 +31,43 @@ h1, h2, h3, h4, h5, h6,
 	i, em {
 		font-style: normal;
 	}
-	
 }
 
 h1, 
 .h1-like {
-    font-size:  1.75em; 		/* equiv 28px */
     font-size: 2.8rem;
     line-height: 1.7142;
     margin: 0 0 .8571em 0;
 }
 h2, 
 .h2-like {
-    font-size:  1.625em; 		/* equiv 26px */
-     font-size: 2.6rem;
-   line-height: 1.8462;
-    margin: 0 0 .9231em 0;
+	font-size: 2.6rem;
+	line-height: 1.8462;
+	margin: 0 0 .9231em 0;
 }
 h3, 
 .h3-like {
-    font-size:  1.5em; 			/* equiv 24px */
     font-size: 2.4rem;
-	line-height:  1;
-    margin: 0 0  1em 0;
+	line-height: 1;
+    margin: 0 0 1em 0;
 }
 h4, 
 .h4-like {
-    font-size:  1.375em; 		/* equiv 22px */
     font-size: 2.2rem;
-    line-height:  1.0909;
-    margin: 0 0  1.0909em 0;
+    line-height: 1.0909;
+    margin: 0 0 1.0909em 0;
 }
 h5, 
 .h5-like {
-    font-size:  1.25em; 		/* equiv 20px */
     font-size: 2rem;
-    line-height:  1.2;
-    margin: 0 0  1.2em 0;
+    line-height: 1.2;
+    margin: 0 0 1.2em 0;
 }
 h6, 
 .h6-like {
-    font-size:  1.125em; 		/* equiv 18px */
     font-size: 1.8rem;
-    line-height:  1.3333;
-    margin: 0 0  1.3333em 0;
+    line-height: 1.3333;
+    margin: 0 0 1.3333em 0;
 }
 
 p, 
@@ -85,7 +80,6 @@ label, legend, figcaption,
 hgroup, address,
 time, span,
 small {
-    font-size: 1em;				/* equiv 16px */ 			
     font-size: 1.6rem;
     line-height: 1.5;
     margin: 0 0 1.5em 0;
@@ -163,11 +157,10 @@ small {
 
 // Code stuff
 
-
 code, pre, samp, kbd {
 	white-space: pre-line; // IE fix
 	white-space: pre-wrap;
-	font-family: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+	font-family: $font-mono;
 	font-size: 1em;
 	line-height: 1;
 }
@@ -195,14 +188,17 @@ mark {
 	background: #ff0;
 }
 
+
+// If an error output is needed
+
 .error {
 	padding: .5em;
-	background: red; color: #fff;
+	background: red; 
+	color: #fff;
 }
 
 
 // Max values
-
 
 img, td,
 blockquote, code, pre,
@@ -213,26 +209,32 @@ textarea, input, video {
 
 // Lists
 
+ul, ol {
+	padding-left: 1.5em;
+}
 
-ul, ol {padding-left: 1.5em;}
+ul {
+	list-style-type: circle;
+}
+ol {
+	list-style-type: decimal;
+}
 
-ul {list-style-type: circle;}
-ol {list-style-type: decimal;}
-
-nav ul, nav ol {
+nav ul, 
+nav ol {
 	padding: 0; 
 	margin: 0; 
 	list-style-type: none;
 }
 
-li ul, li ol {
+li ul, 
+li ol {
 	margin-top: 0; 
 	margin-bottom: 0;
 }
 
 
 // Images
-
 
 img {
 	height: auto;
@@ -243,13 +245,17 @@ img {
 figure {
 	margin: 0 0 1em 0;
 	overflow: hidden;
+	
+	img {
+		display: block;
+		width: 100%; 
+		height: auto;
+	}
 }
-figure img {
-	display: block;
-	width: 100%; height: auto;
-}
+
 figcaption {
-	font-size: .85em; line-height: 1;
+	font-size: .85em; 
+	line-height: 1;
 	margin: .5em 0;
 }
 
@@ -257,7 +263,7 @@ figcaption {
 // Tables (responsive)
 
 
-.table-container {
+.table-container {  // Wrap the <table> inside this container
 	width: 100%; 
 	overflow-x: auto;
 }
@@ -338,21 +344,28 @@ iframe {
 // WP Alignments
 
 
+.alignleft,
+.alignright {
+	display: inline; 
+}
 .alignleft {
-	display: inline; float: left;
+	float: left;
 	margin-right: 1.5em;
 }
 .alignright {
-	display: inline; float: right;
+	float: right;
 	margin-left: 1.5em;
 }
 .aligncenter {
-	display: block; clear: both; 
+	display: block; 
+	clear: both; 
 	margin: 0 auto;
 }
 
 
-// Buttons 
+// Buttons
+
+// You can use the class .action-btn on <a>, <button> or <input> 
 
 .action-btn,
 button.action-btn,
@@ -387,6 +400,11 @@ input[type=submit].action-btn:focus {
 
 @media print {
 	
-	[class*="col-"] {display: block; float: left;}   // @fix: FF print issue
+	// @fix: FF print issue
+	
+	[class*="col-"] { 
+		display: block; 
+		float: left;
+	}   
 
 }	

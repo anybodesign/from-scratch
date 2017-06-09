@@ -3,11 +3,15 @@
 // -------------------------
 
 
+// Visually hide the text of an element (a11y ok)
+
 @mixin a11y-hide($percent: 150%) {
 	text-indent: $percent;
 	white-space: nowrap;
 	overflow: hidden;
 }
+
+// Visually hide an element (a11y ok)
 
 @mixin a11y-hidden($width: 1px, $height: 1px) {
 	position: absolute;
@@ -21,16 +25,22 @@
 	overflow: hidden;	
 }
 
+// CSS transition
+
 @mixin transition($property: all) {
 	transition: $property .2s ease-in-out;
 }
 
+// Extend the click area to the entire block 
+
 @mixin linkblock() {
-	content: "";
+	content: '';
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: 100;	
 }
+
+// Opacity effect on hovered images
 
 @mixin img-opacity($opacity: .5) {
 	a img {
@@ -42,6 +52,8 @@
 	}	
 }
 
+// Add a stroke before or after an elements
+
 @mixin pre-stroke() {
 	content: "–";
 	display: block;
@@ -51,7 +63,7 @@
 
 
 
-// Mobile First
+// Mobile First Media Queries
 
 @mixin rwd($width) {
 	
@@ -83,7 +95,7 @@
 }
 
 
-// Desktop First
+// Desktop First Media Queries
 
 @mixin desktop($width) {
 	

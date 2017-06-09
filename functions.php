@@ -91,6 +91,9 @@ function from_scratch_scripts_load() {
 			'screen' 
 		);
 		
+		
+		// Main stylesheet
+		
 		wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri() );
 
 	}
@@ -106,7 +109,7 @@ register_nav_menus( array(
 	'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' )
 ));
 
-// Sub-menus Walker // http://wordpress.stackexchange.com/questions/88604/bootstrap-drop-down-menu-with-wp-nav-menu
+// Sub-menus Walker
 
 include( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 

@@ -17,6 +17,8 @@
 			<div class="row inner">
 				<div class="col-12">				
 					
+					<?php // The credit/copyright line, settings in the Customizer ?>
+					
 					<p class="footer-copyright">
 						<?php if(get_theme_mod('footer_text')) {
 							echo get_theme_mod('footer_text', ''); 
@@ -28,6 +30,8 @@
 						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'from-scratch'); ?></a>
 						<?php } ?>
 					</p>
+					
+					<?php // The footer menu location ?>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
 					<nav class="footer-nav">

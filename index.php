@@ -12,7 +12,9 @@ get_header(); ?>
 				<div class="row inner">
 					
 					<div class="col-9">
-	
+					
+					<?php // The Loop ?>
+					
 					<?php if ( have_posts() ) : ?>
 			
 						<?php if ( is_home() && ! is_front_page() ) { ?>

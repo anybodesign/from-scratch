@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
 	});
 	
 
-	// Responsive Players
+	// Responsive Video Players (Youtube, Vimeo)
 			
 	$(window).on('load',function() {
 		
