@@ -1,10 +1,11 @@
-<?php
+<?php defined('ABSPATH') or die();
 /**
  * From Scratch Customizer functionality
  *
  * @package WordPress
  * @subpackage From_Scratch
- * @since From Scratch 1.8
+ * @since 1.0
+ * @version 1.0
  */
  
  

@@ -1,4 +1,12 @@
-<?php defined('ABSPATH') or die(); 
+<?php defined('ABSPATH') or die();
+/**
+ * From Scratch Sub-navigation Walker for Main Menu
+ *
+ * @package WordPress
+ * @subpackage From_Scratch
+ * @since 1.0
+ * @version 1.0
+ */
 
 class from_scratch_subnav_walker extends Walker_Nav_Menu {
 
