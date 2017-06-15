@@ -8,12 +8,18 @@
 .skiplinks-menu {
 	
 	a {
-		position: absolute; top: -65px;
+		position: fixed; 
+		top: -65px;
 		padding: $grid-padding;
-		background-color: #fff;
-		transition: all .2s ease-in;
+		background-color: #000;
+		font-family: $font-bold;
+		color: #fff;
+		text-decoration: none;
+		transition: top .2s ease-in;
 	
-		&:focus {top: -5px;}
+		&:focus {
+			top: -5px;
+		}
 
 	}
 }
@@ -191,12 +197,12 @@
 	&.menu-opened span::after {
 		top: 0;
 		transform: rotate(45deg);
-		background-color: #c00;
+		background-color: $primary-color;
 	}
 	&.menu-opened span::before {
 		top: 0;
 		transform: rotate(-45deg);
-		background-color: #c00;
+		background-color: $primary-color;
 	}
 
 	&:hover {

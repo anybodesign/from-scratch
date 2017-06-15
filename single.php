@@ -12,7 +12,7 @@
 get_header(); ?>
 					
 				<div class="row inner">
-					<div class="col-12">
+					<div class="col-9">
 	
 					<?php while (have_posts()) : the_post(); ?>
 			
@@ -24,6 +24,10 @@ get_header(); ?>
 	  					<?php comments_template(); ?>
 					<?php endif;?>
 						
+					</div>
+					
+					<div class="col-3">
+						<?php get_sidebar(); ?>
 					</div>					
 				</div>
 				

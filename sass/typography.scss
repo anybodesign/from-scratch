@@ -21,7 +21,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-	color: $primary-color;
+	color: $text-color;
 	font-family: $font-title;
 	font-weight: normal;
 
@@ -84,7 +84,7 @@ small {
     line-height: 1.5;
     margin: 0 0 1.5em 0;
 	font-family: $font-regular;
-	color: $primary-color;
+	color: $text-color;
 }
 span {
 	font-family: inherit;
@@ -376,7 +376,7 @@ input[type=submit].action-btn {
 	font-family: $font-bold;
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: $primary-color;
+	background-color: $text-color;
 	color: #fff;
 	transition: background .2s linear;
 }
@@ -386,7 +386,7 @@ button.action-btn:hover,
 button.action-btn:focus,
 input[type=submit].action-btn:hover,
 input[type=submit].action-btn:focus {
-	background-color: lighten($primary-color, 10%);
+	background-color: lighten($text-color, 10%);
 }
 
 
