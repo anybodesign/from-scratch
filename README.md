@@ -4,6 +4,10 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 2.3 - 2017.11.08
+* Customizer fix (WP credit)
+* Improved a11y on main menu
+
 ### 2.2 - 2017.06.15
 * CSS enhancements
 * Single with sidebar
