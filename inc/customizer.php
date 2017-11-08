@@ -74,8 +74,8 @@ function fs_customize_register($wp_customize) {
 	// WP Credits
 	
 	$wp_customize->add_setting('display_wp', array(
-		'default'				=> true,
-		'sanitize_callback'		=> 'fs_customizer_sanitize_checkbox'
+		'default'			=> false,
+		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 	));
 	
 	$wp_customize->add_control('display_wp_ctrl', array(
@@ -84,7 +84,7 @@ function fs_customize_register($wp_customize) {
 		'section'		=> 'title_tagline',
 		'settings'		=> 'display_wp',
 	));
-	
+		
 	// Site logo
 	
 	$wp_customize->add_setting('site_logo', array(
