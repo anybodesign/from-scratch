@@ -127,10 +127,10 @@ function from_scratch_widgets_init() {
 		'name'			=>	esc_html__( 'Primary Widgets Area', 'from-scratch' ),
 		'id'			=>	'widgets_area1',
 		'description' 	=> 	'',
-		'before_widget' => 	'',
-		'after_widget' 	=> 	'',
-		'before_title' 	=> 	'<h3 class="widget-title">',
-		'after_title' 	=> 	'</h3>',
+		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' 	=> 	'</div>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
 	));
 }
 add_action( 'widgets_init', 'from_scratch_widgets_init' );
