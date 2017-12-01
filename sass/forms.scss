@@ -118,6 +118,13 @@ input[type="submit"]:hover {
 	color: #fff;
 }
 
+// Placeholders
+
+::placeholder {
+	color: lighten($primary-color, 20%);
+	font-family: $font-italic;
+	font-size: 1.4rem;
+}
 
 // ------------------------------
 //

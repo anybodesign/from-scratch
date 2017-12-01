@@ -56,7 +56,7 @@
 								
 								<div class="formfield-text">
 									<label for="inp_text">The Label</label>
-									<input type="text" id="inp_text">
+									<input type="text" id="inp_text" placeholder="A placeholder…">
 								</div>
 								
 								<div class="formfield-checkbox">
