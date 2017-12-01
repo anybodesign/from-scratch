@@ -19,6 +19,12 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content', 'page' ); ?>
 		
 					<?php endwhile; ?>
+
+						
+						<?php // Just for testing typographic styles, then remove this part ?>
+						<div class="page-content">
+							<?php get_template_part('template-parts/temp','typo'); ?>
+						</div>
 						
 					</div>					
 				</div>
