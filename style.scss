@@ -43,6 +43,10 @@ body {
 	position: relative;
 	margin: 0 auto;
 	max-width: $max-width;
+	
+	.row & {
+		width: 100%;
+	}
 }
 
 [class*="col-"] { 

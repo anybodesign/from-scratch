@@ -35,7 +35,7 @@ $bg-color: #fff;
 // Define your custom fonts :)
 
 /* 
-$fontface-regular: url('fonts/bitter-regular.woff') format('woff');
+$fontface-regular: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');
 @font-face {
 	font-family: 'Regular';
 	src: $fontface-regular;
@@ -43,7 +43,7 @@ $fontface-regular: url('fonts/bitter-regular.woff') format('woff');
 	font-style: normal;
 }
 
-$fontface-italic: url('fonts/bitter-italic.woff') format('woff');	
+$fontface-italic: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');;	
 @font-face {
 	font-family: 'Italic';
 	src: $fontface-italic;
@@ -51,7 +51,7 @@ $fontface-italic: url('fonts/bitter-italic.woff') format('woff');
 	font-style: normal;
 }
 
-$fontface-bold: url('fonts/bitter-bold.woff') format('woff');
+$fontface-bold: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');;
 @font-face {
 	font-family: 'Bold';
 	src: $fontface-bold;
@@ -59,7 +59,7 @@ $fontface-bold: url('fonts/bitter-bold.woff') format('woff');
 	font-style: normal;
 }
 
-$fontface-bolditalic: url('fonts/bitter-bolditalic.woff') format('woff');
+$fontface-bolditalic: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');;
 @font-face {
 	font-family: 'BoldItalic';
 	src: $fontface-bolditalic;
@@ -67,7 +67,7 @@ $fontface-bolditalic: url('fonts/bitter-bolditalic.woff') format('woff');
 	font-style: normal;
 }
 
-$fontface-title: url('fonts/share-bold.woff') format('woff');
+$fontface-title: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');;
 @font-face {
 	font-family: 'Title';
 	src: $fontface-title;

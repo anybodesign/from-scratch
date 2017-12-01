@@ -35,39 +35,40 @@ h1, h2, h3, h4, h5, h6,
 
 h1, 
 .h1-like {
-    font-size: 2.8rem;
-    line-height: 1.7142;
-    margin: 0 0 .8571em 0;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 .75em 0;
 }
 h2, 
 .h2-like {
-	font-size: 2.6rem;
-	line-height: 1.8462;
-	margin: 0 0 .9231em 0;
+	font-size: 3rem;
+	line-height: 1.4;
+	margin: 0 0 .5em 0;
 }
 h3, 
 .h3-like {
-    font-size: 2.4rem;
-	line-height: 1;
+    font-size: 2.6rem;
+	line-height: 1.2;
     margin: 0 0 1em 0;
 }
 h4, 
 .h4-like {
-    font-size: 2.2rem;
-    line-height: 1.0909;
-    margin: 0 0 1.0909em 0;
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 0 0 1em 0;
 }
 h5, 
 .h5-like {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.2;
     margin: 0 0 1.2em 0;
 }
 h6, 
 .h6-like {
-    font-size: 1.8rem;
-    line-height: 1.3333;
-    margin: 0 0 1.3333em 0;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 0 1.2em 0;
 }
 
 p, 
@@ -107,6 +108,9 @@ li ul {
     margin-bottom: 0;
 }
 
+
+// links
+
 a {
 	color: inherit;
 	background-color: transparent;
@@ -115,87 +119,33 @@ a:hover {
 	text-decoration: none;
 }
 
-q,
-blockquote {
-	max-width: 75%;
-	padding: .75em 0 .75em 1.5em;
-	border-left: #999 2px solid;
-}
-q,
-blockquote,
-blockquote p {
-	font-family: $font-bolditalic;
-	font-style: normal;
-	font-size: 2rem;
-}
-blockquote p {
-	margin-bottom: 0;
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
+.content-area {
+	
+	p {
+		a:not([class*="action-btn"]) {
+			text-decoration: none;
+			color: $secondary-color;
+			border-bottom: $secondary-color 2px solid;
+			transition: .2s ease-in-out;
+			
+			&:hover {
+				border-bottom-width: 4px;
+			}
+			&:focus {
+				background-color: $secondary-color;
+				color: #fff;
+			}
+			&:visited {
+				color: $text-color;
+				border-bottom-color: $text-color;
+				border-bottom-width: 1px;
+			}
+			
+		}
+	}
+	
 }
 
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 75%;
-}
-
-
-// Code stuff
-
-code, pre, samp, kbd {
-	white-space: pre-line; // IE fix
-	white-space: pre-wrap;
-	font-family: $font-mono;
-	font-size: 1em;
-	line-height: 1;
-}
-
-kbd {
-	padding: 0 2px;
-	border: 1px solid #999;
-	border-radius : 2px;
-}
-
-code, pre {
-	background-color: #eee;
-	color: #999;
-}
-code {padding: .5em;}
-
-pre {
-	padding: .5em 1.5em;
-	border: #ccc 1px dashed;
-	white-space: pre-line;
-}
-
-mark {
-	padding: .5em;
-	background: #ff0;
-}
-
-
-// If an error output is needed
-
-.error {
-	padding: .5em;
-	background: red; 
-	color: #fff;
-}
 
 
 // Max values
@@ -251,12 +201,114 @@ figure {
 		width: 100%; 
 		height: auto;
 	}
+
+	a[href*="youtube.com"] {
+		display: block;
+		position: relative;
+		
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 10;
+		}
+		&::before {
+			width: 80px; height: 80px;
+			border-radius: 80px;
+			background-color: transparentize( $primary-color, .1 );
+			transition: .4s ease-in-out;
+		}
+		&::after {
+			width: 0; height: 0;
+			border-color: transparent;
+			border-left-color: #fff; 
+			border-width: 12px;
+			border-style: solid;
+			left: calc(50% + 6px);
+			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
+		}
+		
+		&:focus::before, &:hover::before {
+			transform: translateX(-50%) translateY(-50%) scale(1.2);
+			background-color: $primary-color;
+		}
+		& img {
+			transition: opacity .2s ease-in-out;
+		}
+		&:focus img, &:hover img {
+			opacity: .7;
+		}
+		&:focus {
+			outline: none;
+		}
+		
+	}
+	
 }
 
 figcaption {
 	font-size: .85em; 
 	line-height: 1;
 	margin: .5em 0;
+}
+
+
+// Quotes
+
+q,
+blockquote {
+	max-width: 75%;
+	padding: .75em 0 .75em 1.5em;
+	border-left: #999 2px solid;
+}
+q,
+blockquote,
+blockquote p {
+	font-family: $font-bolditalic;
+	font-style: normal;
+	font-size: 2rem;
+}
+blockquote p {
+	margin-bottom: 0;
+}
+
+
+
+// Misc
+
+hr {
+  box-sizing: content-box;
+  height: 0; 
+  overflow: visible;
+}
+
+iframe {
+	width: 100%;
+}
+
+small {
+  font-size: 75%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
 }
 
 
@@ -273,15 +325,18 @@ table {
     margin-bottom: 1.5em;
 }
 thead {
-	display: none;
+	background-color: $secondary-color;
 }
-
+th {
+	color: #fff;
+	font-weight: normal;
+	font-family: $font-bold;
+}
 td, th {
-	display: block;
 	vertical-align: middle;
 	margin-bottom: 0;
 	padding: .5em;
-	border: #ccc 1px solid;
+	border: $primary-color 1px solid;
 	
 	thead &, 
 	tbody &, 
@@ -295,31 +350,47 @@ td, th {
 	
 }
 
-@include rwd(medium) {
-	thead {
-		display: table-row-group;
-	}
-	tr {
-		display: table-row;
-	}
-	td, th {
-		display: table-cell;
-	}
+
+// Code
+
+code, pre, samp, kbd {
+	white-space: pre-line; // IE fix
+	white-space: pre-wrap;
+	font-family: $font-mono;
+	font-size: 1em;
+	line-height: 1;
+}
+
+kbd {
+	padding: 0 2px;
+	border: 1px solid #999;
+	border-radius : 2px;
+}
+
+code, pre {
+	background-color: #eee;
+	color: #999;
+}
+code {padding: .5em;}
+
+pre {
+	padding: .5em 1.5em;
+	border: #ccc 1px dashed;
+	white-space: pre-line;
+}
+
+mark {
+	padding: .5em;
+	background: #ff0;
 }
 
 
+// If an error output is needed
 
-// Misc
-
-
-hr {
-  box-sizing: content-box;
-  height: 0; 
-  overflow: visible;
-}
-
-iframe {
-	width: 100%;
+.error {
+	padding: .5em;
+	background: red; 
+	color: #fff;
 }
 
 
@@ -379,14 +450,13 @@ input[type=submit].action-btn {
 	background-color: $text-color;
 	color: #fff;
 	transition: background .2s linear;
-}
-.action-btn:hover,
-.action-btn:focus,
-button.action-btn:hover,
-button.action-btn:focus,
-input[type=submit].action-btn:hover,
-input[type=submit].action-btn:focus {
-	background-color: lighten($text-color, 10%);
+	
+	&:focus, &:hover {
+		background-color: lighten($text-color, 10%);
+	}
+	&:focus {
+		outline: none;
+	}
 }
 
 
