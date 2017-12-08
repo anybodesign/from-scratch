@@ -67,6 +67,11 @@
 
 @mixin rwd($width) {
 	
+	@if $width == xwide {
+		@media only screen and (min-width: $width-xwide) {
+			@content;
+		}
+	}
 	@if $width == wide {
 		@media only screen and (min-width: $width-wide) {
 			@content;
@@ -99,6 +104,11 @@
 
 @mixin desktop($width) {
 	
+	@if $width == xwide {
+		@media only screen and (max-width: $width-xwide) {
+			@content;
+		}
+	}
 	@if $width == wide {
 		@media only screen and (max-width: $width-wide) {
 			@content;

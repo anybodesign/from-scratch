@@ -4,6 +4,9 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 2.4.1 - 2017.12.08
+* New breakpoints vars
+
 ### 2.4 - 2017.12.01
 * 100% width .inner inside .row
 * woff2 support
