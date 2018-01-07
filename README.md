@@ -4,6 +4,9 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 2.5 - 2019.01.07
+* Default fonts (Miriam Libre ans Asap)
+
 ### 2.4.1 - 2017.12.08
 * New breakpoints vars
 
