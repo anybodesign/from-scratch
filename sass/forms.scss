@@ -136,6 +136,14 @@ input[type="submit"]:hover {
 // Containers for inputs
 // Inputs must be wrapped inside them
 
+.formfield-half {
+	
+	@include rwd(medium) {
+		display: flex;
+	}
+}
+
+
 .formfield-text, // Generic container
 .formfield-texteara,
 .formfield-select, 
@@ -144,6 +152,12 @@ input[type="submit"]:hover {
 .formfield-radio {
 	position: relative;
 	margin: .5em 0;
+
+	.formfield-half &:first-child {
+		@include rwd(medium) {
+			margin-right: $grid-padding*2;
+		}
+	}	
 }
 
 
@@ -157,7 +171,8 @@ input[type="submit"]:hover {
 	top: 0; 
 	left: 0;
 	
-	& + label {
+	& + label,
+	& + span {					// @onte: span is for CF7
 		padding: 0 0 0 26px;
 		
 		&::before {
@@ -181,10 +196,12 @@ input[type="submit"]:hover {
 	}
 }
 
-.formfield-radio input[type="radio"] + label::before {
+.formfield-radio input[type="radio"] + label::before,
+.formfield-radio input[type="radio"] + span::before {
 	border-radius: 100%;
 }
-.formfield-radio input[type="radio"] + label::after {
+.formfield-radio input[type="radio"] + label::after,
+.formfield-radio input[type="radio"] + span::after {
 	width: 6px; height: 6px;
 	background-color: $secondary-color;
 	top: 6px; left: 6px;
@@ -192,11 +209,13 @@ input[type="submit"]:hover {
 	opacity: 0;
 	transition: opacity .2s linear;
 }
-.formfield-radio input[type="radio"]:checked + label::after {
+.formfield-radio input[type="radio"]:checked + label::after,
+.formfield-radio input[type="radio"]:checked + span::after {
 	opacity: 1;
 }
 
-.formfield-checkbox input[type="checkbox"] + label::after {
+.formfield-checkbox input[type="checkbox"] + label::after,
+.formfield-checkbox input[type="checkbox"] + span::after {
 	top: -2px; left: 5px;
 	content: "L";
 	font-family: $font-bold;
@@ -205,9 +224,32 @@ input[type="submit"]:hover {
 	transform: scaleX(-1) rotate(-45deg);
 	transition: opacity .2s linear;
 }
-.formfield-checkbox input[type="checkbox"]:checked + label::after {
+.formfield-checkbox input[type="checkbox"]:checked + label::after,
+.formfield-checkbox input[type="checkbox"]:checked + span::after  {
 	opacity: 1;
 }
+
+// @onte: for CF7
+
+.wpcf7-list-item label {
+	position: relative;
+}
+span.wpcf7-list-item {
+	margin: 0 1em 0 0;
+}
+
+.formfield-radio input[type="radio"]:focus + span,
+.formfield-radio input[type="checkbox"]:focus + span {
+	border-bottom: $primary-color 1px dashed;
+}
+,
+.formfield-radio input[type="radio"]:focus + span::after,
+.formfield-radio input[type="checkbox"]:focus + span::after {
+	//opacity: .5;
+}
+
+
+
 
 
 // Select
