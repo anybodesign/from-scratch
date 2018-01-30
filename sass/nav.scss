@@ -61,7 +61,8 @@
 				
 				&:hover > .sub-menu,
 				&:focus > .sub-menu {
-					visibility: visible;
+					//visibility: visible;
+					left: auto;
 					opacity: 1;
 				}
 			}
@@ -82,7 +83,8 @@
 
 			@include rwd(wide) {
 				display: block;
-				visibility: hidden;
+				//visibility: hidden;
+				left: -999em;
 				opacity: 0;
 				transition: opacity .2s ease-in-out;
 			}

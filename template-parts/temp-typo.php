@@ -122,41 +122,43 @@
 						
 						<div class="col-6">
 							
-							<table width="100%">
-								<thead>
-									<tr>
-										<th>Animal</th>
-										<th>Name</th>
-										<th>Age</th>
-										<th>Weight</th>
-										<th>Hobby</th>
-										<th>Passion</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Cat</td>
-										<td>Prosper</td>
-										<td>13</td>
-										<td>8 kg</td>
-										<td>Sleeping</td>
-										<td>Food</td>
-									</tr>
-									<tr>
-										<td>Cat</td>
-										<td>Garfield</td>
-										<td>4</td>
-										<td>5 kg</td>
-										<td>Hunting</td>
-										<td>Food</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="6">That's all about cats now...</td>
-									</tr>
-								</tfoot>
-							</table>
+							<div class="table-container">
+								<table width="100%">
+									<thead>
+										<tr>
+											<th>Animal</th>
+											<th>Name</th>
+											<th>Age</th>
+											<th>Weight</th>
+											<th>Hobby</th>
+											<th>Passion</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Cat</td>
+											<td>Prosper</td>
+											<td>13</td>
+											<td>8 kg</td>
+											<td>Sleeping</td>
+											<td>Food</td>
+										</tr>
+										<tr>
+											<td>Cat</td>
+											<td>Garfield</td>
+											<td>4</td>
+											<td>5 kg</td>
+											<td>Hunting</td>
+											<td>Food</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="6">That's all about cats now...</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
 							
 						</div>
 					</div>

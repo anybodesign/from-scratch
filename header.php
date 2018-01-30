@@ -35,8 +35,8 @@
 				<?php // The Skiplinks ?>
 				
 				<ul class="skiplinks-menu">
-					<li><a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a></li>
 					<li><a href="#site_content"><?php _e('Go to main content', 'from-scratch'); ?></a></li>
+					<li><a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a></li>
 				</ul>
 			</nav>
 	

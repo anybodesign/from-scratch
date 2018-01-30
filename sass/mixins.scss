@@ -60,6 +60,36 @@
 	margin-bottom: .25em;
 }
 
+// Add a pointer on ::before or ::after
+
+@mixin pointer($orientation:top, $width:10px) {
+	
+	content: '';
+	display: block; 
+	width: 0; height: 0;
+	border-color: transparent; 
+	border-width: $width;
+	border-style: solid;
+
+	@if $orientation == top {
+		border-top-color: inherit;
+	}
+	@else if $orientation == bottom {
+		border-bottom-color: inherit;
+	}
+	@else if $orientation == left {
+		border-left-color: inherit;
+	}
+	@else if $orientation == right {
+		border-right-color: inherit;
+	}
+	@else {
+		border-top-color: inherit;
+	}
+	
+}
+
+
 
 
 

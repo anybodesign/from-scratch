@@ -4,7 +4,15 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
-### 2.5 - 2019.01.07
+### 2.5.1 - 2018.01.23
+* ContactForm 7: Radio buttons and checkboxes
+* Forms: Half length fields
+* Mixins: pointer pseudo-element 
+* A11y: Got to main content first
+* A11y: Display image OR text for the logo
+* Testing template part: Table container
+
+### 2.5 - 2018.01.07
 * Default fonts (Miriam Libre ans Asap)
 
 ### 2.4.1 - 2017.12.08

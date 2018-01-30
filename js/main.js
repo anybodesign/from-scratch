@@ -44,6 +44,21 @@ jQuery(document).ready(function($) {
 		    }
 	});
 	
+	
+	// li tabindex allowing :focus
+	
+	$(window).on('load',function() {
+		
+		$("li").each(function() {
+			
+			if($(this).hasClass('menu-item-has-children')) {
+				$( this ).attr('tabindex','0');
+			}
+		});
+		
+	});
+	
+		
 
 	// Responsive Video Players (Youtube, Vimeo)
 			

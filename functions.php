@@ -138,6 +138,7 @@ add_action( 'widgets_init', 'from_scratch_widgets_init' );
 
 
 // Auto-Updater
+// Remove these lines and dependencies for your theme
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
