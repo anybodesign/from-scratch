@@ -114,7 +114,6 @@ register_nav_menus( array(
 include( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 
 
-
 // Customizer
 
 require get_template_directory() . '/inc/customizer.php';
@@ -134,6 +133,44 @@ function from_scratch_widgets_init() {
 	));
 }
 add_action( 'widgets_init', 'from_scratch_widgets_init' );
+
+
+// Tinymce class
+
+function from_scratch_mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'from_scratch_mce_buttons_2');
+
+function from_scratch_tiny_formats($init_array) {
+
+    $style_formats = array(
+
+        array(
+            'title' => 'Texte intro',
+            'selector' => 'p',
+            'classes' => 'text-intro',
+            'wrapper' => true,
+        ),
+        array(
+            'title' => 'Texte mentions',
+            'selector' => 'p',
+            'classes' => 'text-mentions',
+            'wrapper' => true,
+        ),
+        array(
+            'title' => 'Bouton d’action',
+            'selector' => 'a',
+            'classes' => 'action-btn',
+        )
+    );
+    $init_array['style_formats'] = json_encode($style_formats);
+
+    return $init_array;
+
+}
+add_filter('tiny_mce_before_init', 'from_scratch_tiny_formats');
 
 
 

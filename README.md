@@ -4,7 +4,11 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
-### 2.5.1 - 2018.01.23
+### 2.5.2 - 2018.01.31
+* TinyMCE styles
+* Testing template part: em and strong
+
+### 2.5.1 - 2018.01.30
 * ContactForm 7: Radio buttons and checkboxes
 * Forms: Half length fields
 * Mixins: pointer pseudo-element 

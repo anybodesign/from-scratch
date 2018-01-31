@@ -10,6 +10,20 @@ html .mceContentBody {
 	font-family: Georgia, "Bitstream Charter", serif;
 	line-height: 1.5;
 }
+.text-intro {
+	font-size: 22px;
+}
+.text-mentions {
+	font-size: 13px;
+	line-height: 14px;
+	text-align: justify;
+}
+.action-btn {
+	padding: 5px 10px;
+	background-color: #EF5A2E;
+	color: #fff !important;
+}
+
 p,
 dl,
 td,
