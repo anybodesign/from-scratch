@@ -50,8 +50,9 @@ function from_scratch_setup() {
 endif;
 add_action( 'after_setup_theme', 'from_scratch_setup' );
 
-
+// ------------------------
 // Enqueue JS & CSS
+// ------------------------
 
 function from_scratch_scripts_load() {
     if (!is_admin()) {
@@ -100,6 +101,10 @@ function from_scratch_scripts_load() {
 }    
 add_action( 'wp_enqueue_scripts', 'from_scratch_scripts_load' );
 
+
+// ------------------------
+// Theme Stuff
+// ------------------------
 
 
 // Menus
@@ -189,7 +194,45 @@ add_filter('tiny_mce_before_init', 'from_scratch_tiny_formats');
 
 
 
+// ------------------------
+// ACF
+// ------------------------
+
+
+// Remove the WP Custom Fields meta box
+
+add_filter('acf/settings/remove_wp_meta_box', '__return_true');
+
+// Custom ACF Functions
+
+include_once('inc/acf/acf-functions.php');
+
+
+// Front-End ACF Functions
+
+add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
+function fs_acf_json_save_point( $path ) {
+    
+    $path = get_stylesheet_directory() . '/inc/acf';
+    
+    return $path;
+}
+add_filter('acf/settings/load_json', 'fs_acf_json_load_point');
+function fs_acf_json_load_point( $paths ) {
+    
+    unset($paths[0]);
+
+    $paths[] = get_stylesheet_directory() . '/inc/acf';
+    
+    return $paths;
+}
+
+
+
+// ------------------------
 // Auto-Updater
+// ------------------------
+
 // Remove these lines and dependencies for your theme
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
