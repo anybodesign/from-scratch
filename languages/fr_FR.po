@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-05-15 09:56+0200\n"
-"PO-Revision-Date: 2017-05-15 09:56+0200\n"
+"POT-Creation-Date: 2018-04-13 15:38+0200\n"
+"PO-Revision-Date: 2018-04-13 15:39+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -20,137 +20,178 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:20
+#: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! Page introuvable."
 
-#: 404.php:23
+#: 404.php:24
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
 "une recherche?"
 
-#: comments.php:18
+#: comments.php:19
 msgid "They talk about it"
 msgstr "Ils en parlent"
 
-#: comments.php:33
+#: comments.php:34
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: comments.php:40
+#: comments.php:41
 msgid "Do we talk about it?"
 msgstr "On en discute ?"
 
-#: comments.php:41
+#: comments.php:42
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:28
+#: footer.php:31
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: functions.php:105
+#: footer.php:38
+msgid "Footer menu"
+msgstr "Menu pied de page"
+
+#: functions.php:113
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:106
+#: functions.php:114
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:124
+#: functions.php:136
+msgid "Thumbnail High"
+msgstr "Miniature (x2)"
+
+#: functions.php:137
+msgid "Medium High"
+msgstr "Moyenne (x2)"
+
+#: functions.php:138
+msgid "Large High"
+msgstr "Grande (x2)"
+
+#: functions.php:146
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: header.php:34
-msgid "Go to main menu"
-msgstr "Aller au menu principal"
-
-#: header.php:35
+#: header.php:32
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:61
-msgid "Unfold navigation menu"
-msgstr "Déplier le menu de navigation"
+#: header.php:33
+msgid "Go to main menu"
+msgstr "Aller au menu principal"
 
-#: header.php:61
+#: header.php:63
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: header.php:64
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/customizer.php:17
+#: inc/customizer.php:18
 msgid "Theme Colors"
 msgstr "Couleurs du thème"
 
-#: inc/customizer.php:18
+#: inc/customizer.php:19
 msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
-#: inc/customizer.php:22
+#: inc/customizer.php:23
 msgid "Theme Pictures"
 msgstr "Images du thème"
 
-#: inc/customizer.php:23
+#: inc/customizer.php:24
 msgid "Pictures customisation"
 msgstr "Personnalisation des images"
 
-#: inc/customizer.php:38
+#: inc/customizer.php:39
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: inc/customizer.php:54
+#: inc/customizer.php:55
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: inc/customizer.php:67
+#: inc/customizer.php:68
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:68
+#: inc/customizer.php:69
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:82
+#: inc/customizer.php:83
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:95
+#: inc/customizer.php:96
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/subnav-walker.php:12
+#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:358
+msgid "Check for updates"
+msgstr "Vérifier les mises à jour"
+
+#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:405
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "L’extension %s est à jour."
+
+#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:407
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "Une nouvelle version de l'extension %s est disponible."
+
+#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:409
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
+
+#: inc/plugin-update-checker/Puc/v4p1/Vcs/PluginUpdateChecker.php:83
+msgid "There is no changelog available."
+msgstr "Il n’y a aucun historique des mises à jour disponible."
+
+#: inc/subnav-walker.php:20
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:32
+#: index.php:35
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:33
+#: index.php:36
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:34
+#: index.php:37
 msgid "Page"
 msgstr "Page"
 
-#: search.php:18
+#: search.php:19
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
 
-#: template-parts/content-none.php:13
+#: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr "Aucun résultat"
 
-#: template-parts/content-none.php:17
+#: template-parts/content-none.php:18
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
 
-#: template-parts/content-none.php:21
+#: template-parts/content-none.php:22
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -158,7 +199,7 @@ msgstr ""
 "Aucun résultat ne correspond à vos critères de recherche. Essayez avec "
 "d’autres mots clés."
 
-#: template-parts/content-none.php:27
+#: template-parts/content-none.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -166,36 +207,36 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-search.php:33 template-parts/content.php:51
+#: template-parts/content-search.php:34 template-parts/content.php:52
 msgid "Pages:"
 msgstr "Pages :"
 
-#: template-parts/content.php:35
+#: template-parts/content.php:36
 #, php-format
 msgid "Continue reading %s"
 msgstr "Lire la suite de l'article %s"
 
-#: template-parts/content.php:44
+#: template-parts/content.php:45
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/header-logo.php:13
+#: template-parts/header-logo.php:14
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
 
-#: template-parts/post-meta.php:15
+#: template-parts/post-meta.php:16
 msgid "Posted on&nbsp;"
 msgstr "Posté le&nbsp;"
 
-#: template-parts/post-meta.php:16
+#: template-parts/post-meta.php:17
 msgid "by&nbsp;"
 msgstr "par&nbsp;"
 
-#: template-parts/post-meta.php:17
+#: template-parts/post-meta.php:18
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
 
-#: template-parts/post-meta.php:22
+#: template-parts/post-meta.php:23
 msgid "Comment(s)"
 msgstr "Commentaire(s)"
 
@@ -218,6 +259,9 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgid "Unfold navigation menu"
+#~ msgstr "Déplier le menu de navigation"
 
 #~ msgid ""
 #~ "Your browser should be <a href=\"http://browsehappy.com\">updated</a> to "
