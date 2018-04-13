@@ -35,7 +35,7 @@
 					<?php // The footer menu location ?>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav class="footer-nav">
+					<nav class="footer-nav" aria-label="<?php _e('Footer menu', 'from-scratch'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',

@@ -1,4 +1,4 @@
-<?php
+<?php if ( !defined('ABSPATH') ) die();
 /**
  * Template part for displaying a message that posts cannot be found.
  *

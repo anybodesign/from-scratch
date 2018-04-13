@@ -1,4 +1,4 @@
-<?php
+<?php if ( !defined('ABSPATH') ) die();
 /**
  * Template part for the Logo.
  *

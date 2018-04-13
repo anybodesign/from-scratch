@@ -4,6 +4,13 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 2.5.3 - 2018.03.12
+* Add custom image sizes
+* Abspath on template parts
+* A11y: Menus aria labels and header
+* A11y: Skiplinks
+* Table CSS fix
+
 ### 2.5.2 - 2018.01.31
 * TinyMCE styles
 * Testing template part: em and strong
@@ -12,7 +19,7 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 * ContactForm 7: Radio buttons and checkboxes
 * Forms: Half length fields
 * Mixins: pointer pseudo-element 
-* A11y: Got to main content first
+* A11y: Go to main content first
 * A11y: Display image OR text for the logo
 * Testing template part: Table container
 

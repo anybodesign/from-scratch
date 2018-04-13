@@ -119,6 +119,21 @@ include( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 require get_template_directory() . '/inc/customizer.php';
 
 
+// Image Sizes
+
+add_image_size( 'thumbnail-hd', 320, 320, true );
+add_image_size( 'medium-hd', 640, 640, false );
+add_image_size( 'large-hd', 2048, 2048, false );
+
+add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
+function fs_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'thumbnail-hd'	=> __( 'Thumbnail High', 'from-scratch' ),
+        'medium-hd'		=> __( 'Medium High', 'from-scratch' ),
+        'large-hd'		=> __( 'Large High', 'from-scratch' ),
+    ) );
+}
+
 // Widgets
 
 function from_scratch_widgets_init() {
