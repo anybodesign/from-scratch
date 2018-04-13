@@ -7,7 +7,7 @@
  */
 ?>
 
-	<?php if ( have_rows('fs_builder') ) : ?>
+		<?php if ( have_rows('fs_builder') ) : ?>
 		<div class="fs-builder">
 
 			<?php while ( have_rows('fs_builder') ) : the_row(); ?>
@@ -17,4 +17,4 @@
 			<?php endwhile; ?>
 			
 		</div>
-	<?php endif; ?>
+		<?php endif; ?>

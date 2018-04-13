@@ -242,7 +242,7 @@ span.wpcf7-list-item {
 .formfield-radio input[type="checkbox"]:focus + span {
 	border-bottom: $primary-color 1px dashed;
 }
-,
+
 .formfield-radio input[type="radio"]:focus + span::after,
 .formfield-radio input[type="checkbox"]:focus + span::after {
 	//opacity: .5;

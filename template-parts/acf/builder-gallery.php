@@ -7,4 +7,6 @@
  */
 ?>
 
-					<p>Module Galerie photos</p>
+					<section class="builder-gallery">
+						<p>Module Galerie photos</p>
+					</section>

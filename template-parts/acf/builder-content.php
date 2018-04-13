@@ -7,4 +7,6 @@
  */
 ?>
 
-					<p>Module Contenus</p>
+					<section class="builder-content">
+						<p>Module Contenus</p>
+					</section>
