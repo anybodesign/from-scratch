@@ -433,10 +433,10 @@
                                 "id": ""
                             },
                             "choices": {
-                                "col-6": "2 colonnes",
-                                "col-4": "3 colonnes",
-                                "col-3": "4 colonnes",
-                                "col-2": "6 colonnes"
+                                "2cols": "2 colonnes",
+                                "3cols": "3 colonnes",
+                                "4cols": "4 colonnes",
+                                "6cols": "6 colonnes"
                             },
                             "allow_null": 0,
                             "default_value": "col-4",
@@ -538,10 +538,10 @@
                                 "id": ""
                             },
                             "choices": {
-                                "col-6": "2 colonnes",
-                                "col-4": "3 colonnes",
-                                "col-3": "4 colonnes",
-                                "col-2": "6 colonnes"
+                                "2cols": "2 colonnes",
+                                "3cols": "3 colonnes",
+                                "4cols": "4 colonnes",
+                                "6cols": "6 colonnes"
                             },
                             "allow_null": 0,
                             "default_value": "col-4",
@@ -609,5 +609,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523634425
+    "modified": 1523802020
 }
