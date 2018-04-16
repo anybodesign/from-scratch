@@ -185,7 +185,7 @@
 		width: 24px; 
 		height: 0;
 		margin: 0;
-		border: $primary-color .15rem solid;
+		border-top: $primary-color 2px solid;
 		transition: .3s linear;
 	}
 	span {
@@ -195,13 +195,13 @@
 		&::before,
 		&::after {
 			content: '';
-			left: -1px;
+			left: 0;
 		}
 		&::after {
 			bottom: -9px;
 		}
 		&::before {
-			top: -9px; 
+			top: -11px; 
 		}
 	}
 
