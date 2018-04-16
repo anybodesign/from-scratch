@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2018-04-13 15:38+0200\n"
-"PO-Revision-Date: 2018-04-13 15:39+0200\n"
+"POT-Creation-Date: 2018-04-16 15:34+0200\n"
+"PO-Revision-Date: 2018-04-16 15:35+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -179,6 +179,14 @@ msgstr "Page"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
+
+#: template-parts/acf/builder-content.php:31
+msgid "Read "
+msgstr "Lire "
+
+#: template-parts/acf/builder-gallery.php:31
+msgid "Enlarge picture"
+msgstr "Agrandir l'image"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"

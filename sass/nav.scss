@@ -213,12 +213,12 @@
 		span::after {
 			top: 0;
 			transform: rotate(45deg);
-			background-color: $secondary-color;
+			border-color: $secondary-color;
 		}
 		span::before {
 			top: 0;
 			transform: rotate(-45deg);
-			background-color: $secondary-color;
+			border-color: $secondary-color;
 		}
 	}
 
