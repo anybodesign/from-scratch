@@ -167,42 +167,59 @@
 	// Hamburger Menu
 	
 	display: block; 
-	height: 23px; width: 23px;
+	height: 24px; 
+	width: 24px;
 	position: relative;
-	border: 0; border-radius: 0; padding: 0;
+	border: 0; 
+	border-radius: 0;
+	margin: 0; 
+	padding: 0;
 	cursor: pointer;
-	@include a11y-hide(60px);
+	@include a11y-hide();
 
-	span {
+	span,
+	span::before,
+	span::after {
 		position: absolute; 
-		top: 10px; right: 0;
-	}
-	span, span::after, span::before {
 		display: block;
-		width: 23px; height: 3px;
-		background-color: #000;
-		transition: all .3s linear;
+		width: 24px; 
+		height: 0;
+		margin: 0;
+		border: $primary-color .15rem solid;
+		transition: .3s linear;
 	}
-	span::after, span::before {
-		position: absolute;
-		content: ""; 
+	span {
+		top: 10px; 
+		left: 0;
+		
+		&::before,
+		&::after {
+			content: '';
+			left: -1px;
+		}
+		&::after {
+			bottom: -9px;
+		}
+		&::before {
+			top: -9px; 
+		}
 	}
-	span::after {bottom: -9px; left: 0;}
-	span::before {top: -9px; left: 0;}
 
-	&.menu-opened span {
-		background-color: transparent; 
-		height: 1px;
-	}
-	&.menu-opened span::after {
-		top: 0;
-		transform: rotate(45deg);
-		background-color: $primary-color;
-	}
-	&.menu-opened span::before {
-		top: 0;
-		transform: rotate(-45deg);
-		background-color: $primary-color;
+
+	&.menu-opened {
+		span {
+			border-color: transparent; 
+		}
+		span::after {
+			top: 0;
+			transform: rotate(45deg);
+			background-color: $secondary-color;
+		}
+		span::before {
+			top: 0;
+			transform: rotate(-45deg);
+			background-color: $secondary-color;
+		}
 	}
 
 	&:hover {
