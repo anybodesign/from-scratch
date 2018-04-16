@@ -4,6 +4,10 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 2.6 - 2018.04.16
+* Add ACF Builder
+* A11y: Burger menu
+
 ### 2.5.3 - 2018.03.12
 * Add custom image sizes
 * Abspath on template parts
