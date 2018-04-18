@@ -43,9 +43,17 @@
 		margin-right: 0;	
 	}
 	
-	.builder-text--2-1col &:first-child,
-	.builder-text--1-2col &:last-child {
-		flex: 2 0 0;
+	@include rwd(medium) {
+		.builder-text--2-1col &:first-child,
+		.builder-text--1-2col &:last-child {
+			flex: auto;
+			width: 66.6667%;
+		}
+		.builder-text--2-1col &:last-child,
+		.builder-text--1-2col &:first-child {
+			flex: auto;
+			width: 33.3333%;
+		}
 	}
 }
 
