@@ -47,7 +47,7 @@
 		transition: opacity .2s ease-in-out;
 	}
 	a:hover img,
-	a:focus img {
+	a.focus-visible img {
 		opacity: $opacity;
 	}	
 }

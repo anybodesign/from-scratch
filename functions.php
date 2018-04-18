@@ -61,6 +61,16 @@ function from_scratch_scripts_load() {
 		
 		wp_enqueue_script( 'jquery' );
 
+		
+		
+		wp_enqueue_script(
+			'focus-visible', 
+			get_template_directory_uri() . '/js/focus-visible.js', 
+			array(), 
+			false, 
+			true
+		);
+		
 		wp_enqueue_script(
 			'from-scratch-skip-link-focus-fix', 
 			get_template_directory_uri() . '/js/skip-link-focus-fix.js', 
@@ -88,7 +98,7 @@ function from_scratch_scripts_load() {
 			'pridx', 
 			get_template_directory_uri() . '/css/pridx.css',
 			array(), 
-			'1.7', 
+			'1.7.1', 
 			'screen' 
 		);
 		

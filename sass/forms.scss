@@ -38,11 +38,13 @@ select {
 	border-radius: 0;
 	appearance: none;
 	
-	&:focus {
-		outline: none;
+	&.focus-visible {
 		border-color: #333;
 		color: #333; 	
 	}
+	&:focus {
+		outline: none;
+	}	
 }
 
 input[type="search"] {
@@ -55,8 +57,8 @@ textarea {
 	resize: vertical;
 }
 
-input[type="checkbox"]:focus + label, 
-input[type="radio"]:focus + label {
+input[type="checkbox"].focus-visible + label, 
+input[type="radio"].focus-visible + label {
 	border-bottom: #444 1px dashed; 
 }
 
@@ -238,13 +240,13 @@ span.wpcf7-list-item {
 	margin: 0 1em 0 0;
 }
 
-.formfield-radio input[type="radio"]:focus + span,
-.formfield-radio input[type="checkbox"]:focus + span {
+.formfield-radio input[type="radio"].focus-visible + span,
+.formfield-radio input[type="checkbox"].focus-visible + span {
 	border-bottom: $primary-color 1px dashed;
 }
 
-.formfield-radio input[type="radio"]:focus + span::after,
-.formfield-radio input[type="checkbox"]:focus + span::after {
+.formfield-radio input[type="radio"].focus-visible + span::after,
+.formfield-radio input[type="checkbox"].focus-visible + span::after {
 	//opacity: .5;
 }
 

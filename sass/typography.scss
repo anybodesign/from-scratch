@@ -16,6 +16,12 @@ body {
     line-height: 1.5;
 }
 
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+.js-focus-visible .focus-visible {
+	// styles
+}
 
 // Typography
 
@@ -151,7 +157,7 @@ a:hover {
 			&:hover {
 				border-bottom-width: 4px;
 			}
-			&:focus {
+			&.focus-visible {
 				background-color: $secondary-color;
 				color: #fff;
 			}
@@ -159,6 +165,10 @@ a:hover {
 				color: $text-color;
 				border-bottom-color: $text-color;
 				border-bottom-width: 1px;
+			}
+			&:active {
+				color: $secondary-color;
+				border-bottom-color: transparent;
 			}
 			
 		}
@@ -251,14 +261,14 @@ figure {
 			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
 		}
 		
-		&:focus::before, &:hover::before {
+		&.focus-visible::before, &:hover::before {
 			transform: translateX(-50%) translateY(-50%) scale(1.2);
 			background-color: $primary-color;
 		}
 		& img {
 			transition: opacity .2s ease-in-out;
 		}
-		&:focus img, &:hover img {
+		&.focus-visible img, &:hover img {
 			opacity: .7;
 		}
 		&:focus {
@@ -471,7 +481,7 @@ input[type=submit].action-btn {
 	color: #fff;
 	transition: background .2s linear;
 	
-	&:focus, &:hover {
+	&.focus-visible, &:hover {
 		background-color: lighten($text-color, 10%);
 	}
 	&:focus {

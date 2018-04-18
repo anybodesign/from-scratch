@@ -15,8 +15,11 @@
 		text-decoration: none;
 		transition: top .2s ease-in;
 	
-		&:focus {
+		&.focus-visible {
 			top: -5px;
+		}
+		&:focus {
+			outline: none;
 		}
 
 	}
@@ -44,8 +47,11 @@
 		a {
 			
 		}
-		a:hover, a:focus,
+		a:hover, a.focus-visible,
 		&.current-menu-item a {
+			
+		}
+		a:focus {
 			
 		}
 		
@@ -58,7 +64,7 @@
 				padding: 0;
 				
 				&:hover > .sub-menu,
-				&:focus > .sub-menu {
+				&.focus-visible > .sub-menu {
 					//visibility: visible;
 					left: auto;
 					opacity: 1;
@@ -94,7 +100,7 @@
 				a {
 					display: block;
 				}
-				a:hover, a:focus,
+				a:hover, a.focus-visible,
 				&.current-menu-item a {
 					
 				}
