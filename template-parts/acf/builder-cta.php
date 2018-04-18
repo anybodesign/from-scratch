@@ -29,7 +29,7 @@
 						} 
 					?>
 
-					<section class="builder-cta<?php if($color) { echo ' white-text'; } if( $over) { echo ' cta-overlay'; } ?>"<?php echo $has_bgcolor; echo $has_bgimg; ?>>
+					<section class="builder-section builder-cta<?php if($color) { echo ' white-text'; } if( $over) { echo ' cta-overlay'; } ?>"<?php echo $has_bgcolor; echo $has_bgimg; ?>>
 						<div class="builder-section-container">
 						
 							<?php if( $text ) { ?>

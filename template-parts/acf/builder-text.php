@@ -14,7 +14,7 @@
 						$text3 = get_sub_field('text_3');
 					?>
 						
-					<section class="builder-text">
+					<section class="builder-section builder-text">
 						<div class="builder-section-container">
 
 							<div class="builder-text--<?php echo $layout; ?>">

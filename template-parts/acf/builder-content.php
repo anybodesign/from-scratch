@@ -13,7 +13,7 @@
 						$content = get_sub_field('gallery');
 					?>
 
-					<section class="builder-content">
+					<section class="builder-section builder-content">
 						<div class="builder-section-container">
 					
 							<?php if( $text ) { ?>
