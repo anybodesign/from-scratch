@@ -4,6 +4,12 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 2.7 - 2018.04.18
+* A11y: Active nav items
+* A11y: .focus class on <li>
+* JS: focus-visible polyfill
+* Pridx 1.7.1
+
 ### 2.6.1 - 2018.04.16
 * CSS fix: Burger menu
 * FR translation

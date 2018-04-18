@@ -45,17 +45,32 @@ jQuery(document).ready(function($) {
 	});
 	
 	
-	// li tabindex allowing :focus
+	// A11y active label on nav items
 	
-	$(window).on('load',function() {
-		
-		$("li").each(function() {
-			
-			if($(this).hasClass('menu-item-has-children')) {
-				$( this ).attr('tabindex','0');
-			}
-		});
-		
+	var $el = 'li.current-menu-item a, li.current-page-ancestor a, li.current_page_item a, li.current_page_parent a, li.current-cat a';
+	var $lang = 'Active';
+	
+	if ( $('html').attr('lang') === 'fr-FR' ) {
+		$lang = 'Actif';
+	}
+	
+	$($el).append('<span class="screen-reader-text"> - '+$lang+'</span>');
+
+
+	// Toggle class focus on <li>
+
+	$('.menu-item > a').on('focus', function () {
+		$(this).parent().next().removeClass('focus');
+		$(this).parent().prev().removeClass('focus');
+		$(this).parent().addClass('focus');
+	});
+	
+	$('.sub-menu > li > a').on('focus', function () {
+		$(this).parent().parent().parent().addClass('focus');
+	});	
+	
+	$('.menu-item:first-child > a').on('focusout', function () {
+		$(this).parent().removeClass('focus');
 	});
 	
 		
