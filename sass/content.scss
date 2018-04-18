@@ -10,11 +10,17 @@
 // + + + + + + + + + + 
 
 
-.fs-builder {}
+.fs-builder {
+	width: 100%;
+}
 
 [class*=builder-] {
 	position: relative;
 	margin-bottom: $grid-padding*2;
+}
+
+.builder-section-container {
+	width: 100%;
 }
 
 // Text

@@ -223,6 +223,8 @@ img {
 }
 
 figure {
+	position: relative;
+	max-width: 100%;
 	margin: 0 0 1em 0;
 	overflow: hidden;
 	
@@ -421,25 +423,6 @@ mark {
 	padding: .5em;
 	background: red; 
 	color: #fff;
-}
-
-
-// WP Captions
-
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
-	
-	.wp-caption-text {
-		text-align: left;
-		font-family: $font-mono;
-		font-size: 1.2rem;
-		
-		&::before {
-			@include pre-stroke();
-		}
-	}
-
 }
 
 // WP Alignments
