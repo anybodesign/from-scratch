@@ -30,19 +30,21 @@
 					?>
 
 					<section class="builder-cta<?php if($color) { echo ' white-text'; } if( $over) { echo ' cta-overlay'; } ?>"<?php echo $has_bgcolor; echo $has_bgimg; ?>>
+						<div class="builder-section-container">
 						
-						<?php if( $text ) { ?>
-						<div class="builder-cta-text">
-							<?php echo $text; ?>
-						</div>
-						<?php } ?>
-					
-						<?php if( $link ) : ?>
-						<div class="builder-cta-btn">
-							<a href="<?php echo $link['url']; ?>" class="action-btn"<?php if($link['target']) { echo ' target="'.$link['target'].'"'; } ?>>
-								<?php echo $link['title']; ?>
-							</a>
-						</div>
-						<?php endif; ?>
+							<?php if( $text ) { ?>
+							<div class="builder-cta-text">
+								<?php echo $text; ?>
+							</div>
+							<?php } ?>
+						
+							<?php if( $link ) : ?>
+							<div class="builder-cta-btn">
+								<a href="<?php echo $link['url']; ?>" class="action-btn"<?php if($link['target']) { echo ' target="'.$link['target'].'"'; } ?>>
+									<?php echo $link['title']; ?>
+								</a>
+							</div>
+							<?php endif; ?>
 
+						</div>
 					</section>
