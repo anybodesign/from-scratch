@@ -32,7 +32,7 @@
 							            <a href="<?php echo get_permalink( $c->ID ); ?>" title="<?php _e('Read ', 'from-scratch'); echo get_the_title( $c->ID ); ?>">
 								            <?php 
 									            if ( has_post_thumbnail( $c->ID ) ) { 
-								            		echo get_the_post_thumbnail( $c->ID, 'thumbnail'); 
+								            		echo get_the_post_thumbnail( $c->ID, 'thumbnail-hd'); 
 												} else {
 													echo '<img src="' . get_bloginfo('template_directory') .'/img/fallback.png" alt="">'; 
 									        } ?>
