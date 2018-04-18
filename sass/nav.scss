@@ -4,6 +4,7 @@
 .skiplinks {
 	position: absolute; 
 	padding-top: 0;
+	z-index: 100;
 
 	a {
 		position: fixed; 
@@ -64,8 +65,7 @@
 				padding: 0;
 				
 				&:hover > .sub-menu,
-				&.focus-visible > .sub-menu {
-					//visibility: visible;
+				&.focus > .sub-menu {
 					left: auto;
 					opacity: 1;
 				}
@@ -87,7 +87,6 @@
 
 			@include rwd(wide) {
 				display: block;
-				//visibility: hidden;
 				left: -999em;
 				opacity: 0;
 				transition: opacity .2s ease-in-out;
