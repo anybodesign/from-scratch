@@ -1,8 +1,14 @@
 # From Scratch
 
-A WordPress Starter Theme by Thomas Villain @ anybodesign.com
+A WordPress Starter Theme by Thomas Villain @ anybodesign.com\
+First of all, remove or customize the Auto-Updater lines at the bottom of the functions.php file.\
+If you don't want to use Github/Bitbucket auto-update feature, remove the _plugin-update-checker_ dependency in the _inc_ directory.\
+Documentation: <https://github.com/YahnisElsts/plugin-update-checker>
 
 ## Changelog
+
+### 2.7.2 - 2018.05.07
+* Plugin Update Checker update
 
 ### 2.7.1 - 2018.05.07
 * ACF: pop-up with thumbnails
