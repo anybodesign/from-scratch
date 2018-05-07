@@ -4,6 +4,9 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 2.7.1 - 2018.05.07
+* ACF: pop-up
+
 ### 2.7 - 2018.04.18
 * A11y: Active nav items
 * A11y: .focus class on <li>

@@ -1,6 +1,6 @@
 {
     "key": "group_58c6bfd3a0239",
-    "title": "ACF Builder",
+    "title": "Constructeur",
     "fields": [
         {
             "key": "field_58c6bfd90e6b4",
@@ -19,7 +19,7 @@
                 "58c6bfee6ec2e": {
                     "key": "58c6bfee6ec2e",
                     "name": "text",
-                    "label": "Texte \/ Images",
+                    "label": "<img src=\"\/wp-content\/themes\/from-scratch\/img\/builder\/builder-text.png\"><span>Texte<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -229,10 +229,82 @@
                     "min": "",
                     "max": ""
                 },
+                "5aef734ec6242": {
+                    "key": "5aef734ec6242",
+                    "name": "textimg",
+                    "label": "<img src=\"\/wp-content\/themes\/from-scratch\/img\/builder\/builder-textimg.png\"><span>Texte \/ Image<\/span>",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5aef7388c624b",
+                            "label": "Image",
+                            "name": "picture",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "35",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5aef739dc624c",
+                            "label": "Zone de texte",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "65",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5aef736bc624a",
+                            "label": "Image à droite",
+                            "name": "right",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "58c6c0ee0e6bb": {
                     "key": "58c6c0ee0e6bb",
                     "name": "cta",
-                    "label": "Call to Action",
+                    "label": "<img src=\"\/wp-content\/themes\/from-scratch\/img\/builder\/builder-cta.png\"><span>Call to Action<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -370,7 +442,7 @@
                 "58c6c277e5a60": {
                     "key": "58c6c277e5a60",
                     "name": "gallery",
-                    "label": "Galerie photos",
+                    "label": "<img src=\"\/wp-content\/themes\/from-scratch\/img\/builder\/builder-gallery.png\"><span>Galerie photos<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -475,7 +547,7 @@
                 "58c6c1e5e5a5d": {
                     "key": "58c6c1e5e5a5d",
                     "name": "content",
-                    "label": "Galerie de contenus",
+                    "label": "<img src=\"\/wp-content\/themes\/from-scratch\/img\/builder\/builder-content.png\"><span>Galerie de contenus<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -609,5 +681,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523802020
+    "modified": 1525690481
 }

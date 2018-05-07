@@ -57,6 +57,31 @@
 	}
 }
 
+// Text + Img
+
+.builder-textimg {
+	
+	.builder-section-container {
+		
+		@include rwd(medium) {
+			display: flex;
+			
+			&.right {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}
+
+.builder-textimg-text,
+.builder-textimg-picture {
+	padding: $grid-padding;
+	
+	@include rwd(medium) {
+		width: 50%;
+	}
+}
+
 
 // CTA
 
