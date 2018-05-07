@@ -213,9 +213,11 @@ add_filter('tiny_mce_before_init', 'from_scratch_tiny_formats');
 
 add_filter('acf/settings/remove_wp_meta_box', '__return_true');
 
+
 // Custom ACF Functions
 
 include_once('inc/acf/acf-functions.php');
+include_once('inc/acf/popup-acf.php');
 
 
 // Front-End ACF Functions
@@ -235,6 +237,15 @@ function fs_acf_json_load_point( $paths ) {
     $paths[] = get_stylesheet_directory() . '/inc/acf';
     
     return $paths;
+}
+
+
+//	Admin style and script
+
+add_action('admin_print_styles', 'wearewp_admin_css', 11 );
+function wearewp_admin_css() {
+	wp_enqueue_style( 'admin-css', get_stylesheet_directory_uri() . '/css/admin.css' );
+	wp_enqueue_style( 'popup-acf-css', get_stylesheet_directory_uri() . '/css/popup-acf.css' );
 }
 
 
