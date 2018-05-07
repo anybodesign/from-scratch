@@ -5,7 +5,8 @@ A WordPress Starter Theme by Thomas Villain @ anybodesign.com
 ## Changelog
 
 ### 2.7.1 - 2018.05.07
-* ACF: pop-up
+* ACF: pop-up with thumbnails
+* ACF: New Text/Picture Section
 
 ### 2.7 - 2018.04.18
 * A11y: Active nav items
