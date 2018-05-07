@@ -1,0 +1,49 @@
+.acf-repeater .acf-row:nth-child(odd) .acf-row-handle.order {
+    background: #cfcfcf;
+    color: #fff;
+}
+.acf-repeater .acf-row:nth-child(odd) .acf-fields.-left > .acf-field:before {
+    background: #cfcfcf;
+}
+a.acf-icon[data-event="add-layout"],
+a.acf-icon[data-event="collapse-row"] {
+	background-color: #7cff7c;
+	color: #656565;
+}
+a.acf-icon[data-event="remove-layout"],
+a.acf-icon[data-event="remove-row"] {
+	background-color: #ff3f3f;
+	color: #fff;
+}
+
+.acf-flexible-content .acf-fc-layout-handle span:not(.acf-fc-layout-order) {
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle {
+	display: flex;
+	align-items: center;
+}
+.acf-flexible-content .layout .acf-fc-layout-order {
+	margin-right: 10px;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle img {
+	border: #e1e1e1 1px dashed;
+	width: 250px;
+}
+
+.wp-core-ui .button-primary.acf-button {
+	background: #37A9DC;
+	border-radius: 0;
+	border: 1px solid #37A9DC;
+	text-shadow: none;
+	box-shadow: none;
+	-webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+.wp-core-ui .button-primary.acf-button:hover {
+	color: #37A9DC;
+	background: #fff;
+}
