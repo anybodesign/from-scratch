@@ -66,7 +66,7 @@
 					'theme_location'	=> 	'main_menu',
 					'menu_class'		=>	'main-menu',
 					'container'			=>	false,
-					'walker'			=>	new from_scratch_subnav_walker()
+					'walker'			=>	new fs_subnav_walker()
 					));
 				?>
 			</nav>

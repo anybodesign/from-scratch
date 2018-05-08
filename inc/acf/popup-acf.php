@@ -1,4 +1,8 @@
 <?php
+	
+	// ACF flexible fields customisation, by WeAre[WP]
+	// https://www.wearewp.pro
+	
 add_action('acf/input/admin_footer', 'waw_flexible_content_layout_popup_class');
 function waw_flexible_content_layout_popup_class() {
     ?>

@@ -8,7 +8,7 @@
  * @version 1.0
  */
 
-class from_scratch_subnav_walker extends Walker_Nav_Menu {
+class fs_subnav_walker extends Walker_Nav_Menu {
 
    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
        

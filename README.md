@@ -1,11 +1,29 @@
 # From Scratch
 
-A WordPress Starter Theme by Thomas Villain @ anybodesign.com\
+A WordPress Starter Theme by Thomas Villain @ anybodesign.com
+
+## Instructions
+
+### Auto-Updater
+
 First of all, remove or customize the Auto-Updater lines at the bottom of the functions.php file.\
 If you don't want to use Github/Bitbucket auto-update feature, remove the _plugin-update-checker_ dependency in the _inc_ directory.\
 Documentation: <https://github.com/YahnisElsts/plugin-update-checker>
 
+### Custom Post Type
+
+If you don’t need any custom post type, remove this line in the functions.php file: `include_once('inc/fs-cpt.php');`
+
+### ACF Page Builder
+
+If you don’t need the ACF page builder, remove the ACF lines in the functions.php file and delete the _acf_ folder in the _inc_ directory.
+
 ## Changelog
+
+### 2.7.3 - 2018.05.08
+* Adding Custom Post Type
+* Adding Custom Taxonomy
+* Functions names
 
 ### 2.7.2 - 2018.05.07
 * Plugin Update Checker update

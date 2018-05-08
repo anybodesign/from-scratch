@@ -1,16 +1,16 @@
 <?php if ( !defined('ABSPATH') ) die();
 
-// Content width
+// ------------------------
+// Theme Setup
+// ------------------------
 
 if ( ! isset( $content_width ) )
 	$content_width = 640;
 
 
-// From Scratch Theme Setup
+if ( ! function_exists( 'fs_setup' ) ) :
 
-if ( ! function_exists( 'from_scratch_setup' ) ) :
-
-function from_scratch_setup() {
+function fs_setup() {
 	
 	
 	// I18n
@@ -48,13 +48,14 @@ function from_scratch_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'from_scratch_setup' );
+add_action( 'after_setup_theme', 'fs_setup' );
+
 
 // ------------------------
 // Enqueue JS & CSS
 // ------------------------
 
-function from_scratch_scripts_load() {
+function fs_scripts_load() {
     if (!is_admin()) {
 
 		// JS 
@@ -109,7 +110,7 @@ function from_scratch_scripts_load() {
 
 	}
 }    
-add_action( 'wp_enqueue_scripts', 'from_scratch_scripts_load' );
+add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
 
 
 // ------------------------
@@ -134,6 +135,11 @@ include( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 require get_template_directory() . '/inc/customizer.php';
 
 
+// Custom Post types
+
+include_once('inc/fs-cpt.php');
+
+
 // Image Sizes
 
 add_image_size( 'thumbnail-hd', 320, 320, true );
@@ -151,7 +157,7 @@ function fs_custom_sizes( $sizes ) {
 
 // Widgets
 
-function from_scratch_widgets_init() {
+function fs_widgets_init() {
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Primary Widgets Area', 'from-scratch' ),
 		'id'			=>	'widgets_area1',
@@ -162,18 +168,18 @@ function from_scratch_widgets_init() {
 		'after_title' 	=> 	'</p>',
 	));
 }
-add_action( 'widgets_init', 'from_scratch_widgets_init' );
+add_action( 'widgets_init', 'fs_widgets_init' );
 
 
 // Tinymce class
 
-function from_scratch_mce_buttons_2($buttons) {
+function fs_mce_buttons_2($buttons) {
     array_unshift($buttons, 'styleselect');
     return $buttons;
 }
-add_filter('mce_buttons_2', 'from_scratch_mce_buttons_2');
+add_filter('mce_buttons_2', 'fs_mce_buttons_2');
 
-function from_scratch_tiny_formats($init_array) {
+function fs_tiny_formats($init_array) {
 
     $style_formats = array(
 
@@ -200,7 +206,7 @@ function from_scratch_tiny_formats($init_array) {
     return $init_array;
 
 }
-add_filter('tiny_mce_before_init', 'from_scratch_tiny_formats');
+add_filter('tiny_mce_before_init', 'fs_tiny_formats');
 
 
 
