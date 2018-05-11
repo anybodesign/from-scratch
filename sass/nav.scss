@@ -30,7 +30,9 @@
 // Main nav
 
 
-#site_nav {}
+.site-nav {
+	padding: $grid-padding;
+}
 
 .main-menu {
 	

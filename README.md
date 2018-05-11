@@ -20,6 +20,12 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.7.4 - 2018.05.11
+* Custom Post Type Labels
+* Custom Post Type Flush Rewrite
+* Header logo link not on front-page
+* Header markup
+
 ### 2.7.3 - 2018.05.08
 * Adding Custom Post Type
 * Adding Custom Taxonomy

@@ -36,16 +36,18 @@
 	
 	<header role="banner" id="site_head">
 		
-		<div class="row inner">
+		<div class="row inner x-between">
 			
-			<div class="col-12 site-brand">
+			<div class="site-brand">
 				<?php if ( is_front_page() ) { ?>
 				<h1 class="site-title">
 					<?php get_template_part('template-parts/header', 'logo'); ?>
 				</h1>
 				<?php } else { ?>
 				<p class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>">
 					<?php get_template_part('template-parts/header', 'logo'); ?>
+					</a>
 				</p>
 				<?php } ?>
 	
@@ -60,7 +62,7 @@
 			<?php // The main menu location ?>
 			
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-			<nav class="col-12" role="navigation" id="site_nav" aria-label="<?php _e('Main menu', 'from-scratch'); ?>">
+			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main menu', 'from-scratch'); ?>">
 				<button id="menu-toggle" type="button"><?php _e('Menu', 'from-scratch'); ?><span></span></button>
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',

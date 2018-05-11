@@ -10,20 +10,22 @@ function fs_custom_posts() {
 		'singular_name'			=> _x( 'Portfolio', 'Post Type Singular Name', 'from-scratch' ),
 		'menu_name'				=> __( 'Portfolio', 'from-scratch' ),
 		'name_admin_bar'		=> __( 'Portfolio', 'from-scratch' ),
-		'parent_item_colon'		=> __( 'Parent Creation:', 'from-scratch' ),
+		//'parent_item_colon'		=> __( 'Parent Creation:', 'from-scratch' ),
 		'all_items'				=> __( 'All Creations', 'from-scratch' ),
 		'add_new_item'			=> __( 'Add New Creation', 'from-scratch' ),
-		'add_new'				=> __( 'Add New', 'from-scratch' ),
 		'new_item'				=> __( 'New Creation', 'from-scratch' ),
 		'edit_item'				=> __( 'Edit Creation', 'from-scratch' ),
 		'update_item'			=> __( 'Update Creation', 'from-scratch' ),
 		'view_item'				=> __( 'View Creation', 'from-scratch' ),
 		'search_items'			=> __( 'Search Creation', 'from-scratch' ),
-		'not_found'				=> __( 'Not found', 'from-scratch' ),
-		'not_found_in_trash'	=> __( 'Not found in Trash', 'from-scratch' ),
+		'not_found'				=> __( 'No creations were found', 'from-scratch' ),
+		'featured_image'	 	=> __( 'Creation Picture', 'from-scratch' ),
+		'set_featured_image' 	=> __( 'Set Creation Picture', 'from-scratch' ),
+		'remove_featured_image' => __( 'Remove Creation Picture', 'from-scratch' ),
+		'use_featured_image' 	=> __( 'Use as Creation Picture', 'from-scratch' ),
 	);
 	$rewrite = array(
-		'slug'					=> 'portfolio',
+		'slug'					=> __( 'portfolio', 'from-scratch' ),
 		'with_front'			=> true,
 		'pages'					=> true,
 		'feeds'					=> true,
@@ -56,6 +58,15 @@ add_action('init', 'fs_custom_posts');
 
 
 
+// Flush Rewrite
+
+add_action( 'after_switch_theme', function() {
+    fs_custom_posts();
+    flush_rewrite_rules();
+});
+
+
+
 // Taxonomies
 
 function fs_custom_taxonomies() {
@@ -72,22 +83,20 @@ function fs_custom_taxonomies() {
 		'edit_item'						=> __( 'Edit Creation Category', 'from-scratch' ),
 		'update_item'					=> __( 'Update Creation Category', 'from-scratch' ),
 		'view_item'						=> __( 'View Creation Category', 'from-scratch' ),
-		'separate_items_with_commas'	=> __( 'Separate items with commas', 'from-scratch' ),
-		'add_or_remove_items'			=> __( 'Add or remove items', 'from-scratch' ),
-		'choose_from_most_used'			=> __( 'Choose from the most used', 'from-scratch' ),
 		'popular_items'					=> __( 'Popular Creation Category', 'from-scratch' ),
 		'search_items'					=> __( 'Search Creation Category', 'from-scratch' ),
-		'not_found'						=> __( 'Not Found', 'from-scratch' ),
+		'not_found'						=> __( 'No creation categories were found', 'from-scratch' ),
+		
 	);
 	$args = array(
 		'labels'				=> $labels,
-		'hierarchical'			=> true,
+		'hierarchical'			=> false,
 		'public'				=> true,
 		'show_ui'				=> true,
 		'show_admin_column'		=> true,
 		'show_in_nav_menus'		=> true,
 		'show_tagcloud'			=> false,
-		'rewrite'				=> array( 'slug' => 'creations' ),		
+		'rewrite'				=> array( 'slug' => __( 'creations', 'from-scratch' ) ),		
 	);
 	register_taxonomy( 'type-creation', array( 'projet' ), $args );	
 

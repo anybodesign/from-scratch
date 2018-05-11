@@ -4,7 +4,7 @@ Author: Thomas Villain
 Author URI: https://anybodesign.com/
 Theme URI: https://github.com/anybodesign/from-scratch
 Description: A WordPress Starter Theme using Prid’x
-Version: 2.7.3
+Version: 2.7.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: from-scratch
@@ -61,18 +61,31 @@ body {
 
 #site_head {
 	position: relative;
+	padding: $grid-padding*2 0;
+	
+	& > .row {
+		align-items: center;
+	}
 }
 
 .site-title {
+	display: block;
+	margin: 0;
+	line-height: 1;
 	
 	a {
 		
 	}
 }
 
-.site-desc {}
+.site-desc {
+	display: block;
+	margin: 0;
+}
 
-
+.site-brand {
+	padding: $grid-padding;
+}
 
 
 /* ------------------------- */
