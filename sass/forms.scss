@@ -147,7 +147,7 @@ input[type="submit"]:hover {
 
 
 .formfield-text, // Generic container
-.formfield-texteara,
+.formfield-textarea,
 .formfield-select, 
 .formfield-file, 
 .formfield-checkbox, 
@@ -336,13 +336,16 @@ span.wpcf7-list-item {
 	padding: $grid-padding*2 0;
 }
 
-// Checkbox
+// Checkbox, Radio & Select
 
 .gfield_checkbox li {
 	@extend .formfield-checkbox;
 }
 .gfield_radio li {
 	@extend .formfield-radio;
+}
+.ginput_container_select {
+	@extend .formfield-select--container;
 }
 
 

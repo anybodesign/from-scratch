@@ -209,6 +209,20 @@ function fs_tiny_formats($init_array) {
 add_filter('tiny_mce_before_init', 'fs_tiny_formats');
 
 
+// Custom search form
+
+function fs_search_form( $form ) {
+    $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+    <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+    <input type="search" placeholder="' . __( 'Keywords' ) . '" value="' . get_search_query() . '" name="s" id="s">
+    <input type="submit" class="action-btn" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'">
+    </form>';
+ 
+    return $form;
+}
+add_filter( 'get_search_form', 'fs_search_form' );
+
+
 
 // ------------------------
 // ACF

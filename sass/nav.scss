@@ -16,8 +16,13 @@
 		text-decoration: none;
 		transition: top .2s ease-in;
 	
-		&.focus-visible {
+		&.focus-visible,
+		&:focus {
 			top: -5px;
+			
+			.admin-bar & {
+				top: 27px;
+			}
 		}
 		&:focus {
 			outline: none;

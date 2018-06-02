@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2018-04-16 15:34+0200\n"
-"PO-Revision-Date: 2018-04-16 15:35+0200\n"
+"POT-Creation-Date: 2018-05-11 11:05+0200\n"
+"PO-Revision-Date: 2018-05-11 11:08+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -21,8 +21,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:21
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Page introuvable."
+msgid "Oops! That page can&rsquo;t be found"
+msgstr "Oops! Page introuvable"
 
 #: 404.php:24
 msgid "It looks like nothing was found at this location. Maybe try a search?"
@@ -54,27 +54,27 @@ msgstr "Propulsé par WordPress !"
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: functions.php:113
+#: functions.php:124
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:114
+#: functions.php:125
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:136
+#: functions.php:152
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:137
+#: functions.php:153
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:138
+#: functions.php:154
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:146
+#: functions.php:162
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
@@ -86,11 +86,15 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:63
+#: header.php:48
+msgid "Go to Home Page"
+msgstr "Aller à la page d'accueil"
+
+#: header.php:65
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: header.php:64
+#: header.php:66
 msgid "Menu"
 msgstr "Menu"
 
@@ -134,28 +138,175 @@ msgstr "Afficher le lien WordPress"
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:358
+#: inc/fs-cpt.php:9
+msgctxt "Post Type General Name"
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: inc/fs-cpt.php:10
+msgctxt "Post Type Singular Name"
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: inc/fs-cpt.php:11 inc/fs-cpt.php:12 inc/fs-cpt.php:34
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: inc/fs-cpt.php:14
+msgid "All Creations"
+msgstr "Toutes les créations"
+
+#: inc/fs-cpt.php:15
+msgid "Add New Creation"
+msgstr "Ajouter une nouvelle création"
+
+#: inc/fs-cpt.php:16
+msgid "New Creation"
+msgstr "Nouvelle création"
+
+#: inc/fs-cpt.php:17
+msgid "Edit Creation"
+msgstr "Modifier la création"
+
+#: inc/fs-cpt.php:18
+msgid "Update Creation"
+msgstr "Mettre à jour la création"
+
+#: inc/fs-cpt.php:19
+msgid "View Creation"
+msgstr "Voir la création"
+
+#: inc/fs-cpt.php:20
+msgid "Search Creation"
+msgstr "Chercher une création"
+
+#: inc/fs-cpt.php:21
+msgid "No creations were found"
+msgstr "Aucune création trouvée"
+
+#: inc/fs-cpt.php:22
+msgid "Creation Picture"
+msgstr "Image de référence"
+
+#: inc/fs-cpt.php:23
+msgid "Set Creation Picture"
+msgstr "Choisir l'image de référence"
+
+#: inc/fs-cpt.php:24
+msgid "Remove Creation Picture"
+msgstr "Supprimer l'image de référence"
+
+#: inc/fs-cpt.php:25
+msgid "Use as Creation Picture"
+msgstr "Utilisatier en tant qu’image de référence"
+
+#: inc/fs-cpt.php:28
+msgid "portfolio"
+msgstr "portfolio"
+
+#: inc/fs-cpt.php:35
+msgid "Anybodesign Portfolio"
+msgstr "Portfolio Anybodesign"
+
+#: inc/fs-cpt.php:75
+msgctxt "Taxonomy General Name"
+msgid "Creation Categories"
+msgstr "Types de créations"
+
+#: inc/fs-cpt.php:76
+msgctxt "Taxonomy Singular Name"
+msgid "Creation Category"
+msgstr "Type de création"
+
+#: inc/fs-cpt.php:77
+msgid "Creation Category"
+msgstr "Type de création"
+
+#: inc/fs-cpt.php:78
+msgid "All Creation Categories"
+msgstr "Tous les types de créations"
+
+#: inc/fs-cpt.php:79
+msgid "Parent Creation Category"
+msgstr "Type de création parent"
+
+#: inc/fs-cpt.php:80
+msgid "Parent Creation Category:"
+msgstr "Type de création parent :"
+
+#: inc/fs-cpt.php:81
+msgid "New Creation Category"
+msgstr "Nouveau type de création"
+
+#: inc/fs-cpt.php:82
+msgid "Add New Creation Category"
+msgstr "Ajouter un type de création"
+
+#: inc/fs-cpt.php:83
+msgid "Edit Creation Category"
+msgstr "Modifier le type de création"
+
+#: inc/fs-cpt.php:84
+msgid "Update Creation Category"
+msgstr "Mettre à jour le type de création"
+
+#: inc/fs-cpt.php:85
+msgid "View Creation Category"
+msgstr "Voir le type de création"
+
+#: inc/fs-cpt.php:86
+msgid "Popular Creation Category"
+msgstr "Type de création populaire"
+
+#: inc/fs-cpt.php:87
+msgid "Search Creation Category"
+msgstr "Chercher un type de création"
+
+#: inc/fs-cpt.php:88
+msgid "No creation categories were found"
+msgstr "Aucun type de création trouvé"
+
+#: inc/fs-cpt.php:99
+msgid "creations"
+msgstr "creations"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:405
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
+msgid "View details"
+msgstr "Voir les détails"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
+#, php-format
+msgid "More information about %s"
+msgstr "Plus d'informations sur %s"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:407
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:409
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p1/Vcs/PluginUpdateChecker.php:83
+#: inc/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
@@ -180,11 +331,11 @@ msgstr "Page"
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
 
-#: template-parts/acf/builder-content.php:31
+#: template-parts/acf/builder-content.php:32
 msgid "Read "
 msgstr "Lire "
 
-#: template-parts/acf/builder-gallery.php:31
+#: template-parts/acf/builder-gallery.php:32
 msgid "Enlarge picture"
 msgstr "Agrandir l'image"
 
@@ -227,10 +378,6 @@ msgstr "Lire la suite de l'article %s"
 #: template-parts/content.php:45
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
-
-#: template-parts/header-logo.php:14
-msgid "Go to Home Page"
-msgstr "Aller à la page d'accueil"
 
 #: template-parts/post-meta.php:16
 msgid "Posted on&nbsp;"
@@ -310,12 +457,6 @@ msgstr "https://anybodesign.com/"
 
 #~ msgid "A WordPress Starter Theme"
 #~ msgstr "Un starter thème pour WordPress"
-
-#~ msgid "Search results"
-#~ msgstr "Résultats de la recherche"
-
-#~ msgid "All Settings"
-#~ msgstr "Tous les paramètres"
 
 #~ msgid "Thomas Villain - Anybodesign"
 #~ msgstr "Thomas Villain - Anybodesign"

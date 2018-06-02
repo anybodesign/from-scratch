@@ -16,9 +16,14 @@ If you don’t need any custom post type, remove this line in the functions.php 
 
 ### ACF Page Builder
 
-If you don’t need the ACF page builder, remove the ACF lines in the functions.php file and delete the _acf_ folder in the _inc_ directory.
+If you don’t need the ACF page builder, remove the ACF lines in the functions.php file and delete the _acf_ folder in the _inc_ directory. ACF Pro is required.
 
 ## Changelog
+
+### 2.7.5 - 2018.06.02
+* Translations updated
+* Custom and more accessible searchform
+* Form css typo
 
 ### 2.7.4 - 2018.05.11
 * Custom Post Type Labels
