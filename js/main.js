@@ -77,8 +77,8 @@ jQuery(document).ready(function($) {
 
 	// Responsive Video Players (Youtube, Vimeo)
 			
-	$(window).on('load',function() {
-		
+	function resizevid(){
+
 		$("iframe").each(function() {
 			
 			if($(this).is("[src*=youtube], [src*=vimeo]")) {
@@ -86,18 +86,14 @@ jQuery(document).ready(function($) {
 				$( this ).attr('style','height: '+yt_width/1.77+'px');
 			}
 		});
-		
+	}
+				
+	$(window).on('load',function() {		
+		resizevid();
 	});	
 
 	$(window).on('resize',function() {
-
-		$("iframe").each(function() {
-			if($(this).is("[src*=youtube], [src*=vimeo]")) {
-				var yt_width = $(this).width();
-				$( this ).attr('style','height: '+yt_width/1.77+'px');
-			}
-		});
-		
+		resizevid();
 	});	
 	
 	
