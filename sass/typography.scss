@@ -107,6 +107,14 @@ i, em {
 	font-family: $font-italic;
 	font-style: normal;
 }
+em strong, strong em,
+i strong, strong i,
+em b, b em,
+i b, b i {
+	font-family: $font-bolditalic;
+	font-weight: normal;
+	font-style: normal;
+}
 
 li p,
 li ul {

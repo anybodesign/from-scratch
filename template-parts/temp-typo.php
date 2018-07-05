@@ -74,7 +74,7 @@
 									<div class="formfield-select--container">
 										<select id="inp_sel">
 											<option>Option 1</option>
-											<option>Option 2</option>
+											<option>Option 2 with a very very long option text to show ellipsis</option>
 											<option>Option 3</option>
 											<option>Option 4</option>
 										</select>
