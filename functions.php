@@ -45,10 +45,42 @@ function fs_setup() {
 		'audio',
 		'chat',
 	) );
+	
+
+	// Gutenberg support 
+	
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'editor-color-palette', 
+	    array(
+	        'name' => __( 'very dark gray', 'from-scratch' ),
+	        'slug' => 'very-dark-gray',
+	        'color' => '#4a4a4a',
+	    ),
+	    array(
+	        'name' => __( 'very light gray', 'from-scratch' ),
+	        'slug' => 'very-light-gray',
+	        'color' => '#e0e0e0',
+	    )
+	);	
+	add_theme_support( 'disable-custom-colors' );
 
 }
 endif;
 add_action( 'after_setup_theme', 'fs_setup' );
+
+
+// Gutenberg editor styles
+
+function fs_block_editor_styles() {
+    wp_enqueue_style( 
+    	'fs_block_editor_styles',
+    	get_theme_file_uri( '/block-editor-style.css' ), 
+    	false, 
+    	'1.0', 
+    	'screen'
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
 
 
 // ------------------------
