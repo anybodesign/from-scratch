@@ -40,9 +40,20 @@
 					</ol>
 					
 					<blockquote>
-						“ Typography is the craft of endowing human language with a durable visual form.  (I'm a quote) “<br>
-						― Robert Bringhurst
+						“ Typography is the craft of endowing human language with a durable visual form.  (I'm a quote) “
+						<cite>― Robert Bringhurst</cite>
 					</blockquote>
+					
+					<p>A code block:</p>
+					<pre>
+					    array(
+					        &nbsp;'name' => __( 'very light gray', 'themeLangDomain' ),
+					        &nbsp;'slug' => 'very-light-gray',
+					        &nbsp;'color' => '#e0e0e0',
+					    ),
+					</pre>
+					
+					<p>Here is some inline code: <code>color: #444;</code> (CSS)</p>
 					
 					<h3>Forms</h3>
 					

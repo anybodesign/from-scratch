@@ -314,7 +314,12 @@ blockquote p {
 blockquote p {
 	margin-bottom: 0;
 }
-
+cite {
+	display: block;
+	font-family: $font-italic;
+	margin-top: .5em;
+	font-size: 85%;
+}
 
 
 // Misc
@@ -398,7 +403,6 @@ code, pre, samp, kbd {
 	white-space: pre-wrap;
 	font-family: $font-mono;
 	font-size: 1em;
-	line-height: 1;
 }
 
 kbd {
@@ -411,8 +415,13 @@ code, pre {
 	background-color: #eee;
 	color: #999;
 }
-code {padding: .5em;}
-
+code {
+	padding: .5em;
+	
+	pre & {
+		background-color: transparent;
+	}
+}
 pre {
 	padding: .5em 1.5em;
 	border: #ccc 1px dashed;
