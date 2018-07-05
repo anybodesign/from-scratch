@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2018-05-11 11:05+0200\n"
-"PO-Revision-Date: 2018-05-11 11:08+0200\n"
+"POT-Creation-Date: 2018-07-05 12:02+0200\n"
+"PO-Revision-Date: 2018-07-05 12:03+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -54,29 +54,49 @@ msgstr "Propulsé par WordPress !"
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: functions.php:124
+#: functions.php:55
+msgid "very dark gray"
+msgstr "gris très foncé"
+
+#: functions.php:60
+msgid "very light gray"
+msgstr "gris très clair"
+
+#: functions.php:161
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:125
+#: functions.php:162
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:152
+#: functions.php:190
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:153
+#: functions.php:191
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:154
+#: functions.php:192
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:162
+#: functions.php:200
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
+
+#: functions.php:254
+msgid "Search for:"
+msgstr "Rechercher :"
+
+#: functions.php:255
+msgid "Keywords"
+msgstr "Mots clés"
+
+#: functions.php:256
+msgid "Search"
+msgstr "Chercher"
 
 #: header.php:32
 msgid "Go to main content"
@@ -414,6 +434,14 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#. Template Name of the plugin/theme
+msgid "Page builder"
+msgstr "Constructeur de Page"
+
+#. Template Name of the plugin/theme
+msgid "Custom page template with Sidebar"
+msgstr "Page avec colonne latérale"
 
 #~ msgid "Unfold navigation menu"
 #~ msgstr "Déplier le menu de navigation"
