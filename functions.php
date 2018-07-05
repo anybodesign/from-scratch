@@ -118,6 +118,11 @@ add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
 // ------------------------
 
 
+// Customizer
+
+require get_template_directory() . '/inc/customizer.php';
+
+
 // Menus
 
 register_nav_menus( array(
@@ -127,17 +132,18 @@ register_nav_menus( array(
 
 // Sub-menus Walker
 
-include( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
-
-
-// Customizer
-
-require get_template_directory() . '/inc/customizer.php';
+include_once( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 
 
 // Custom Post types
 
-include_once('inc/fs-cpt.php');
+include_once( dirname( __FILE__ ) . '/inc/fs-cpt.php' );
+
+
+// Extended Search
+
+include_once( dirname( __FILE__ ) . '/inc/fs-extended-search.php' );
+
 
 
 // Image Sizes
