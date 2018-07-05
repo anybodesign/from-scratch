@@ -20,6 +20,14 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.8 - 2018.07.05
+* Extended search: WP search in custom fields
+* Some Gutenberg theme support and css
+* Typography: Bold Italic
+* CSS: pre, code…
+* Forms: select ellipsis
+* Video ratio function
+
 ### 2.7.5 - 2018.06.02
 * Translations updated
 * Custom and more accessible searchform
