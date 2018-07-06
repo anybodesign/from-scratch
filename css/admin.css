@@ -5,15 +5,33 @@
 .acf-repeater .acf-row:nth-child(odd) .acf-fields.-left > .acf-field:before {
     background: #cfcfcf;
 }
-a.acf-icon[data-event="add-layout"],
-a.acf-icon[data-event="collapse-row"] {
-	background-color: #7cff7c;
-	color: #656565;
-}
-a.acf-icon[data-event="remove-layout"],
-a.acf-icon[data-event="remove-row"] {
-	background-color: #ff3f3f;
+
+.acf-flexible-content .layout .acf-fc-layout-controlls .acf-icon.-collapse {
+	border-radius: 100%;
+	background: #21e221;
 	color: #fff;
+}
+.acf-flexible-content .layout .acf-fc-layout-controlls .acf-icon.-collapse:hover {
+	border-radius: 100%;
+	background: #00cc00;
+	color: #fff;
+}
+
+.acf-field-flexible-content {
+	background: #f5f5f5;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle {
+	background: #fff;
+}
+.acf-flexible-content .layout:nth-child(odd) .acf-fc-layout-handle {
+	background: #e4e4e4;
+}
+
+@media (max-width: 45em) {
+	.acf-input input[type="range"] {
+		display: none;
+	}
 }
 
 .acf-flexible-content .acf-fc-layout-handle span:not(.acf-fc-layout-order) {
