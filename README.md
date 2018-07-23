@@ -20,6 +20,12 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.8.1 - 2018.07.23
+* ACF admin styles (odd/even)
+* Sass separate files
+* Some more Gravity styles
+* Minor fixes
+
 ### 2.8 - 2018.07.05
 * Extended search: WP search in custom fields
 * Some Gutenberg theme support and css
