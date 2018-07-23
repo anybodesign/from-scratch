@@ -1,0 +1,95 @@
+/* ------------------------- */
+/* = Plugins
+/* ------------------------- */
+
+// Slick
+
+.slick-dots {
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 1em 0; 
+	list-style: none;
+	text-align: center;
+	
+	li {
+		display: inline-block;
+		padding: .5em !important;
+		margin: 0;
+		
+		&::before {
+			content: none !important;
+		}
+		
+		button {
+			padding: 0;
+			display: block;
+			width: 16px; 
+			height: 16px;
+			margin: 0 8px;
+			border-radius: 16px;
+			border: $primary-color 2px solid;
+			background-color: $secondary-color;
+			//outline: none !important;
+			
+			@include a11y-hide();
+			transition: .2s ease-in-out;
+			
+			&:hover, &.focus-visible {
+				transform: scale(1.4);
+				background-color: $primary-color;
+				//outline: none;
+			}
+		
+		}
+		
+		&.slick-active button {
+			background-color: $primary-color;
+		}
+		&.slick-disabled {
+			visibility: hidden;
+		}
+
+	}
+}
+
+// Fancybox
+
+
+/* ------------------------- */
+/* = Misc
+/* ------------------------- */
+
+.error-404 {}
+
+
+/* ------------------------- */
+/* = Helpers
+/* ------------------------- */
+
+.screen-reader-text {
+	@include a11y-hidden();
+}
+
+.clearfix {
+	clear: both;
+	float: none;
+}
+.floatl {
+	float: left;
+} 
+.floatr {
+	float: right;
+}
+
+.txtr {
+	text-align: right;
+} 
+.txtl {
+	text-align: left;
+} 
+.txtc {
+	text-align: center;
+}

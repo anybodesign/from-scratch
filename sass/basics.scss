@@ -1,0 +1,28 @@
+/* ------------------------- */
+/* = Basics
+/* ------------------------- */
+
+html, 
+body, 
+#wrapper {
+	width: 100%; 
+	height: 100%; 
+}
+
+body {
+	text-size-adjust: none;
+}
+
+.inner {
+	position: relative;
+	margin: 0 auto;
+	max-width: $max-width;
+	
+	.row & {
+		width: 100%;
+	}
+}
+
+[class*="col-"] { 
+	padding: $grid-padding; 
+}

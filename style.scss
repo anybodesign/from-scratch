@@ -4,7 +4,7 @@ Author: Thomas Villain
 Author URI: https://anybodesign.com/
 Theme URI: https://github.com/anybodesign/from-scratch
 Description: A WordPress Starter Theme using Prid’x
-Version: 2.8
+Version: 2.8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: from-scratch
@@ -23,140 +23,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'sass/typography.scss';
 @import 'sass/forms.scss';
 
+@import 'sass/basics.scss';
 
-/* ------------------------- */
-/* = Basics
-/* ------------------------- */
-
-html, 
-body, 
-#wrapper {
-	width: 100%; 
-	height: 100%; 
-}
-
-body {
-	text-size-adjust: none;
-}
-
-.inner {
-	position: relative;
-	margin: 0 auto;
-	max-width: $max-width;
-	
-	.row & {
-		width: 100%;
-	}
-}
-
-[class*="col-"] { 
-	padding: $grid-padding; 
-}
-
-
-/* ------------------------- */
-/* = Header
-/* ------------------------- */
-
-
-#site_head {
-	position: relative;
-	padding: $grid-padding*2 0;
-	
-	& > .row {
-		align-items: center;
-	}
-}
-
-.site-title {
-	display: block;
-	margin: 0;
-	line-height: 1;
-	
-	a {
-		
-	}
-}
-
-.site-desc {
-	display: block;
-	margin: 0;
-}
-
-.site-brand {
-	padding: $grid-padding;
-}
-
-
-/* ------------------------- */
-/* = Nav
-/* ------------------------- */
-
+@import 'sass/header.scss';
 @import 'sass/nav.scss';
-
-
-
-/* ------------------------- */
-/* = Content
-/* ------------------------- */
-
-
-#site_content {}
-
+@import 'sass/frontpage.scss';
 @import 'sass/content.scss';
-
-
-
-/* ------------------------- */
-/* = Posts
-/* ------------------------- */
-
 @import 'sass/posts.scss';
+@import 'sass/footer.scss';
 
-
-
-
-/* ------------------------- */
-/* = Footer
-/* ------------------------- */
-
-
-#site_foot {}
-
-
-.footer-nav, 
-.footer-copyright {
-	display: inline-block; 
-	vertical-align: baseline;
-}
-
-.footer-menu {
-	margin: 0;
-	
-	li {
-		display: inline;
-		margin: 0 .25em;
-	}
-}
-
-
-/* ------------------------- */
-/* = Helpers
-/* ------------------------- */
-
-
-.screen-reader-text {
-	@include a11y-hidden();
-}
-
-.clearfix {
-	clear: both;
-	float: none;
-}
-.floatl {float: left;} 
-.floatr {float: right;}
-
-.txtr {text-align: right;} 
-.txtl {text-align: left;} 
-.txtc {text-align: center;}
-
+@import 'sass/misc.scss';

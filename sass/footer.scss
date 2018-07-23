@@ -1,0 +1,21 @@
+/* ------------------------- */
+/* = Footer
+/* ------------------------- */
+
+
+#site_foot {}
+
+.footer-nav, 
+.footer-copyright {
+	display: inline-block; 
+	vertical-align: baseline;
+}
+
+.footer-menu {
+	margin: 0;
+	
+	li {
+		display: inline;
+		margin: 0 .25em;
+	}
+}
