@@ -15,7 +15,7 @@ get_header(); ?>
 	
 					<?php while ( have_posts() ) : the_post(); ?>
 		
-						<?php get_template_part( 'template-parts/content', 'page' ); ?>
+						<?php get_template_part( 'template-parts/page', 'content' ); ?>
 		
 					<?php endwhile; ?>
 
@@ -45,7 +45,7 @@ get_header(); ?>
 										
 						<?php while ($query->have_posts()) : $query->the_post(); ?>
 					
-							<?php get_template_part( 'template-parts/content' ); ?>
+							<?php get_template_part( 'template-parts/post-content' ); ?>
 
 						<?php endwhile; ?>
 

@@ -21,7 +21,7 @@ get_header(); ?>
 			
 						<?php while ( have_posts() ) : the_post(); ?>
 			
-							<?php get_template_part( 'template-parts/content', 'search' ); ?>
+							<?php get_template_part( 'template-parts/search', 'content' ); ?>
 			
 						<?php endwhile; ?>
 			
@@ -29,7 +29,7 @@ get_header(); ?>
 			
 					<?php else : ?>
 	
-						<?php get_template_part( 'template-parts/content', 'none' ); ?>
+						<?php get_template_part( 'template-parts/nothing' ); ?>
 				
 					<?php endif; ?>	
 						
