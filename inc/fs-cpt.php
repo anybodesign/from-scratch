@@ -51,7 +51,7 @@ function fs_custom_posts() {
 		'rewrite'				=> $rewrite,
 		'capability_type'		=> 'post'
 	);	
-	register_post_type( 'projet', $args);
+	register_post_type( 'portfolio', $args);
 	
 }
 add_action('init', 'fs_custom_posts');
@@ -86,7 +86,6 @@ function fs_custom_taxonomies() {
 		'popular_items'					=> __( 'Popular Creation Category', 'from-scratch' ),
 		'search_items'					=> __( 'Search Creation Category', 'from-scratch' ),
 		'not_found'						=> __( 'No creation categories were found', 'from-scratch' ),
-		
 	);
 	$args = array(
 		'labels'				=> $labels,
@@ -98,7 +97,102 @@ function fs_custom_taxonomies() {
 		'show_tagcloud'			=> false,
 		'rewrite'				=> array( 'slug' => __( 'creations', 'from-scratch' ) ),		
 	);
-	register_taxonomy( 'type-creation', array( 'projet' ), $args );	
+	register_taxonomy( 'type-creation', array( 'portfolio' ), $args );	
 
 }
 add_action( 'init', 'fs_custom_taxonomies', 0 );
+
+
+// Taxonomy Selects
+//
+// https://blog.tjnevis.com/wordpress-admin-add-dropdown-filters-for-custom-taxonomies/
+
+$restrict_manage_posts = function ($post_type, $taxonomy) {
+    return function() use ($post_type, $taxonomy) {
+        global $typenow;
+
+        if ($typenow == $post_type) {
+            $selected = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+            $info_taxonomy = get_taxonomy($taxonomy);
+
+            wp_dropdown_categories(array(
+                'show_option_all'   => $info_taxonomy->label,
+                'taxonomy'          => $taxonomy,
+                'name'              => $taxonomy,
+                'orderby'           => 'name',
+                'selected'          => $selected,
+                'show_count'        => TRUE,
+                'hide_empty'        => TRUE,
+            ));
+
+        }
+
+    };
+
+};
+
+$parse_query = function($post_type, $taxonomy) {
+
+    return function($query) use($post_type, $taxonomy) {
+        global $pagenow;
+
+        $q_vars = &$query->query_vars;
+
+        if( $pagenow == 'edit.php'
+            && isset($q_vars['post_type']) && $q_vars['post_type'] == $post_type
+            && isset($q_vars[$taxonomy])
+            && is_numeric($q_vars[$taxonomy]) && $q_vars[$taxonomy] != 0
+        ) {
+            $term = get_term_by('id', $q_vars[$taxonomy], $taxonomy);
+            $q_vars[$taxonomy] = $term->slug;
+        }
+
+    };
+
+};
+
+add_action('restrict_manage_posts', $restrict_manage_posts('portfolio', 'type-creation') );
+add_filter('parse_query', $parse_query('portfolio', 'type-creation') );
+
+
+// Custom titles
+
+function fs_change_title_text( $title ) {
+	$screen = get_current_screen();
+
+	if  ( 'portfolio' == $screen->post_type ) {
+		$title = __( 'Enter the name of the creation', 'from-scratch' );
+	}
+
+	return $title;
+}
+add_filter( 'enter_title_here', 'fs_change_title_text' );
+
+
+// Admin Columns Shows
+
+function fs_new_columns_portfolio( $wp_columns ) {
+	$column_before = array();
+	unset( $wp_columns['date'] );
+	$column_after['visuel'] = __( 'Picture', 'from-scratch');
+	$column_after['date'] = __( 'Date', 'from-scratch');
+	$wp_columns = array_merge( $column_before, $wp_columns, $column_after );
+	
+	return $wp_columns;
+}
+function fs_manage_columns_portfolio( $column_name ) {
+	global $wpdb, $post;
+
+	switch( $column_name ) {
+		case 'visuel':
+			if( has_post_thumbnail( $post->ID ) ){
+				echo get_the_post_thumbnail( $post->ID, array(60,60) );
+			}
+			break;
+		
+		default:
+			break;
+	}
+}
+add_filter( 'manage_edit-portfolio_columns', 'fs_new_columns_portfolio' );
+add_filter( 'manage_portfolio_posts_custom_column', 'fs_manage_columns_portfolio' );
