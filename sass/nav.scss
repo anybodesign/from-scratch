@@ -128,21 +128,28 @@
 
 .sub-menu-unfold {
 	position: absolute;
-	top: 0; right: 0;
+	top: 0; 
+	right: 0;
 	display: block;
-	height: 24px; width: 24px;
+	height: 24px; 
+	width: 24px;
 	margin-top: 0;
-	border: 0; border-radius: 12px; padding: 0;
+	border: 0; 
+	border-radius: 12px; 
+	padding: 0;
 	background: #ccc !important;
 	
-	&::after, &::before {
-		content: "";
+	&::after, 
+	&::before {
+		content: '';
 		display: block;
 		position: absolute;
-		top: 11px; left: 4px;
-		width: 16px; height: 3px;
+		top: 11px; 
+		left: 4px;
+		width: 16px; 
+		height: 3px;
 		background-color: #000;
-		@include transition();
+		@include transition(transform);
 	}
 	&::after {
 		transform: rotate(-90deg);
@@ -153,17 +160,25 @@
 		@include a11y-hidden();
 	}
 	
-	&.sub-menu-opened::after {transform: rotate(45deg);}
-	&.sub-menu-opened::before {transform: rotate(-45deg);}
+	&.sub-menu-opened::after {
+		transform: rotate(45deg);
+	}
+	&.sub-menu-opened::before {
+		transform: rotate(-45deg);
+	}
 	
 	@include rwd(medium) {
-		height: 16px; width: 16px;
-		top: 50%; margin-top: -8px;
+		height: 16px; 
+		width: 16px;
+		top: 50%; 
+		margin-top: -8px;
 		border-radius: 8px;
 		
 		&::after, &::before {
-			top: 7px; left: 3px;
-			width: 10px; height: 2px;
+			top: 7px; 
+			left: 3px;
+			width: 10px; 
+			height: 2px;
 		} 
 	}
 	
