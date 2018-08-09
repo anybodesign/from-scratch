@@ -20,6 +20,14 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.9 - 2018.08.09
+* White-btn style
+* Content width var
+* CPT custom stuff
+* Include Prid'x in sass
+* More comments
+* Templates spring cleaning
+
 ### 2.8.1 - 2018.07.23
 * ACF admin styles (odd/even)
 * Sass separate files

@@ -38,6 +38,8 @@
 		
 		<div class="row inner x-between">
 			
+			<?php // The Logo & Site Titles ?>
+			
 			<div class="site-brand">
 				<?php if ( is_front_page() ) { ?>
 				<h1 class="site-title">
