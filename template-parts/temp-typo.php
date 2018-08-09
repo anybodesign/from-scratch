@@ -53,7 +53,7 @@
 					    ),
 					</pre>
 					
-					<p>Here is some inline code: <code>color: #444;</code> (CSS)</p>
+					<p>Here is some <mark>inline</mark> code: <code>color: #444;</code> (CSS)</p>
 					
 					<h3>Forms</h3>
 					
