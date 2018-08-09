@@ -5,7 +5,7 @@
 // ------------------------
 
 if ( ! isset( $content_width ) )
-	$content_width = 640;
+	$content_width = 2048;
 
 
 if ( ! function_exists( 'fs_setup' ) ) :
@@ -127,13 +127,17 @@ function fs_scripts_load() {
 		
 		// CSS
 		
+		/* Enqueue your customl CSS here
+		
 		wp_enqueue_style( 
-			'pridx', 
-			get_template_directory_uri() . '/css/pridx.css',
+			'your-css', 
+			get_template_directory_uri() . '/css/your.css',
 			array(), 
-			'1.7.1', 
+			'1.0', 
 			'screen' 
 		);
+		
+		*/
 		
 		
 		// Main stylesheet
