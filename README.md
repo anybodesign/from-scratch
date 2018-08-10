@@ -20,6 +20,9 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.9.1 - 2018.08.10
+* Bugfix: Gutenberg color palette
+
 ### 2.9 - 2018.08.09
 * White-btn style
 * Content width var
