@@ -3,7 +3,17 @@
 // + + + + + + + + + + 
 
 
-.wp-block-text-columns {
+// Excerpt
+
+p.wp-block-subhead {
+	@extend .text-intro;
+	font-style: normal;
+	opacity: 1;
+}
+
+// Columns 
+
+.wp-block-columns {
 	display: block;
 	
 	.wp-block-column {
@@ -39,5 +49,138 @@
 				width: 25%;
 			}
 		}
+	}
+}
+
+
+// Images
+
+.wp-block-image {
+	
+	& img {
+		max-width: none;
+	}
+	
+	&.alignfull {
+		width: 100%;
+	}	
+}
+
+
+// Quotes
+
+.wp-block-quote {
+	margin-bottom: $grid-padding*2 !important;
+}
+
+
+// Gallery /Gut  ** backwards compatibility **
+
+.wp-block-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0 !important;
+	// allow gallery items to go edge to edge
+	margin: 0 -$grid-padding/2 0 -$grid-padding/2;
+
+	.blocks-gallery-image,
+	.blocks-gallery-item {
+		margin: $grid-padding/2;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+			@include img-opacity(.7);
+
+		figure {
+			margin: 0;
+			height: 100%;
+			display: flex;
+				flex-direction: column; 		// direction
+				flex: 1;						// and stretching
+			align-items: flex-start;
+				
+				a {
+					display: flex; 				// stretching <a>
+					flex-direction: column;		// along all 
+					flex: 1;					// the height
+				}
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		figcaption {
+			position: absolute;
+				bottom: 0;			// positionning 
+				left: 0;			// the caption
+			width: 100%;
+			max-height: 100%;
+			overflow: auto;
+			padding: 40px 10px 5px;
+			color: #fff;
+			text-align: center;
+			background: linear-gradient(0deg, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.3) 60%, transparent);
+
+			img {
+				display: inline;
+			}
+		}
+	}
+
+	// Cropped
+	&.is-cropped .blocks-gallery-image,
+	&.is-cropped .blocks-gallery-item {
+		a,
+		img {
+			//display: flex;	// no
+			//flex: 1;			// need
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+		}
+	}
+
+	// Responsive fallback value, 2 columns
+	& .blocks-gallery-image,
+	& .blocks-gallery-item {
+		width: calc(100% / 2 - $grid-padding);
+	}
+
+	&.columns-1 .blocks-gallery-image,
+	&.columns-1 .blocks-gallery-item {
+		width: calc(100% / 1 - $grid-padding);
+	}
+
+	@include rwd(small) {
+		@for $i from 3 through 8 {
+			&.columns-#{ $i } .blocks-gallery-image,
+			&.columns-#{ $i } .blocks-gallery-item {
+				width: calc(100% / #{ $i } - $grid-padding);
+			}
+		}
+	}
+
+	// Make the "Add new Gallery item" button full-width (so it always appears
+	// below other items).
+	.blocks-gallery-item {
+		&.has-add-item-button {
+			width: 100%;
+		}
+	}
+
+	// Apply max-width to floated items that have no intrinsic width
+	[data-align="left"] &,
+	[data-align="right"] &,
+	&.alignleft,
+	&.alignright {
+		max-width: $max-width / 2;
+		width: 100%;
 	}
 }
