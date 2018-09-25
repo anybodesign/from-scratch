@@ -1,4 +1,9 @@
 <?php if ( !defined('ABSPATH') ) die();
+	
+	
+define( 'FS_THEME_DIR', get_template_directory() );
+define( 'FS_THEME_URL', get_template_directory_uri() );
+	
 
 // ------------------------
 // Theme Setup
@@ -15,7 +20,7 @@ function fs_setup() {
 	
 	// I18n
 	
-	load_theme_textdomain( 'from-scratch', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'from-scratch', FS_THEME_DIR . '/languages' );
 	
 	
 	// Theme Support
@@ -92,13 +97,20 @@ function fs_scripts_load() {
 
 		// JS 
 		
-		wp_enqueue_script( 'jquery' );
+		//wp_enqueue_script( 'jquery' );
+		wp_deregister_script( 'jquery' );
 
-		
+		wp_enqueue_script(
+			'jquery', 
+			FS_THEME_URL . '/js/jquery-3.3.1.min.js', 
+			array(), 
+			'3.3.1', 
+			true
+		);
 		
 		wp_enqueue_script(
 			'focus-visible', 
-			get_template_directory_uri() . '/js/focus-visible.js', 
+			FS_THEME_URL . '/js/focus-visible.js', 
 			array(), 
 			false, 
 			true
@@ -106,7 +118,7 @@ function fs_scripts_load() {
 		
 		wp_enqueue_script(
 			'from-scratch-skip-link-focus-fix', 
-			get_template_directory_uri() . '/js/skip-link-focus-fix.js', 
+			FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 			array(), 
 			false, 
 			true
@@ -114,7 +126,7 @@ function fs_scripts_load() {
 		
 	    wp_enqueue_script( 
 	    	'main', 
-	    	get_template_directory_uri() . '/js/main.js',
+	    	FS_THEME_URL . '/js/main.js',
 	    	array('jquery'), 
 	    	'1.0', 
 	    	true
@@ -131,7 +143,7 @@ function fs_scripts_load() {
 		
 		wp_enqueue_style( 
 			'your-css', 
-			get_template_directory_uri() . '/css/your.css',
+			FS_THEME_URL . '/css/your.css',
 			array(), 
 			'1.0', 
 			'screen' 
@@ -156,7 +168,7 @@ add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
 
 // Customizer
 
-require get_template_directory() . '/inc/customizer.php';
+require FS_THEME_DIR . '/inc/customizer.php';
 
 
 // Menus
@@ -188,7 +200,6 @@ add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
 
-add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
 function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'thumbnail-hd'	=> __( 'Thumbnail High', 'from-scratch' ),
@@ -196,6 +207,8 @@ function fs_custom_sizes( $sizes ) {
         'large-hd'		=> __( 'Large High', 'from-scratch' ),
     ) );
 }
+add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
+
 
 // Widgets
 
@@ -243,8 +256,11 @@ function fs_tiny_formats($init_array) {
             'classes' => 'action-btn',
         )
     );
+    
+    // Filter
+    $style_formats = apply_filters( 'fs_tiny_formats', $style_formats ); 
+    
     $init_array['style_formats'] = json_encode($style_formats);
-
     return $init_array;
 
 }
@@ -270,44 +286,47 @@ add_filter( 'get_search_form', 'fs_search_form' );
 // ACF
 // ------------------------
 
+if( class_exists('acf') ) {
 
-// Remove the WP Custom Fields meta box
-
-add_filter('acf/settings/remove_wp_meta_box', '__return_true');
-
-
-// Custom ACF Functions
-
-include_once('inc/acf/acf-functions.php');
-include_once('inc/acf/popup-acf.php');
-
-
-// Front-End ACF Functions
-
-add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
-function fs_acf_json_save_point( $path ) {
-    
-    $path = get_stylesheet_directory() . '/inc/acf';
-    
-    return $path;
-}
-add_filter('acf/settings/load_json', 'fs_acf_json_load_point');
-function fs_acf_json_load_point( $paths ) {
-    
-    unset($paths[0]);
-
-    $paths[] = get_stylesheet_directory() . '/inc/acf';
-    
-    return $paths;
-}
-
-
-//	Admin style and script
-
-add_action('admin_print_styles', 'wearewp_admin_css', 11 );
-function wearewp_admin_css() {
-	wp_enqueue_style( 'admin-css', get_stylesheet_directory_uri() . '/css/admin.css' );
-	wp_enqueue_style( 'popup-acf-css', get_stylesheet_directory_uri() . '/css/popup-acf.css' );
+	// Remove the WP Custom Fields meta box
+	
+	add_filter('acf/settings/remove_wp_meta_box', '__return_true');
+	
+	
+	// Custom ACF Functions
+	
+	include_once('inc/acf/acf-functions.php');
+	include_once('inc/acf/popup-acf.php');
+	
+	
+	// Front-End ACF Functions
+	
+	add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
+	function fs_acf_json_save_point( $path ) {
+	    
+	    $path = FS_THEME_DIR . '/inc/acf';
+	    
+	    return $path;
+	}
+	add_filter('acf/settings/load_json', 'fs_acf_json_load_point');
+	function fs_acf_json_load_point( $paths ) {
+	    
+	    unset($paths[0]);
+	
+	    $paths[] = FS_THEME_DIR . '/inc/acf';
+	    
+	    return $paths;
+	}
+	
+	
+	//	Admin style and script
+	
+	add_action('admin_print_styles', 'fs_admin_css', 11 );
+	function fs_admin_css() {
+		wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
+		wp_enqueue_style( 'popup-acf-css', FS_THEME_URL . '/css/popup-acf.css' );
+	}
+	
 }
 
 
