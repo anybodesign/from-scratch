@@ -20,8 +20,12 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
-### 2.9.1 - 2018.08.10
+### 2.9.1 - 2018.09.25
 * Bugfix: Gutenberg color palette
+* Add constants for template directory
+* CSS: Gutenberg columns block
+* Bugfix: Gutenberg Gallery CSS backward compatibility
+* TinyMCE styles Filter
 
 ### 2.9 - 2018.08.09
 * White-btn style
