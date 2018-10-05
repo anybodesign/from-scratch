@@ -79,7 +79,7 @@ add_action( 'after_setup_theme', 'fs_setup' );
 function fs_block_editor_styles() {
     wp_enqueue_style( 
     	'fs_block_editor_styles',
-    	get_theme_file_uri( '/block-editor-style.css' ), 
+    	FS_THEME_URL .'/css/block-editor-style.css', 
     	false, 
     	'1.0', 
     	'screen'
@@ -97,7 +97,6 @@ function fs_scripts_load() {
 
 		// JS 
 		
-		//wp_enqueue_script( 'jquery' );
 		wp_deregister_script( 'jquery' );
 
 		wp_enqueue_script(
