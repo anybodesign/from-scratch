@@ -20,6 +20,12 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.9.2 - 2018.11.05
+* Bugfix: Gutenberg editor style
+* ACF: gallery role group
+* ACF: text-img padding
+* CSS: some styles
+
 ### 2.9.1 - 2018.09.25
 * Bugfix: Gutenberg color palette
 * Add constants for template directory

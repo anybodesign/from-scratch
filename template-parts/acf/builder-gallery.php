@@ -28,7 +28,7 @@
 						        <?php foreach( $images as $image ): ?>
 						        <div class="gallery-item-<?php echo $cols; ?>">
 							        
-							        <figure class="builder-gallery-figure">
+							        <figure class="builder-gallery-figure"<?php if ( $image['caption'] ) { echo ' role="group"'; } ?>>
 							            <a href="<?php echo $image['url']; ?>" title="<?php _e('Enlarge picture', 'from-scratch'); ?>">
 								            <img src="<?php echo $image['sizes']['thumbnail-hd']; ?>" alt="<?php echo $image['alt']; ?>">
 											<?php if ( $image['caption'] ) { ?>

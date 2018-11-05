@@ -28,7 +28,7 @@
 						        <?php foreach( $content as $c ): ?>
 						        <div class="gallery-item-<?php echo $cols; ?>">
 							        
-							        <figure class="builder-gallery-figure">
+							        <figure class="builder-gallery-figure" role="group">
 							            <a href="<?php echo get_permalink( $c->ID ); ?>" title="<?php _e('Read ', 'from-scratch'); echo get_the_title( $c->ID ); ?>">
 								            <?php 
 									            if ( has_post_thumbnail( $c->ID ) ) { 

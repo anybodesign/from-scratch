@@ -75,10 +75,18 @@
 
 .builder-textimg-text,
 .builder-textimg-picture {
-	padding: $grid-padding;
 	
 	@include rwd(medium) {
 		width: 50%;
+	}
+}
+
+.builder-textimg-text {
+	padding-left: $grid-padding*2;
+	
+	.right & {
+		padding-left: 0;
+		padding-right: $grid-padding*2;
 	}
 }
 
