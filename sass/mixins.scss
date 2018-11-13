@@ -3,6 +3,23 @@
 // -------------------------
 
 
+// Center mode
+
+@mixin center($top: 0, $bottom: 0) {
+	position: relative;
+	margin: $top auto $bottom auto;
+	max-width: $max-width;	
+}
+
+// dotted line
+
+@mixin dotted-line($color1: $primary-color, $color2: transparent, $space: 4) {
+    background-image: linear-gradient(to right, $color1 0%, $color1 (100% / $space), $color2 (100% / $space));
+    background-position: 0 bottom; 
+    background-size: ($space + px) 1px;
+    background-repeat: repeat-x;
+}
+
 // Visually hide the text of an element (a11y ok)
 
 @mixin a11y-hide($percent: 150%) {
