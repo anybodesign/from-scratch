@@ -20,6 +20,16 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.9.3 - 2018.11.13
+* Conditionnal skiplinks
+* Center Mode mixin
+* Archives titles
+* Excerpt function
+* i18n
+* Slick & Fancybox
+* Some mixins
+* Some fixes
+
 ### 2.9.2 - 2018.11.05
 * Bugfix: Gutenberg editor style
 * ACF: gallery role group

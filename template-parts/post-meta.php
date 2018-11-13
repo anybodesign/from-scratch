@@ -14,8 +14,8 @@
 							<div class="post-meta">
 								<p class="meta-infos">
 									<?php _e( 'Posted on&nbsp;', 'from-scratch' ); ?><?php echo the_time( get_option('date_format') ); ?>
-									<?php _e( 'by&nbsp;', 'from-scratch' ); ?><?php the_author(); ?>
-									<?php _e( 'in&nbsp;', 'from-scratch' ); ?><?php the_category(', '); ?>
+									<?php _e( 'by&nbsp;', 'from-scratch' ); the_author(); ?>
+									<?php _e( 'in&nbsp;', 'from-scratch' ); the_category(', '); ?>
 								</p>
 								
 								<?php if ( ! get_comments_number()==0 ) : ?>
