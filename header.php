@@ -30,7 +30,9 @@
 	
 	<div class="skiplinks">
 		<a href="#site_content"><?php _e('Go to main content', 'from-scratch'); ?></a>
-		<a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a>
+		<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
+		<a href="#site_nav"><?php _e('Go to main menu', 'apcld'); ?></a>
+		<?php endif; ?>
 	</div>
 	
 	
@@ -64,7 +66,7 @@
 			<?php // The main menu location ?>
 			
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main menu', 'from-scratch'); ?>">
+			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main menu', 'from-scratch'); ?>" id="site_nav">
 				<button id="menu-toggle" type="button"><?php _e('Menu', 'from-scratch'); ?><span></span></button>
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',
