@@ -106,6 +106,44 @@ function fs_scripts_load() {
 			'3.3.1', 
 			true
 		);
+
+		// Slick
+		/*
+		   	wp_enqueue_script( 
+		    	'slick', 
+		    	get_template_directory_uri() . '/js/slick.min.js',
+		    	array('jquery'), 
+		    	'1.8', 
+		    	true
+		    );
+		    wp_enqueue_script( 
+		    	'slick-init', 
+		    	get_template_directory_uri() . '/js/slick-init.js',
+		    	array('jquery'), 
+		    	false, 
+		    	true
+		    );
+		*/
+		
+		// Fancybox
+		
+		/*
+		   	wp_enqueue_script( 
+		    	'fancybox', 
+		    	get_template_directory_uri() . '/js/jquery.fancybox.min.js',
+		    	array('jquery'), 
+		    	'3.1.20', 
+		    	true
+		    );
+		    wp_enqueue_script( 
+		    	'fancybox-init', 
+		    	get_template_directory_uri() . '/js/fancybox-init.js',
+		    	array('fancybox'), 
+		    	false, 
+		    	true
+		    );
+		*/			
+
 		
 		wp_enqueue_script(
 			'focus-visible', 
@@ -140,13 +178,25 @@ function fs_scripts_load() {
 		
 		/* Enqueue your customl CSS here
 		
-		wp_enqueue_style( 
-			'your-css', 
-			FS_THEME_URL . '/css/your.css',
-			array(), 
-			'1.0', 
-			'screen' 
-		);
+		// Slick
+		
+			wp_enqueue_style( 
+				'slick', 
+				get_template_directory_uri() . '/css/slick.css',
+				array(), 
+				'1.8', 
+				'screen' 
+			);
+		
+		// Fancybox
+
+			wp_enqueue_style( 
+				'fancybox', 
+				get_template_directory_uri() . '/css/jquery.fancybox.min.css',
+				array(), 
+				'3.1.20', 
+				'screen' 
+			);
 		
 		*/
 		
@@ -191,6 +241,50 @@ include_once( dirname( __FILE__ ) . '/inc/fs-cpt.php' );
 
 include_once( dirname( __FILE__ ) . '/inc/fs-extended-search.php' );
 
+
+// Archives titles
+
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+        $title = single_cat_title( '', false );
+
+    } elseif ( is_tag() ) {
+
+        $title = single_tag_title( '', false );
+
+    } elseif ( is_post_type_archive() ) {
+
+        $title = post_type_archive_title( '', false );
+    
+    } elseif ( is_tax() ) {
+
+        $title = single_term_title( '', false );
+    } 
+
+    return $title;
+
+});
+
+
+// Excerpts lenght
+
+function fs_custom_excerpt_length( $length ) {
+	return 24;
+}
+add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
+
+
+// Excerpt link
+
+function fs_excerpt_more( $more ) {
+    return sprintf( ' […] <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'from-scratch' )
+    );
+}
+add_filter( 'excerpt_more', 'fs_excerpt_more' );
 
 
 // Image Sizes
