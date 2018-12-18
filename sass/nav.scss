@@ -40,8 +40,12 @@
 }
 
 .main-menu {
-	
 	display: none;
+
+	@include rwd(medium) {
+		display: block;
+	}
+
 	
 	& > li {
 		position: relative;
@@ -53,109 +57,149 @@
 		}
 		
 		a {
-			
+			text-decoration: none;
 		}
-		a:hover, a.focus-visible,
-		&.current-menu-item a {
+		& > a:hover, 
+		& > a.focus-visible,
+		&.current-menu-item > a {
 			
 		}
 		a:focus {
 			
 		}
-		
-		// If Menu item has children
-		
-		&.menu-item-has-children {
-			padding-right: 20px;
-
-			@include rwd(wide) {
-				padding: 0;
-				
-				&:hover > .sub-menu,
-				&.focus > .sub-menu {
-					left: auto;
-					opacity: 1;
-				}
-			}
-				
-		}
-		
-		// Sub-Menus behaviors
-		
-		.sub-menu {
-			display: none;
-			position: relative;
-			
-			@include rwd(medium) {
-				position: absolute;
-				min-width: 100%;
-				z-index: 100;
-			}
-
-			@include rwd(wide) {
-				display: block;
-				left: -999em;
-				opacity: 0;
-				transition: opacity .2s ease-in-out;
-			}
-			
-			
-		
-			& > li {
-
-				a {
-					display: block;
-				}
-				a:hover, a.focus-visible,
-				&.current-menu-item a {
-					
-				}
-			}
-			
-			.current-menu-item &,
-			.current-menu-ancestor & {
-				
-			}			
-		}
-		
 	}
+}
+
+
+// Sub-Menus behaviors
+
+
+.menu-item-has-children {
+	padding-right: 2.4rem;
 	
 	@include rwd(medium) {
+		padding-right: 1.8rem;
+	}
+
+	@include rwd(wide) {
+		padding-right: 0;
+		
+		&.unfold-parent {
+			padding-right: 1.8rem;
+		}
+		
+		&:hover > .sub-menu {
+			left: auto;
+			opacity: 1;
+			
+			& > li {
+				display: block;
+			}
+		}
+	}
+}
+
+.sub-menu-opened + .sub-menu {
+	transform: scaleY(1);
+	height: auto;
+	
+	& > li {
 		display: block;
 	}
 	
+	@include rwd(medium) {
+		left: auto;
+		opacity: 1;
+		
+		& > li {
+			display: block;
+		}
+	}
 }
+
+.sub-menu {
+	position: relative;
+	height: 1px;
+	transform: scaleY(0);
+	transform-origin: center top;
+	overflow: hidden;
+	transition: .2s ease-in-out;
+	
+	@include rwd(wide) {
+		position: absolute;
+		height: auto;
+		top: auto;
+		left: -999em;
+		opacity: 0;
+		min-width: 100%;
+		z-index: 100;
+		transition: opacity .2s ease-in-out;
+	}
+
+	& > li {
+		
+		@include rwd(wide) {
+			display: none;
+		}
+		
+		
+		a {
+			display: block;
+		}
+		a:hover, 
+		a.focus-visible,
+		&.current-menu-item a {
+			
+		}
+	}
+	
+	.current-menu-item &,
+	.current-menu-ancestor & {
+		
+	}			
+}
+
+
+// Sub-Menus trigger
+
 
 .sub-menu-unfold {
 	position: absolute;
 	top: 0; 
 	right: 0;
 	display: block;
-	height: 24px; 
-	width: 24px;
+	height: 2.2rem; 
+	width: 2.2rem;
 	margin-top: 0;
 	border: 0; 
-	border-radius: 12px; 
+	border-radius: 1.1rem; 
 	padding: 0;
-	background: #ccc !important;
+	background: transparent !important;
+	
+	@include rwd(wide) {
+		left: -999rem;
+		
+		&:focus {
+			left: auto;
+			right: 0;
+		}
+	}
 	
 	&::after, 
 	&::before {
 		content: '';
 		display: block;
 		position: absolute;
-		top: 11px; 
-		left: 4px;
+		top: 10px; 
+		left: 3px;
 		width: 16px; 
 		height: 3px;
-		background-color: #000;
+		background-color: $primary-color;
 		@include transition(transform);
 	}
 	&::after {
 		transform: rotate(-90deg);
 	}
-	&::before {}
-	
 	span {
 		@include a11y-hidden();
 	}
@@ -168,31 +212,28 @@
 	}
 	
 	@include rwd(medium) {
-		height: 16px; 
-		width: 16px;
+		height: 1.6rem; 
+		width: 1.6rem;
 		top: 50%; 
-		margin-top: -8px;
-		border-radius: 8px;
+		margin-top: -.8rem;
+		border-radius: .8rem;
 		
-		&::after, &::before {
+		&::after, 
+		&::before {
 			top: 7px; 
 			left: 3px;
 			width: 10px; 
 			height: 2px;
 		} 
 	}
-	
-	@include rwd(wide) {
-		display: none;
-	}
+
 }
 
 
+// Hamburger Menu
+
 
 #menu-toggle {
-
-	// Hamburger Menu
-	
 	display: block; 
 	height: 24px; 
 	width: 24px;

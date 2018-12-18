@@ -33,15 +33,27 @@ jQuery(document).ready(function($) {
 		
 	    if($(this).hasClass('sub-menu-opened')) {
 	        $(this).removeClass('sub-menu-opened').attr('aria-expanded','false');
-			$(this).next('.sub-menu').slideUp().attr('aria-hidden','true');
-	    
+			$(this).next('.sub-menu').attr('aria-hidden','true');
+
 	    } else {
 
 			$(this).parent().parent().find('.sub-menu-opened').removeClass('sub-menu-opened');
-			$('.sub-menu').slideUp();
 	        $(this).addClass('sub-menu-opened').attr('aria-expanded','true');
-	        $(this).next('.sub-menu').slideDown().attr('aria-hidden','false');
+	        $(this).next('.sub-menu').attr('aria-hidden','false');
 	    }
+	});
+	
+	$('.sub-menu-unfold').on('focus', function () {
+		$(this).parent().addClass('unfold-parent');
+	});
+	$('.sub-menu-unfold').on('focusout', function () {
+		$(this).parent().removeClass('unfold-parent');
+	});
+
+	// Last item focus
+	
+	$('.sub-menu .menu-item:last-child > a').on('focusout', function () {
+		$(this).parent().parent().parent().find('.sub-menu-unfold').focus();
 	});
 	
 	
@@ -72,8 +84,7 @@ jQuery(document).ready(function($) {
 	$('.menu-item:first-child > a').on('focusout', function () {
 		$(this).parent().removeClass('focus');
 	});
-	
-		
+				
 
 	// Responsive Video Players (Youtube, Vimeo)
 			
