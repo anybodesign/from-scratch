@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2018-11-08 15:55+0100\n"
-"PO-Revision-Date: 2018-11-08 15:55+0100\n"
+"POT-Creation-Date: 2018-12-18 09:15+0100\n"
+"PO-Revision-Date: 2018-12-18 09:15+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -50,8 +50,8 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:38
-msgid "Footer menu"
+#: footer.php:38 functions.php:227
+msgid "Footer Menu"
 msgstr "Menu pied de page"
 
 #: functions.php:60
@@ -62,43 +62,39 @@ msgstr "gris très foncé"
 msgid "very light gray"
 msgstr "gris très clair"
 
-#: functions.php:176
+#: functions.php:226 header.php:69
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:177
-msgid "Footer Menu"
-msgstr "Menu pied de page"
-
-#: functions.php:226
+#: functions.php:284
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:240
+#: functions.php:298
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:241
+#: functions.php:299
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:242
+#: functions.php:300
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:252
+#: functions.php:310
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:309
+#: functions.php:367
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:310
+#: functions.php:368
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:311
+#: functions.php:369
 msgid "Search"
 msgstr "Chercher"
 
@@ -113,10 +109,6 @@ msgstr "Aller au menu principal"
 #: header.php:52
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
-
-#: header.php:69
-msgid "Main menu"
-msgstr "Menu principal"
 
 #: header.php:70
 msgid "Menu"
@@ -458,6 +450,12 @@ msgstr "Constructeur de Page"
 #. Template Name of the plugin/theme
 msgid "Custom page template with Sidebar"
 msgstr "Page avec colonne latérale"
+
+#~ msgid "Footer menu"
+#~ msgstr "Menu pied de page"
+
+#~ msgid "Main menu"
+#~ msgstr "Menu principal"
 
 #~ msgid "Unfold navigation menu"
 #~ msgstr "Déplier le menu de navigation"
