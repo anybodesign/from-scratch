@@ -130,6 +130,10 @@ input[type="submit"]:hover {
 	font-family: $font-italic;
 	font-size: 1.4rem;
 }
+.focus-visible::placeholder,
+*:focus::placeholder {
+	color: transparentize(#fff, .5);
+}
 
 // ------------------------------
 //
