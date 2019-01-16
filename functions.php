@@ -69,6 +69,25 @@ function fs_setup() {
 	));	
 	add_theme_support( 'disable-custom-colors' );
 
+	add_theme_support( 'editor-font-sizes', array(
+	    array(
+	        'name' => __( 'Small', 'fs-blocks' ),
+	        'shortName' => __( 'S', 'fs-blocks' ),
+	        'size' => 14,
+	        'slug' => 'small'
+	    ),
+	    array(
+	        'name' => __( 'Large', 'fs-blocks' ),
+	        'shortName' => __( 'L', 'fs-blocks' ),
+	        'size' => 22,
+	        'slug' => 'large'
+	    ),
+	));
+	
+	add_theme_support('disable-custom-font-sizes');
+	
+	add_theme_support( 'responsive-embeds' );
+
 }
 endif;
 add_action( 'after_setup_theme', 'fs_setup' );
