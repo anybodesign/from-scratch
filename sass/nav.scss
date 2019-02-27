@@ -43,7 +43,7 @@
 	display: none;
 
 	@include rwd(medium) {
-		display: block;
+		display: flex;flex-wrap: wrap;
 	}
 
 	
@@ -52,7 +52,6 @@
 		display: block;
 		
 		@include rwd(medium) {
-			display: inline-block;
 			margin-right: $grid-padding;
 		}
 		
@@ -75,16 +74,21 @@
 
 
 .menu-item-has-children {
-	padding-right: 2.4rem;
 	
-	@include rwd(medium) {
-		padding-right: 1.8rem;
+	& > a {
+		padding-right: 2.4rem;
+		
+		@include rwd(medium) {
+			padding-right: 1.8rem;
+		}
+		@include rwd(wide) {
+			padding-right: 0;
+		}
 	}
 
 	@include rwd(wide) {
-		padding-right: 0;
 		
-		&.unfold-parent {
+		&.unfold-parent > a {
 			padding-right: 1.8rem;
 		}
 		
@@ -125,12 +129,13 @@
 	overflow: hidden;
 	transition: .2s ease-in-out;
 	
-	@include rwd(wide) {
+	@include rwd(medium) {
 		position: absolute;
 		height: auto;
 		top: auto;
 		left: -999em;
 		opacity: 0;
+		transform: none;
 		min-width: 100%;
 		z-index: 100;
 		transition: opacity .2s ease-in-out;

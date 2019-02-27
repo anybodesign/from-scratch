@@ -33,13 +33,13 @@ jQuery(document).ready(function($) {
 		
 	    if($(this).hasClass('sub-menu-opened')) {
 	        $(this).removeClass('sub-menu-opened').attr('aria-expanded','false');
-			$(this).next('.sub-menu').attr('aria-hidden','true');
+			$(this).next('.sub-menu').hide().attr('aria-hidden','true');
 
 	    } else {
 
 			$(this).parent().parent().find('.sub-menu-opened').removeClass('sub-menu-opened');
 	        $(this).addClass('sub-menu-opened').attr('aria-expanded','true');
-	        $(this).next('.sub-menu').attr('aria-hidden','false');
+	        $(this).next('.sub-menu').removeAttr('style').attr('aria-hidden','false');
 	    }
 	});
 	
@@ -50,11 +50,14 @@ jQuery(document).ready(function($) {
 		$(this).parent().removeClass('unfold-parent');
 	});
 
-	// Last item focus
+
+	// Leave focus
 	
-	$('.sub-menu .menu-item:last-child > a').on('focusout', function () {
-		$(this).parent().parent().parent().find('.sub-menu-unfold').focus();
+	$('.main-menu > .menu-item > a').on('focus', function () {
+		$('.sub-menu-unfold').removeClass('sub-menu-opened').attr('aria-expanded','false');
+		$('.sub-menu').hide().attr('aria-hidden','true');
 	});
+
 	
 	
 	// A11y active label on nav items
