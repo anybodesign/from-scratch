@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2018-12-18 09:15+0100\n"
-"PO-Revision-Date: 2018-12-18 09:15+0100\n"
+"POT-Creation-Date: 2019-01-18 14:00+0100\n"
+"PO-Revision-Date: 2019-01-18 14:01+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -50,51 +50,67 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:38 functions.php:227
+#: footer.php:38 functions.php:246
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
 #: functions.php:60
-msgid "very dark gray"
-msgstr "gris très foncé"
+msgid "Black"
+msgstr "Noir"
 
 #: functions.php:65
-msgid "very light gray"
-msgstr "gris très clair"
+msgid "White"
+msgstr "Blanc"
 
-#: functions.php:226 header.php:69
+#: functions.php:74
+msgid "Small"
+msgstr "Petite"
+
+#: functions.php:75
+msgid "S"
+msgstr "S"
+
+#: functions.php:80
+msgid "Large"
+msgstr "Grande"
+
+#: functions.php:81
+msgid "L"
+msgstr "L"
+
+#: functions.php:245 header.php:69
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:284
+#: functions.php:303
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:298
+#: functions.php:317
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:299
+#: functions.php:318
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:300
+#: functions.php:319
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:310
+#: functions.php:329
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:367
+#: functions.php:386
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:368
+#: functions.php:387
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:369
+#: functions.php:388
 msgid "Search"
 msgstr "Chercher"
 
@@ -298,43 +314,43 @@ msgstr "Image"
 msgid "Date"
 msgstr "Date"
 
-#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
-msgid "Check for updates"
-msgstr "Vérifier les mises à jour"
-
-#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
+#: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:54
 msgid "View details"
 msgstr "Voir les détails"
 
-#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
+#: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:77
 #, php-format
 msgid "More information about %s"
 msgstr "Plus d'informations sur %s"
 
-#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
+#: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr "Vérifier les mises à jour"
+
+#: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:213
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
+#: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:215
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
+#: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:217
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
 msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
 
-#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
+#: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:223
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
+#: inc/plugin-update-checker/Puc/v4p5/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
@@ -450,6 +466,12 @@ msgstr "Constructeur de Page"
 #. Template Name of the plugin/theme
 msgid "Custom page template with Sidebar"
 msgstr "Page avec colonne latérale"
+
+#~ msgid "very dark gray"
+#~ msgstr "gris très foncé"
+
+#~ msgid "very light gray"
+#~ msgstr "gris très clair"
 
 #~ msgid "Footer menu"
 #~ msgstr "Menu pied de page"
