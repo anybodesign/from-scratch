@@ -42,6 +42,7 @@ function fs_custom_posts() {
 		'show_in_menu'			=> true,
 		'show_in_nav_menus'		=> true,
 		'show_in_admin_bar'		=> true,
+		'show_in_rest'			=> true,
 		'menu_position'			=> 20,
 		'menu_icon'				=> 'dashicons-carrot',
 		'can_export'			=> true,

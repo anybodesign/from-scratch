@@ -55,36 +55,38 @@ function fs_setup() {
 	// Gutenberg support 
 	
 	add_theme_support( 'align-wide' );
+	
 	add_theme_support( 'editor-color-palette', array(
 	    array(
-	        'name' => esc_html__( 'very dark gray', 'from-scratch' ),
-	        'slug' => 'very-dark-gray',
+	        'name' => esc_html__( 'Black', 'from-scratch' ),
+	        'slug' => 'black',
 	        'color' => '#4a4a4a',
 	    ),
 	    array(
-	        'name' => esc_html__( 'very light gray', 'from-scratch' ),
-	        'slug' => 'very-light-gray',
-	        'color' => '#e0e0e0',
+	        'name' => esc_html__( 'White', 'from-scratch' ),
+	        'slug' => 'white',
+	        'color' => '#ffffff',
 	    )
 	));	
+	
 	add_theme_support( 'disable-custom-colors' );
 
 	add_theme_support( 'editor-font-sizes', array(
 	    array(
-	        'name' => __( 'Small', 'fs-blocks' ),
-	        'shortName' => __( 'S', 'fs-blocks' ),
+	        'name' => __( 'Small', 'from-scratch' ),
+	        'shortName' => __( 'S', 'from-scratch' ),
 	        'size' => 14,
 	        'slug' => 'small'
 	    ),
 	    array(
-	        'name' => __( 'Large', 'fs-blocks' ),
-	        'shortName' => __( 'L', 'fs-blocks' ),
+	        'name' => __( 'Large', 'from-scratch' ),
+	        'shortName' => __( 'L', 'from-scratch' ),
 	        'size' => 22,
 	        'slug' => 'large'
 	    ),
 	));
 	
-	add_theme_support('disable-custom-font-sizes');
+	add_theme_support( 'disable-custom-font-sizes' );
 	
 	add_theme_support( 'responsive-embeds' );
 
@@ -105,6 +107,22 @@ function fs_block_editor_styles() {
     );
 }
 add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
+
+
+// Gutenberg allowed blocks
+
+function fs_blocks_assets() {
+  
+    wp_enqueue_script(
+        'gutenblocks-block-deactivator',
+		FS_THEME_URL . '/js/gut-deactivator.js',
+        array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), 
+        '1.0'
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'fs_blocks_assets' );
+
+
 
 
 // ------------------------
