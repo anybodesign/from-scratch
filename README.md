@@ -20,6 +20,17 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.9.4 - 2019.02.27
+* Improved a11y main menu
+* Placeholder focus color
+* i18n fix
+* Gutenberg: Custom CSS removed for gallery blocks
+* Gutenberg: Blocks CSS fix
+* Gutenberg: Defined font sizes
+* Gutenberg: Disable custom font sizes
+* Gutenberg: Responsive embeds
+* Gutenberg: Blocks deactivator
+
 ### 2.9.3 - 2018.11.13
 * Conditionnal skiplinks
 * Center Mode mixin
