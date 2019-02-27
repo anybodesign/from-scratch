@@ -5,36 +5,57 @@
 
 // Colors
 
-.has-primary-color-background-color {
-	background-color: $primary-color;
-}
-.has-secondary-color-background-color {
-	background-color: $secondary-color;
-}
-.has-third-color-background-color {
-	background-color: $third-color;
-}
-.has-white-color-background-color {
-	background-color: #fff;
-}
-.has-black-color-background-color {
-	background-color: #303030;
+*,
+.wp-block-button__link {
+		
+	&.has-primary-color-background-color {
+		background-color: $primary-color;
+	}
+	&.has-secondary-color-background-color {
+		background-color: $secondary-color;
+	}
+	&.has-third-color-background-color {
+		background-color: $third-color;
+	}
+	&.has-white-color-background-color {
+		background-color: #fff;
+	}
+	&.has-black-color-background-color {
+		background-color: #303030;
+	}
+	
+	&.has-text-color.has-primary-color-color {
+		color: $primary-color;
+	}
+	&.has-text-color.has-secondary-color-color {
+		color: $secondary-color;
+	}
+	&.has-text-color.has-third-color-color {
+		color: $third-color;
+	}
+	&.has-text-color.has-white-color-color {
+		color: #fff;
+	}
+	&.has-text-color.has-black-color-color {
+		color: #303030;
+	}
 }
 
-.has-text-color.has-primary-color-color {
-	color: $primary-color;
-}
-.has-text-color.has-secondary-color-color {
-	color: $secondary-color;
-}
-.has-text-color.has-third-color-color {
-	color: $third-color;
-}
-.has-text-color.has-white-color-color {
-	color: #fff;
-}
-.has-text-color.has-black-color-color {
-	color: #303030;
+
+// Links / Button
+
+.wp-block-button {}
+	
+.wp-block-button__link {
+	@extend .action-btn;
+	border-radius: 0;
+	
+	&.has-primary-color-background-color {
+		background-color: $primary-color;
+	}
+	&.has-secondary-color-background-color {
+		background-color: $secondary-color;
+	}
 }
 
 
@@ -108,4 +129,66 @@
 
 .wp-block-quote {
 	margin-bottom: $grid-padding*2 !important;
+	
+	cite {
+		
+	}
+}
+
+
+// Files
+
+.wp-block-file {
+	
+	a:first-child {
+		font-family: $font-regular;
+		text-decoration: none;
+		border-bottom: $secondary-color 2px solid;
+		transition: border .2s ease-in-out;
+		
+		&:hover {
+			border-bottom-width: 4px;
+		}
+		&.focus-visible {
+			background-color: $text-color;
+			border-bottom-color: $text-color;
+			color: #fff;
+		}
+	}
+
+	a.wp-block-file__button {
+		@extend .action-btn;
+		border-radius: 0;
+		font-size: 1.3rem !important;
+	}
+	
+}
+
+
+
+// Table
+
+.wp-block-table {
+
+}
+
+
+// Gallery /Gut  ** backwards compatibility -webkit- prefix? **
+
+.wp-block-gallery {
+	
+	.blocks-gallery-image,
+	.blocks-gallery-item { 
+		figcaption {
+			padding: $grid-padding;
+		}
+	}
+	
+}  
+
+
+// Gallery ACF
+
+.acf-block-gallery-figure {
+	background-color: transparent;
 }
