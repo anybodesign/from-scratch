@@ -12,7 +12,7 @@
 get_header(); ?>
 
 				<div class="row inner">
-					<div class="col-12">
+					<div class="site-content">
 	
 					<?php while ( have_posts() ) : the_post(); ?>
 		

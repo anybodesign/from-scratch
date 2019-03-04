@@ -11,7 +11,7 @@ get_header(); ?>
 
 				<div class="row inner">
 					
-					<div class="col-12">
+					<div class="site-content">
 					<?php while ( have_posts() ) : the_post(); ?>
 		
 						<?php get_template_part( 'template-parts/page', 'content' ); ?>
@@ -19,7 +19,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 					</div>
 					
-					<div class="col-12">
+					<div class="site-content">
 						<?php get_template_part('template-parts/acf/builder'); ?>
 					</div>
 					

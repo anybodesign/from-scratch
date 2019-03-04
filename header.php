@@ -38,7 +38,7 @@
 	
 	<header role="banner" id="site_head">
 		
-		<div class="row inner x-between">
+		<div class="row inner justify-between">
 			
 			<?php // The Logo & Site Titles ?>
 			

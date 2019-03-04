@@ -13,7 +13,7 @@
 get_header(); ?>
 					
 				<div class="row inner">
-					<div class="col-12">
+					<div class="site-content">
 	
 						<section class="error-404 not-found">
 							

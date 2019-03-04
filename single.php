@@ -11,8 +11,8 @@
  */
 get_header(); ?>
 					
-				<div class="row inner">
-					<div class="col-9">
+				<div class="row inner has-sidebar">
+					<div class="site-content">
 	
 					<?php while (have_posts()) : the_post(); ?>
 			
@@ -26,7 +26,7 @@ get_header(); ?>
 						
 					</div>
 					
-					<div class="col-3">
+					<div class="site-sidebar">
 						<?php get_sidebar(); ?>
 					</div>					
 				</div>

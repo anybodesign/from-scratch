@@ -10,9 +10,9 @@
  * @version 1.0
  */
 get_header(); ?>
-				<div class="row inner">
+				<div class="row inner has-sidebar">
 					
-					<div class="col-9">
+					<div class="site-content">
 					
 					<?php // The Loop ?>
 					
@@ -46,7 +46,7 @@ get_header(); ?>
 	
 					</div>
 
-					<div class="col-3">
+					<div class="site-sidebar">
 						<?php get_sidebar(); ?>
 					</div>
 										

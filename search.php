@@ -9,9 +9,9 @@
  */
 get_header(); ?>
 
-				<div class="row">
+				<div class="row inner has-sidebar">
 					
-					<div class="col-9">
+					<div class="site-content">
 	
 					<?php if ( have_posts() ) : ?>
 			
@@ -36,7 +36,7 @@ get_header(); ?>
 	
 					</div>
 
-					<div class="col-3">
+					<div class="site-content">
 						<?php get_sidebar(); ?>
 					</div>					
 										
