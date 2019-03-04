@@ -3,14 +3,23 @@
 /* ------------------------- */
 
 
-#site_foot {}
-
-.footer-nav, 
-.footer-copyright {
-	display: inline-block; 
-	vertical-align: baseline;
+#site_foot {
+	
 }
 
+.footer-content {
+	display: flex;
+	width: 100%;
+	padding: $grid-padding;
+}
+
+.footer-copyright {
+	margin-bottom: 0;
+}
+
+.footer-nav {
+	
+}
 .footer-menu {
 	margin: 0;
 	
