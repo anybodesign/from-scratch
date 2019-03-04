@@ -59,117 +59,98 @@
 					
 					<p>Sed posuere consectetur est at lobortis.</p>
 					
-					<div class="row nested">
-
-						<form class="col-4">
-							<fieldset>
-								<legend>Fieldset Legend</legend>
-								
-								<div class="formfield-text">
-									<label for="inp_text">The Label</label>
-									<input type="text" id="inp_text" placeholder="A placeholder…">
-								</div>
-								
-								<div class="formfield-checkbox">
-									<input type="checkbox" id="inp_check">
-									<label for="inp_check">The Label</label>
-								</div>
-								
-								<div class="formfield-radio">
-									<input type="radio" id="inp_rad">
-									<label for="inp_rad">The Label</label>
-								</div>
-								
-								<div class="formfield-select">
-									<label for="inp_sel" class="screen-reader-text">The Label</label>
-									<div class="formfield-select--container">
-										<select id="inp_sel">
-											<option>Option 1</option>
-											<option>Option 2 with a very very long option text to show ellipsis</option>
-											<option>Option 3</option>
-											<option>Option 4</option>
-										</select>
-										
-									</div>
-								</div>
-								
-								<input type="submit" class="action-btn" value="Send">
-								
-							</fieldset>
+					<form style="max-width: 50rem;">
+						<fieldset>
+							<legend>Fieldset Legend</legend>
 							
+							<div class="formfield-text">
+								<label for="inp_text">The Label</label>
+								<input type="text" id="inp_text" placeholder="A placeholder…">
+							</div>
 							
+							<div class="formfield-checkbox">
+								<input type="checkbox" id="inp_check">
+								<label for="inp_check">The Label</label>
+							</div>
 							
-						</form>
-						
-					</div>
+							<div class="formfield-radio">
+								<input type="radio" id="inp_rad">
+								<label for="inp_rad">The Label</label>
+							</div>
+							
+							<div class="formfield-select">
+								<label for="inp_sel" class="screen-reader-text">The Label</label>
+								<div class="formfield-select--container">
+									<select id="inp_sel">
+										<option>Option 1</option>
+										<option>Option 2 with a very very long option text to show ellipsis</option>
+										<option>Option 3</option>
+										<option>Option 4</option>
+									</select>
+									
+								</div>
+							</div>
+							
+							<input type="submit" class="action-btn" value="Send">
+							
+						</fieldset>
+					</form>
 					
 					
 					
 					<h3>Images, Players & Tables</h3>
 					
-					<div class="row nested">
-						
-						<div class="col-4">
-							<figure>
-								<a href="#"><img src="http://placecorgi.com/500/340"></a>
-								<figcaption>
-									Place a Corgi
-								</figcaption>
-							</figure>
-							
-						</div>
-						
-						<div class="col-4 left-2">
-							<figure>
-								<a href="https://www.youtube.com/watch?v=PtMx316Vpvw">
-									<img src="https://i1.ytimg.com/vi/PtMx316Vpvw/mqdefault.jpg">
-								</a>
-								<figcaption>
-									Ride - Pulsar (vidéo)
-								</figcaption>
-							</figure>
-							
-						</div>
-						
-						<div class="col-6">
-							
-							<div class="table-container">
-								<table width="100%">
-									<thead>
-										<tr>
-											<th>Animal</th>
-											<th>Name</th>
-											<th>Age</th>
-											<th>Weight</th>
-											<th>Hobby</th>
-											<th>Passion</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Cat</td>
-											<td>Prosper</td>
-											<td>13</td>
-											<td>8 kg</td>
-											<td>Sleeping</td>
-											<td>Food</td>
-										</tr>
-										<tr>
-											<td>Cat</td>
-											<td>Garfield</td>
-											<td>4</td>
-											<td>5 kg</td>
-											<td>Hunting</td>
-											<td>Food</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="6">That's all about cats now...</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-							
-						</div>
+					<figure style="max-width: 50rem;">
+						<a href="#"><img src="http://placecorgi.com/500/340"></a>
+						<figcaption>
+							Place a Corgi
+						</figcaption>
+					</figure>
+				
+					<figure style="max-width: 50rem;">
+						<a href="https://www.youtube.com/watch?v=PtMx316Vpvw">
+							<img src="https://i1.ytimg.com/vi/PtMx316Vpvw/mqdefault.jpg">
+						</a>
+						<figcaption>
+							Ride - Pulsar (vidéo)
+						</figcaption>
+					</figure>
+
+					<div class="table-container">
+						<table width="100%">
+							<thead>
+								<tr>
+									<th>Animal</th>
+									<th>Name</th>
+									<th>Age</th>
+									<th>Weight</th>
+									<th>Hobby</th>
+									<th>Passion</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Cat</td>
+									<td>Prosper</td>
+									<td>13</td>
+									<td>8 kg</td>
+									<td>Sleeping</td>
+									<td>Food</td>
+								</tr>
+								<tr>
+									<td>Cat</td>
+									<td>Garfield</td>
+									<td>4</td>
+									<td>5 kg</td>
+									<td>Hunting</td>
+									<td>Food</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="6">That's all about cats now...</td>
+								</tr>
+							</tfoot>
+						</table>
 					</div>
+				</div>
