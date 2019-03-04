@@ -23,7 +23,8 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 ### 2.9.5 - 2019.03.04
 * HTML fix
 * Prid'x removed
-* …
+* Customizer: back to top
+* Customizer: sticky nav
 
 ### 2.9.4 - 2019.02.27
 * Improved a11y main menu

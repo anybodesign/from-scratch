@@ -1,0 +1,29 @@
+#back2top {
+	display: block;
+	padding: .5rem;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #000;
+	
+	position: fixed;
+	bottom: 1.5rem;
+	right: 1.5rem;
+	
+	opacity: 0;
+	transition: .4s ease-in-out;
+}
+#back2top img {
+	width: 100%;
+	height: auto;
+}
+#back2top:hover,
+#back2top.focus-visible {
+	transform: scale(1.1);
+}
+
+.sticky-nav #back2top {
+	opacity: 1;
+}
+
+
