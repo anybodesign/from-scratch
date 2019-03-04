@@ -87,6 +87,8 @@ jQuery(document).ready(function($) {
 	$('.menu-item:first-child > a').on('focusout', function () {
 		$(this).parent().removeClass('focus');
 	});
+
+
 				
 
 	// Responsive Video Players (Youtube, Vimeo)

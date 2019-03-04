@@ -180,7 +180,33 @@ function fs_scripts_load() {
 		    	true
 		    );
 		*/			
-
+		
+		
+		// Back 2 top
+		
+		if ( get_theme_mod('back2top') == true ) {
+			
+			wp_enqueue_script(
+				'back2top', 
+				FS_THEME_URL . '/js/back2top.js', 
+				array(), 
+				false, 
+				true
+			);
+		}
+		
+		// Sticky Nav
+		
+		if ( get_theme_mod('stickynav') == true ) {
+			
+			wp_enqueue_script(
+				'stickynav', 
+				FS_THEME_URL . '/js/sticky-header.js', 
+				array(), 
+				false, 
+				true
+			);
+		}
 		
 		wp_enqueue_script(
 			'focus-visible', 

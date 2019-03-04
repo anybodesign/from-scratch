@@ -16,7 +16,7 @@
 		<footer role="contentinfo" id="site_foot">
 			
 			<div class="row inner">
-				<div class="col-12">				
+				<div class="footer-content">				
 					
 					<?php // The credit/copyright line, settings in the Customizer ?>
 					
@@ -49,6 +49,14 @@
 			</div>
 			
 		</footer>
+
+
+		<?php if(get_theme_mod('back2top') == true) { ?>
+			<button id="back2top" title="<?php _e('Back to top','from-scratch'); ?>">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/back-to-top.svg" alt="">
+			</button>
+		<?php } ?>
+
 
 		
 </div> <?php // END wrapper ?>

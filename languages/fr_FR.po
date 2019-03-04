@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2019-01-18 14:00+0100\n"
-"PO-Revision-Date: 2019-01-18 14:01+0100\n"
+"POT-Creation-Date: 2019-03-04 11:44+0100\n"
+"PO-Revision-Date: 2019-03-04 11:45+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -50,67 +50,71 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:38 functions.php:246
+#: footer.php:38 functions.php:264
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:60
+#: footer.php:55
+msgid "Back to top"
+msgstr "Haut de page"
+
+#: functions.php:61
 msgid "Black"
 msgstr "Noir"
 
-#: functions.php:65
+#: functions.php:66
 msgid "White"
 msgstr "Blanc"
 
-#: functions.php:74
+#: functions.php:76
 msgid "Small"
 msgstr "Petite"
 
-#: functions.php:75
+#: functions.php:77
 msgid "S"
 msgstr "S"
 
-#: functions.php:80
+#: functions.php:82
 msgid "Large"
 msgstr "Grande"
 
-#: functions.php:81
+#: functions.php:83
 msgid "L"
 msgstr "L"
 
-#: functions.php:245 header.php:69
+#: functions.php:263 header.php:69
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:303
+#: functions.php:321
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:317
+#: functions.php:335
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:318
+#: functions.php:336
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:319
+#: functions.php:337
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:329
+#: functions.php:347
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:386
+#: functions.php:404
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:387
+#: functions.php:405
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:388
+#: functions.php:406
 msgid "Search"
 msgstr "Chercher"
 
@@ -130,45 +134,58 @@ msgstr "Aller à la page d'accueil"
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/customizer.php:18
-msgid "Theme Colors"
-msgstr "Couleurs du thème"
+#: inc/customizer.php:22
+msgid "Theme Options"
+msgstr "Options du thème"
 
-#: inc/customizer.php:19
-msgid "Colors customisation"
-msgstr "Personnalisation des couleurs"
-
-#: inc/customizer.php:23
+#: inc/customizer.php:26
 msgid "Theme Pictures"
 msgstr "Images du thème"
 
-#: inc/customizer.php:24
+#: inc/customizer.php:27
 msgid "Pictures customisation"
 msgstr "Personnalisation des images"
 
-#: inc/customizer.php:39
+#: inc/customizer.php:48
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: inc/customizer.php:55
+#: inc/customizer.php:64
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: inc/customizer.php:68
+#: inc/customizer.php:84
+msgid "Site Logo"
+msgstr "Logo du site"
+
+#: inc/customizer.php:97
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:69
+#: inc/customizer.php:98
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:83
+#: inc/customizer.php:113
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:96
-msgid "Site Logo"
-msgstr "Logo du site"
+#: inc/customizer.php:133
+msgid "Display a Back to top button"
+msgstr "Afficher un bouton Haut de page"
+
+#: inc/customizer.php:148
+msgid "Make the header sticky"
+msgstr "Rendre l'en-tête collant"
+
+#: inc/customizer.php:166
+msgid "404 error"
+msgstr "Erreur 404"
+
+#: inc/customizer.php:167
+msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
 #: inc/fs-cpt.php:9
 msgctxt "Post Type General Name"
@@ -240,77 +257,77 @@ msgstr "portfolio"
 msgid "Anybodesign Portfolio"
 msgstr "Portfolio Anybodesign"
 
-#: inc/fs-cpt.php:75
+#: inc/fs-cpt.php:76
 msgctxt "Taxonomy General Name"
 msgid "Creation Categories"
 msgstr "Types de créations"
 
-#: inc/fs-cpt.php:76
+#: inc/fs-cpt.php:77
 msgctxt "Taxonomy Singular Name"
 msgid "Creation Category"
 msgstr "Type de création"
 
-#: inc/fs-cpt.php:77
+#: inc/fs-cpt.php:78
 msgid "Creation Category"
 msgstr "Type de création"
 
-#: inc/fs-cpt.php:78
+#: inc/fs-cpt.php:79
 msgid "All Creation Categories"
 msgstr "Tous les types de créations"
 
-#: inc/fs-cpt.php:79
+#: inc/fs-cpt.php:80
 msgid "Parent Creation Category"
 msgstr "Type de création parent"
 
-#: inc/fs-cpt.php:80
+#: inc/fs-cpt.php:81
 msgid "Parent Creation Category:"
 msgstr "Type de création parent :"
 
-#: inc/fs-cpt.php:81
+#: inc/fs-cpt.php:82
 msgid "New Creation Category"
 msgstr "Nouveau type de création"
 
-#: inc/fs-cpt.php:82
+#: inc/fs-cpt.php:83
 msgid "Add New Creation Category"
 msgstr "Ajouter un type de création"
 
-#: inc/fs-cpt.php:83
+#: inc/fs-cpt.php:84
 msgid "Edit Creation Category"
 msgstr "Modifier le type de création"
 
-#: inc/fs-cpt.php:84
+#: inc/fs-cpt.php:85
 msgid "Update Creation Category"
 msgstr "Mettre à jour le type de création"
 
-#: inc/fs-cpt.php:85
+#: inc/fs-cpt.php:86
 msgid "View Creation Category"
 msgstr "Voir le type de création"
 
-#: inc/fs-cpt.php:86
+#: inc/fs-cpt.php:87
 msgid "Popular Creation Category"
 msgstr "Type de création populaire"
 
-#: inc/fs-cpt.php:87
+#: inc/fs-cpt.php:88
 msgid "Search Creation Category"
 msgstr "Chercher un type de création"
 
-#: inc/fs-cpt.php:88
+#: inc/fs-cpt.php:89
 msgid "No creation categories were found"
 msgstr "Aucun type de création trouvé"
 
-#: inc/fs-cpt.php:98
+#: inc/fs-cpt.php:99
 msgid "creations"
 msgstr "creations"
 
-#: inc/fs-cpt.php:164
+#: inc/fs-cpt.php:165
 msgid "Enter the name of the creation"
 msgstr "Entrer le nom de la création"
 
-#: inc/fs-cpt.php:177
+#: inc/fs-cpt.php:178
 msgid "Picture"
 msgstr "Image"
 
-#: inc/fs-cpt.php:178
+#: inc/fs-cpt.php:179
 msgid "Date"
 msgstr "Date"
 
@@ -466,6 +483,9 @@ msgstr "Constructeur de Page"
 #. Template Name of the plugin/theme
 msgid "Custom page template with Sidebar"
 msgstr "Page avec colonne latérale"
+
+#~ msgid "Colors customisation"
+#~ msgstr "Personnalisation des couleurs"
 
 #~ msgid "very dark gray"
 #~ msgstr "gris très foncé"
