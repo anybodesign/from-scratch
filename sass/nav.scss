@@ -1,3 +1,8 @@
+// Navigation
+// -
+// + + + + + + + + + + 
+
+
 // Skiplinks
 
 
@@ -41,9 +46,23 @@
 
 .main-menu {
 	display: none;
+	position: absolute;
+	top: 0; 
+	left: $grid-padding;
+	width: 80%;
+	padding: $grid-padding;
+	background-color: #fff;
+	z-index: 100;
 
 	@include rwd(medium) {
-		display: flex;flex-wrap: wrap;
+		position: relative;
+		top: auto;
+		left: auto;
+		padding: 0;
+		width: auto;
+		background-color: transparent;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	
@@ -249,6 +268,7 @@
 	padding: 0;
 	cursor: pointer;
 	@include a11y-hide();
+	z-index: 200;
 
 	span,
 	span::before,
