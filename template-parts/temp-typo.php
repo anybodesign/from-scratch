@@ -24,6 +24,12 @@
 						<li>Unordered list...</li>
 						<li>That's funny</li>
 					</ul>
+
+					<p>
+						<a href="#" class="action-btn">Action button</a> 
+						<a href="#" class="white-btn">White button</a> 
+					</p>
+					
 					
 					<h4>And here is the section subtitle</h4>
 					
@@ -153,4 +159,3 @@
 							</tfoot>
 						</table>
 					</div>
-				</div>

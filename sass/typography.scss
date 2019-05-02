@@ -151,7 +151,7 @@ a:hover {
 .content-area {
 	
 	p {
-		a:not([class*="action-btn"]) {
+		a:not([class*="-btn"]) {
 			text-decoration: none;
 			color: $secondary-color;
 			border-bottom: $secondary-color 2px solid;
