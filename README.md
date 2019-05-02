@@ -12,7 +12,9 @@ Documentation: <https://github.com/YahnisElsts/plugin-update-checker>
 
 ### Custom Post Type
 
-If you don’t need any custom post type, remove this line in the functions.php file: `include_once('inc/fs-cpt.php');`
+If you don’t need any custom post type, remove these lines in the functions.php file: \
+`include_once( dirname( __FILE__ ) . '/inc/custom-post-type.php' );`\
+`include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );`
 
 ### ACF Page Builder
 
