@@ -317,7 +317,8 @@ include_once( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 
 // Custom Post types
 
-include_once( dirname( __FILE__ ) . '/inc/fs-cpt.php' );
+include_once( dirname( __FILE__ ) . '/inc/custom-post-type.php' );
+include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );
 
 
 // Extended Search

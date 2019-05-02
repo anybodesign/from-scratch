@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2019-03-04 11:44+0100\n"
-"PO-Revision-Date: 2019-03-04 11:45+0100\n"
+"POT-Creation-Date: 2019-05-02 16:14+0200\n"
+"PO-Revision-Date: 2019-05-02 16:17+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -50,7 +50,7 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:38 functions.php:264
+#: footer.php:38 functions.php:310
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -82,39 +82,39 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:263 header.php:69
+#: functions.php:309 header.php:69
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:321
+#: functions.php:368
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:335
+#: functions.php:382
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:336
+#: functions.php:383
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:337
+#: functions.php:384
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:347
+#: functions.php:394
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:404
+#: functions.php:451
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:405
+#: functions.php:452
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:406
+#: functions.php:453
 msgid "Search"
 msgstr "Chercher"
 
@@ -133,6 +133,206 @@ msgstr "Aller à la page d'accueil"
 #: header.php:70
 msgid "Menu"
 msgstr "Menu"
+
+#: inc/custom-post-type.php:32
+msgctxt "Post Type General Name"
+msgid "Projects"
+msgstr "Projets"
+
+#: inc/custom-post-type.php:33
+msgctxt "Post Type Singular Name"
+msgid "Project"
+msgstr "Projet"
+
+#: inc/custom-post-type.php:34
+msgid "Projects"
+msgstr "Projets"
+
+#: inc/custom-post-type.php:35 inc/custom-post-type.php:67
+msgid "Project"
+msgstr "Projet"
+
+#: inc/custom-post-type.php:36
+msgid "Project archives"
+msgstr "Archives du projet"
+
+#: inc/custom-post-type.php:37
+msgid "Project attributes"
+msgstr "Attributs du projet"
+
+#: inc/custom-post-type.php:38
+msgid "Parent project:"
+msgstr "Projet parent :"
+
+#: inc/custom-post-type.php:39
+msgid "All the projects"
+msgstr "Tous les projets"
+
+#: inc/custom-post-type.php:40
+msgid "Add new project"
+msgstr "Ajouter un nouveau projet"
+
+#: inc/custom-post-type.php:41
+msgid "Add New"
+msgstr "Ajouter"
+
+#: inc/custom-post-type.php:42
+msgid "New project"
+msgstr "Nouveau projet"
+
+#: inc/custom-post-type.php:43
+msgid "Edit project"
+msgstr "Modifier le projet"
+
+#: inc/custom-post-type.php:44
+msgid "Update project"
+msgstr "Mettre à jour le projet"
+
+#: inc/custom-post-type.php:45
+msgid "View project"
+msgstr "Voir le projet"
+
+#: inc/custom-post-type.php:46
+msgid "View projects"
+msgstr "Voir les projets"
+
+#: inc/custom-post-type.php:47
+msgid "Search project"
+msgstr "Rechercher un projet"
+
+#: inc/custom-post-type.php:48
+msgid "Not found"
+msgstr "Aucun résultat"
+
+#: inc/custom-post-type.php:49
+msgid "Not found in Trash"
+msgstr "Introuvable dans la corbeille"
+
+#: inc/custom-post-type.php:50
+msgid "Project picture"
+msgstr "Image du projet"
+
+#: inc/custom-post-type.php:51
+msgid "Set project picture"
+msgstr "Définir l’image du projet"
+
+#: inc/custom-post-type.php:52
+msgid "Remove project picture"
+msgstr "Supprimer l'image du projet"
+
+#: inc/custom-post-type.php:53
+msgid "Use as project picture"
+msgstr "Utiliser comme image de projet"
+
+#: inc/custom-post-type.php:54
+msgid "Insert into project"
+msgstr "Insérer dans le projet"
+
+#: inc/custom-post-type.php:55
+msgid "Uploaded to this project"
+msgstr "Téléversé dans ce projet"
+
+#: inc/custom-post-type.php:56
+msgid "Projects list"
+msgstr "Liste des projets"
+
+#: inc/custom-post-type.php:57
+msgid "Projects list navigation"
+msgstr "Navigation dans la liste des projets"
+
+#: inc/custom-post-type.php:58
+msgid "Filter events list"
+msgstr "Filtrer la liste d'évènements"
+
+#: inc/custom-post-type.php:68
+msgid "Project description"
+msgstr "Description du projet"
+
+#: inc/custom-post-type.php:97
+msgid "Choose a title for this project"
+msgstr "Choisissez un titre pour ce projet"
+
+#: inc/custom-post-type.php:143
+msgctxt "Taxonomy General Name"
+msgid "Projects types"
+msgstr "Types de projets"
+
+#: inc/custom-post-type.php:144
+msgctxt "Taxonomy Singular Name"
+msgid "Project type"
+msgstr "Type de projet"
+
+#: inc/custom-post-type.php:145
+msgid "Project type"
+msgstr "Type de projet"
+
+#: inc/custom-post-type.php:146
+msgid "All types"
+msgstr "Tous les types"
+
+#: inc/custom-post-type.php:147
+msgid "Parent type"
+msgstr "Type Parent"
+
+#: inc/custom-post-type.php:148
+msgid "Parent type:"
+msgstr "Type parent :"
+
+#: inc/custom-post-type.php:149
+msgid "New type name"
+msgstr "Nouveau nom de type"
+
+#: inc/custom-post-type.php:150
+msgid "Add type Item"
+msgstr "Ajouter un type"
+
+#: inc/custom-post-type.php:151
+msgid "Edit type"
+msgstr "Modifier le type"
+
+#: inc/custom-post-type.php:152
+msgid "Update type"
+msgstr "Mettre à jour le type"
+
+#: inc/custom-post-type.php:153
+msgid "View type"
+msgstr "Voir le type"
+
+#: inc/custom-post-type.php:154
+msgid "Separate types with commas"
+msgstr "Séparer les types par des virgules"
+
+#: inc/custom-post-type.php:155
+msgid "Add or remove types"
+msgstr "Ajouter ou supprimer des types"
+
+#: inc/custom-post-type.php:156
+msgid "Choose from the most used"
+msgstr "Choisir parmi les plus utilisés"
+
+#: inc/custom-post-type.php:157
+msgid "Popular types"
+msgstr "Types populaires"
+
+#: inc/custom-post-type.php:158
+msgid "Search types"
+msgstr "Rechercher des types"
+
+#: inc/custom-post-type.php:159
+msgid "Not Found"
+msgstr "Aucun résultat"
+
+#: inc/custom-post-type.php:160
+msgid "No types"
+msgstr "Aucun type"
+
+#: inc/custom-post-type.php:161
+msgid "Types list"
+msgstr "Liste des types"
+
+#: inc/custom-post-type.php:162
+msgid "Types list navigation"
+msgstr "Navigation dans la liste des types"
 
 #: inc/customizer.php:22
 msgid "Theme Options"
@@ -186,150 +386,6 @@ msgstr "Erreur 404"
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
-
-#: inc/fs-cpt.php:9
-msgctxt "Post Type General Name"
-msgid "Portfolio"
-msgstr "Portfolio"
-
-#: inc/fs-cpt.php:10
-msgctxt "Post Type Singular Name"
-msgid "Portfolio"
-msgstr "Portfolio"
-
-#: inc/fs-cpt.php:11 inc/fs-cpt.php:12 inc/fs-cpt.php:34
-msgid "Portfolio"
-msgstr "Portfolio"
-
-#: inc/fs-cpt.php:14
-msgid "All Creations"
-msgstr "Toutes les créations"
-
-#: inc/fs-cpt.php:15
-msgid "Add New Creation"
-msgstr "Ajouter une nouvelle création"
-
-#: inc/fs-cpt.php:16
-msgid "New Creation"
-msgstr "Nouvelle création"
-
-#: inc/fs-cpt.php:17
-msgid "Edit Creation"
-msgstr "Modifier la création"
-
-#: inc/fs-cpt.php:18
-msgid "Update Creation"
-msgstr "Mettre à jour la création"
-
-#: inc/fs-cpt.php:19
-msgid "View Creation"
-msgstr "Voir la création"
-
-#: inc/fs-cpt.php:20
-msgid "Search Creation"
-msgstr "Chercher une création"
-
-#: inc/fs-cpt.php:21
-msgid "No creations were found"
-msgstr "Aucune création trouvée"
-
-#: inc/fs-cpt.php:22
-msgid "Creation Picture"
-msgstr "Image de référence"
-
-#: inc/fs-cpt.php:23
-msgid "Set Creation Picture"
-msgstr "Choisir l'image de référence"
-
-#: inc/fs-cpt.php:24
-msgid "Remove Creation Picture"
-msgstr "Supprimer l'image de référence"
-
-#: inc/fs-cpt.php:25
-msgid "Use as Creation Picture"
-msgstr "Utilisatier en tant qu’image de référence"
-
-#: inc/fs-cpt.php:28
-msgid "portfolio"
-msgstr "portfolio"
-
-#: inc/fs-cpt.php:35
-msgid "Anybodesign Portfolio"
-msgstr "Portfolio Anybodesign"
-
-#: inc/fs-cpt.php:76
-msgctxt "Taxonomy General Name"
-msgid "Creation Categories"
-msgstr "Types de créations"
-
-#: inc/fs-cpt.php:77
-msgctxt "Taxonomy Singular Name"
-msgid "Creation Category"
-msgstr "Type de création"
-
-#: inc/fs-cpt.php:78
-msgid "Creation Category"
-msgstr "Type de création"
-
-#: inc/fs-cpt.php:79
-msgid "All Creation Categories"
-msgstr "Tous les types de créations"
-
-#: inc/fs-cpt.php:80
-msgid "Parent Creation Category"
-msgstr "Type de création parent"
-
-#: inc/fs-cpt.php:81
-msgid "Parent Creation Category:"
-msgstr "Type de création parent :"
-
-#: inc/fs-cpt.php:82
-msgid "New Creation Category"
-msgstr "Nouveau type de création"
-
-#: inc/fs-cpt.php:83
-msgid "Add New Creation Category"
-msgstr "Ajouter un type de création"
-
-#: inc/fs-cpt.php:84
-msgid "Edit Creation Category"
-msgstr "Modifier le type de création"
-
-#: inc/fs-cpt.php:85
-msgid "Update Creation Category"
-msgstr "Mettre à jour le type de création"
-
-#: inc/fs-cpt.php:86
-msgid "View Creation Category"
-msgstr "Voir le type de création"
-
-#: inc/fs-cpt.php:87
-msgid "Popular Creation Category"
-msgstr "Type de création populaire"
-
-#: inc/fs-cpt.php:88
-msgid "Search Creation Category"
-msgstr "Chercher un type de création"
-
-#: inc/fs-cpt.php:89
-msgid "No creation categories were found"
-msgstr "Aucun type de création trouvé"
-
-#: inc/fs-cpt.php:99
-msgid "creations"
-msgstr "creations"
-
-#: inc/fs-cpt.php:165
-msgid "Enter the name of the creation"
-msgstr "Entrer le nom de la création"
-
-#: inc/fs-cpt.php:178
-msgid "Picture"
-msgstr "Image"
-
-#: inc/fs-cpt.php:179
-msgid "Date"
-msgstr "Date"
 
 #: inc/plugin-update-checker/Puc/v4p5/Plugin/Ui.php:54
 msgid "View details"
@@ -483,6 +539,88 @@ msgstr "Constructeur de Page"
 #. Template Name of the plugin/theme
 msgid "Custom page template with Sidebar"
 msgstr "Page avec colonne latérale"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgid "All Creations"
+#~ msgstr "Toutes les créations"
+
+#~ msgid "No creations were found"
+#~ msgstr "Aucune création trouvée"
+
+#~ msgid "Creation Picture"
+#~ msgstr "Image de référence"
+
+#~ msgid "portfolio"
+#~ msgstr "portfolio"
+
+#~ msgid "Anybodesign Portfolio"
+#~ msgstr "Portfolio Anybodesign"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Creation Categories"
+#~ msgstr "Types de créations"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Creation Category"
+#~ msgstr "Type de création"
+
+#~ msgid "Creation Category"
+#~ msgstr "Type de création"
+
+#~ msgid "All Creation Categories"
+#~ msgstr "Tous les types de créations"
+
+#~ msgid "Parent Creation Category"
+#~ msgstr "Type de création parent"
+
+#~ msgid "Parent Creation Category:"
+#~ msgstr "Type de création parent :"
+
+#~ msgid "New Creation Category"
+#~ msgstr "Nouveau type de création"
+
+#~ msgid "Add New Creation Category"
+#~ msgstr "Ajouter un type de création"
+
+#~ msgid "Edit Creation Category"
+#~ msgstr "Modifier le type de création"
+
+#~ msgid "Update Creation Category"
+#~ msgstr "Mettre à jour le type de création"
+
+#~ msgid "View Creation Category"
+#~ msgstr "Voir le type de création"
+
+#~ msgid "Popular Creation Category"
+#~ msgstr "Type de création populaire"
+
+#~ msgid "Search Creation Category"
+#~ msgstr "Chercher un type de création"
+
+#~ msgid "No creation categories were found"
+#~ msgstr "Aucun type de création trouvé"
+
+#~ msgid "creations"
+#~ msgstr "creations"
+
+#~ msgid "Enter the name of the creation"
+#~ msgstr "Entrer le nom de la création"
+
+#~ msgid "Picture"
+#~ msgstr "Image"
+
+#~ msgid "Date"
+#~ msgstr "Date"
 
 #~ msgid "Colors customisation"
 #~ msgstr "Personnalisation des couleurs"

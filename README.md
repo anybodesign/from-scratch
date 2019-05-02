@@ -20,6 +20,11 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.9.6 - 2019.05.02
+* wearewp CPT Class
+* Some HTML/CSS fixes
+* Fancybox update
+
 ### 2.9.5 - 2019.03.04
 * HTML fix
 * Prid'x removed
