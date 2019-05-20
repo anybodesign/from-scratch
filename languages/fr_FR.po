@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2019-05-20 16:50+0200\n"
-"PO-Revision-Date: 2019-05-20 16:50+0200\n"
+"POT-Creation-Date: 2019-05-20 18:19+0200\n"
+"PO-Revision-Date: 2019-05-20 23:36+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -26,9 +26,7 @@ msgstr "Oops! Page introuvable"
 
 #: 404.php:24
 msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
-"une recherche?"
+msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
 
 #: comments.php:19
 msgid "They talk about it"
@@ -557,12 +555,14 @@ msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
 
 #. Template Name of the plugin/theme
-msgid "Page builder"
-msgstr "Constructeur de Page"
+msgid "Style Guide"
+msgstr "Style Guide"
 
-#. Template Name of the plugin/theme
-msgid "Custom page template with Sidebar"
-msgstr "Page avec colonne latérale"
+#~ msgid "Page builder"
+#~ msgstr "Constructeur de Page"
+
+#~ msgid "Custom page template with Sidebar"
+#~ msgstr "Page avec colonne latérale"
 
 #~ msgctxt "Post Type General Name"
 #~ msgid "Portfolio"
