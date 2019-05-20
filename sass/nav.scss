@@ -54,7 +54,7 @@
 	background-color: #fff;
 	z-index: 100;
 
-	@include rwd(medium) {
+	@include rwd(large) {
 		position: relative;
 		top: auto;
 		left: auto;
@@ -70,7 +70,7 @@
 		position: relative;
 		display: block;
 		
-		@include rwd(medium) {
+		@include rwd(large) {
 			margin-right: $grid-padding;
 		}
 		
@@ -97,7 +97,7 @@
 	& > a {
 		padding-right: 2.4rem;
 		
-		@include rwd(medium) {
+		@include rwd(large) {
 			padding-right: 1.8rem;
 		}
 		@include rwd(wide) {
@@ -130,7 +130,7 @@
 		display: block;
 	}
 	
-	@include rwd(medium) {
+	@include rwd(large) {
 		left: auto;
 		opacity: 1;
 		
@@ -148,7 +148,7 @@
 	overflow: hidden;
 	transition: .2s ease-in-out;
 	
-	@include rwd(medium) {
+	@include rwd(large) {
 		position: absolute;
 		height: auto;
 		top: auto;
@@ -235,7 +235,7 @@
 		transform: rotate(-45deg);
 	}
 	
-	@include rwd(medium) {
+	@include rwd(large) {
 		height: 1.6rem; 
 		width: 1.6rem;
 		top: 50%; 
@@ -319,7 +319,7 @@
 		background-color: transparent;
 	}	
 	
-	@include rwd(medium) {
+	@include rwd(large) {
 		display: none;				
 	}
 }
