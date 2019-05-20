@@ -29,7 +29,6 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 * Functions fix
 * Styleguide template
 * New markup
-* …
 
 ### 2.9.6 - 2019.05.02
 * wearewp CPT Class
