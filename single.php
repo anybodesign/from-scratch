@@ -11,8 +11,13 @@
  */
 get_header(); ?>
 					
-				<div class="row inner has-sidebar">
-					<div class="site-content">
+				<div class="page-wrap has-sidebar">
+					
+					<?php 
+						get_template_part( 'template-parts/page', 'banner' ); 
+					?>
+
+					<div class="page-content">
 	
 					<?php while (have_posts()) : the_post(); ?>
 			
@@ -26,9 +31,10 @@ get_header(); ?>
 						
 					</div>
 					
-					<div class="site-sidebar">
+					<div class="page-sidebar">
 						<?php get_sidebar(); ?>
-					</div>					
+					</div>	
+									
 				</div>
 				
 <?php get_footer(); ?>

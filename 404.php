@@ -9,24 +9,21 @@
  * @since 1.0
  * @version 1.0
  */
-
 get_header(); ?>
 					
-				<div class="row inner">
-					<div class="site-content">
-	
-						<section class="error-404 not-found">
+				<div class="page-wrap">
+
+					<?php 
+						get_template_part( 'template-parts/page', 'banner' ); 
+					?>
+					
+					<div class="page-content">
 							
-							<header class="page-header">
-								<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'from-scratch' ); ?></h1>
-							</header>
-							
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'from-scratch' ); ?></p>
-							<?php get_search_form(); ?>		
-							
-						</section>
-												
-					</div>					
+						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'from-scratch' ); ?></p>
+						<?php get_search_form(); ?>		
+																			
+					</div>	
+									
 				</div>
 
 <?php get_footer(); ?>

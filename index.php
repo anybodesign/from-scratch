@@ -8,22 +8,20 @@
  * @subpackage From_Scratch
  * @since 1.0
  * @version 1.0
- */
+ */ 
 get_header(); ?>
-				<div class="row inner has-sidebar">
+
+				<div class="page-wrap has-sidebar">
 					
-					<div class="site-content">
+					<?php 
+						get_template_part( 'template-parts/page', 'banner' ); 
+					?>
+
+					<div class="page-content">
 					
 					<?php // The Loop ?>
 					
-					<?php if ( have_posts() ) : ?>
-			
-						<?php if ( is_home() && ! is_front_page() ) { ?>
-							<header>
-								<h1 class="page-title"><?php single_post_title(); ?></h1>
-							</header>
-						<?php } ?>
-			
+					<?php if ( have_posts() ) : ?>		
 			
 						<?php while ( have_posts() ) : the_post(); ?>
 			
@@ -46,7 +44,8 @@ get_header(); ?>
 	
 					</div>
 
-					<div class="site-sidebar">
+
+					<div class="page-sidebar">
 						<?php get_sidebar(); ?>
 					</div>
 										

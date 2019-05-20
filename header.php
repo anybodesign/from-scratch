@@ -84,4 +84,4 @@
 	
 	
 	
-		<main class="content-area" role="main" id="site_content">
+		<main class="content-area" role="main" id="site_main">

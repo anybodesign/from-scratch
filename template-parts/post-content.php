@@ -15,19 +15,19 @@
 						
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
+							<?php if (is_single()) { ?><a href="<?php the_permalink(); ?>"><?php } ?>
+							<?php the_post_thumbnail('large'); ?>
+							<?php if (is_single()) { ?></a><?php } ?>
 						</figure>
 						<?php } ?>
 						
+						<?php if ( !is_single() ) { ?>
 						<header class="post-header">
-							<?php if ( is_single() ) { ?>
-								<h1 class="post-title"><?php the_title(); ?></h1>
-							<?php } else { ?>
-								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
-							<?php } ?>
+							<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
 							
 							<?php get_template_part('template-parts/post', 'meta'); ?>							
 						</header>
+						<?php } ?>
 						
 						<div class="post-content">
 							<?php

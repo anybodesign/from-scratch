@@ -11,22 +11,22 @@
  */
 get_header(); ?>
 
-				<div class="row inner">
-					<div class="site-content">
-	
-					<?php while ( have_posts() ) : the_post(); ?>
-		
-						<?php get_template_part( 'template-parts/page', 'content' ); ?>
-		
-					<?php endwhile; ?>
-
-						
-						<?php // Just for testing typographic styles, then remove this part ?>
-						<div class="page-content">
-							<?php get_template_part('template-parts/temp','typo'); ?>
-						</div>
-						
-					</div>					
+				<div class="page-wrap">
+					
+					<?php 
+						while ( have_posts() ) : the_post();
+							get_template_part( 'template-parts/page', 'banner' );
+							get_template_part( 'template-parts/page', 'content' );
+						endwhile;					
+					?>
+					
+					
+					<?php // ACF Builder output ?>
+					
+					<div class="builder-content">
+						<?php get_template_part('template-parts/acf/builder'); ?>
+					</div>
+										
 				</div>
 				
 <?php get_footer(); ?>

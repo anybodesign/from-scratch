@@ -9,20 +9,15 @@
  * @since 1.0
  * @version 1.0
  */
-
 get_header(); ?>
 
-				<div class="row inner">
+				<div class="page-wrap">
 					
-					<div class="site-content">
-	
 					<?php while ( have_posts() ) : the_post(); ?>
 		
 						<?php get_template_part( 'template-parts/page', 'content' ); ?>
 		
 					<?php endwhile; ?>
-					
-					</div>
 					
 					
 					<?php 
@@ -41,7 +36,7 @@ get_header(); ?>
 				
 					<?php if ($query->have_posts()) : ?>
 					
-					<div class="site-content">
+					<div class="page-content">
 										
 						<?php while ($query->have_posts()) : $query->the_post(); ?>
 					

@@ -2,26 +2,49 @@
 // -
 // + + + + + + + + + + 
 
-#site_content {
+
+// Structure 
+
+
+.page-wrap {
+	@include center();
 	
+	&.has-sidebar {
+		
+		@include rwd(large) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
 }
 
-.site-content,
-.site-sidebar {
+.page-banner,
+.page-content,
+.page-sidebar {
 	padding: $grid-padding;
 	width: 100%;
 }
 
-@include rwd(large) {
+.page-banner {
+
+}
+
+.page-content {
 	
-	.site-content {
-		width: 100%;
+	@include rwd(large) {
 		
 		.has-sidebar & {
 			width: 75%;
 		}
-	}
-	.site-sidebar {
-		width: 25%;
-	}
+	}	
+}
+
+.page-sidebar {
+	
+	@include rwd(large) {
+		
+		.has-sidebar & {
+			width: 25%;
+		}
+	}	
 }

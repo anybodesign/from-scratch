@@ -22,6 +22,15 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 2.9.7 - 2019.05.20
+* ACF: option page 
+* Nav breakpoint (large)
+* Tinymce: styles i18n
+* Functions fix
+* Styleguide template
+* New markup
+* …
+
 ### 2.9.6 - 2019.05.02
 * wearewp CPT Class
 * Some HTML/CSS fixes
