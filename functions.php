@@ -148,14 +148,14 @@ function fs_scripts_load() {
 		/*
 		   	wp_enqueue_script( 
 		    	'slick', 
-		    	get_template_directory_uri() . '/js/slick.min.js',
+		    	FS_THEME_URL . '/js/slick.min.js',
 		    	array('jquery'), 
 		    	'1.8', 
 		    	true
 		    );
 		    wp_enqueue_script( 
 		    	'slick-init', 
-		    	get_template_directory_uri() . '/js/slick-init.js',
+		    	FS_THEME_URL . '/js/slick-init.js',
 		    	array('jquery'), 
 		    	false, 
 		    	true
@@ -167,14 +167,14 @@ function fs_scripts_load() {
 		/*
 		   	wp_enqueue_script( 
 		    	'fancybox', 
-		    	get_template_directory_uri() . '/js/jquery.fancybox.min.js',
+		    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
 		    	array('jquery'), 
 		    	'3.1.20', 
 		    	true
 		    );
 		    wp_enqueue_script( 
 		    	'fancybox-init', 
-		    	get_template_directory_uri() . '/js/fancybox-init.js',
+		    	FS_THEME_URL . '/js/fancybox-init.js',
 		    	array('fancybox'), 
 		    	false, 
 		    	true
@@ -416,19 +416,19 @@ function fs_tiny_formats($init_array) {
     $style_formats = array(
 
         array(
-            'title' => 'Texte intro',
+            'title' => __( 'Text intro', 'from-scratch' ),
             'selector' => 'p',
             'classes' => 'text-intro',
             'wrapper' => true,
         ),
         array(
-            'title' => 'Texte mentions',
+            'title' => __( 'Text mentions', 'from-scratch' ),
             'selector' => 'p',
             'classes' => 'text-mentions',
             'wrapper' => true,
         ),
         array(
-            'title' => 'Bouton d’action',
+            'title' => __( 'Action button', 'from-scratch' ),
             'selector' => 'a',
             'classes' => 'action-btn',
         )
@@ -503,7 +503,42 @@ if( class_exists('acf') ) {
 		wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
 		wp_enqueue_style( 'popup-acf-css', FS_THEME_URL . '/css/popup-acf.css' );
 	}
+
+
+	//	ACF Options page
 	
+	if (function_exists('acf_add_options_page')) {
+	    
+		add_action( 'init', 'fs_acf_add_options_page' );
+		function fs_acf_add_options_page() {
+			
+			$parent = acf_add_options_page(array(
+				'page_title'		=> esc_html__( 'Site Options', 'from-scratch' ),
+				'menu_title'		=> esc_html__( 'Site Options', 'from-scratch' ),
+				'menu_slug'		=> 'options-site',
+				'capability'		=> 'edit_posts',
+				'icon_url'		=> 'dashicons-admin-network',
+				'redirect'		=> false,
+				'position'		=> 30
+			));
+			acf_add_options_sub_page(array(
+				'page_title' 	=> esc_html__( 'Main Menu', 'from-scratch'),
+				'menu_title' 	=> esc_html__( 'Main Menu', 'from-scratch'),
+				'parent_slug' 	=> $parent['menu_slug'],
+			));		
+			acf_add_options_sub_page(array(
+				'page_title' 	=> esc_html__( 'Archives Customizer', 'from-scratch'),
+				'menu_title' 	=> esc_html__( 'Archives Customizer', 'from-scratch'),
+				'parent_slug' 	=> $parent['menu_slug'],
+			));	
+			acf_add_options_sub_page(array(
+				'page_title' 	=> esc_html__( 'Social Networks', 'from-scratch'),
+				'menu_title' 	=> esc_html__( 'Social Networks', 'from-scratch'),
+				'parent_slug' 	=> $parent['menu_slug'],
+			));
+			
+		}
+	}	
 }
 
 

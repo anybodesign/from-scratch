@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2019-05-02 16:14+0200\n"
-"PO-Revision-Date: 2019-05-02 16:17+0200\n"
+"POT-Creation-Date: 2019-05-20 16:50+0200\n"
+"PO-Revision-Date: 2019-05-20 16:50+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -82,7 +82,7 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:309 header.php:69
+#: functions.php:309 functions.php:525 functions.php:526 header.php:69
 msgid "Main Menu"
 msgstr "Menu principal"
 
@@ -106,6 +106,18 @@ msgstr "Grande (x2)"
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
+#: functions.php:419
+msgid "Text intro"
+msgstr "Texte d’intro"
+
+#: functions.php:425
+msgid "Text mentions"
+msgstr "Mentions"
+
+#: functions.php:431
+msgid "Action button"
+msgstr "Bouton d’action"
+
 #: functions.php:451
 msgid "Search for:"
 msgstr "Rechercher :"
@@ -117,6 +129,18 @@ msgstr "Mots clés"
 #: functions.php:453
 msgid "Search"
 msgstr "Chercher"
+
+#: functions.php:516 functions.php:517
+msgid "Site Options"
+msgstr "Options du site"
+
+#: functions.php:530 functions.php:531
+msgid "Archives Customizer"
+msgstr "Personnalisation des pages d’archives"
+
+#: functions.php:535 functions.php:536
+msgid "Social Networks"
+msgstr "Réseaux sociaux"
 
 #: header.php:32
 msgid "Go to main content"
@@ -649,9 +673,6 @@ msgstr "Page avec colonne latérale"
 
 #~ msgid "Site Settings"
 #~ msgstr "Paramètres du site"
-
-#~ msgid "Social Networks"
-#~ msgstr "Réseaux sociaux"
 
 #~ msgid "Copyright"
 #~ msgstr "Copyright"
