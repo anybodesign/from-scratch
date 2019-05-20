@@ -387,6 +387,20 @@ function fs_custom_sizes( $sizes ) {
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
 
 
+// Background image
+
+function fs_bg_img() {
+	
+	if ( '' != get_the_post_thumbnail() ) {
+		$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
+		$bg = ' style="background-image: url('.$img_url[0].')"';
+	} else {
+		$bg = null;	
+	}
+	
+	echo $bg;
+}
+
 // Widgets
 
 function fs_widgets_init() {
