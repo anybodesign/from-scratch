@@ -108,9 +108,6 @@
 }
 
 
-
-
-
 // Mobile First Media Queries
 
 @mixin rwd($width) {
@@ -183,66 +180,3 @@
 		}
 	}
 }
-
-
-
-
-// Animations
-
-@keyframes drop-in {
-	0% {
-		transform: translateY(-100%);
-	}
-	50% {
-		transform: translateY(0);
-	}
-	75% {
-		transform: translateY(-10%);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes pop-in {
-	0% {
-		transform: translateY(-1rem);
-	}
-	50% {
-		transform: translateY(0);
-	}
-	75% {
-		transform: translateY(-.5rem);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes go-back {
-	0% {
-		margin-right: 2.5rem;
-	}
-	50% {
-		margin-right: $grid-padding;
-	}
-	75% {
-		margin-right: 1.5rem;
-	}
-	100% {
-		margin-right: $grid-padding;
-	}
-}
-
-@keyframes fall-in {
-	from {
-		opacity: 0;
-		margin-top: -1.5rem;
-	}
-	to {
-		opacity: 1;
-		margin-top: 0;
-	}
-}
-
-
