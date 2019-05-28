@@ -16,11 +16,23 @@ If you don’t need any custom post type, remove these lines in the functions.ph
 `include_once( dirname( __FILE__ ) . '/inc/custom-post-type.php' );`\
 `include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );`
 
-### ACF Page Builder
+### Gutenberg Blocks
 
-If you don’t need the ACF page builder, remove the ACF lines in the functions.php file and delete the _acf_ folder in the _inc_ directory. ACF Pro is required.
+Choose only the blocks you need! Just edit the JS file: `js/gut-deactivator.js`
+
+### ACF Page Builder, Custom Blocks and Option page
+
+If you don’t need the ACF features, remove or ecdit the ACF lines in the functions.php file and delete or edit the _acf_ folder in the _inc_ directory. ACF Pro is required.\
+Custom blocks: `include_once('inc/acf/acf-blocks.php');`
+
 
 ## Changelog
+
+### 2.9.8 - 2019.05.28
+* ACF Blocks
+* Update blocks deactivator
+* Cleaning vars and mixins
+* Added `wp_body_open()`
 
 ### 2.9.7 - 2019.05.20
 * ACF: option page 
