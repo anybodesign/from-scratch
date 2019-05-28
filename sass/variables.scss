@@ -7,7 +7,8 @@
 
 
 $grid-padding: 0.625em; 	// @note: The padding gutter! equiv. 10px
-$max-width: 70em;			// @note: 1120px
+//$max-width: 70em;			// @note: 1120px
+$max-width: 96rem;			// @note: 960px
 
 $half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the viewport
 

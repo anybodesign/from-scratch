@@ -7,9 +7,9 @@
 
 
 .page-wrap {
-	@include center();
 	
 	&.has-sidebar {
+		@include center();
 		
 		@include rwd(large) {
 			display: flex;
@@ -25,11 +25,36 @@
 	width: 100%;
 }
 
-.page-banner {
-
-}
+.page-banner {}
 
 .page-content {
+	
+	// Centering Blocks and content
+	
+	& > * {
+		width: 100%;
+		padding: $grid-padding;
+		@include center();
+	}
+	
+	& > *.alignfull {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+	}
+	
+	& > [class*="wp-block-gallery"],
+	& > [class*="wp-block-cover-image"],
+	& > [class*="wp-block-quote"] {
+		@include center(0, $grid-padding*2);
+	}
+	& > [class*="wp-block-table"],
+	& > [class*="wp-block-verse"] {	
+		@include center($grid-padding*2, $grid-padding*2);
+		max-width: calc(#{$max-width} - #{$grid-padding}*2);
+	}
+
+
 	
 	@include rwd(large) {
 		
