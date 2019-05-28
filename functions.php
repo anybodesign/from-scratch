@@ -477,14 +477,20 @@ add_filter( 'get_search_form', 'fs_search_form' );
 // ACF
 // ------------------------
 
+
 if( class_exists('acf') ) {
 
 	// Remove the WP Custom Fields meta box
 	
 	add_filter('acf/settings/remove_wp_meta_box', '__return_true');
+
+
+	// ACF Blocks
+	
+	include_once('inc/acf/acf-blocks.php');
 	
 	
-	// Custom ACF Functions
+	// Custom ACF Functions (Builder)
 	
 	include_once('inc/acf/acf-functions.php');
 	include_once('inc/acf/popup-acf.php');
@@ -512,8 +518,8 @@ if( class_exists('acf') ) {
 	
 	//	Admin style and script
 	
-	add_action('admin_print_styles', 'fs_admin_css', 11 );
-	function fs_admin_css() {
+	add_action('admin_print_styles', 'fs_acf_admin_css', 11 );
+	function fs_acf_admin_css() {
 		wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
 		wp_enqueue_style( 'popup-acf-css', FS_THEME_URL . '/css/popup-acf.css' );
 	}
@@ -527,10 +533,10 @@ if( class_exists('acf') ) {
 		function fs_acf_add_options_page() {
 			
 			$parent = acf_add_options_page(array(
-				'page_title'		=> esc_html__( 'Site Options', 'from-scratch' ),
-				'menu_title'		=> esc_html__( 'Site Options', 'from-scratch' ),
+				'page_title'	=> esc_html__( 'Site Options', 'from-scratch' ),
+				'menu_title'	=> esc_html__( 'Site Options', 'from-scratch' ),
 				'menu_slug'		=> 'options-site',
-				'capability'		=> 'edit_posts',
+				'capability'	=> 'edit_posts',
 				'icon_url'		=> 'dashicons-admin-network',
 				'redirect'		=> false,
 				'position'		=> 30

@@ -633,8 +633,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "post_type": [],
-                            "taxonomy": [],
+                            "post_type": "",
+                            "taxonomy": "",
                             "filters": [
                                 "search",
                                 "post_type",
@@ -645,7 +645,7 @@
                             ],
                             "min": "",
                             "max": "",
-                            "return_format": "object"
+                            "return_format": ""
                         }
                     ],
                     "min": "",
@@ -681,5 +681,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1525690481
+    "modified": 1559036700
 }

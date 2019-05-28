@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2019-05-20 18:19+0200\n"
-"PO-Revision-Date: 2019-05-20 23:36+0200\n"
+"POT-Creation-Date: 2019-05-28 11:43+0200\n"
+"PO-Revision-Date: 2019-05-28 11:44+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -20,11 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:21
-msgid "Oops! That page can&rsquo;t be found"
-msgstr "Oops! Page introuvable"
-
-#: 404.php:24
+#: 404.php:22
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
 
@@ -48,7 +44,7 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:38 functions.php:310
+#: footer.php:38 functions.php:317
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -80,81 +76,105 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:309 functions.php:525 functions.php:526 header.php:69
+#: functions.php:316 functions.php:552 functions.php:553 header.php:70
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:368
+#: functions.php:375
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:382
+#: functions.php:389
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:383
+#: functions.php:390
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:384
+#: functions.php:391
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:394
+#: functions.php:415
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:419
+#: functions.php:440
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:425
+#: functions.php:446
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:431
+#: functions.php:452
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:451
+#: functions.php:472
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:452
+#: functions.php:473
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:453
+#: functions.php:474
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:516 functions.php:517
+#: functions.php:543 functions.php:544
 msgid "Site Options"
 msgstr "Options du site"
 
-#: functions.php:530 functions.php:531
+#: functions.php:557 functions.php:558
 msgid "Archives Customizer"
 msgstr "Personnalisation des pages d’archives"
 
-#: functions.php:535 functions.php:536
+#: functions.php:562 functions.php:563
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: header.php:32
+#: header.php:33
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:34
+#: header.php:35
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:52
+#: header.php:53
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
 
-#: header.php:70
+#: header.php:71
 msgid "Menu"
 msgstr "Menu"
+
+#: inc/acf/acf-blocks.php:11
+msgid "FS Blocks"
+msgstr "FS Blocks"
+
+#: inc/acf/acf-blocks.php:28
+msgid "Rich Text"
+msgstr "Texte riche"
+
+#: inc/acf/acf-blocks.php:42
+msgid "Text and Image"
+msgstr "Texte et image"
+
+#: inc/acf/acf-blocks.php:55
+msgid "Photo gallery"
+msgstr "Galerie photos"
+
+#: inc/acf/acf-blocks.php:68
+msgid "Content gallery"
+msgstr "Galerie de contenu"
+
+#: inc/acf/acf-blocks.php:84
+msgid "CTA"
+msgstr "CTA"
 
 #: inc/custom-post-type.php:32
 msgctxt "Post Type General Name"
@@ -453,30 +473,33 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:35
+#: index.php:33
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:36
+#: index.php:34
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:37
+#: index.php:35
 msgid "Page"
 msgstr "Page"
 
-#: search.php:19
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour : %s"
-
+#: template-parts/acf/block-content.php:32
 #: template-parts/acf/builder-content.php:32
 msgid "Read "
 msgstr "Lire "
 
+#: template-parts/acf/block-gallery.php:24
+#: template-parts/acf/block-textimg.php:24
 #: template-parts/acf/builder-gallery.php:32
 msgid "Enlarge picture"
 msgstr "Agrandir l'image"
+
+#: template-parts/acf/block-text.php:15 template-parts/acf/block-text.php:16
+#: template-parts/acf/block-text.php:17
+msgid "Enter text here..."
+msgstr "Entrez du texte ici…"
 
 #: template-parts/nothing.php:14
 msgid "Nothing Found"
@@ -504,6 +527,10 @@ msgid ""
 msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
+
+#: template-parts/page-banner.php:23
+msgid "Oops! That page can&rsquo;t be found"
+msgstr "Oops! Page introuvable"
 
 #: template-parts/post-content.php:36
 #, php-format
@@ -557,6 +584,9 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Style Guide"
 msgstr "Style Guide"
+
+#~ msgid "Search Results for: %s"
+#~ msgstr "Résultats de la recherche pour : %s"
 
 #~ msgid "Page builder"
 #~ msgstr "Constructeur de Page"

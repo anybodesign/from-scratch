@@ -2,3 +2,28 @@
 Theme Name: From Scratch
 Description: Have fun with Gutenberg style editor.
 */
+
+
+/* Typography */
+
+p.text-intro {
+	font-size: 2rem;
+}
+p.text-mentions {
+	font-size: 1.3rem;
+}
+a.action-btn {
+	background-color: #333;
+	color: #fff;
+	padding: 5px 15px;
+}
+
+.white-text * {
+	color: #fff;
+}
+
+/* Layout */
+
+.wp-block {
+	max-width: 960px;
+}
