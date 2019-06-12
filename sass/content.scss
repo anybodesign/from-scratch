@@ -21,11 +21,15 @@
 .page-banner,
 .page-content,
 .page-sidebar {
-	padding: $grid-padding;
 	width: 100%;
 }
 
-.page-banner {}
+.page-banner {
+	
+	.inner {
+		padding: $grid-padding;
+	}
+}
 
 .page-content {
 	
@@ -54,7 +58,6 @@
 		max-width: calc(#{$max-width} - #{$grid-padding}*2);
 	}
 
-
 	
 	@include rwd(large) {
 		
@@ -65,7 +68,8 @@
 }
 
 .page-sidebar {
-	
+	padding: $grid-padding;
+
 	@include rwd(large) {
 		
 		.has-sidebar & {
