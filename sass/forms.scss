@@ -232,12 +232,13 @@ input[type="submit"]:hover {
 .formfield-checkbox input[type="checkbox"] + span::after {
 	top: -9px; 
 	left: 6px;
-	content: "L";
-	font-family: $font-bold;
-	font-size: 2.4rem;
-	color: $primary-color; 
+	content: '';
+	width: 10px;
+	height: 5px;
+	border-left: 2px solid $primary-color;
+	border-bottom: 2px solid $primary-color;	
 	opacity: 0;
-	transform: scaleX(-1) rotate(-45deg);
+	transform: rotate(-45deg);
 	transition: opacity .2s linear;
 }
 .formfield-checkbox input[type="checkbox"]:checked + label::after,
