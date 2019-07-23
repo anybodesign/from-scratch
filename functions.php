@@ -303,12 +303,19 @@ add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
 require FS_THEME_DIR . '/inc/customizer.php';
 
 
-// Menus
+// Register Navigation Menus
 
-register_nav_menus( array(
-	'main_menu' =>  esc_html__( 'Main Menu', 'from-scratch' ),
-	'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' )
-));
+function fs_custom_nav_menus() {
+
+	$locations = array(
+		'main_menu' =>  esc_html__( 'Main Menu', 'from-scratch' ),
+		'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' )
+	);
+	register_nav_menus( $locations );
+
+}
+add_action( 'init', 'fs_custom_nav_menus' );
+
 
 // Sub-menus Walker
 
