@@ -17,7 +17,7 @@
 							<?php 	
 								if ( is_home() && ! is_front_page() ) {
 									single_post_title();
-								} else if(is_archive()) {
+								} else if ( is_archive() ) {
 									the_archive_title();
 								} else if ( is_404() ) {
 									esc_html_e( 'Oops! That page can&rsquo;t be found', 'from-scratch' );

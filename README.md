@@ -12,9 +12,10 @@ Documentation: <https://github.com/YahnisElsts/plugin-update-checker>
 
 ### Custom Post Type
 
-If you don’t need any custom post type, remove these lines in the functions.php file: \
+You can add or customize Custom Post Types, find the sample files as declared in functions.php:\
 `include_once( dirname( __FILE__ ) . '/inc/custom-post-type.php' );`\
-`include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );`
+`include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );`\
+If you don’t need any custom post type, remove these lines.
 
 ### Gutenberg Blocks
 
@@ -27,6 +28,12 @@ Custom blocks: `include_once('inc/acf/acf-blocks.php');`
 
 
 ## Changelog
+
+### 2.9.9 - 2019.07.23
+* ACF Blocks icons
+* Switch some em to rem units
+* CSS: forms checkbox
+* Custom nav menus function
 
 ### 2.9.8 - 2019.05.28
 * ACF Blocks
