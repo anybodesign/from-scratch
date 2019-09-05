@@ -187,31 +187,7 @@ a:hover {
 	
 	p {
 		a:not([class*="-btn"]) {
-			text-decoration: none;
-			color: $secondary-color;
-			border-bottom: $secondary-color 2px solid;
-			transition: .2s ease-in-out;
-			
-			&:hover {
-				border-bottom-width: 4px;
-			}
-			&.focus-visible {
-				background-color: $secondary-color;
-				color: #fff;
-			}
-			&:visited {
-				color: $text-color;
-				border-bottom-color: $text-color;
-				border-bottom-width: 1px;
-			}
-			&:visited:focus {
-				color: #fff;
-			}
-			&:active {
-				color: $secondary-color;
-				border-bottom-color: transparent;
-			}
-			
+			@include link-style();
 		}
 	}
 	

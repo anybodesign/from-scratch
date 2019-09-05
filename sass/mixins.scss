@@ -3,6 +3,36 @@
 // -------------------------
 
 
+// Link Style
+
+@mixin link-style() {
+
+	text-decoration: none;
+	color: $secondary-color;
+	border-bottom: $secondary-color 2px solid;
+	transition: .2s ease-in-out;
+	
+	&:hover {
+		border-bottom-width: 4px;
+	}
+	&.focus-visible {
+		background-color: $secondary-color;
+		color: #fff;
+	}
+	&:visited {
+		color: $text-color;
+		border-bottom-color: $text-color;
+		border-bottom-width: 1px;
+	}
+	&:visited:focus {
+		color: #fff;
+	}
+	&:active {
+		color: $secondary-color;
+		border-bottom-color: transparent;
+	}	
+}
+
 // Center mode
 
 @mixin center($top: 0, $bottom: 0) {
@@ -11,7 +41,7 @@
 	max-width: $max-width;	
 }
 
-// dotted line
+// Dotted line
 
 @mixin dotted-line($color1: $primary-color, $color2: transparent, $space: 4) {
     background-image: linear-gradient(to right, $color1 0%, $color1 (100% / $space), $color2 (100% / $space));
@@ -53,7 +83,10 @@
 @mixin linkblock() {
 	content: '';
 	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0;
 	z-index: 100;	
 }
 
