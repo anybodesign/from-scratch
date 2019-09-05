@@ -309,12 +309,23 @@ function fs_custom_nav_menus() {
 
 	$locations = array(
 		'main_menu' =>  esc_html__( 'Main Menu', 'from-scratch' ),
-		'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' )
+		'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' ),
+		'social_menu' => esc_html__( 'Social Menu', 'from-scratch' )
 	);
 	register_nav_menus( $locations );
 
 }
 add_action( 'init', 'fs_custom_nav_menus' );
+
+// Nav tag for widget menus
+
+function fs_modify_nav_menu_args( $args ) {
+	
+	$args['container'] = 'nav';
+	return $args;
+}
+
+add_filter( 'wp_nav_menu_args', 'fs_modify_nav_menu_args' );
 
 
 // Sub-menus Walker
@@ -529,6 +540,26 @@ if( class_exists('acf') ) {
 	function fs_acf_admin_css() {
 		wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
 		wp_enqueue_style( 'popup-acf-css', FS_THEME_URL . '/css/popup-acf.css' );
+	}
+
+	
+	// Social Menu icons
+	
+	add_filter('wp_nav_menu_objects', 'fs_nav_menu_icons', 10, 2);
+	
+	function fs_nav_menu_icons( $items, $args ) {
+		
+		foreach( $items as $item ) {
+			
+			$icon = get_field('icon', $item);
+			
+			if( $icon ) {
+				$item->classes[] = 'social-item';
+				$item->title = '<img src="'.$icon['url'].'" alt=""><span>'.$item->title.'</span>';
+			}		
+		}
+
+		return $items;
 	}
 
 
