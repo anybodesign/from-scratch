@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2019-05-28 11:43+0200\n"
-"PO-Revision-Date: 2019-05-28 11:44+0200\n"
+"POT-Creation-Date: 2019-09-05 18:39+0200\n"
+"PO-Revision-Date: 2019-09-05 18:39+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -44,7 +44,7 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:38 functions.php:317
+#: footer.php:38 functions.php:312
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -76,63 +76,67 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:316 functions.php:552 functions.php:553 header.php:70
+#: functions.php:311 functions.php:583 functions.php:584 header.php:70
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:375
+#: functions.php:313
+msgid "Social Menu"
+msgstr "Menu réseaux sociaux"
+
+#: functions.php:386
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:389
+#: functions.php:400
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:390
+#: functions.php:401
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:391
+#: functions.php:402
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:415
+#: functions.php:426
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:440
+#: functions.php:451
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:446
+#: functions.php:457
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:452
+#: functions.php:463
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:472
+#: functions.php:483
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:473
+#: functions.php:484
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:474
+#: functions.php:485
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:543 functions.php:544
+#: functions.php:574 functions.php:575
 msgid "Site Options"
 msgstr "Options du site"
 
-#: functions.php:557 functions.php:558
+#: functions.php:588 functions.php:589
 msgid "Archives Customizer"
 msgstr "Personnalisation des pages d’archives"
 
-#: functions.php:562 functions.php:563
+#: functions.php:593 functions.php:594
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
@@ -485,13 +489,13 @@ msgstr "Page suivante"
 msgid "Page"
 msgstr "Page"
 
-#: template-parts/acf/block-content.php:32
+#: template-parts/acf/block-content.php:30
 #: template-parts/acf/builder-content.php:32
 msgid "Read "
 msgstr "Lire "
 
-#: template-parts/acf/block-gallery.php:24
-#: template-parts/acf/block-textimg.php:24
+#: template-parts/acf/block-gallery.php:30
+#: template-parts/acf/block-textimg.php:30
 #: template-parts/acf/builder-gallery.php:32
 msgid "Enlarge picture"
 msgstr "Agrandir l'image"
