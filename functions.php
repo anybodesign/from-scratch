@@ -317,14 +317,16 @@ function fs_custom_nav_menus() {
 }
 add_action( 'init', 'fs_custom_nav_menus' );
 
+
 // Nav tag for widget menus
 
 function fs_modify_nav_menu_args( $args ) {
-	
-	$args['container'] = 'nav';
+
+	if( empty ( $args['theme_location'] ) ) {
+		$args['container'] = 'nav';
+	}
 	return $args;
 }
-
 add_filter( 'wp_nav_menu_args', 'fs_modify_nav_menu_args' );
 
 
