@@ -53,7 +53,7 @@
 
 		<?php if(get_theme_mod('back2top') == true) { ?>
 			<button id="back2top" title="<?php _e('Back to top','from-scratch'); ?>">
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/back-to-top.svg" alt="">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ui/back-to-top.svg" alt="">
 			</button>
 		<?php } ?>
 
