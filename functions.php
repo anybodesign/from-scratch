@@ -138,9 +138,9 @@ function fs_scripts_load() {
 
 		wp_enqueue_script(
 			'jquery', 
-			FS_THEME_URL . '/js/jquery-3.3.1.min.js', 
+			FS_THEME_URL . '/js/jquery-3.4.1.min.js', 
 			array(), 
-			'3.3.1', 
+			'3.4.1', 
 			true
 		);
 
