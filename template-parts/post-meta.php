@@ -18,9 +18,11 @@
 									<?php _e( 'in&nbsp;', 'from-scratch' ); the_category(', '); ?>
 								</p>
 								
-								<?php if ( ! get_comments_number()==0 ) : ?>
+								<?php $comment = get_comments_number(); if ( $comment > 0 ) : ?>
 								<p class="meta-comments">
-									<a href="<?php the_permalink() ?>#comments"><?php comments_number('0', '1', '%'); ?> <?php _e( 'Comment(s)', 'from-scratch' ); ?></a>
+									<a href="<?php the_permalink() ?>#comments">
+										<?php printf( _n( '%s comment', '%s comments', $comment, 'from-scratch' ), $comment ); ?>
+									</a>
 								</p>
 		    					<?php endif; ?>
 							</div>
