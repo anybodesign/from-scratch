@@ -1,6 +1,6 @@
 {
     "key": "group_5ce417112b1de",
-    "title": "Block: Photo gallery",
+    "title": "Block 03: Photo gallery",
     "fields": [
         {
             "key": "field_5ce4174ccc530",
@@ -50,7 +50,31 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_5dc12ae66f8fb",
+            "label": "Affichage de la légende",
+            "name": "legend",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "inside": "À l’intérieur du bloc",
+                "outside": "À l’extérieur du bloc"
+            },
+            "allow_null": 0,
+            "default_value": "inside",
+            "layout": "horizontal",
+            "return_format": "value"
         }
     ],
     "location": [
@@ -68,7 +92,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1559028173
+    "modified": 1572940941
 }

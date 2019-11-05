@@ -1,6 +1,6 @@
 {
     "key": "group_5ce416f19cc8d",
-    "title": "Block: Text-Image",
+    "title": "Block 02: Text + Image",
     "fields": [
         {
             "key": "field_5ce41de031ede",
@@ -118,7 +118,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1559028173
+    "modified": 1572940454
 }
