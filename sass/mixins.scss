@@ -41,16 +41,7 @@
 	max-width: $max-width;	
 }
 
-// Dotted line
-
-@mixin dotted-line($color1: $primary-color, $color2: transparent, $space: 4) {
-    background-image: linear-gradient(to right, $color1 0%, $color1 (100% / $space), $color2 (100% / $space));
-    background-position: 0 bottom; 
-    background-size: ($space + px) 1px;
-    background-repeat: repeat-x;
-}
-
-// Visually hide the text of an element (a11y ok)
+// Visually obfuscate the text of an element (a11y ok)
 
 @mixin a11y-hide($percent: 150%) {
 	text-indent: $percent;
@@ -72,12 +63,6 @@
 	overflow: hidden;	
 }
 
-// CSS transition
-
-@mixin transition($property: all, $speed: .2s) {
-	transition: $property $speed ease-in-out;
-}
-
 // Extend the click area to the entire block 
 
 @mixin linkblock() {
@@ -90,7 +75,7 @@
 	z-index: 100;	
 }
 
-// Opacity effect on hovered images
+// Opacity effect on hovered images links
 
 @mixin img-opacity($opacity: .5) {
 	a img {
@@ -100,14 +85,6 @@
 	a.focus-visible img {
 		opacity: $opacity;
 	}	
-}
-
-// Add a stroke before or after an elements
-
-@mixin pre-stroke() {
-	content: "–";
-	display: block;
-	margin-bottom: .25em;
 }
 
 // Add a pointer on ::before or ::after
@@ -172,43 +149,6 @@
 	}
 	@else {
 		@media only screen and (min-width: $width) {
-			@content;
-		}
-	}
-}
-
-
-// Desktop First Media Queries
-
-@mixin desktop($width) {
-	
-	@if $width == xwide {
-		@media only screen and (max-width: $width-xwide) {
-			@content;
-		}
-	}
-	@if $width == wide {
-		@media only screen and (max-width: $width-wide) {
-			@content;
-		}
-	}
-	@else if $width == large {
-		@media only screen and (max-width: $width-large) {
-			@content;
-		}
-	}
-	@else if $width == medium {
-		@media only screen and (max-width: $width-medium) {
-			@content;
-		}
-	}
-	@else if $width == small {
-		@media only screen and (max-width: $width-small) {
-			@content;
-		}
-	}
-	@else {
-		@media only screen and (max-width: $width) {
 			@content;
 		}
 	}

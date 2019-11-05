@@ -219,7 +219,7 @@
 		width: 16px; 
 		height: 3px;
 		background-color: $primary-color;
-		@include transition(transform);
+		transition: transform .2s ease-in-out;
 	}
 	&::after {
 		transform: rotate(-90deg);
