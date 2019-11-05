@@ -9,6 +9,7 @@
 					<?php 
 						$cols = get_field('layout');
 						$content = get_field('gallery');
+						$title = get_field('legend');
 
 						if( !empty($block['align']) ) {
 						    $align = ' align' . $block['align'];
@@ -17,7 +18,7 @@
 						}						
 					?>
 
-					<section class="acf-block--content<?php echo esc_attr($align); ?>">
+					<section class="acf-block--content<?php echo esc_attr($align); echo esc_attr(' '.$title); ?>">
 						<div class="acf-block-container">
 					
 							<?php if( $content ): ?>
@@ -26,7 +27,7 @@
 						        <?php foreach( $content as $c ): ?>
 						        <div class="acf-block-gallery-item-<?php echo $cols; ?>">
 							        
-							        <figure class="acf-block-gallery-figure" role="group">
+							        <div class="acf-block-gallery-figure" role="group">
 							            <a href="<?php echo get_permalink( $c->ID ); ?>" title="<?php _e('Read ', 'from-scratch'); echo get_the_title( $c->ID ); ?>">
 								            <?php 
 									            if ( has_post_thumbnail( $c->ID ) ) { 
@@ -35,11 +36,11 @@
 													echo '<img src="' . FS_THEME_URL .'/img/fallback.png" alt="">'; 
 									        } ?>
 									        
-											<figcaption class="acf-block-gallery-caption">
+											<div class="acf-block-gallery-caption">
 												<span class="acf-block-gallery-caption-title"><?php echo get_the_title( $c->ID ); ?></span>
-											</figcaption>
+											</div>
 								        </a>
-								    </figure>
+								    </div>
 								    
 						        </div>
 						        <?php endforeach; ?>

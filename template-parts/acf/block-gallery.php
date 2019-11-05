@@ -9,7 +9,8 @@
 					<?php 
 						$cols = get_field('columns');
 						$images = get_field('gallery');
-
+						$legend = get_field('legend');
+						
 						if( !empty($block['align']) ) {
 						    $align = ' align' . $block['align'];
 						} else {
@@ -17,7 +18,7 @@
 						}						
 					?>
 
-					<section class="acf-block--gallery<?php echo esc_attr($align); ?>">
+					<section class="acf-block--gallery<?php echo esc_attr($align); echo esc_attr(' '.$legend); ?>">
 						<div class="acf-block-container">
 
 							<?php if( $images ): ?>
