@@ -31,30 +31,35 @@ body {
 	src: $fontface-regular;
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Italic';
 	src: $fontface-italic;
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Bold';
 	src: $fontface-bold;
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'BoldItalic';
 	src: $fontface-bolditalic;
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Title';
 	src: $fontface-title;
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 
