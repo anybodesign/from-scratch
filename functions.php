@@ -109,21 +109,6 @@ function fs_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
 
 
-// Gutenberg allowed blocks
-
-function fs_blocks_assets() {
-  
-    wp_enqueue_script(
-        'gutenblocks-block-deactivator',
-		FS_THEME_URL . '/js/gut-deactivator.js',
-        array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), 
-        '1.0'
-    );
-}
-add_action( 'enqueue_block_editor_assets', 'fs_blocks_assets' );
-
-
-
 
 // ------------------------
 // Enqueue JS & CSS
