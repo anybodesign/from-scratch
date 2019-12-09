@@ -25,7 +25,7 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
-### 3.0 - 2019.…
+### 3.0 - 2019.12.09
 * Link style mixin
 * Nav tag around widget menus
 * Better CSS responsive menu
