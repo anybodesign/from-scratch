@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-	
+define( 'FS_THEME_VERSION', '3.0' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 	
@@ -271,7 +271,7 @@ function fs_scripts_load() {
 		
 		// Main stylesheet
 		
-		wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri(), array(), FS_THEME_VERSION, 'screen' );
 
 	}
 }    
