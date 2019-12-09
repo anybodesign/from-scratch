@@ -17,17 +17,26 @@ You can add or customize Custom Post Types, find the sample files as declared in
 `include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );`\
 If you don’t need any custom post type, remove these lines.
 
-### Gutenberg Blocks
+### ACF Option page and json output
 
-Choose only the blocks you need! Just edit the JS file: `js/gut-deactivator.js`
-
-### ACF Page Builder, Custom Blocks and Option page
-
-If you don’t need the ACF features, remove or ecdit the ACF lines in the functions.php file and delete or edit the _acf_ folder in the _inc_ directory. ACF Pro is required.\
-Custom blocks: `include_once('inc/acf/acf-blocks.php');`
+If you don’t need the ACF features, remove or edit the concerned ACF lines in the functions.php file. ACF Pro is required.\
+If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://github.com/anybodesign/ad-acf-blocks).
 
 
 ## Changelog
+
+### 3.0 - 2019.…
+* Link style mixin
+* Nav tag around widget menus
+* Better CSS responsive menu
+* Webfonts: local src and swap
+* Display number of comments
+* ACF Blocks moved to plugin
+* ACF Builder removed
+* Mixins cleaning
+* Sticky nav fixed
+* jQuery 3.4.1
+* Auto-updater 4.8.1
 
 ### 2.9.9 - 2019.07.23
 * ACF Blocks icons

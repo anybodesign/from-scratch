@@ -5,11 +5,11 @@
 
 #site_head {
 	position: relative;
-	padding: $grid-padding*2 0;
 	background-color: #fff;
 	
 	& > .row {
 		align-items: center;
+		padding: $grid-padding*2 0;
 	}
 }
 
@@ -30,4 +30,33 @@
 
 .site-brand {
 	padding: $grid-padding;
+}
+
+// Sticky Nav
+
+.sticky-nav {
+
+	@include rwd(large) {
+		#site_head {
+			position: fixed;
+			width: 100%;
+			top: 0;
+			left: 0;
+			
+			animation: drop-in .8s;
+			z-index: 100;		
+			
+		}
+		
+		&.admin-bar {
+			
+			#site_head {
+				top: 46px;
+				
+				@include rwd(782px) {
+					top: 32px;
+				}
+			}
+		}
+	}
 }
