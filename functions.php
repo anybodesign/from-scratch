@@ -488,25 +488,14 @@ if( class_exists('acf') ) {
 	// Remove the WP Custom Fields meta box
 	
 	add_filter('acf/settings/remove_wp_meta_box', '__return_true');
-
-
-	// ACF Blocks
-	
-	include_once('inc/acf/acf-blocks.php');
-	
-	
-	// Custom ACF Functions (Builder)
-	
-	include_once('inc/acf/acf-functions.php');
-	include_once('inc/acf/popup-acf.php');
-	
+		
 	
 	// Front-End ACF Functions
 	
 	add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
 	function fs_acf_json_save_point( $path ) {
 	    
-	    $path = FS_THEME_DIR . '/inc/acf';
+	    $path = FS_THEME_DIR . '/inc/acf-json';
 	    
 	    return $path;
 	}
@@ -515,7 +504,7 @@ if( class_exists('acf') ) {
 	    
 	    unset($paths[0]);
 	
-	    $paths[] = FS_THEME_DIR . '/inc/acf';
+	    $paths[] = FS_THEME_DIR . '/inc/acf-json';
 	    
 	    return $paths;
 	}
@@ -526,7 +515,6 @@ if( class_exists('acf') ) {
 	add_action('admin_print_styles', 'fs_acf_admin_css', 11 );
 	function fs_acf_admin_css() {
 		wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
-		wp_enqueue_style( 'popup-acf-css', FS_THEME_URL . '/css/popup-acf.css' );
 	}
 
 	
