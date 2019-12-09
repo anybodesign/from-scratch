@@ -1,11 +1,23 @@
 jQuery(document).ready(function($) {
-	
-	// Sticky Nav (Option)
 
-    var head = $('#site_head').height();
+	function hhead() {
+    	var vw = $(window).width();
+
+		if ( vw > 959 ) {
+			head = $('#site_head').height();
+		} else {
+			head = 0;
+		}
+    }
+
+    $(window).on('load',function() {		
+		hhead();
+	});
+	$(window).on('resize',function() {		
+		hhead();
+	});
 	
-	$(window).scroll( function() {
-	    
+	function stickyhead() {
 	    var topscreen = $(this).scrollTop();
 	    
 	    if ( topscreen >= head ) {
@@ -18,6 +30,10 @@ jQuery(document).ready(function($) {
 	        $('body').removeClass('sticky-nav');
 	        $('body').css('padding-top', 0);
 	    }
-	});
-	
+	}
+				
+	$(window).on('scroll',function() {		
+		stickyhead();
+	});	
+
 });
