@@ -4,7 +4,6 @@ jQuery(document).ready(function($) {
 	// Responsive Main Menu
 
 	$('#menu-toggle').click(function() {
-		$('.main-menu').slideToggle();
 		$(this).toggleClass('menu-opened');
 			
 			if ($(this).hasClass('menu-opened')) {

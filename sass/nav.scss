@@ -45,15 +45,21 @@
 }
 
 .main-menu {
-	display: none;
 	position: absolute;
 	top: 0; 
 	left: $grid-padding;
 	width: 80%;
 	padding: $grid-padding;
 	background-color: #fff;
+	
+	transform: translateY(-110%);
+	transition: transform .4s ease-in-out;
 	z-index: 100;
-
+	
+	.menu-opened + & {
+		transform: translateY(0);
+	}
+	
 	@include rwd(large) {
 		position: relative;
 		top: auto;
@@ -61,6 +67,8 @@
 		padding: 0;
 		width: auto;
 		background-color: transparent;
+		transform: none;
+
 		display: flex;
 		flex-wrap: wrap;
 	}
