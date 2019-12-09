@@ -13,6 +13,8 @@
 
 					<h2>Typography (this is a subtitle)</h2>
 					
+					<div>Inside a div…</div>
+					
 					<p>Curabitur blandit tempus porttitor. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit. Aenean eu leo quam. <strong>Pellentesque ornare</strong> sem lacinia quam venenatis vestibulum.</p>
 					
 					<h3>This is a section subtitle</h3>
