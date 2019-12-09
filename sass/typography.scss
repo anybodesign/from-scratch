@@ -8,13 +8,17 @@
 // Basics
 
 html {
-	font-size: .625em; 				// fallback IE8+
-	font-size: calc(1em * .625); 	// IE9-IE11 math fixing. See http://bit.ly/1g4X0bX
+	font-size: 62.5%;
 }
 body {
-	font-size: 1.6em; 				// base font-size is equivalent "14px"
-    line-height: 1.5;
+	font-family: $font-regular;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: $text-color;
 }
+
+
+// Focus visible
 
 .js-focus-visible :focus:not(.focus-visible) {
 	outline: none;
@@ -26,13 +30,6 @@ body {
 
 // Fonts
 
-@font-face {
-	font-family: 'Regular';
-	src: $fontface-regular;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
 @font-face {
 	font-family: 'Italic';
 	src: $fontface-italic;
