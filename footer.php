@@ -12,6 +12,7 @@
 ?>
 		</main> <?php // END content ?>
 		
+	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 
 		<footer role="contentinfo" id="site_foot">
 			
@@ -50,14 +51,13 @@
 			
 		</footer>
 
-
 		<?php if(get_theme_mod('back2top') == true) { ?>
 			<button id="back2top" title="<?php _e('Back to top','from-scratch'); ?>">
 				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ui/back-to-top.svg" alt="">
 			</button>
 		<?php } ?>
 
-
+	<?php } ?>	
 		
 </div> <?php // END wrapper ?>
 
