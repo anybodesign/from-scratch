@@ -318,18 +318,18 @@ add_filter( 'wp_nav_menu_args', 'fs_modify_nav_menu_args' );
 
 // Sub-menus Walker
 
-include_once( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
+include_once( FS_THEME_DIR . '/inc/subnav-walker.php' );
 
 
 // Custom Post types
 
-include_once( dirname( __FILE__ ) . '/inc/custom-post-type.php' );
-include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );
+include_once( FS_THEME_DIR . '/inc/custom-post-type.php' );
+include_once( FS_THEME_DIR . '/inc/custom-post-type-functions.php' );
 
 
 // Extended Search
 
-include_once( dirname( __FILE__ ) . '/inc/fs-extended-search.php' );
+include_once( FS_THEME_DIR . '/inc/fs-extended-search.php' );
 
 
 // Archives titles
@@ -369,7 +369,7 @@ add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
 // Excerpt link
 
 function fs_excerpt_more( $more ) {
-    return sprintf( ' […] <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
+    return sprintf( '… <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
         get_permalink( get_the_ID() ),
         __( 'Read More', 'from-scratch' )
     );
@@ -382,12 +382,20 @@ add_filter( 'excerpt_more', 'fs_excerpt_more' );
 add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
+add_image_size( 'screen-mid', 720, 450, true );
+add_image_size( 'screen-hd', 1440, 900, true );
+add_image_size( 'video-mid', 960, 540, true );
+add_image_size( 'video-hd', 1920, 1080, true );
 
 function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'thumbnail-hd'	=> __( 'Thumbnail High', 'from-scratch' ),
-        'medium-hd'		=> __( 'Medium High', 'from-scratch' ),
-        'large-hd'		=> __( 'Large High', 'from-scratch' ),
+        'thumbnail-hd'	=> __( 'Thumbnail x2', 'from-scratch' ),
+        'medium-hd'		=> __( 'Medium x2', 'from-scratch' ),
+        'large-hd'		=> __( 'Large x2', 'from-scratch' ),
+        'screen-mid'	=> __( 'Screen Medium', 'from-scratch' ),
+        'large-hd'		=> __( 'Screen Full', 'from-scratch' ),
+        'large-hd'		=> __( 'Video Medium', 'from-scratch' ),
+        'large-hd'		=> __( 'Video Full', 'from-scratch' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
@@ -491,6 +499,15 @@ if( class_exists('acf') ) {
 	add_filter('acf/settings/remove_wp_meta_box', '__return_true');
 		
 	
+	// Custom blocks
+
+	$modules = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );
+	
+	foreach( $modules as $module ) {
+		include_once 'blocks/'. $module .'/'. $module .'.php';
+		include_once 'blocks/'. $module .'/'. $module .'-fields.php';
+	}	
+	
 	// Front-End ACF Functions
 	
 	add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
@@ -556,11 +573,6 @@ if( class_exists('acf') ) {
 				'position'		=> 30
 			));
 			acf_add_options_sub_page(array(
-				'page_title' 	=> esc_html__( 'Main Menu', 'from-scratch'),
-				'menu_title' 	=> esc_html__( 'Main Menu', 'from-scratch'),
-				'parent_slug' 	=> $parent['menu_slug'],
-			));		
-			acf_add_options_sub_page(array(
 				'page_title' 	=> esc_html__( 'Archives Customizer', 'from-scratch'),
 				'menu_title' 	=> esc_html__( 'Archives Customizer', 'from-scratch'),
 				'parent_slug' 	=> $parent['menu_slug'],
@@ -572,7 +584,21 @@ if( class_exists('acf') ) {
 			));
 			
 		}
-	}	
+	}
+
+	// Translate ACF fields
+	
+	function fs_custom_acf_settings_localization($localization){
+	  return true;
+	}
+	add_filter('acf/settings/l10n', 'fs_custom_acf_settings_localization');
+	
+	function fs_custom_acf_settings_textdomain($domain){
+	  return 'from-scratch';
+	}
+	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
+	
+		
 }
 
 
