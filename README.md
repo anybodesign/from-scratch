@@ -36,7 +36,6 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 * Fancybox update
 * Fix missing @font-face
 
-
 ### 3.0 - 2019.12.09
 * Link style mixin
 * Nav tag around widget menus
