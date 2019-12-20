@@ -26,63 +26,26 @@
 
 <div id="wrapper">
 
-
-	<?php // The Skiplinks ?>
-	
-	<div class="skiplinks">
-		<a href="#site_main"><?php _e('Go to main content', 'from-scratch'); ?></a>
-		<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-		<a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a>
-		<?php endif; ?>
-	</div>
-	
+	<?php 
+		if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+			get_template_part('template-parts/header', 'skiplinks');
+		}
+	?>
 	
 	<header role="banner" id="site_head">
-		
 		<div class="row inner justify-between">
 			
-			<?php // The Logo & Site Titles ?>
-			
-			<div class="site-brand">
-				<?php if ( is_front_page() ) { ?>
-				<h1 class="site-title">
-					<?php get_template_part('template-parts/header', 'logo'); ?>
-				</h1>
-				<?php } else { ?>
-				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>">
-					<?php get_template_part('template-parts/header', 'logo'); ?>
-					</a>
-				</p>
-				<?php } ?>
-	
-				<?php 
-					$site_desc = get_bloginfo( 'description', 'display' );
-					if ( $site_desc || is_customize_preview() ) { ?>
-					<p class="site-desc"><?php echo $site_desc; ?></p>
-				<?php } ?>
-							
-			</div>
-			
-			<?php // The main menu location ?>
-			
-			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main Menu', 'from-scratch'); ?>" id="site_nav">
-				<button id="menu-toggle" type="button"><?php _e('Menu', 'from-scratch'); ?><span></span></button>
-				<?php wp_nav_menu( array(
-					'theme_location'	=> 	'main_menu',
-					'menu_class'		=>	'main-menu',
-					'container'			=>	false,
-					'walker'			=>	new fs_subnav_walker()
-					));
-				?>
-			</nav>
-			<?php endif; ?>
+			<?php 
+				get_template_part('template-parts/header', 'brand'); 
+			?>
+			<?php 
+				if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+					get_template_part('template-parts/header', 'nav');
+				}
+			?>
 
 		</div>
-
 	</header>
-	
-	
-	
+
+
 		<main class="content-area" role="main" id="site_main">

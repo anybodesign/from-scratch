@@ -49,7 +49,7 @@
 					
 					<blockquote>
 						“ Typography is the craft of endowing human language with a durable visual form.  (I'm a quote) “
-						<cite>― Robert Bringhurst</cite>
+						<cite>Robert Bringhurst</cite>
 					</blockquote>
 					
 					<p>A code block:</p>

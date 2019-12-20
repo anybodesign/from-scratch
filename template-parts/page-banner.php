@@ -28,6 +28,9 @@
 							</h1>
 							
 							<?php 
+								if ( is_page_template( 'pagecustom-maintenance.php' ) ) {
+									the_content(); 
+								} 
 								if ( is_archive() ) {
 									the_archive_description( '<div class="archive-desc">', '</div>' );
 								}

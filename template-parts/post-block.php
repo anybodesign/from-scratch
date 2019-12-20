@@ -15,12 +15,20 @@
 						
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
-							<?php the_post_thumbnail('large-hd'); ?>
+							<a href="<?php the_permalink(); ?>" rel="nofollow">
+							<?php the_post_thumbnail('medium-hd'); ?>
+							</a>
 						</figure>
 						<?php } ?>
 						
 						<div class="post-content">
-							<?php the_content(); ?>
+							<header class="post-header">
+								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+								<?php get_template_part('template-parts/post', 'meta'); ?>							
+							</header>
+							<div class="post-excerpt">
+								<p><?php the_excerpt(); ?></p>
+							</div>
 						</div>
-
+						
 					</article>
