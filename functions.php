@@ -38,7 +38,8 @@ function fs_setup() {
 		'gallery',
 		'caption',
 	) );
-
+	
+	/*
 	add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
@@ -50,7 +51,7 @@ function fs_setup() {
 		'audio',
 		'chat',
 	) );
-	
+	*/
 
 	// Gutenberg support 
 	
