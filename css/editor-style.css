@@ -19,9 +19,10 @@ html .mceContentBody {
 	text-align: justify;
 }
 .action-btn {
-	padding: 5px 10px;
-	background-color: #EF5A2E;
+	padding: 5px 15px;
+	background-color: #333;
 	color: #fff !important;
+	text-decoration: none;
 }
 
 p,

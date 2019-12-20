@@ -7,15 +7,16 @@ Description: Have fun with Gutenberg style editor.
 /* Typography */
 
 p.text-intro {
-	font-size: 2rem;
+	font-size: 1.25em !important;
 }
 p.text-mentions {
-	font-size: 1.3rem;
+	font-size: 0.8em !important;
 }
 a.action-btn {
 	background-color: #333;
 	color: #fff;
 	padding: 5px 15px;
+	text-decoration: none;
 }
 
 .white-text * {
