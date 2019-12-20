@@ -31,6 +31,13 @@ body {
 // Fonts
 
 @font-face {
+	font-family: 'Regular';
+	src: $fontface-regular;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
 	font-family: 'Italic';
 	src: $fontface-italic;
 	font-weight: normal;
@@ -67,7 +74,7 @@ h1, h2, h3, h4, h5, h6,
 	color: $text-color;
 	font-family: $font-title;
 	font-weight: normal;
-	margin-bottom: $grid-padding;
+	margin: 0 0 .75em 0;
 	
 	b, strong {
 		font-weight: normal;
@@ -121,7 +128,7 @@ time, span,
 small {
     font-size: 1.6rem;
     line-height: 1.5;
-    margin: 0 0 $grid-padding*2 0;
+    margin: 0 0 1.5em 0;
 	font-family: $font-regular;
 	color: $text-color;
 }
@@ -158,6 +165,7 @@ li ul {
 
 p.text-intro {
 	font-size: 2rem;
+	margin-bottom: 1.25em;
 }
 p.text-mentions {
 	font-size: 1.3rem;
@@ -210,6 +218,10 @@ textarea, input, video {
 
 ul, ol {
 	padding-left: $grid-padding*2;
+	
+	.page-content > & {
+		padding-left: $grid-padding*3;
+	}
 }
 
 ul {
@@ -286,14 +298,16 @@ figure {
 			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
 		}
 		
-		&.focus-visible::before, &:hover::before {
+		&.focus-visible::before, 
+		&:hover::before {
 			transform: translateX(-50%) translateY(-50%) scale(1.2);
 			background-color: $primary-color;
 		}
 		& img {
 			transition: opacity .2s ease-in-out;
 		}
-		&.focus-visible img, &:hover img {
+		&.focus-visible img, 
+		&:hover img {
 			opacity: .7;
 		}
 		&:focus {
@@ -305,7 +319,7 @@ figure {
 }
 
 figcaption {
-	font-size: .85em; 
+	font-size: 1.3rem; 
 	line-height: 1;
 	margin: $grid-padding 0;
 }
@@ -444,14 +458,6 @@ mark {
 }
 
 
-// If an error output is needed
-
-.error {
-	padding: $grid-padding;
-	background: red; 
-	color: #fff;
-}
-
 // WP Alignments
 
 
@@ -493,7 +499,7 @@ input[type=submit].action-btn {
 	
 	&.focus-visible, 
 	&:hover {
-		background-color: lighten($text-color, 10%);
+		background-color: $secondary-color;
 	}
 	&:focus {
 		outline: none;

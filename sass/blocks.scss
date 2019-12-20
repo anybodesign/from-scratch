@@ -49,13 +49,6 @@
 .wp-block-button__link {
 	@extend .action-btn;
 	border-radius: 0;
-	
-	&.has-primary-color-background-color {
-		background-color: $primary-color;
-	}
-	&.has-secondary-color-background-color {
-		background-color: $secondary-color;
-	}
 }
 
 
@@ -192,5 +185,42 @@
 // + + + + + + + + + + 
 
 
+[class*=acf-block--] {
+
+	.acf-block-container {
+		width: 100%;
+		
+		&.center-max {
+			padding: $grid-padding;
+			margin: 0 auto;
+			max-width: $max-width;
+		}
+	}
+}
+
+// Text 
+
+.acf-block--text {}
+
+
+// Text+Img
+
+.acf-block--textimg {}
+
+
+// Gallery 
+
+.acf-block--gallery {}
+
+
+// CTA
+
+.acf-block--cta {}
+
+
+// Posts
+
+.acf-block---post {}
+.acf-block-post-item {}
 
 
