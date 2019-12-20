@@ -21,9 +21,21 @@ If you don’t need any custom post type, remove these lines.
 
 If you don’t need the ACF features, remove or edit the concerned ACF lines in the functions.php file. ACF Pro is required.\
 If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://github.com/anybodesign/ad-acf-blocks).
+If needed, you can create custom blocks in the `blocks` folder, or remove it and the lines in functions.php starting with:\
+`$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );`
 
 
 ## Changelog
+
+### 3.1 - 2019.12.20
+* Templating update
+* Custom block template
+* Maintenance page template
+* Some CSS update
+* CSS for blocks centering
+* Fancybox update
+* Fix missing @font-face
+
 
 ### 3.0 - 2019.12.09
 * Link style mixin

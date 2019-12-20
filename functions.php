@@ -501,11 +501,11 @@ if( class_exists('acf') ) {
 	
 	// Custom blocks
 
-	$modules = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );
+	$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );
 	
-	foreach( $modules as $module ) {
-		include_once 'blocks/'. $module .'/'. $module .'.php';
-		include_once 'blocks/'. $module .'/'. $module .'-fields.php';
+	foreach( $my_blocks as $block ) {
+		include_once 'blocks/'. $block .'/'. $block .'.php';
+		include_once 'blocks/'. $block .'/'. $block .'-fields.php';
 	}	
 	
 	// Front-End ACF Functions
