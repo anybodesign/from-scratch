@@ -13,7 +13,7 @@
 				<div class="acf-block-container">
 
 					<?php if ( $field ) { ?>
-					<div class="acf-block-somthing">
+					<div class="acf-block-something">
 						<?php echo $field; ?>
 					</div>
 					<?php } ?>
