@@ -173,13 +173,6 @@ function fs_scripts_load() {
 		if ( get_theme_mod('back2top') == true ) {
 			
 			wp_enqueue_script(
-				'stickynav', 
-				FS_THEME_URL . '/js/sticky-header.js', 
-				array(), 
-				false, 
-				true
-			);
-			wp_enqueue_script(
 				'back2top', 
 				FS_THEME_URL . '/js/back2top.js', 
 				array(), 
@@ -201,6 +194,8 @@ function fs_scripts_load() {
 			);
 		}
 		
+		// Other stuff
+		
 		wp_enqueue_script(
 			'focus-visible', 
 			FS_THEME_URL . '/js/focus-visible.js', 
@@ -216,6 +211,8 @@ function fs_scripts_load() {
 			false, 
 			true
 		);
+		
+		// Main
 		
 	    wp_enqueue_script( 
 	    	'main', 
