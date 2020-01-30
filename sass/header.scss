@@ -18,9 +18,19 @@
 	margin: 0;
 	line-height: 1;
 	
-	a {
-		
+	a,
+	img {
+		display: block;
 	}
+
+	.logo.has-mobile-logo { display: none; }
+	.logo-mobile { display: block; }
+	
+	@include rwd(large) {
+		.logo.has-mobile-logo { display: block; }
+		.logo-mobile { display: none; }
+	}
+
 }
 
 .site-desc {

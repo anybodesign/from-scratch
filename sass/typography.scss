@@ -4,7 +4,6 @@
 //
 // ------------------------------
 
-
 // Basics
 
 html {
@@ -17,7 +16,6 @@ body {
 	color: $text-color;
 }
 
-
 // Focus visible
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -26,7 +24,6 @@ body {
 .js-focus-visible .focus-visible {
 	// Focus styles 
 }
-
 
 // Fonts
 
@@ -65,7 +62,6 @@ body {
 	font-style: normal;
 	font-display: swap;
 }
-
 
 // Typography
 
