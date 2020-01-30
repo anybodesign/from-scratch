@@ -20,7 +20,7 @@
 	
 				<?php 
 					$site_desc = get_bloginfo( 'description', 'display' );
-					if ( $site_desc || is_customize_preview() ) { ?>
+					if ( $site_desc && ! get_theme_mod( 'hide_tagline' ) ) { ?>
 					<p class="site-desc"><?php echo $site_desc; ?></p>
 				<?php } ?>
 							

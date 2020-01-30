@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-01-29 11:09+0100\n"
-"PO-Revision-Date: 2020-01-29 11:11+0100\n"
+"POT-Creation-Date: 2020-01-30 16:38+0100\n"
+"PO-Revision-Date: 2020-01-30 16:38+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -60,7 +60,7 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:39 functions.php:295
+#: footer.php:39 functions.php:317
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -68,107 +68,119 @@ msgstr "Menu pied de page"
 msgid "Back to top"
 msgstr "Haut de page"
 
-#: functions.php:62
+#: functions.php:65
 msgid "Black"
 msgstr "Noir"
 
-#: functions.php:67
+#: functions.php:70
 msgid "White"
 msgstr "Blanc"
 
-#: functions.php:77
+#: functions.php:78 inc/customizer.php:58
+msgid "Primary color"
+msgstr "Couleur primaire"
+
+#: functions.php:83 inc/customizer.php:74
+msgid "Secondary color"
+msgstr "Couleur secondaire"
+
+#: functions.php:88
+msgid "Complementary color"
+msgstr "Couleur complémentaire"
+
+#: functions.php:99
 msgid "Small"
 msgstr "Petite"
 
-#: functions.php:78
+#: functions.php:100
 msgid "S"
 msgstr "S"
 
-#: functions.php:83
+#: functions.php:105
 msgid "Large"
 msgstr "Grande"
 
-#: functions.php:84
+#: functions.php:106
 msgid "L"
 msgstr "L"
 
-#: functions.php:294 template-parts/header-nav.php:6
+#: functions.php:316 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:296
+#: functions.php:318
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:371
+#: functions.php:393
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:389
+#: functions.php:411
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:390
+#: functions.php:412
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:391
+#: functions.php:413
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:392
+#: functions.php:414
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:393
+#: functions.php:415
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:394
+#: functions.php:416
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:395
+#: functions.php:417
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:419
+#: functions.php:441
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:444
+#: functions.php:466
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:450
+#: functions.php:472
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:456
+#: functions.php:478
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:476
+#: functions.php:498
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:477
+#: functions.php:499
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:478
+#: functions.php:500
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:564 functions.php:565
+#: functions.php:586 functions.php:587
 msgid "Site Options"
 msgstr "Options du site"
 
-#: functions.php:573 functions.php:574
+#: functions.php:595 functions.php:596
 msgid "Archives Customizer"
 msgstr "Personnalisation des pages d’archives"
 
-#: functions.php:578 functions.php:579
+#: functions.php:600 functions.php:601
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
@@ -377,50 +389,100 @@ msgid "Theme Options"
 msgstr "Options du thème"
 
 #: inc/customizer.php:26
+msgid "Layout Options"
+msgstr "Options de mise en page"
+
+#: inc/customizer.php:27
+msgid "Choose the layout of the site header and main navigation."
+msgstr ""
+"Choisissez la mise en page pour l'en-tête du site et la navigation "
+"principale."
+
+#: inc/customizer.php:31
+msgid "Theme Fonts"
+msgstr "Polices du thème"
+
+#: inc/customizer.php:32
+msgid "Choose a font combination for the site."
+msgstr "Choisissez une combinaison de polices pour le site."
+
+#: inc/customizer.php:36
 msgid "Theme Pictures"
 msgstr "Images du thème"
 
-#: inc/customizer.php:27
-msgid "Pictures customisation"
-msgstr "Personnalisation des images"
+#: inc/customizer.php:37
+msgid "Select default banner pictures."
+msgstr "Sélection des images par défaut pour la bannière."
 
-#: inc/customizer.php:48
-msgid "Primary color"
-msgstr "Couleur primaire"
+#: inc/customizer.php:90
+msgid "Contraste color"
+msgstr "Couleur de contraste"
 
-#: inc/customizer.php:64
-msgid "Secondary color"
-msgstr "Couleur secondaire"
-
-#: inc/customizer.php:84
+#: inc/customizer.php:109
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:97
+#: inc/customizer.php:110
+msgid "Your logo, displayed instead of the website title."
+msgstr "Votre logo, affiché à la place du titre du site."
+
+#: inc/customizer.php:123
+msgid "Site Logo - Mobile"
+msgstr "Logo du site - mobile"
+
+#: inc/customizer.php:124
+msgid ""
+"Specific version of the logo for mobile devices. If none, the default logo "
+"will be used."
+msgstr ""
+"Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
+"par défaut sera utilisé."
+
+#: inc/customizer.php:138
+msgid "Hide the website tagline"
+msgstr "Masquer le slogan du site"
+
+#: inc/customizer.php:151
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:98
+#: inc/customizer.php:152
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:113
+#: inc/customizer.php:166
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:133
+#: inc/customizer.php:186
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:148
+#: inc/customizer.php:201
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:166
+#: inc/customizer.php:225
+msgid "Layout version"
+msgstr "Version de mise en page"
+
+#: inc/customizer.php:228
+msgid "Version 1"
+msgstr "Version 1"
+
+#: inc/customizer.php:229
+msgid "Version 2"
+msgstr "Version 2"
+
+#: inc/customizer.php:230
+msgid "Version 3"
+msgstr "Version 3"
+
+#: inc/customizer.php:248
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:167
+#: inc/customizer.php:249
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -580,6 +642,15 @@ msgstr "Maintenance"
 msgid "Style Guide"
 msgstr "Style Guide"
 
+#~ msgid "Pictures selection."
+#~ msgstr "Sélection des images."
+
+#~ msgid "Fonts"
+#~ msgstr "Polices"
+
+#~ msgid "Layout customisation"
+#~ msgstr "Personnalisation de la mise en page"
+
 #~ msgid "Large High"
 #~ msgstr "Grande (x2)"
 
@@ -710,9 +781,6 @@ msgstr "Style Guide"
 
 #~ msgid "Date"
 #~ msgstr "Date"
-
-#~ msgid "Colors customisation"
-#~ msgstr "Personnalisation des couleurs"
 
 #~ msgid "very dark gray"
 #~ msgstr "gris très foncé"
