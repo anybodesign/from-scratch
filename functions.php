@@ -58,6 +58,9 @@ function fs_setup() {
 	add_theme_support( 'align-wide' );
 	
 	add_theme_support( 'editor-color-palette', array(
+	    
+	    // Raw colors 
+	    
 	    array(
 	        'name' => esc_html__( 'Black', 'from-scratch' ),
 	        'slug' => 'black',
@@ -67,7 +70,26 @@ function fs_setup() {
 	        'name' => esc_html__( 'White', 'from-scratch' ),
 	        'slug' => 'white',
 	        'color' => '#ffffff',
-	    )
+	    ),
+
+	    // Customizer colors
+	    
+	    array(
+	        'name' => esc_html__( 'Primary color', 'from-scratch' ),
+	        'slug' => 'primary-color',
+	        'color' => get_theme_mod('primary_color', '#99cc00'),
+	    ),
+	    array(
+	        'name' => esc_html__( 'Secondary color', 'from-scratch' ),
+	        'slug' => 'secondary-color',
+	        'color' => get_theme_mod('secondary_color', '#606060'),
+	    ),
+	    array(
+	        'name' => esc_html__( 'Complementary color', 'from-scratch' ),
+	        'slug' => 'third-color',
+	        'color' => get_theme_mod('third_color', '#8def12'),
+	    ),
+	    
 	));	
 	
 	add_theme_support( 'disable-custom-colors' );
@@ -110,6 +132,15 @@ function fs_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
 
 
+//	Admin style and script
+
+add_action('admin_print_styles', 'fs_acf_admin_css', 11 );
+function fs_acf_admin_css() {
+	wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
+}
+
+
+
 
 // ------------------------
 // Enqueue JS & CSS
@@ -120,156 +151,158 @@ function fs_scripts_load() {
 
 		// JS 
 		
-		wp_deregister_script( 'jquery' );
-
-		wp_enqueue_script(
-			'jquery', 
-			FS_THEME_URL . '/js/jquery-3.4.1.min.js', 
-			array(), 
-			'3.4.1', 
-			true
-		);
-
-		// Slick
-		/*
-		   	wp_enqueue_script( 
-		    	'slick', 
-		    	FS_THEME_URL . '/js/slick.min.js',
-		    	array('jquery'), 
-		    	'1.8', 
-		    	true
-		    );
-		    wp_enqueue_script( 
-		    	'slick-init', 
-		    	FS_THEME_URL . '/js/slick-init.js',
-		    	array('jquery'), 
-		    	false, 
-		    	true
-		    );
-		*/
-		
-		// Fancybox
-		
-		/*
-		   	wp_enqueue_script( 
-		    	'fancybox', 
-		    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
-		    	array('jquery'), 
-		    	'3.1.20', 
-		    	true
-		    );
-		    wp_enqueue_script( 
-		    	'fancybox-init', 
-		    	FS_THEME_URL . '/js/fancybox-init.js',
-		    	array('fancybox'), 
-		    	false, 
-		    	true
-		    );
-		*/			
-		
-		
-		// Back 2 top
-		
-		if ( get_theme_mod('back2top') == true ) {
+			// jQuery 
+					
+			wp_deregister_script( 'jquery' );
+	
+			wp_enqueue_script(
+				'jquery', 
+				FS_THEME_URL . '/js/jquery-3.4.1.min.js', 
+				array(), 
+				'3.4.1', 
+				true
+			);
+	
+			// Slick
+			/*
+			   	wp_enqueue_script( 
+				    	'slick', 
+				    	FS_THEME_URL . '/js/slick.min.js',
+				    	array('jquery'), 
+				    	'1.8', 
+				    	true
+			    );
+			    wp_enqueue_script( 
+				    	'slick-init', 
+				    	FS_THEME_URL . '/js/slick-init.js',
+				    	array('jquery'), 
+				    	false, 
+				    	true
+			    );
+			*/
+			
+			// Fancybox
+			
+			/*
+			   	wp_enqueue_script( 
+				    	'fancybox', 
+				    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
+				    	array('jquery'), 
+				    	'3.1.20', 
+				    	true
+			    );
+			    wp_enqueue_script( 
+				    	'fancybox-init', 
+				    	FS_THEME_URL . '/js/fancybox-init.js',
+				    	array('fancybox'), 
+				    	false, 
+				    	true
+			    );
+			*/			
+			
+			
+			// Back 2 top
+			
+			if ( get_theme_mod('back2top') == true ) {
+				
+				wp_enqueue_script(
+					'back2top', 
+					FS_THEME_URL . '/js/back2top.js', 
+					array(), 
+					false, 
+					true
+				);
+			}
+			
+			// Sticky Nav
+			
+			if ( get_theme_mod('stickynav') == true ) {
+				
+				wp_enqueue_script(
+					'stickynav', 
+					FS_THEME_URL . '/js/sticky-header.js', 
+					array(), 
+					false, 
+					true
+				);
+			}
+			
+			// Other stuff
 			
 			wp_enqueue_script(
-				'back2top', 
-				FS_THEME_URL . '/js/back2top.js', 
+				'focus-visible', 
+				FS_THEME_URL . '/js/focus-visible.js', 
 				array(), 
 				false, 
 				true
 			);
-		}
-		
-		// Sticky Nav
-		
-		if ( get_theme_mod('stickynav') == true ) {
 			
 			wp_enqueue_script(
-				'stickynav', 
-				FS_THEME_URL . '/js/sticky-header.js', 
+				'from-scratch-skip-link-focus-fix', 
+				FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 				array(), 
 				false, 
 				true
 			);
-		}
-		
-		// Other stuff
-		
-		wp_enqueue_script(
-			'focus-visible', 
-			FS_THEME_URL . '/js/focus-visible.js', 
-			array(), 
-			false, 
-			true
-		);
-		
-		wp_enqueue_script(
-			'from-scratch-skip-link-focus-fix', 
-			FS_THEME_URL . '/js/skip-link-focus-fix.js', 
-			array(), 
-			false, 
-			true
-		);
-		
-		// Main
-		
-	    wp_enqueue_script( 
-	    	'main', 
-	    	FS_THEME_URL . '/js/main.js',
-	    	array('jquery'), 
-	    	'1.0', 
-	    	true
-	    );
-	    
-	    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-		
+			
+			// Main
+			
+		    wp_enqueue_script( 
+			    	'main', 
+			    	FS_THEME_URL . '/js/main.js',
+			    	array('jquery'), 
+			    	'1.0', 
+			    	true
+		    );
+		    
+		    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+				wp_enqueue_script( 'comment-reply' );
+			}
+			
 		
 		// CSS
-		
-		/* Enqueue your customl CSS here
-		
-		// Slick
-		
-			wp_enqueue_style( 
-				'slick', 
-				FS_THEME_URL . '/css/slick.css',
-				array(), 
-				'1.8', 
-				'screen' 
-			);
-		
-		// Fancybox
 
-			wp_enqueue_style( 
-				'fancybox', 
-				FS_THEME_URL . '/css/jquery.fancybox.min.css',
-				array(), 
-				'3.1.20', 
-				'screen' 
-			);
-		
-		*/
-
-		// Back to top
-
-		if ( get_theme_mod('back2top') == true ) {
-
-			wp_enqueue_style( 
-				'back2top', 
-				FS_THEME_URL . '/css/back2top.css',
-				array(), 
-				false, 
-				'screen' 
-			);
-		}
-		
-		
-		// Main stylesheet
-		
-		wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri(), array(), FS_THEME_VERSION, 'screen' );
+			/* Enqueue your customl CSS here
+			
+			// Slick
+			
+				wp_enqueue_style( 
+					'slick', 
+					FS_THEME_URL . '/css/slick.css',
+					array(), 
+					'1.8', 
+					'screen' 
+				);
+			
+			// Fancybox
+	
+				wp_enqueue_style( 
+					'fancybox', 
+					FS_THEME_URL . '/css/jquery.fancybox.min.css',
+					array(), 
+					'3.1.20', 
+					'screen' 
+				);
+			
+			*/
+	
+			// Back to top
+	
+			if ( get_theme_mod('back2top') == true ) {
+	
+				wp_enqueue_style( 
+					'back2top', 
+					FS_THEME_URL . '/css/back2top.css',
+					array(), 
+					false, 
+					'screen' 
+				);
+			}
+			
+			
+			// Main stylesheet
+			
+			wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri(), array(), FS_THEME_VERSION, 'screen' );
 
 	}
 }    
@@ -523,16 +556,7 @@ if( class_exists('acf') ) {
 	    
 	    return $paths;
 	}
-	
-	
-	//	Admin style and script
-	
-	add_action('admin_print_styles', 'fs_acf_admin_css', 11 );
-	function fs_acf_admin_css() {
-		wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
-	}
 
-	
 	// Social Menu icons
 	
 	add_filter('wp_nav_menu_objects', 'fs_nav_menu_icons', 10, 2);
