@@ -1,39 +1,29 @@
-jQuery(document).ready(function($) {
+// Get header & body
 
-	function hhead() {
-    	var vw = $(window).width();
+var header = document.getElementById('site_head');
+var body = document.getElementsByTagName('body')[0];
 
-		if ( vw > 959 ) {
-			head = $('#site_head').height();
-		} else {
-			head = 0;
-		}
-    }
+// Get height position of the header
 
-    $(window).on('load',function() {		
-		hhead();
-	});
-	$(window).on('resize',function() {		
-		hhead();
-	});
+var head_height = header.offsetHeight;
+
+// Add the 'sticky-nav' class to the body when you reach the scroll position. 
+// Remove 'sticky-nav' when you leave the scroll position.
+
+function stickyhead() {
 	
-	function stickyhead() {
-	    var topscreen = $(this).scrollTop();
-	    
-	    if ( topscreen >= head ) {
-	        
-			$('body').addClass('sticky-nav');
-			$('body').css('padding-top', head);
-							
-	    } else {
-	        
-	        $('body').removeClass('sticky-nav');
-	        $('body').css('padding-top', 0);
-	    }
+	if (window.innerWidth > 959) {
+		if (window.pageYOffset > window.innerHeight/2) {
+			body.classList.add('sticky-nav');
+			body.setAttribute('style', 'padding-top:'+head_height+'px;');
+		} else {
+			body.classList.remove('sticky-nav');
+			body.removeAttribute('style');
+		}
 	}
-				
-	$(window).on('scroll',function() {		
-		stickyhead();
-	});	
+	
+}
 
-});
+// When user scrolls the page
+
+window.onscroll = function() { stickyhead(); };
