@@ -1,0 +1,93 @@
+/*
+Theme Name: From Scratch
+Description: Have fun with Gutenberg style editor.
+*/
+
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'webfonts.scss';
+
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Typography */
+
+.edit-post-visual-editor {
+	
+	h1, h2, h3, h4, h5, h6,
+	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+		font-family: $font-title;
+		font-weight: normal;
+	}
+	p, li, small, span {
+		font-family: $font-regular;
+	}
+	
+}
+
+/* Custom */
+
+p.text-intro {
+	font-size: 1.75em !important;
+	
+	.wp-block & {
+		font-size: 1.25em !important
+	}
+}
+p.text-mentions {
+	font-size: 0.8em !important;
+	
+	.wp-editor-container & {
+		font-size: 1em !important
+	}
+}
+a.action-btn {
+	background-color: $primary-color;
+	color: #fff !important;
+	padding: 5px 15px;
+	text-decoration: none;
+}
+
+.white-text * {
+	color: #fff;
+}
+
+
+/* Layout */
+
+.wp-block {
+	max-width: 960px;
+}
