@@ -27,6 +27,14 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.2 - 2020.01.30
+* Back2top JS update
+* Sticky Nav JS update
+* Title fior search results
+* Sass reorganization
+* New Admin stylesheets
+* New Customizer Options
+
 ### 3.1 - 2019.12.20
 * Templating update
 * Custom block template
