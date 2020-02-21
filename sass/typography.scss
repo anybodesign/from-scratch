@@ -480,9 +480,10 @@ mark {
 
 // You can use the class .action-btn on <a>, <button> or <input> 
 
+button,
 .action-btn,
-button.action-btn,
-input[type=submit].action-btn {
+input[type=button],
+input[type=submit] {
 	display: inline-block;
 	padding: $grid-padding $grid-padding*2;
 	font-size: 1.6rem;
@@ -506,9 +507,9 @@ input[type=submit].action-btn {
 
 .white-btn,
 button.white-btn,
+input[type=button].white-btn,
 input[type=submit].white-btn {
 	@extend .action-btn;
-	
 	background-color: #fff;
 	color: $text-color;
 
