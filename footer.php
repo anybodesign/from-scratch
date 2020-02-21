@@ -28,9 +28,7 @@
 							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
 						} ?>
 						
-						<?php if(get_theme_mod('display_wp') == true) { ?>
-						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'from-scratch'); ?></a>
-						<?php } ?>
+						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo ' out-of-reach'; } ?>" href="//wordpress.org"><?php _e('Powered by WordPress!', 'good-time'); ?></a>
 					</p>
 					
 					<?php // The footer menu location ?>

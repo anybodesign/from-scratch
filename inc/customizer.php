@@ -7,25 +7,54 @@
  * @since 1.0
  * @version 1.0
  */
+
+// Customizer JS
+
+add_action( 'customize_preview_init', 'fs_customizer_scripts' );
+function fs_customizer_scripts() {
+	wp_enqueue_script(
+		'fs-customizer',
+	    	FS_THEME_URL . '/js/customizer.js',
+	    	array( 'customize-preview' ), 
+	    	false, 
+	    	true
+	);
+}
+
+// Customizer Settings
  
- 
- // Customizer Settings
- 
-function fs_customize_register($wp_customize) {
-	 
+function fs_customize_register($fs_customize) {
+
+	// Title and Description
+	// -
+	// + + + + + + + + + + 
+	
+	$fs_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$fs_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+	if ( isset( $fs_customize->selective_refresh ) ) {
+		$fs_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'        => array('.site-title', '.site-title a'),
+			'render_callback' => 'fs_customize_partial_blogname',
+		) );
+		$fs_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'        => '.site-desc',
+			'render_callback' => 'fs_customize_partial_blogdescription',
+		) );
+	}	 
 
 	// Create Some Sections
 	// -
 	// + + + + + + + + + + 
 	
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_options_section',
 		array(
 			'title'			=> __('Theme Options', 'from-scratch'),
 			'priority'		=> 20,
 		)
 	);
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_layout_section', 
 		array(
 			'title' 		=> __('Layout Options', 'from-scratch'),
@@ -33,7 +62,7 @@ function fs_customize_register($wp_customize) {
 			'priority'		=> 30,
 		)
 	);
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_fonts_section', 
 		array(
 			'title' 		=> __('Theme Fonts', 'from-scratch'),
@@ -41,7 +70,7 @@ function fs_customize_register($wp_customize) {
 			'priority'		=> 40,
 		)
 	);
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_pictures_section', 
 		array(
 			'title' 		=> __('Theme Pictures', 'from-scratch'),
@@ -57,7 +86,7 @@ function fs_customize_register($wp_customize) {
 		
 		// Primary color
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'primary_color', 
 			array(
 				'default'			=> '',
@@ -67,9 +96,9 @@ function fs_customize_register($wp_customize) {
 				'transport'			=> 'refresh', 
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			new WP_Customize_Color_control(
-				$wp_customize, 
+				$fs_customize, 
 				'primary_color', 
 				array(
 					'label'		=> __('Primary color', 'from-scratch'),
@@ -81,7 +110,7 @@ function fs_customize_register($wp_customize) {
 				
 		// Secondary color
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'secondary_color', 
 			array(
 				'default'			=> '',
@@ -91,9 +120,9 @@ function fs_customize_register($wp_customize) {
 				'transport'			=> 'refresh', 
 			)
 		);
-		$wp_customize->add_control( 
+		$fs_customize->add_control( 
 			new WP_Customize_Color_control(
-				$wp_customize, 
+				$fs_customize, 
 				'secondary_color', 
 				array(
 					'label'		=> __('Secondary color', 'from-scratch'),
@@ -105,7 +134,7 @@ function fs_customize_register($wp_customize) {
 				
 		// Third color
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'third_color', 
 			array(
 				'default'			=> '',
@@ -115,7 +144,7 @@ function fs_customize_register($wp_customize) {
 				'transport'			=> 'refresh', 
 			)
 		);
-		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'third_color', array(
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'third_color', array(
 					'label'		=> __('Contraste color', 'from-scratch'),
 					'section'	=> 'colors',
 					'settings'	=> 'third_color',
@@ -131,15 +160,15 @@ function fs_customize_register($wp_customize) {
 
 		// Site logo
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'site_logo', 
 			array(
 				'sanitize_callback'	=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'site_logo', 
 				array(
 					'label'			=> __('Site Logo', 'from-scratch'),
@@ -152,14 +181,14 @@ function fs_customize_register($wp_customize) {
 		
 		// Site logo - Mobile
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'site_logo_mobile', array(
 				'sanitize_callback'		=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control( 
+		$fs_customize->add_control( 
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'site_logo_mobile', 
 				array(
 					'label'			=> __('Site Logo - Mobile', 'from-scratch'),
@@ -173,14 +202,15 @@ function fs_customize_register($wp_customize) {
 
 		// Hide tagline
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'hide_tagline', 
 			array(
 				'default'			=> false,
+				'transport'			=> 'postMessage',
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'hide_tagline', 
 			array(
 				'type'			=> 'checkbox',
@@ -193,14 +223,15 @@ function fs_customize_register($wp_customize) {
 	
 		// Footer text
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'footer_text', 
 			array(
 				'default'				=> '',
+				'transport'				=> 'postMessage',				
 				'sanitize_callback'		=> 'sanitize_text_field'
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'footer_text', 
 			array(
 				'label'			=> __('Custom footer text', 'from-scratch'),
@@ -213,14 +244,15 @@ function fs_customize_register($wp_customize) {
 		
 		// WP Credits
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'display_wp', 
 			array(
 				'default'			=> false,
+				'transport'			=> 'postMessage',				
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'display_wp', 
 			array(
 				'type'			=> 'checkbox',
@@ -237,14 +269,14 @@ function fs_customize_register($wp_customize) {
 		
 		// Back to top
 	
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'back2top', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'back2top', 
 			array(
 				'type'			=> 'checkbox',
@@ -256,14 +288,14 @@ function fs_customize_register($wp_customize) {
 			
 		// Sticky Nav
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'stickynav', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'stickynav', 
 			array(
 				'type'			=> 'checkbox',
@@ -280,7 +312,7 @@ function fs_customize_register($wp_customize) {
 
 		// Header & Main nav
 
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'layout_option', 
 			array(
 				'default' => 'version1',
@@ -288,7 +320,7 @@ function fs_customize_register($wp_customize) {
 			)
 		);
 		
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'layout_option', 
 			array(
 				'type' => 'radio',
@@ -310,15 +342,15 @@ function fs_customize_register($wp_customize) {
 	
 		// 404 Image
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'bg_404', 
 			array(
 				'sanitize_callback'	=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control( 
+		$fs_customize->add_control( 
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'bg_404', 
 				array(
 					'label'			=> __('404 error', 'from-scratch'),
@@ -333,7 +365,14 @@ function fs_customize_register($wp_customize) {
 add_action('customize_register', 'fs_customize_register');
 
 
-// Sanitize
+// Callbacks + Sanitize
+
+function fs_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+function fs_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
 
 function fs_customizer_sanitize_checkbox( $input ) {
 	if ( $input === true || $input === '1' ) {

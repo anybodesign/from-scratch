@@ -81,6 +81,9 @@
 .screen-reader-text {
 	@include a11y-hidden();
 }
+.out-of-reach {
+	display: none;
+}
 
 .clearfix {
 	clear: both;
