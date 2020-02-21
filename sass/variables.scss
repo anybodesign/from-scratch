@@ -2,7 +2,6 @@
 // = Variables
 // -------------------------
 
-
 // Grid Padding & Max Width
 
 $grid-padding: 1rem; 		// @note: The padding gutter! equiv. 10px
@@ -27,3 +26,16 @@ $secondary-color: #606060;
 $third-color: #404040;
 $text-color: #303030;
 $bg-color: #fff;
+
+
+// Root CSS vars
+// Ex: var(--primary-color)
+
+:root {
+	--primary-color: #303030; 
+	--secondary-color: #606060; 
+	--third-color: #404040;
+	--text-color: #303030;
+	--bg-color: #fff;
+}
+
