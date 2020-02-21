@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 	
 	// A11y active label on nav items
 	
-	var $el = 'li.current-menu-item a, li.current-page-ancestor a, li.current_page_item a, li.current_page_parent a, li.current-cat a';
+	var $el = 'li.current-menu-item > a, li.current-page-ancestor > a, li.current_page_item > a, li.current_page_parent > a, li.current-cat > a';
 	var $lang = 'Active';
 	
 	if ( $('html').attr('lang') === 'fr-FR' ) {
