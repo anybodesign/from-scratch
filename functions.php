@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '3.1' );
+define( 'FS_THEME_VERSION', '3.2' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 	
@@ -37,9 +37,54 @@ function fs_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-	) );
+	));
+
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+/*
 	
-	/*
+	// https://codex.wordpress.org/Theme_Logo
+
+	add_theme_support( 'custom-logo', array(
+		'height'      => '',
+		'width'       => '',
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-desc' ),
+	));	
+	
+	// https://codex.wordpress.org/Custom_Backgrounds
+	
+	add_theme_support( 'custom-background', array(
+		'default-color'          => 'ffffff',
+		'default-image'          => '',
+		'default-repeat'         => 'repeat',
+		'default-position-x'     => 'left',
+	    'default-position-y'     => 'top',
+	    'default-size'           => 'auto',
+		'default-attachment'     => 'scroll',
+		'wp-head-callback'       => '_custom_background_cb',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => ''
+	));
+	
+	// https://codex.wordpress.org/Custom_Headers
+	
+	add_theme_support( 'custom-header', array(
+		'default-image'          => get_template_directory_uri() . '/img/header.jpg',
+		'width'                  => 0,
+		'height'                 => 0,
+		'flex-height'            => false,
+		'flex-width'             => true,
+		'uploads'                => true,
+		'random-default'         => false,
+		'header-text'            => true,
+		'default-text-color'     => '',
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	));
+
 	add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
@@ -50,8 +95,10 @@ function fs_setup() {
 		'status',
 		'audio',
 		'chat',
-	) );
-	*/
+	));
+*/
+
+
 
 	// Gutenberg support 
 	
@@ -125,7 +172,7 @@ function fs_block_editor_styles() {
     	'fs_block_editor_styles',
     	FS_THEME_URL .'/css/block-editor-style.css', 
     	false, 
-    	'1.0', 
+    	FS_THEME_VERSION, 
     	'screen'
     );
 }
@@ -209,7 +256,7 @@ function fs_scripts_load() {
 					'back2top', 
 					FS_THEME_URL . '/js/back2top.js', 
 					array(), 
-					false, 
+					FS_THEME_VERSION, 
 					true
 				);
 			}
@@ -222,7 +269,7 @@ function fs_scripts_load() {
 					'stickynav', 
 					FS_THEME_URL . '/js/sticky-header.js', 
 					array(), 
-					false, 
+					FS_THEME_VERSION, 
 					true
 				);
 			}
@@ -233,7 +280,7 @@ function fs_scripts_load() {
 				'focus-visible', 
 				FS_THEME_URL . '/js/focus-visible.js', 
 				array(), 
-				false, 
+				FS_THEME_VERSION, 
 				true
 			);
 			
@@ -241,7 +288,7 @@ function fs_scripts_load() {
 				'from-scratch-skip-link-focus-fix', 
 				FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 				array(), 
-				false, 
+				FS_THEME_VERSION, 
 				true
 			);
 			
@@ -251,7 +298,7 @@ function fs_scripts_load() {
 			    	'main', 
 			    	FS_THEME_URL . '/js/main.js',
 			    	array('jquery'), 
-			    	'1.0', 
+			    	FS_THEME_VERSION, 
 			    	true
 		    );
 		    
@@ -294,7 +341,7 @@ function fs_scripts_load() {
 					'back2top', 
 					FS_THEME_URL . '/css/back2top.css',
 					array(), 
-					false, 
+					FS_THEME_VERSION, 
 					'screen' 
 				);
 			}
@@ -302,7 +349,13 @@ function fs_scripts_load() {
 			
 			// Main stylesheet
 			
-			wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri(), array(), FS_THEME_VERSION, 'screen' );
+			wp_enqueue_style( 
+				'from-scratch-style', 
+				get_stylesheet_uri(), 
+				array(), 
+				FS_THEME_VERSION, 
+				'screen'
+			);
 
 	}
 }    
