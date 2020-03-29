@@ -465,20 +465,20 @@ add_filter( 'excerpt_more', 'fs_excerpt_more' );
 add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
-add_image_size( 'screen-mid', 720, 450, true );
+add_image_size( 'screen-md', 720, 450, true );
 add_image_size( 'screen-hd', 1440, 900, true );
-add_image_size( 'video-mid', 960, 540, true );
+add_image_size( 'video-md', 960, 540, true );
 add_image_size( 'video-hd', 1920, 1080, true );
 
 function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'thumbnail-hd'	=> __( 'Thumbnail x2', 'from-scratch' ),
-        'medium-hd'		=> __( 'Medium x2', 'from-scratch' ),
-        'large-hd'		=> __( 'Large x2', 'from-scratch' ),
-        'screen-mid'	=> __( 'Screen Medium', 'from-scratch' ),
-        'large-hd'		=> __( 'Screen Full', 'from-scratch' ),
-        'large-hd'		=> __( 'Video Medium', 'from-scratch' ),
-        'large-hd'		=> __( 'Video Full', 'from-scratch' ),
+        'thumbnail-hd'	=> __( 'Thumbnail x2', 'fs-blog' ),
+        'medium-hd'		=> __( 'Medium x2', 'fs-blog' ),
+        'large-hd'		=> __( 'Large x2', 'fs-blog' ),
+        'screen-md'		=> __( 'Screen Medium', 'fs-blog' ),
+        'screen-hd'		=> __( 'Screen Full', 'fs-blog' ),
+        'video-md'		=> __( 'Video Medium', 'fs-blog' ),
+        'video-hd'		=> __( 'Video Full', 'fs-blog' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
@@ -650,11 +650,13 @@ if( class_exists('acf') ) {
 				'page_title' 	=> esc_html__( 'Archives Customizer', 'from-scratch'),
 				'menu_title' 	=> esc_html__( 'Archives Customizer', 'from-scratch'),
 				'parent_slug' 	=> $parent['menu_slug'],
+				'menu_slug'		=> 'options-site-archives'
 			));	
 			acf_add_options_sub_page(array(
 				'page_title' 	=> esc_html__( 'Social Networks', 'from-scratch'),
 				'menu_title' 	=> esc_html__( 'Social Networks', 'from-scratch'),
 				'parent_slug' 	=> $parent['menu_slug'],
+				'menu_slug'		=> 'options-site-social'
 			));
 			
 		}

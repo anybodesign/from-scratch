@@ -27,10 +27,20 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.3 - 2020.03.29
+* Import custom block styles in admin
+* Add some theme supports
+* Customizer live previews
+* A11y fix: active menu item
+* Buttons/Inputs CSS
+* Introduced CSS vars
+* ACF Options subpages menu_slug
+* Image sizes names fix
+
 ### 3.2 - 2020.01.30
 * Back2top JS update
 * Sticky Nav JS update
-* Title fior search results
+* Title for search results
 * Sass reorganization
 * New Admin stylesheets
 * New Customizer Options

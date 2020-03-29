@@ -275,6 +275,7 @@
 	margin: 0; 
 	padding: 0;
 	cursor: pointer;
+	background-color: transparent;
 	@include a11y-hide();
 	z-index: 200;
 
