@@ -200,16 +200,8 @@ function fs_scripts_load() {
 		
 			// jQuery 
 					
-			wp_deregister_script( 'jquery' );
-	
-			wp_enqueue_script(
-				'jquery', 
-				FS_THEME_URL . '/js/jquery-3.4.1.min.js', 
-				array(), 
-				'3.4.1', 
-				true
-			);
-	
+			wp_enqueue_script( 'jquery' );
+
 			// Slick
 			/*
 			   	wp_enqueue_script( 
