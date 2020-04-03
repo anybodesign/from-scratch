@@ -13,13 +13,15 @@
 
 					<h2>Typography (this is a subtitle)</h2>
 					
+					<p>Curabitur blandit tempus porttitor. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit. Aenean eu leo quam. <strong>Pellentesque ornare</strong> sem lacinia quam venenatis vestibulum.</p>
+
 					<div>Inside a div…</div>
 					
-					<p>Curabitur blandit tempus porttitor. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit. Aenean eu leo quam. <strong>Pellentesque ornare</strong> sem lacinia quam venenatis vestibulum.</p>
-					
+					<span>Inside a span</span>
+										
 					<h3>This is a section subtitle</h3>
 					
-					<p>Etiam porta sem malesuada magna mollis euismod. <em>Nullam id dolor id nibh ultricies vehicula ut id elit.</em> Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</p>
+					<p>Etiam porta <span>in a span</span> sem malesuada magna mollis euismod. <em>Nullam id dolor id nibh ultricies vehicula ut id elit.</em> Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</p>
 					
 					<ul>
 						<li>I'm a list</li>
@@ -51,6 +53,20 @@
 						“ Typography is the craft of endowing human language with a durable visual form.  (I'm a quote) “
 						<cite>Robert Bringhurst</cite>
 					</blockquote>
+					
+					<div class="white-text" style="background-color:#303030;margin-bottom:1.5rem;padding:1.5rem;">
+						
+						<h4>Some content on a dark background</h4>
+						
+						<p>Vivamus sagittis lacus vel augue <span>laoreet (in a span)</span> rutrum faucibus dolor auctor. <strong>Vivamus sagittis lacus vel augue laoreet</strong> rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. <em>Curabitur blandit tempus porttitor.</em></p>
+						<ul>
+							<li>Toto</li>
+							<li>Lili</li>
+							<li>Nono</li>
+						</ul>
+						<small>That's all folks</small>
+						
+					</div>
 					
 					<p>A code block:</p>
 					<pre>

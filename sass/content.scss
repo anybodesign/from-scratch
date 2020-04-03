@@ -56,12 +56,20 @@
 	}
 	
 	& > *.alignwide {
-		max-width: $max-width*1.3;	// 1248px
+		max-width: $max-width-large;
 	}
 	& > *.alignfull {
 		margin-left: 0;
 		margin-right: 0;
 		max-width: none;
+	}
+	
+	// Beaver container
+	& > *.fl-builder-content {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+		padding: 0;
 	}
 	
 	& > [class*="wp-block-gallery"],
@@ -76,7 +84,11 @@
 		margin: $grid-padding*2 auto;
 		max-width: calc(#{$max-width} - #{$grid-padding}*2);
 	}
-
+	
+	& > span {
+		display: block;
+	    margin-bottom: 1.5em;
+	}
 	
 	@include rwd(large) {
 		
