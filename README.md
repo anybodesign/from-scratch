@@ -27,6 +27,13 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.4 - 2020.04.03
+* Beaver Builder support
+* Removed custom jQuery
+* Removed ACF Builder template part
+* CSS updates 
+* Mobile Nav update
+
 ### 3.3 - 2020.03.29
 * Import custom block styles in admin
 * Add some theme supports
