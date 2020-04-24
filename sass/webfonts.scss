@@ -38,3 +38,42 @@ $font-bold: 'Bold', $font-stack;
 $font-bolditalic: 'BoldItalic', $font-stack;
 
 $font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+
+
+// Root CSS vars
+// Ex: var(--font-title)
+/*
+:root {
+	--f-regular: Asap-Regular;
+	--f-italic: Asap-Italic;
+	--f-bold: Asap-Medium;
+	--f-bolditalic: Asap-MediumItalic;
+	--f-title: Miriam-Libre-Bold;
+	
+	--fontface-regular: local('var(--f-regular)'), url('fonts/var(--f-regular).woff2') format('woff2'), url('fonts/var(--f-regular).woff') format('woff');
+	--fontface-italic: local('var(--f-italic)'), url('fonts/var(--f-italic).woff2') format('woff2'), url('fonts/var(--f-italic).woff') format('woff');	
+	--fontface-bold: local('var(--f-bold)'), url('fonts/var(--f-bold).woff2') format('woff2'), url('fonts/var(--f-bold).woff') format('woff');
+	--fontface-bolditalic: local('var(--f-bolditalic)'), url('fonts/var(--f-bolditalic).woff2') format('woff2'), url('fonts/var(--f-bolditalic).woff') format('woff');
+	--fontface-title: local('var(--f-title)'), url('fonts/var(--f-title).woff2') format('woff2'), url('fonts/var(--f-title).woff') format('woff');
+	
+	--fontface-regular-out: local('var(--f-regular)'), url('../fonts/var(--f-regular).woff2') format('woff2'), url('../fonts/var(--f-regular).woff') format('woff');
+	--fontface-italic-out: local('var(--f-italic)'), url('../fonts/var(--f-italic).woff2') format('woff2'), url('../fonts/var(--f-italic).woff') format('woff');	
+	--fontface-bold-out: local('var(--f-bold)'), url('../fonts/var(--f-bold).woff2') format('woff2'), url('../fonts/var(--f-bold).woff') format('woff');
+	--fontface-bolditalic-out: local('var(--f-bolditalic)'), url('../fonts/var(--f-bolditalic).woff2') format('woff2'), url('../fonts/var(--f-bolditalic).woff') format('woff');
+	--fontface-title-out: local('var(--f-title)'), url('../fonts/var(--f-title).woff2') format('woff2'), url('../fonts/var(--f-title).woff') format('woff');
+
+	--font-stack: Helvetica, Arial, sans-serif;
+	
+	// The Fonts
+	
+	--font-title: 'Title', var(--font-stack);
+	--font-regular: 'Regular', var(--font-stack);
+	--font-italic: 'Italic', var(--font-stack);
+	--font-bold: 'Bold', var(--font-stack);
+	--font-bolditalic: 'BoldItalic', var(--font-stack);
+	
+	--font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+
+
+}
+*/
