@@ -27,6 +27,11 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.4.1 - 2020.04.24
+* Some more blocks CSS
+* More CSS vars
+* Header title CSS fix
+
 ### 3.4 - 2020.04.03
 * Beaver Builder support
 * Removed custom jQuery
