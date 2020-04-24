@@ -83,7 +83,7 @@ class FS_CPT {
 			'publicly_queryable'    => true,
 			'rewrite'               => $rewrite,
 			'capability_type'       => 'post',
-			'show_in_rest'          => false,
+			'show_in_rest'          => true,
 		);
 		register_post_type( 'project', $args );
 
@@ -170,7 +170,7 @@ class FS_CPT {
 			'show_in_nav_menus'          => true,
 			'show_tagcloud'              => false,
 			'query_var'                  => 'project-type',
-			'show_in_rest'               => false,
+			'show_in_rest'               => true,
 		);
 		register_taxonomy( 'project_type', array( 'project' ), $args );
 		
