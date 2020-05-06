@@ -20,7 +20,9 @@ if ( post_password_required() ) {
 				
 						<ol class="comment-list">
 							<?php
-								wp_list_comments();
+								wp_list_comments( array(
+								    'callback' => 'fs_custom_comments',
+								));
 							?>
 						</ol>
 						

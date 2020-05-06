@@ -561,6 +561,58 @@ function fs_search_form( $form ) {
 add_filter( 'get_search_form', 'fs_search_form' );
 
 
+// Custom comment HTML
+
+function fs_custom_comments($comment, $args, $depth) {
+   $GLOBALS['comment'] = $comment; ?>
+   
+   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+		<article id="comment-<?php comment_ID(); ?>" class="comment">
+			<div class="comment-author avatar">
+				<?php
+					echo get_avatar( $comment, 192 );
+				?>
+			</div>
+
+			<div class="comment-content">
+				<div class="comment-author-name">
+					<?php 
+						printf( '<span class="fn">%s</span>', get_comment_author_link() );
+					?>
+				</div>
+				<div class="comment-date">
+					<?php 
+						printf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+							esc_url( get_comment_link( $comment->comment_ID ) ),
+							get_comment_time( 'c' ),
+							sprintf( __( '%1$s at %2$s' ), get_comment_date(), get_comment_time() )
+						);
+					?>
+				</div>
+				<div class="comment-author-text">
+					<?php if ($comment->comment_approved == '0') : ?>
+						<em class="pending"><?php _e('Your comment is awaiting moderation.') ?></em>
+					<?php endif; ?>
+					
+					<?php comment_text(); ?>
+				</div>
+			</div>
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge($args, array(
+				    'reply_text' => __('Reply'),
+				    'depth'      => $depth,
+				    'max_depth'  => $args['max_depth']
+				    )
+				)); ?>
+			</div>
+			<?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+
+		</article>
+		
+<?php }
+
+
 
 // ------------------------
 // ACF
