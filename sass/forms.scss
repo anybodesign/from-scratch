@@ -192,11 +192,11 @@ input[type="submit"] {
 }
 .formfield-radio input[type="radio"] + label::after,
 .formfield-radio input[type="radio"] + span::after {
-	width: 6px; 
-	height: 6px;
+	width: .6rem; 
+	height: .6rem;
 	background-color: $primary-color;
-	top: 9px; 
-	left: 6px;
+	top: .9rem; 
+	left: .6rem;
 	border-radius: 100%;
 	opacity: 0;
 	transition: opacity .2s linear;
@@ -208,13 +208,13 @@ input[type="submit"] {
 
 .formfield-checkbox input[type="checkbox"] + label::after,
 .formfield-checkbox input[type="checkbox"] + span::after {
-	top: -9px; 
-	left: 6px;
+	top: .5rem; 
+	left: .35rem;
 	content: '';
-	width: 10px;
-	height: 5px;
-	border-left: 2px solid $primary-color;
-	border-bottom: 2px solid $primary-color;	
+	width: 1rem;
+	height: .5rem;
+	border-left: 4px solid $primary-color;
+	border-bottom: 4px solid $primary-color;	
 	opacity: 0;
 	transform: rotate(-45deg);
 	transition: opacity .2s linear;
@@ -241,6 +241,11 @@ span.wpcf7-list-item {
 .formfield-radio input[type="radio"].focus-visible + span::after,
 .formfield-radio input[type="checkbox"].focus-visible + span::after {
 	//opacity: .5;
+}
+
+
+.comment-form-cookies-consent {
+	@extend .formfield-checkbox;
 }
 
 

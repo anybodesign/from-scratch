@@ -385,16 +385,14 @@ td, th {
 	padding: $grid-padding;
 	border: $primary-color 1px solid;
 	
-	thead &, 
-	tbody &, 
+	thead + tbody &, 
 	tfoot & {
 		border-top: 0;
 	}
-	tbody &:first-child,
 	thead & {
 		border-top: $primary-color 1px solid;
 	}
-	
+
 }
 
 
