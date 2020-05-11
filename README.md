@@ -27,6 +27,12 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.4.2 - 2020.05.11
+* Custom checkbox fix
+* Comments custom template
+* Admin bar breakpoint
+* Removed site title img alt
+
 ### 3.4.1 - 2020.04.24
 * Some more blocks CSS
 * More CSS vars
