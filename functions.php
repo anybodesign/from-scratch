@@ -186,7 +186,15 @@ function fs_acf_admin_css() {
 	wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
 }
 
+// WordPress no bloody admin mail notice and no bloody fullscreen
 
+add_filter('admin_email_check_interval', '__return_false');
+
+function fs_disable_bloody_fullscreen() {
+	$script = "window.onload = function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } }";
+	wp_add_inline_script( 'wp-blocks', $script );
+}
+add_action( 'enqueue_block_editor_assets', 'fs_disable_bloody_fullscreen' );
 
 
 // ------------------------
@@ -263,7 +271,7 @@ function fs_scripts_load() {
 				true
 			);
 			wp_register_script(
-				'from-scratch-skip-link-focus-fix', 
+				'skiplink-focus-fix', 
 				FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 				array(), 
 				FS_THEME_VERSION, 
@@ -342,6 +350,11 @@ function fs_scripts_load() {
 		    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
+			
+			wp_enqueue_script( 'focus-visible' );
+			wp_enqueue_script( 'skiplink-focus-fix' );
+			wp_enqueue_script( 'main' );			
+
 
 		// Enqueue CSS
 		// ------------------------
