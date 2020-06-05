@@ -1,0 +1,47 @@
+// ------------------------------
+//
+// = Buttons
+//
+// ------------------------------
+
+// You can use the class .action-btn on <a>, <button> or <input> 
+
+button,
+.action-btn,
+input[type=button],
+input[type=submit] {
+	display: inline-block;
+	padding: $grid-padding $grid-padding*2;
+	font-size: 1.6rem;
+	font-family: $font-bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: $text-color;
+	color: #fff;
+	transition: background .2s linear;
+	
+	&.focus-visible, 
+	&:hover {
+		background-color: $secondary-color;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+// Variation example of .action-btn
+
+.white-btn,
+button.white-btn,
+input[type=button].white-btn,
+input[type=submit].white-btn {
+	@extend .action-btn;
+	background-color: #fff;
+	color: $text-color;
+
+	&.focus-visible, 
+	&:hover {
+		background-color: $text-color;
+		color: #fff;
+	}	
+}
