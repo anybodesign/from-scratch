@@ -1,0 +1,86 @@
+// ------------------------------
+//
+// = Web fonts Admin (SASS)
+//
+// ------------------------------
+
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+// ------------------------------
+//
+// = Web fonts Admin (CSS vars)
+//
+// ------------------------------
+
+/*
+@font-face {
+	font-family: 'Regular';
+	src: url('../fonts/Asap-Regular.woff2') format('woff2'), url('../fonts/Asap-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: url('../fonts/Asap-Italic.woff2') format('woff2'), url('../fonts/Asap-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: url('../fonts/Asap-Medium.woff2') format('woff2'), url('../fonts/Asap-Medium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: url('../fonts/Asap-MediumItalic.woff2') format('woff2'), url('../fonts/Asap-MediumItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: url('../fonts/Miriam-Libre-Bold.woff2') format('woff2'), url('../fonts/Miriam-Libre-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+*/

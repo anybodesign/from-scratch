@@ -1,6 +1,6 @@
 // ------------------------------
 //
-// = Web Fonts
+// = Web Fonts (SASS)
 //
 // ------------------------------
 
@@ -18,12 +18,11 @@ $fontface-bold: local('#{$f-bold}'), url('fonts/#{$f-bold}.woff2') format('woff2
 $fontface-bolditalic: local('#{$f-bolditalic}'), url('fonts/#{$f-bolditalic}.woff2') format('woff2'), url('fonts/#{$f-bolditalic}.woff') format('woff');
 $fontface-title: local('#{$f-title}'), url('fonts/#{$f-title}.woff2') format('woff2'), url('fonts/#{$f-title}.woff') format('woff');
 
-$fontface-regular-out: local('#{$f-regular}'), url('../fonts/#{$f-regular}.woff2') format('woff2'), url('../fonts/#{$f-regular}.woff') format('woff');
-$fontface-italic-out: local('#{$f-italic}'), url('../fonts/#{$f-italic}.woff2') format('woff2'), url('../fonts/#{$f-italic}.woff') format('woff');	
-$fontface-bold-out: local('#{$f-bold}'), url('../fonts/#{$f-bold}.woff2') format('woff2'), url('../fonts/#{$f-bold}.woff') format('woff');
-$fontface-bolditalic-out: local('#{$f-bolditalic}'), url('../fonts/#{$f-bolditalic}.woff2') format('woff2'), url('../fonts/#{$f-bolditalic}.woff') format('woff');
-$fontface-title-out: local('#{$f-title}'), url('../fonts/#{$f-title}.woff2') format('woff2'), url('../fonts/#{$f-title}.woff') format('woff');
-
+$fontface-regular-admin: local('#{$f-regular}'), url('../fonts/#{$f-regular}.woff2') format('woff2'), url('../fonts/#{$f-regular}.woff') format('woff');
+$fontface-italic-admin: local('#{$f-italic}'), url('../fonts/#{$f-italic}.woff2') format('woff2'), url('../fonts/#{$f-italic}.woff') format('woff');	
+$fontface-bold-admin: local('#{$f-bold}'), url('../fonts/#{$f-bold}.woff2') format('woff2'), url('../fonts/#{$f-bold}.woff') format('woff');
+$fontface-bolditalic-admin: local('#{$f-bolditalic}'), url('../fonts/#{$f-bolditalic}.woff2') format('woff2'), url('../fonts/#{$f-bolditalic}.woff') format('woff');
+$fontface-title-admin: local('#{$f-title}'), url('../fonts/#{$f-title}.woff2') format('woff2'), url('../fonts/#{$f-title}.woff') format('woff');
 
 // Customize your Font-Stack
 
@@ -39,41 +38,85 @@ $font-bolditalic: 'BoldItalic', $font-stack;
 
 $font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
 
+// Fonts
 
-// Root CSS vars
-// Ex: var(--font-title)
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+// ------------------------------
+//
+// = Web Fonts (CSS VARS)
+//
+// ------------------------------
+
 /*
-:root {
-	--f-regular: Asap-Regular;
-	--f-italic: Asap-Italic;
-	--f-bold: Asap-Medium;
-	--f-bolditalic: Asap-MediumItalic;
-	--f-title: Miriam-Libre-Bold;
-	
-	--fontface-regular: local('var(--f-regular)'), url('fonts/var(--f-regular).woff2') format('woff2'), url('fonts/var(--f-regular).woff') format('woff');
-	--fontface-italic: local('var(--f-italic)'), url('fonts/var(--f-italic).woff2') format('woff2'), url('fonts/var(--f-italic).woff') format('woff');	
-	--fontface-bold: local('var(--f-bold)'), url('fonts/var(--f-bold).woff2') format('woff2'), url('fonts/var(--f-bold).woff') format('woff');
-	--fontface-bolditalic: local('var(--f-bolditalic)'), url('fonts/var(--f-bolditalic).woff2') format('woff2'), url('fonts/var(--f-bolditalic).woff') format('woff');
-	--fontface-title: local('var(--f-title)'), url('fonts/var(--f-title).woff2') format('woff2'), url('fonts/var(--f-title).woff') format('woff');
-	
-	--fontface-regular-out: local('var(--f-regular)'), url('../fonts/var(--f-regular).woff2') format('woff2'), url('../fonts/var(--f-regular).woff') format('woff');
-	--fontface-italic-out: local('var(--f-italic)'), url('../fonts/var(--f-italic).woff2') format('woff2'), url('../fonts/var(--f-italic).woff') format('woff');	
-	--fontface-bold-out: local('var(--f-bold)'), url('../fonts/var(--f-bold).woff2') format('woff2'), url('../fonts/var(--f-bold).woff') format('woff');
-	--fontface-bolditalic-out: local('var(--f-bolditalic)'), url('../fonts/var(--f-bolditalic).woff2') format('woff2'), url('../fonts/var(--f-bolditalic).woff') format('woff');
-	--fontface-title-out: local('var(--f-title)'), url('../fonts/var(--f-title).woff2') format('woff2'), url('../fonts/var(--f-title).woff') format('woff');
-
-	--font-stack: Helvetica, Arial, sans-serif;
-	
-	// The Fonts
-	
-	--font-title: 'Title', var(--font-stack);
-	--font-regular: 'Regular', var(--font-stack);
-	--font-italic: 'Italic', var(--font-stack);
-	--font-bold: 'Bold', var(--font-stack);
-	--font-bolditalic: 'BoldItalic', var(--font-stack);
-	
-	--font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
-
-
+@font-face {
+	font-family: 'Regular';
+	src: url('fonts/Asap-Regular.woff2') format('woff2'), url('fonts/Asap-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: url('fonts/Asap-Italic.woff2') format('woff2'), url('fonts/Asap-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: url('fonts/Asap-Medium.woff2') format('woff2'), url('fonts/Asap-Medium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: url('fonts/Asap-MediumItalic.woff2') format('woff2'), url('fonts/Asap-MediumItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: url('fonts/Miriam-Libre-Bold.woff2') format('woff2'), url('fonts/Miriam-Libre-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 */

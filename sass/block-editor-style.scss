@@ -6,48 +6,14 @@ Description: Have fun with Gutenberg style editor.
 @import 'variables.scss';
 @import 'mixins.scss';
 @import 'webfonts.scss';
-
-@font-face {
-	font-family: 'Regular';
-	src: $fontface-regular-out;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Italic';
-	src: $fontface-italic-out;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Bold';
-	src: $fontface-bold-out;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'BoldItalic';
-	src: $fontface-bolditalic-out;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Title';
-	src: $fontface-title-out;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
+@import 'webfonts-admin.scss';
 
 /* Typography */
 
 .edit-post-visual-editor {
 	
 	// Import custom block styles in admin
+	@import 'buttons.scss';
 	@import 'blocks.scss';
 	
 	h1, h2, h3, h4, h5, h6,
