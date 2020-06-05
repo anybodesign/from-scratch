@@ -37,10 +37,28 @@ $bg-color: #fff;
 // Ex: var(--primary-color)
 /*
 :root {
-	--primary-color: #303030; 
-	--secondary-color: #606060; 
-	--third-color: #404040;
-	--text-color: #303030;
-	--bg-color: #fff;
+	
+	// Colors 
+	
+	--primary_color: #303030; 
+	--secondary_color: #606060; 
+	--third_color: #404040;
+	
+	--text_color: #303030;
+	--bg_color: #fff;
+
+
+	// Fonts
+	
+	--font_stack: Helvetica, Arial, sans-serif;
+	
+	--font_title: 'Title', var(--font_stack);
+	--font_regular: 'Regular', var(--font_stack);
+	--font_italic: 'Italic', var(--font_stack);
+	--font_bold: 'Bold', var(--font_stack);
+	--font_bolditalic: 'BoldItalic', var(--font_stack);
+	
+	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+	
 }
 */
