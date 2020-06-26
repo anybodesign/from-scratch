@@ -48,10 +48,24 @@ function fs_customize_register($fs_customize) {
 	// + + + + + + + + + + 
 	
 	$fs_customize->add_section(
+		'fs_header_section',
+		array(
+			'title'			=> __('Header Options', 'from-scratch'),
+			'priority'		=> 40,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_footer_section',
+		array(
+			'title'			=> __('Footer Options', 'from-scratch'),
+			'priority'		=> 40,
+		)
+	);
+	$fs_customize->add_section(
 		'fs_options_section',
 		array(
 			'title'			=> __('Theme Options', 'from-scratch'),
-			'priority'		=> 20,
+			'priority'		=> 50,
 		)
 	);
 	$fs_customize->add_section(
@@ -59,15 +73,7 @@ function fs_customize_register($fs_customize) {
 		array(
 			'title' 		=> __('Layout Options', 'from-scratch'),
 			'description' 	=> __('Choose the layout of the site header and main navigation.', 'from-scratch'),
-			'priority'		=> 30,
-		)
-	);
-	$fs_customize->add_section(
-		'fs_fonts_section', 
-		array(
-			'title' 		=> __('Theme Fonts', 'from-scratch'),
-			'description' 	=> __('Choose a font combination for the site.', 'from-scratch'),
-			'priority'		=> 40,
+			'priority'		=> 50,
 		)
 	);
 	$fs_customize->add_section(
@@ -76,6 +82,14 @@ function fs_customize_register($fs_customize) {
 			'title' 		=> __('Theme Pictures', 'from-scratch'),
 			'description' 	=> __('Select default banner pictures.', 'from-scratch'),
 			'priority'		=> 50,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_fonts_section', 
+		array(
+			'title' 		=> __('Theme Fonts', 'from-scratch'),
+			'description' 	=> __('Choose a font combination for the site.', 'from-scratch'),
+			'priority'		=> 60,
 		)
 	);
 
@@ -145,7 +159,7 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'third_color', array(
-					'label'		=> __('Contraste color', 'from-scratch'),
+					'label'		=> __('Contrast color', 'from-scratch'),
 					'section'	=> 'colors',
 					'settings'	=> 'third_color',
 				)
@@ -154,7 +168,7 @@ function fs_customize_register($fs_customize) {
 
 
 
-	// Site identity
+	// Header Options
 	// -
 	// + + + + + + + + + + 
 
@@ -173,7 +187,7 @@ function fs_customize_register($fs_customize) {
 				array(
 					'label'			=> __('Site Logo', 'from-scratch'),
 					'description'	=> __('Your logo, displayed instead of the website title.', 'from-scratch'),
-					'section'		=> 'title_tagline',
+					'section'		=> 'fs_header_section',
 					'settings'		=> 'site_logo',
 				)
 			)
@@ -193,12 +207,31 @@ function fs_customize_register($fs_customize) {
 				array(
 					'label'			=> __('Site Logo - Mobile', 'from-scratch'),
 					'description'	=> __('Specific version of the logo for mobile devices. If none, the default logo will be used.', 'from-scratch'),
-					'section'		=> 'title_tagline',
+					'section'		=> 'fs_header_section',
 					'settings'		=> 'site_logo_mobile',
 				)
 			)
 		);
 
+		// Hide site name
+		
+		$fs_customize->add_setting(
+			'hide_sitetitle', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'hide_sitetitle', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Hide the site title', 'from-scratch'),
+				'section'		=> 'fs_header_section',
+				'settings'		=> 'hide_sitetitle',
+			)
+		);
 
 		// Hide tagline
 		
@@ -215,12 +248,17 @@ function fs_customize_register($fs_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Hide the website tagline', 'from-scratch'),
-				'section'		=> 'title_tagline',
+				'section'		=> 'fs_header_section',
 				'settings'		=> 'hide_tagline',
 			)
 		);
 	
+
+	// Footer Options
+	// -
+	// + + + + + + + + + + 
 	
+		
 		// Footer text
 		
 		$fs_customize->add_setting(
@@ -236,7 +274,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'label'			=> __('Custom footer text', 'from-scratch'),
 				'description'	=> __('Add a custom text instead of the year and blog name.', 'from-scratch'),
-				'section'		=> 'title_tagline',
+				'section'		=> 'fs_footer_section',
 				'settings'		=> 'footer_text',
 			)
 		);
@@ -257,7 +295,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Display WordPress Link', 'from-scratch'),
-				'section'		=> 'title_tagline',
+				'section'		=> 'fs_footer_section',
 				'settings'		=> 'display_wp',
 			)
 		);
@@ -393,20 +431,14 @@ function fs_customizer_sanitize_radio_layout( $input ) {
 function fs_colors() {
 	?>
 	<style>
-		.something { 
-			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
+		/* If using CSS vars
+			
+		:root {
+			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>; 
+			--secondary_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
+			--third_color: <?php echo get_theme_mod('sidebar_color', '#FBFF00'); ?>;
 		}
-		
-		.something { 
-			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		
-		.something {
-			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
-		}
-		.something {
-			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
-		}
+		*/
 	</style>
 	<?php
 }

@@ -12,17 +12,44 @@
 		});
 	});
 
-	// Tagline
-    wp.customize('hide_tagline', function( value ) {
+	// Site title
+    wp.customize('hide_sitetitle', function( value ) {
         value.bind( function( to ) {
             if( to ) {
-                $( '.site-desc' ).hide();
+                $( '.site-title span' ).hide().addClass('screen-reader-text');
             }
             else {
-                $( '.site-desc' ).show();
+                $( '.site-title span' ).show().removeClass('screen-reader-text');
             }
         });
     });
+    
+    // Tagline
+    wp.customize('hide_tagline', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '.site-desc' ).hide().addClass('screen-reader-text');
+            }
+            else {
+                $( '.site-desc' ).show().removeClass('screen-reader-text');
+            }
+        });
+    });
+
+
+    // Colors // if using CSS vars
+    /*
+	var rootCustomProperty = function( setting ) {
+		var bStyle = document.createElement( 'style' );
+		document.head.appendChild( bStyle );
+		setting.bind( function( newval ) {
+			bStyle.innerHTML = ':root { --' + setting.id + ': ' + newval + ' }';
+		} );
+	};
+    wp.customize( 'primary_color', rootCustomProperty );
+    wp.customize( 'secondary_color', rootCustomProperty );
+    wp.customize( 'third_color', rootCustomProperty );
+	*/
     
     // WP Credits
     wp.customize('display_wp', function( value ){

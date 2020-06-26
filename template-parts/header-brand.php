@@ -20,8 +20,8 @@
 	
 				<?php 
 					$site_desc = get_bloginfo( 'description', 'display' );
-					if ( $site_desc && ! get_theme_mod( 'hide_tagline' ) ) { ?>
-					<p class="site-desc"><?php echo $site_desc; ?></p>
+					if ( $site_desc ) { ?>
+					<p class="site-desc<?php if (get_theme_mod( 'hide_tagline' )) { echo ' screen-reader-text'; } ?>"><?php echo $site_desc; ?></p>
 				<?php } ?>
 							
 			</div>

@@ -1,6 +1,7 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
+$dash: #777 1px dashed;
 
 // Editor
 
@@ -16,10 +17,8 @@ html.block-editor-editor-skeleton__html-container {
 
 // Customizer
 
-#customize-control-site_logo,
-#customize-control-footer_text,
 #customize-control-site_icon {
-	border-top: #777 1px dashed;
+	border-top: $dash;
 	padding-top: 1.5em;
 	margin-top: 1em;
 }
