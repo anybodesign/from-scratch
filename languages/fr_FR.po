@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-01-30 16:38+0100\n"
-"PO-Revision-Date: 2020-01-30 16:38+0100\n"
+"POT-Creation-Date: 2020-06-26 10:48+0200\n"
+"PO-Revision-Date: 2020-06-26 10:48+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -44,143 +44,160 @@ msgstr "Description du bloc."
 msgid "They talk about it"
 msgstr "Ils en parlent"
 
-#: comments.php:34
+#: comments.php:36
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: comments.php:41
+#: comments.php:43
 msgid "Do we talk about it?"
 msgstr "On en discute ?"
 
-#: comments.php:42
+#: comments.php:44
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:32
+#: footer.php:31
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:39 functions.php:317
+#: footer.php:37 functions.php:396
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: footer.php:55
+#: footer.php:53
 msgid "Back to top"
 msgstr "Haut de page"
 
-#: functions.php:65
+#: functions.php:112
 msgid "Black"
 msgstr "Noir"
 
-#: functions.php:70
+#: functions.php:117
 msgid "White"
 msgstr "Blanc"
 
-#: functions.php:78 inc/customizer.php:58
+#: functions.php:125 inc/customizer.php:118
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:83 inc/customizer.php:74
+#: functions.php:130 inc/customizer.php:142
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:88
+#: functions.php:135
 msgid "Complementary color"
 msgstr "Couleur complémentaire"
 
-#: functions.php:99
+#: functions.php:146
 msgid "Small"
 msgstr "Petite"
 
-#: functions.php:100
+#: functions.php:147
 msgid "S"
 msgstr "S"
 
-#: functions.php:105
+#: functions.php:152
 msgid "Large"
 msgstr "Grande"
 
-#: functions.php:106
+#: functions.php:153
 msgid "L"
 msgstr "L"
 
-#: functions.php:316 template-parts/header-nav.php:6
+#: functions.php:395 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:318
+#: functions.php:397
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:393
+#: functions.php:472
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:411
+#: functions.php:490
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:412
+#: functions.php:491
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:413
+#: functions.php:492
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:414
+#: functions.php:493
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:415
+#: functions.php:494
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:416
+#: functions.php:495
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:417
+#: functions.php:496
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:441
+#: functions.php:520
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:466
+#: functions.php:545
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:472
+#: functions.php:551
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:478
+#: functions.php:557
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:498
+#: functions.php:577
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:499
+#: functions.php:578
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:500
+#: functions.php:579
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:586 functions.php:587
+#: functions.php:611
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s à %2$s"
+
+#: functions.php:617
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: functions.php:626
+msgid "Reply"
+msgstr "Répondre"
+
+#: functions.php:632
+msgid "Edit"
+msgstr "Modifier"
+
+#: functions.php:708 functions.php:709
 msgid "Site Options"
 msgstr "Options du site"
 
-#: functions.php:595 functions.php:596
+#: functions.php:717 functions.php:718
 msgid "Archives Customizer"
 msgstr "Personnalisation des pages d’archives"
 
-#: functions.php:600 functions.php:601
+#: functions.php:723 functions.php:724
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
@@ -384,53 +401,61 @@ msgstr "Liste des types"
 msgid "Types list navigation"
 msgstr "Navigation dans la liste des types"
 
-#: inc/customizer.php:22
+#: inc/customizer.php:53
+msgid "Header Options"
+msgstr "Options de l'en-tête"
+
+#: inc/customizer.php:60
+msgid "Footer Options"
+msgstr "Options du pied de page"
+
+#: inc/customizer.php:67
 msgid "Theme Options"
 msgstr "Options du thème"
 
-#: inc/customizer.php:26
+#: inc/customizer.php:74
 msgid "Layout Options"
 msgstr "Options de mise en page"
 
-#: inc/customizer.php:27
+#: inc/customizer.php:75
 msgid "Choose the layout of the site header and main navigation."
 msgstr ""
 "Choisissez la mise en page pour l'en-tête du site et la navigation "
 "principale."
 
-#: inc/customizer.php:31
-msgid "Theme Fonts"
-msgstr "Polices du thème"
-
-#: inc/customizer.php:32
-msgid "Choose a font combination for the site."
-msgstr "Choisissez une combinaison de polices pour le site."
-
-#: inc/customizer.php:36
+#: inc/customizer.php:82
 msgid "Theme Pictures"
 msgstr "Images du thème"
 
-#: inc/customizer.php:37
+#: inc/customizer.php:83
 msgid "Select default banner pictures."
 msgstr "Sélection des images par défaut pour la bannière."
 
 #: inc/customizer.php:90
-msgid "Contraste color"
+msgid "Theme Fonts"
+msgstr "Polices du thème"
+
+#: inc/customizer.php:91
+msgid "Choose a font combination for the site."
+msgstr "Choisissez une combinaison de polices pour le site."
+
+#: inc/customizer.php:162
+msgid "Contrast color"
 msgstr "Couleur de contraste"
 
-#: inc/customizer.php:109
+#: inc/customizer.php:188
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:110
+#: inc/customizer.php:189
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:123
+#: inc/customizer.php:208
 msgid "Site Logo - Mobile"
 msgstr "Logo du site - mobile"
 
-#: inc/customizer.php:124
+#: inc/customizer.php:209
 msgid ""
 "Specific version of the logo for mobile devices. If none, the default logo "
 "will be used."
@@ -438,92 +463,96 @@ msgstr ""
 "Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
 "par défaut sera utilisé."
 
-#: inc/customizer.php:138
+#: inc/customizer.php:230
+msgid "Hide the site title"
+msgstr "Masquer le titre du site"
+
+#: inc/customizer.php:250
 msgid "Hide the website tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:151
+#: inc/customizer.php:275
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:152
+#: inc/customizer.php:276
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:166
+#: inc/customizer.php:297
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:186
+#: inc/customizer.php:321
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:201
+#: inc/customizer.php:340
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:225
+#: inc/customizer.php:365
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:228
+#: inc/customizer.php:368
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:229
+#: inc/customizer.php:369
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:230
+#: inc/customizer.php:370
 msgid "Version 3"
 msgstr "Version 3"
 
-#: inc/customizer.php:248
+#: inc/customizer.php:394
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:249
+#: inc/customizer.php:395
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:54
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:54
 msgid "View details"
 msgstr "Voir les détails"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:77
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:77
 #, php-format
 msgid "More information about %s"
 msgstr "Plus d'informations sur %s"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:128
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:128
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:213
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:213
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:215
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:215
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:217
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:217
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
 msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:223
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:223
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p8/Vcs/PluginUpdateChecker.php:98
+#: inc/plugin-update-checker/Puc/v4p9/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
