@@ -27,6 +27,17 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.5 - 2020.06.26
+* Cleaner Register/Enqueue
+* Update checker 4.9
+* No check for admin e-mail
+* No default fullscreen
+* Admin Editor styles improvments
+* Natives CSS color and fonts vars
+* Customizer sections update
+* Customizer options update
+* Customizer live previews update
+
 ### 3.4.2 - 2020.05.11
 * Custom checkbox fix
 * Comments custom template
