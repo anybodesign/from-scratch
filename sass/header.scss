@@ -71,7 +71,7 @@
 			#site_head {
 				top: 46px;
 				
-				@include rwd(782px) {
+				@include rwd($admin-bar) {
 					top: 32px;
 				}
 			}

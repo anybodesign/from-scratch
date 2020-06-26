@@ -222,9 +222,9 @@ figure {
 			z-index: 10;
 		}
 		&::before {
-			width: 80px;
-			height: 80px;
-			border-radius: 80px;
+			width: 8rem;
+			height: 8rem;
+			border-radius: 8rem;
 			background-color: transparentize( $primary-color, .1 );
 			transition: .4s ease-in-out;
 		}
@@ -232,9 +232,9 @@ figure {
 			width: 0; height: 0;
 			border-color: transparent;
 			border-left-color: #fff; 
-			border-width: 12px;
+			border-width: 1.2rem;
 			border-style: solid;
-			left: calc(50% + 6px);
+			left: calc(50% + .6rem);
 			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
 		}
 		
