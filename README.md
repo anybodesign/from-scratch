@@ -27,6 +27,11 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.5.1 - 2020.07.13
+* Text domain fix
+* Some px to rem units
+* Mobile nav position
+
 ### 3.5 - 2020.06.26
 * Cleaner Register/Enqueue
 * Update checker 4.9
