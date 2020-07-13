@@ -31,6 +31,7 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 * Text domain fix
 * Some px to rem units
 * Mobile nav position
+* Escaping outputs
 
 ### 3.5 - 2020.06.26
 * Cleaner Register/Enqueue
