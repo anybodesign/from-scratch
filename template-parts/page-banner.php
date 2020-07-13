@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-					<div class="page-banner">
+					<div class="page-banner"<?php fs_bg_img(); ?>>
 						<div class="inner">
 
 							<h1 class="page-title">

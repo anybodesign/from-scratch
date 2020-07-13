@@ -12,7 +12,7 @@
 				<?php } else { ?>
 				
 				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_html_e('Go to Home Page', 'from-scratch'); ?>">
 					<?php get_template_part('template-parts/header', 'brand-logo'); ?>
 					</a>
 				</p>
@@ -21,7 +21,7 @@
 				<?php 
 					$site_desc = get_bloginfo( 'description', 'display' );
 					if ( $site_desc ) { ?>
-					<p class="site-desc<?php if (get_theme_mod( 'hide_tagline' )) { echo ' screen-reader-text'; } ?>"><?php echo $site_desc; ?></p>
+					<p class="site-desc<?php if (get_theme_mod( 'hide_tagline' )) { echo esc_attr(' screen-reader-text'); } ?>"><?php echo esc_html($site_desc); ?></p>
 				<?php } ?>
 							
 			</div>

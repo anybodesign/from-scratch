@@ -434,9 +434,9 @@ function fs_colors() {
 		/* If using CSS vars
 			
 		:root {
-			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>; 
-			--secondary_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
-			--third_color: <?php echo get_theme_mod('sidebar_color', '#FBFF00'); ?>;
+			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#FF0055')); ?>; 
+			--secondary_color: <?php echo esc_attr(get_theme_mod('title_color', '#23252B')); ?>;
+			--third_color: <?php echo esc_attr(get_theme_mod('sidebar_color', '#FBFF00')); ?>;
 		}
 		*/
 	</style>

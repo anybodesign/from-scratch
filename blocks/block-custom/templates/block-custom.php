@@ -14,7 +14,7 @@
 
 					<?php if ( $field ) { ?>
 					<div class="acf-block-something">
-						<?php echo $field; ?>
+						<?php echo esc_html($field); ?>
 					</div>
 					<?php } ?>
 										

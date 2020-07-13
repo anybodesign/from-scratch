@@ -23,18 +23,18 @@
 					
 					<p class="footer-copyright">
 						<?php if(get_theme_mod('footer_text')) {
-							echo get_theme_mod('footer_text', ''); 
+							echo esc_html(get_theme_mod('footer_text', '')); 
 						} else {
-							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
+							echo esc_html('&copy;'); echo date(' Y '); echo esc_html(bloginfo('name')).'.'; 	
 						} ?>
 						
-						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo ' out-of-reach'; } ?>" href="//wordpress.org"><?php _e('Powered by WordPress!', 'good-time'); ?></a>
+						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo esc_attr(' out-of-reach'); } ?>" href="//wordpress.org"><?php esc_html_e('Powered by WordPress!', 'from-scratch'); ?></a>
 					</p>
 					
 					<?php // The footer menu location ?>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav class="footer-nav" role="navigation" aria-label="<?php _e('Footer Menu', 'from-scratch'); ?>">
+					<nav class="footer-nav" role="navigation" aria-label="<?php esc_html_e('Footer Menu', 'from-scratch'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',
@@ -50,8 +50,8 @@
 		</footer>
 
 		<?php if(get_theme_mod('back2top') == true) { ?>
-			<button id="back2top" title="<?php _e('Back to top','from-scratch'); ?>">
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ui/back-to-top.svg" alt="">
+			<button id="back2top" title="<?php esc_html_e('Back to top','from-scratch'); ?>">
+				<img src="<?php echo FS_THEME_URL; ?>/img/ui/back-to-top.svg" alt="">
 			</button>
 		<?php } ?>
 

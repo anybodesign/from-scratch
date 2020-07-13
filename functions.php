@@ -467,7 +467,7 @@ add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
 // Excerpt link
 
 function fs_excerpt_more( $more ) {
-    return sprintf( '… <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
+    return sprintf( '&hellip; <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
         get_permalink( get_the_ID() ),
         __( 'Read More', 'from-scratch' )
     );
@@ -574,9 +574,9 @@ add_filter('tiny_mce_before_init', 'fs_tiny_formats');
 
 function fs_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
-    <input type="search" placeholder="' . __( 'Keywords' ) . '" value="' . get_search_query() . '" name="s" id="s">
-    <input type="submit" class="action-btn" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'">
+    <label class="screen-reader-text" for="s">' . __( 'Search for:', 'from-scratch' ) . '</label>
+    <input type="search" value="' . get_search_query() . '" name="s" id="s">
+    <input type="submit" class="action-btn" id="searchsubmit" value="'. esc_attr__( 'Search', 'from-scratch' ) .'">
     </form>';
  
     return $form;
@@ -608,13 +608,13 @@ function fs_custom_comments($comment, $args, $depth) {
 						printf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 							esc_url( get_comment_link( $comment->comment_ID ) ),
 							get_comment_time( 'c' ),
-							sprintf( __( '%1$s at %2$s' ), get_comment_date(), get_comment_time() )
+							sprintf( __( '%1$s at %2$s', 'from-scratch' ), get_comment_date(), get_comment_time() )
 						);
 					?>
 				</div>
 				<div class="comment-author-text">
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em class="pending"><?php _e('Your comment is awaiting moderation.') ?></em>
+						<em class="pending"><?php esc_html_e('Your comment is awaiting moderation.', 'from-scratch') ?></em>
 					<?php endif; ?>
 					
 					<?php comment_text(); ?>
@@ -623,13 +623,13 @@ function fs_custom_comments($comment, $args, $depth) {
 
 			<div class="reply">
 				<?php comment_reply_link( array_merge($args, array(
-				    'reply_text' => __('Reply'),
+				    'reply_text' => __('Reply', 'from-scratch'),
 				    'depth'      => $depth,
 				    'max_depth'  => $args['max_depth']
 				    )
 				)); ?>
 			</div>
-			<?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_comment_link( __( 'Edit', 'from-scratch' ), '<span class="edit-link">', '</span>' ); ?>
 
 		</article>
 		
