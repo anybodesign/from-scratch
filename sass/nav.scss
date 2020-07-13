@@ -26,7 +26,11 @@
 			top: -.5rem;
 			
 			.admin-bar & {
-				top: 27px;
+				top: 46px;
+				
+				@include rwd($admin-bar) {
+					top: 32px;
+				}
 			}
 		}
 		&:focus {
@@ -47,17 +51,25 @@
 .main-menu {
 	position: absolute;
 	top: 0; 
-	right: 0;
-	width: 80%;
+	left: 0;
+	width: 100%;
 	padding: $grid-padding;
+	padding-top: 10rem;
 	background-color: #fff;
 	
-	transform: translateX(110%);
+	transform: translateX(-110%);
 	transition: transform .4s ease-in-out;
 	z-index: 100;
 	
 	.menu-opened + & {
 		transform: translateX(0);
+	}
+	
+	@include rwd(small) {
+		width: 80%;
+	}
+	@include rwd(medium) {
+		width: 60%;
 	}
 	
 	@include rwd(large) {
