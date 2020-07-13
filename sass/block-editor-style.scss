@@ -10,7 +10,7 @@ Description: Have fun with Gutenberg style editor.
 
 /* Typography */
 
-.edit-post-visual-editor {
+.edit-post-visual-editor .wp-block {
 	
 	// Import custom block styles in admin
 	@import 'buttons.scss';
