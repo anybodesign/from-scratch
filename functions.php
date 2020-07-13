@@ -487,13 +487,13 @@ add_image_size( 'video-hd', 1920, 1080, true );
 
 function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'thumbnail-hd'	=> __( 'Thumbnail x2', 'fs-blog' ),
-        'medium-hd'		=> __( 'Medium x2', 'fs-blog' ),
-        'large-hd'		=> __( 'Large x2', 'fs-blog' ),
-        'screen-md'		=> __( 'Screen Medium', 'fs-blog' ),
-        'screen-hd'		=> __( 'Screen Full', 'fs-blog' ),
-        'video-md'		=> __( 'Video Medium', 'fs-blog' ),
-        'video-hd'		=> __( 'Video Full', 'fs-blog' ),
+        'thumbnail-hd'	=> __( 'Thumbnail x2', 'from-scratch' ),
+        'medium-hd'		=> __( 'Medium x2', 'from-scratch' ),
+        'large-hd'		=> __( 'Large x2', 'from-scratch' ),
+        'screen-md'		=> __( 'Screen Medium', 'from-scratch' ),
+        'screen-hd'		=> __( 'Screen Full', 'from-scratch' ),
+        'video-md'		=> __( 'Video Medium', 'from-scratch' ),
+        'video-hd'		=> __( 'Video Full', 'from-scratch' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
