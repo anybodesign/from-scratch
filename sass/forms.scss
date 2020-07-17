@@ -87,18 +87,10 @@ label, legend {
 }
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	cursor: pointer;
-	margin: 0 0 $grid-padding 0;
-	padding: $grid-padding $grid-padding*2;
+input[type="submit"],
+input[type="button"] {
 	border: 0;
-	width: auto; 
-	font-family: $font-regular;
-	font-size: 1.6rem;
-	border-radius: 0;
-	appearance: none;
+	cursor: pointer;
 }
 
 // Placeholders
