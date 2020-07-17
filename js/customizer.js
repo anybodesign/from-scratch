@@ -48,7 +48,7 @@
 	};
     wp.customize( 'primary_color', rootCustomProperty );
     wp.customize( 'secondary_color', rootCustomProperty );
-    wp.customize( 'third_color', rootCustomProperty );
+    wp.customize( 'accent_color', rootCustomProperty );
 	*/
     
     // WP Credits

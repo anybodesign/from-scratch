@@ -146,10 +146,10 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 				
-		// Third color
+		// Accent color
 		
 		$fs_customize->add_setting(
-			'third_color', 
+			'accent_color', 
 			array(
 				'default'			=> '',
 				'sanitize_callback'	=> 'sanitize_hex_color',
@@ -158,10 +158,10 @@ function fs_customize_register($fs_customize) {
 				'transport'			=> 'refresh', 
 			)
 		);
-		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'third_color', array(
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'accent_color', array(
 					'label'		=> __('Contrast color', 'from-scratch'),
 					'section'	=> 'colors',
-					'settings'	=> 'third_color',
+					'settings'	=> 'accent_color',
 				)
 			)
 		);
@@ -436,7 +436,7 @@ function fs_colors() {
 		:root {
 			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#FF0055')); ?>; 
 			--secondary_color: <?php echo esc_attr(get_theme_mod('title_color', '#23252B')); ?>;
-			--third_color: <?php echo esc_attr(get_theme_mod('sidebar_color', '#FBFF00')); ?>;
+			--accent_color: <?php echo esc_attr(get_theme_mod('sidebar_color', '#FBFF00')); ?>;
 		}
 		*/
 	</style>
