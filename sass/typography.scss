@@ -101,6 +101,10 @@ li ul {
     margin-bottom: 0;
 }
 
+::selection {
+	background-color: $accent-color;
+}
+
 // Custom Tinymce styles
 
 p.text-intro {
