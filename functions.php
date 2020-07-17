@@ -3,7 +3,12 @@
 define( 'FS_THEME_VERSION', '3.5.2' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
-	
+
+$primary = get_theme_mod('primary_color', '#303030');
+$secondary = get_theme_mod('secondary_color', '#606060');
+$accent = get_theme_mod('accent_color', '#FFFF00');
+$text_color = '#303030';
+$bg = '#fff';		
 
 // ------------------------
 // Theme Setup
@@ -16,7 +21,12 @@ if ( ! isset( $content_width ) )
 if ( ! function_exists( 'fs_setup' ) ) :
 
 function fs_setup() {
-	
+
+	global $primary;
+	global $secondary;
+	global $accent;
+	global $text_color;
+	global $bg;	
 	
 	// I18n
 	
@@ -111,12 +121,12 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'Black', 'from-scratch' ),
 	        'slug' => 'black',
-	        'color' => '#4a4a4a',
+	        'color' => $text_color,
 	    ),
 	    array(
 	        'name' => esc_html__( 'White', 'from-scratch' ),
 	        'slug' => 'white',
-	        'color' => '#ffffff',
+	        'color' => '#fff',
 	    ),
 
 	    // Customizer colors
@@ -124,17 +134,22 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'Primary color', 'from-scratch' ),
 	        'slug' => 'primary-color',
-	        'color' => get_theme_mod('primary_color', '#99cc00'),
+	        'color' => $primary,
 	    ),
 	    array(
 	        'name' => esc_html__( 'Secondary color', 'from-scratch' ),
 	        'slug' => 'secondary-color',
-	        'color' => get_theme_mod('secondary_color', '#606060'),
+	        'color' => $secondary,
 	    ),
 	    array(
-	        'name' => esc_html__( 'Complementary color', 'from-scratch' ),
-	        'slug' => 'third-color',
-	        'color' => get_theme_mod('third_color', '#8def12'),
+	        'name' => esc_html__( 'Accent color', 'from-scratch' ),
+	        'slug' => 'accent-color',
+	        'color' => $accent,
+	    ),
+	    array(
+	        'name' => esc_html__( 'Background color', 'from-scratch' ),
+	        'slug' => 'bg-color',
+	        'color' => $bg,
 	    ),
 	    
 	));	
@@ -191,7 +206,7 @@ function fs_acf_admin_css() {
 add_filter('admin_email_check_interval', '__return_false');
 
 function fs_disable_bloody_fullscreen() {
-	$script = "window.onload = function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } }";
+	$script = "jQuery( window ).load(function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } });";
 	wp_add_inline_script( 'wp-blocks', $script );
 }
 add_action( 'enqueue_block_editor_assets', 'fs_disable_bloody_fullscreen' );
@@ -731,6 +746,8 @@ if( class_exists('acf') ) {
 
 	// Translate ACF fields
 	
+	/* If needed
+		
 	function fs_custom_acf_settings_localization($localization){
 	  return true;
 	}
@@ -740,10 +757,51 @@ if( class_exists('acf') ) {
 	  return 'from-scratch';
 	}
 	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
-	
+	*/
+
+	// ACF colors
+
+	add_action('acf/input/admin_footer', 'fs_acf_colors_script');	
+
+	function fs_acf_colors_script() {
+
+		global $primary;
+		global $secondary;
+		global $accent;
+		global $text_color;
+		global $bg;
+				
+		$colors = ' "'.$primary.'", "'.$secondary.'", "'.$accent.'", "'.$text_color.'", "'.$bg.'" ';
+	 ?>
+	    <script type="text/javascript">
+	    (function($){
+	        
+			acf.add_filter('color_picker_args', function( args, field ){
+			
+			    args.palettes = [ <?php echo $colors; ?> ]
+			
+			    return args;
+			
+			});	
+	        
+	    })(jQuery);
+	    </script>
+	    <?php
+	}	
 		
 }
 
+
+// WP-Rocket
+
+function fs_wp_rocket_add_purge_posts_to_author() {
+	// gets the author role object
+	$role = get_role('editor');
+ 
+	// add a new capability
+	$role->add_cap('rocket_purge_posts', true);
+}
+add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
 
 
 // ------------------------
