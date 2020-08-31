@@ -11,7 +11,7 @@
  */
 ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('post-block'); ?>>
 						
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
@@ -23,11 +23,11 @@
 						
 						<div class="post-content">
 							<header class="post-header">
-								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+								<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<?php get_template_part('template-parts/post', 'meta'); ?>							
 							</header>
 							<div class="post-excerpt">
-								<p><?php the_excerpt(); ?></p>
+								<?php the_excerpt(); ?>
 							</div>
 						</div>
 						
