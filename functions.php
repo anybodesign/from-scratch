@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '3.5.2' );
+define( 'FS_THEME_VERSION', '3.6' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -205,12 +205,13 @@ function fs_acf_admin_css() {
 
 add_filter('admin_email_check_interval', '__return_false');
 
-function fs_disable_bloody_fullscreen() {
-	$script = "jQuery( window ).load(function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } });";
-	wp_add_inline_script( 'wp-blocks', $script );
+if (is_admin()) {
+	function fs_disable_bloody_fullscreen() {
+		$script = "jQuery( window ).load(function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } });";
+		wp_add_inline_script( 'wp-blocks', $script );
+	}
+	add_action( 'enqueue_block_editor_assets', 'fs_disable_bloody_fullscreen' );
 }
-add_action( 'enqueue_block_editor_assets', 'fs_disable_bloody_fullscreen' );
-
 
 // ------------------------
 // JS & CSS

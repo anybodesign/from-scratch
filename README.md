@@ -27,6 +27,15 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.6 - 2020.08.31
+* New Block editor styles for WP 5.5
+* CSS updates
+* Vars updates
+* Translation updates
+* Site name fix
+* Post Block excerpt fix
+* Disable Editor fullscreen fix
+
 ### 3.5.2 - 2020.07.13
 * Block editor styles fixed
 
