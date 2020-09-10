@@ -27,6 +27,13 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.6.1 - 2020.09.10
+* Block editor metabox styles
+* Admin Editor styles fix
+* Some CSS fix
+* Some CSS fix for WP 5.5
+* IAS JS and pagination added
+
 ### 3.6 - 2020.08.31
 * New Block editor styles for WP 5.5
 * CSS updates
