@@ -32,7 +32,11 @@ h1, h2, h3, h4, h5, h6,
 	color: $text-color;
 	font-family: $font-title;
 	font-weight: normal;
-	margin: 0 0 .75em 0;
+	margin: 1.25em 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
 	
 	b, strong {
 		font-weight: normal;
@@ -40,6 +44,11 @@ h1, h2, h3, h4, h5, h6,
 	i, em {
 		font-style: normal;
 	}
+
+	.white-text & {
+		color: #fff;
+	}
+		
 }
 
 h1, 
@@ -205,9 +214,15 @@ figure {
 	
 	img {
 		display: block;
+	}
+	
+	// WP block fix
+	
+	&:not([class*="is-resized"]) img {
 		width: 100%; 
 		height: auto;
 	}
+
 	
 	// Youtube links
 	

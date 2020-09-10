@@ -90,7 +90,9 @@ button,
 input[type="submit"],
 input[type="button"] {
 	border: 0;
+	border-radius: 0;
 	cursor: pointer;
+	appearance: none;
 }
 
 // Placeholders
@@ -378,26 +380,32 @@ input[type="submit"].gform_button {
 
 // If you use the ContactForm7 Plugin
 
-div.wpcf7-response-output {
-	margin: 10px 0 0 0 !important; 
-	padding: 5px !important;
+.wpcf7-response-output {
+	border: 0 !important; 
+	background-color: #B3003C; 
+	color: #fff;
+	margin: $grid-padding 0 0 0 !important; 
+	padding: $grid-padding !important;
 	font-family: $font-regular;
+	
+	.sent & {
+		background-color: $accent-color;
+		color: $text-color;
+	}
+	.spam & {
+		background-color: $primary-color;
+		color: #fff;
+	}
 }
-span.wpcf7-not-valid-tip {
-	color: #c00;
-	margin-top: -.5em;
-	padding-top: .25em;
-	border-top: #c00 1px solid;
+.wpcf7-not-valid {
+	border: #B3003C 2px solid !important;
 }
-div.wpcf7-validation-errors {
-	border: 0 !important; 
-	background-color: #c00; 
-	color: #fff !important;
-}
-div.wpcf7-mail-sent-ok {
-	border: 0 !important; 
-	background-color: #9c0; 
-	color: #fff !important;
+.wpcf7-not-valid-tip {
+	color: #B3003C;
+	margin-top: -2rem;
+	padding-top: .5rem;
+	border-top: #B3003C 4px solid;
+	font-family: $font-bold;
 }
 input[type="submit"].wpcf7-submit {
 	@extend .action-btn;
