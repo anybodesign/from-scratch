@@ -8,7 +8,45 @@ Description: Have fun with Gutenberg style editor.
 @import 'webfonts.scss';
 @import 'webfonts-admin.scss';
 
-/* Typography */
+
+// Global
+
+html.block-editor-editor-skeleton__html-container,
+html.interface-interface-skeleton__html-container {
+	font-size: 62.5%;
+
+	.block-editor-block-list__layout {
+		font-size: 1.6rem;
+		line-height: 1.5;
+		color: $text-color;
+	}
+}
+.edit-post-layout {
+
+	.interface-interface-skeleton__content {
+		background-color: transparent;		
+	}
+}
+
+// Layout 
+
+.wp-block {
+	max-width: 960px;
+}
+.edit-post-layout__metaboxes:not(:empty) {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	border-left: #ddd 1px solid;	
+	border-right: #ddd 1px solid;
+	
+	@include rwd(960px) {
+		margin-bottom: 40px;
+		border-bottom: #ddd 1px solid;
+	}	
+}
+
+// Typography
 
 	
 .editor-post-title .editor-post-title__input {
@@ -40,41 +78,32 @@ Description: Have fun with Gutenberg style editor.
 			max-width: 96% !important;
 			height: auto;
 		}
+	}
+	
+	/* Custom */
+		
+	p.text-intro {
+		font-size: 1.75em !important;
+		
+		.wp-block & {
+			font-size: 1.25em !important
+		}
+	}
+	p.text-mentions {
+		font-size: 0.8em !important;
+		
+		.wp-editor-container & {
+			font-size: 1em !important
+		}
+	}
+	a.action-btn {
+		background-color: $primary-color;
+		color: #fff !important;
+		padding: 5px 15px;
+		text-decoration: none;
+	}
+	
+	.white-text * {
+		color: #fff;
 	}	
-	
-}
-
-
-/* Custom */
-
-p.text-intro {
-	font-size: 1.75em !important;
-	
-	.wp-block & {
-		font-size: 1.25em !important
-	}
-}
-p.text-mentions {
-	font-size: 0.8em !important;
-	
-	.wp-editor-container & {
-		font-size: 1em !important
-	}
-}
-a.action-btn {
-	background-color: $primary-color;
-	color: #fff !important;
-	padding: 5px 15px;
-	text-decoration: none;
-}
-
-.white-text * {
-	color: #fff;
-}
-
-
-/* Layout */
-
-.wp-block {
-	max-width: 960px;
 }
