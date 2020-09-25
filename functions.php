@@ -116,39 +116,31 @@ function fs_setup() {
 	
 	add_theme_support( 'editor-color-palette', array(
 	    
-	    // Raw colors 
-	    
-	    array(
-	        'name' => esc_html__( 'Black', 'from-scratch' ),
-	        'slug' => 'black',
-	        'color' => $text_color,
-	    ),
-	    array(
-	        'name' => esc_html__( 'White', 'from-scratch' ),
-	        'slug' => 'white',
-	        'color' => '#fff',
-	    ),
-
 	    // Customizer colors
 	    
 	    array(
 	        'name' => esc_html__( 'Primary color', 'from-scratch' ),
-	        'slug' => 'primary-color',
+	        'slug' => 'primary',
 	        'color' => $primary,
 	    ),
 	    array(
 	        'name' => esc_html__( 'Secondary color', 'from-scratch' ),
-	        'slug' => 'secondary-color',
+	        'slug' => 'secondary',
 	        'color' => $secondary,
 	    ),
 	    array(
 	        'name' => esc_html__( 'Accent color', 'from-scratch' ),
-	        'slug' => 'accent-color',
+	        'slug' => 'accent',
 	        'color' => $accent,
 	    ),
+		array(
+			'name' => esc_html__( 'Text color', 'from-scratch' ),
+			'slug' => 'text',
+			'color' => $text_color,
+		),
 	    array(
 	        'name' => esc_html__( 'Background color', 'from-scratch' ),
-	        'slug' => 'bg-color',
+	        'slug' => 'bg',
 	        'color' => $bg,
 	    ),
 	    
@@ -842,7 +834,7 @@ function fs_wp_rocket_add_purge_posts_to_author() {
 	$role = get_role('editor');
  
 	// add a new capability
-	$role->add_cap('rocket_purge_posts', true);
+	$role->add_cap('rocket_purge_cache', true);
 }
 add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
 

@@ -5,36 +5,41 @@
 
 // Colors
 
-.has-primary-color-background-color {
+.has-primary-background-color {
 	background-color: $primary-color;
 }
-.has-secondary-color-background-color {
+.has-secondary-background-color {
 	background-color: $secondary-color;
 }
-.has-accent-color-background-color {
+.has-accent-background-color {
 	background-color: $accent-color;
 }
-.has-white-color-background-color {
-	background-color: #fff;
+.has-text-background-color {
+	background-color: $text-color;
 }
-.has-black-color-background-color {
-	background-color: #303030;
+.has-bg-background-color {
+	background-color: $bg-color;
 }
 
-.has-text-color.has-primary-color-color {
+.has-inline-color.has-primary-color,
+.has-text-color.has-primary-color {
 	color: $primary-color;
 }
-.has-text-color.has-secondary-color-color {
+.has-inline-color.has-secondary-color,
+.has-text-color.has-secondary-color {
 	color: $secondary-color;
 }
-.has-text-color.has-accent-color-color {
+.has-inline-color.has-accent-color,
+.has-text-color.has-accent-color {
 	color: $accent-color;
 }
-.has-text-color.has-white-color-color {
-	color: #fff;
+.has-inline-color.has-text-color,
+.has-text-color.has-text-color {
+	color: $text-color;
 }
-.has-text-color.has-black-color-color {
-	color: #303030;
+.has-inline-color.has-bg-color,
+.has-text-color.has-bg-color {
+	color: $bg-color;
 }
 
 
@@ -287,8 +292,9 @@ hr,
 
 // Posts
 
-.acf-block--post {}
-.acf-block-post-item {}
+.acf-block--posts {
+	.acf-block-post-item {}
+}
 
 
 // Testimonial
@@ -301,3 +307,8 @@ hr,
 .acf-block--advanced-list {}
 
 
+// Cards
+
+.acf-block--cards {	
+	.acf-block-cards-item {}
+}
