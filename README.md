@@ -27,6 +27,15 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.7 - 2020.09.25
+* Color CSS fix for the Block editor
+* Markup updates
+* CSS updates
+* Main menu focus fix
+* Breadcrumbs navxt function
+* Translation change
+* .pot file
+
 ### 3.6.1 - 2020.09.10
 * Block editor metabox styles
 * Admin Editor styles fix
