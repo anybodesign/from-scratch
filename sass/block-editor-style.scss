@@ -78,32 +78,33 @@ html.interface-interface-skeleton__html-container {
 			max-width: 96% !important;
 			height: auto;
 		}
-	}
-	
-	/* Custom */
-		
-	p.text-intro {
-		font-size: 1.75em !important;
-		
-		.wp-block & {
-			font-size: 1.25em !important
-		}
-	}
-	p.text-mentions {
-		font-size: 0.8em !important;
-		
-		.wp-editor-container & {
-			font-size: 1em !important
-		}
-	}
-	a.action-btn {
-		background-color: $primary-color;
-		color: #fff !important;
-		padding: 5px 15px;
-		text-decoration: none;
-	}
-	
-	.white-text * {
-		color: #fff;
 	}	
+}
+
+
+// TinyMCE Custom
+	
+	
+p.text-intro {
+	font-size: 1.75em !important;
+	
+	.wp-block & {
+		font-size: 1.25em !important
+	}
+}
+p.text-mentions {
+	font-size: 0.8em !important;
+	
+	.wp-editor-container & {
+		font-size: 1em !important
+	}
+}
+a.action-btn {
+	background-color: $primary-color;
+	//color: #fff !important;
+	padding: 5px 15px;
+	text-decoration: none;
+}	
+.white-text * {
+	color: #fff;
 }
