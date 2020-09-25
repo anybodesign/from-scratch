@@ -9,7 +9,7 @@
 
 
 fieldset {
-	margin: 0 0 1em 0; 
+	margin: $grid-padding*2 0; 
 	border: 0;
 	padding: 0;
 }
@@ -93,6 +93,9 @@ input[type="button"] {
 	border-radius: 0;
 	cursor: pointer;
 	appearance: none;
+}
+input[type="submit"] {
+	@extend .action-btn;
 }
 
 // Placeholders

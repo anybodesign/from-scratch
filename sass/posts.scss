@@ -190,63 +190,84 @@
 /* = Comments
 /* ------------------------- */
 
-.meta-comments {
+.comment-list {
+	list-style: none;
+	padding-left: 0;	
 	
+	.comment {
+		display: flex;
+		flex-direction: column;
+		margin: $grid-padding*4 0;
+		
+		@include rwd(medium) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;	
+		}
+		
+		.children {
+			
+		}
+	}
+	& > .comment {
+
+	}
+	
+	.comment-author.avatar {
+		width: 9.6rem;
+	}
+	
+	.comment-content {
+		
+		@include rwd(medium) {
+			flex: 1 0 0;
+			padding-left: $grid-padding*3;
+		}
+
+		a {
+			@include link-style();
+		}
+		.pending {
+			display: block;
+			margin: $grid-padding 0;
+			background-color: $secondary-color;
+			padding: $grid-padding;
+			color: #fff;
+		}		
+	}
+	.comment-author-name {
+		font-family: $font-bold;
+		font-size: 1.8rem;
+	}
+	.comment-date {
+		font-size: 1.4rem;
+		font-family: $font-mono;
+		margin-bottom: $grid-padding*2;
+	}
+	
+	.reply {
+		width: 100%;
+		margin-top: $grid-padding;
+		
+		@include rwd(medium) {
+			padding-left: calc(9.6rem + #{$grid-padding*3});
+		}
+		
+		a {
+			@include link-style();
+		}
+	}
 }
-
-.bypostauthor {
-	display: block;
-}
-
-
-/* ------------------------- */
-/* = Galleries
-/* ------------------------- */
-
-
-.gallery {
-	margin-bottom: 1.5em;
-}
-
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-
-.gallery-caption {
-	display: block;
+.comment-reply-title {
+	
+	small {
+		display: block;
+		font-family: $font-regular;
+		font-size: 1.6rem;
+		a {
+			display: inline-block;
+			margin-top: $grid-padding;
+			@include link-style();
+		}
+	}
 }
