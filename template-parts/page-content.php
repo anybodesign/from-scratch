@@ -15,9 +15,9 @@
 						<?php the_content(); ?>
 
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<figure class="page-figure">
+						<div class="page-figure">
 							<?php the_post_thumbnail('large-hd'); ?>
-						</figure>
+						</div>
 						<?php } ?>
 												
 					</div>

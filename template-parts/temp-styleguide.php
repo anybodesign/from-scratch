@@ -13,6 +13,8 @@
 
 					<h2>Typography (this is a subtitle)</h2>
 					
+					<p class="text-intro">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+					
 					<p>Curabitur blandit tempus porttitor. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit. Aenean eu leo quam. <strong>Pellentesque ornare</strong> sem lacinia quam venenatis vestibulum.</p>
 
 					<div>Inside a div…</div>
@@ -50,7 +52,7 @@
 					</ol>
 					
 					<blockquote>
-						“ Typography is the craft of endowing human language with a durable visual form.  (I'm a quote) “
+						Typography is the craft of endowing human language with a durable visual form.  (I'm a quote)
 						<cite>Robert Bringhurst</cite>
 					</blockquote>
 					
