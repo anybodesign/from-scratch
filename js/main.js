@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 
 	// Leave focus
 	
-	$('.main-menu > .menu-item > a').on('focus', function () {
+	$('.main-menu > .menu-item > a:not([href*=#])').on('focus', function () {
 		$('.sub-menu-unfold').removeClass('sub-menu-opened').attr('aria-expanded','false');
 		$('.sub-menu').hide().attr('aria-hidden','true');
 	});
