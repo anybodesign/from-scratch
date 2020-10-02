@@ -27,6 +27,10 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.7.1 - 2020.10.02
+* Hotfix for main JS
+* Blockquote basic style
+
 ### 3.7 - 2020.09.25
 * Color CSS fix for the Block editor
 * Markup updates
