@@ -288,23 +288,31 @@ figcaption {
 
 q,
 blockquote {
-	max-width: 75%;
-	padding: $grid-padding 0 $grid-padding $grid-padding*2;
-	border-left: $primary-color 2px solid;
+	border-left: $accent-color 3px solid;
+	
+	.page-content > & {
+		left: $grid-padding;
+		padding: $grid-padding*2;
+		
+		@include rwd(large) {
+			padding-right: 8.3333%;
+		}
+	}
 }
 q,
 blockquote,
 blockquote p {
-	font-family: $font-bolditalic;
+	font-family: $font-regular;
 	font-style: normal;
-	font-size: 2rem;
+	font-size: 2.8rem;
 }
 blockquote p {
 	margin-bottom: 0;
 }
 cite {
 	display: block;
-	font-family: $font-italic;
+	font-family: $font-regular;
+	font-style: normal;
 	margin-top: $grid-padding;
 	font-size: 85%;
 }
