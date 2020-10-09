@@ -438,16 +438,27 @@ function fs_custom_nav_menus() {
 add_action( 'init', 'fs_custom_nav_menus' );
 
 
-// Nav highlights
+// Nav highlights fix
 
 function fs_nav_classes( $classes, $item ) {
     
+	// Remove active state on page for posts
     if( ( is_post_type_archive() || is_search() || is_singular('project') ) && $item->title == 'News' ) {
         $classes = array_diff( $classes, array( 'current_page_parent' ) );
     }
     return $classes;
 }
 add_filter( 'nav_menu_css_class', 'fs_nav_classes', 10, 2 );
+
+
+// CPT highlights
+
+function fs_custom_active_item_classes($classes = array(), $menu_item = false){            
+        global $post;
+        $classes[] = ($menu_item->url == get_post_type_archive_link($post->post_type)) ? 'current-menu-item' : '';
+        return $classes;
+    }
+add_filter( 'nav_menu_css_class', 'fs_custom_active_item_classes', 10, 2 );
 
 
 // Nav tag for widget menus
