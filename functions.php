@@ -436,6 +436,18 @@ function fs_custom_nav_menus() {
 add_action( 'init', 'fs_custom_nav_menus' );
 
 
+// Nav highlights
+
+function fs_nav_classes( $classes, $item ) {
+    
+    if( ( is_post_type_archive() || is_search() || is_singular('project') ) && $item->title == 'News' ) {
+        $classes = array_diff( $classes, array( 'current_page_parent' ) );
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'fs_nav_classes', 10, 2 );
+
+
 // Nav tag for widget menus
 
 function fs_modify_nav_menu_args( $args ) {
