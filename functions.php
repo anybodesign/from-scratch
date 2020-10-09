@@ -50,6 +50,8 @@ function fs_setup() {
 	));
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+	add_theme_support( 'woocommerce' );
 
 /*
 	
@@ -739,8 +741,38 @@ if( class_exists('acf') ) {
 	    return $paths;
 	}
 
-	// Social Menu icons
+	// ACF colors
+
+	add_action('acf/input/admin_footer', 'fs_acf_colors_script');	
+
+	function fs_acf_colors_script() {
+
+		global $primary;
+		global $secondary;
+		global $accent;
+		global $text_color;
+		global $bg;
+				
+		$colors = ' "'.$primary.'", "'.$secondary.'", "'.$accent.'", "'.$text_color.'", "'.$bg.'" ';
+	 ?>
+	    <script type="text/javascript">
+	    (function($){
+	        
+			acf.add_filter('color_picker_args', function( args, field ){
+			
+			    args.palettes = [ <?php echo $colors; ?> ]
+			
+			    return args;
+			
+			});	
+	        
+	    })(jQuery);
+	    </script>
+	    <?php
+	}
 	
+	// Social Menu icons
+	/*
 	add_filter('wp_nav_menu_objects', 'fs_nav_menu_icons', 10, 2);
 	
 	function fs_nav_menu_icons( $items, $args ) {
@@ -757,10 +789,31 @@ if( class_exists('acf') ) {
 
 		return $items;
 	}
-
+	*/
+	
+	// Widgets
+	/*
+	add_filter('dynamic_sidebar_params', 'fs_dynamic_sidebar_footer');
+	
+	function fs_dynamic_sidebar_footer( $params ) {
+		
+		$widget_id = $params[0]['widget_id'];
+		
+		$icon = get_field('icon', 'widget_' . $widget_id);
+		
+		if( $icon ) {
+			
+			$params[0]['before_title'] = '<img class="icon" src="' . $icon['url'] . '" alt="">' . $params[0]['before_title'];
+			$params[0]['before_widget'] = preg_replace( '/class="widget-/', '/class="has-icon widget-', $params[0]['before_widget'], 1 );		
+		}
+		
+		// return
+		return $params;
+	}
+	*/
 
 	//	ACF Options page
-	
+	/*
 	if (function_exists('acf_add_options_page')) {
 	    
 		add_action( 'init', 'fs_acf_add_options_page' );
@@ -790,10 +843,10 @@ if( class_exists('acf') ) {
 			
 		}
 	}
-
-	// Translate ACF fields
+	*/
 	
-	/* If needed
+	// Translate ACF fields
+	/*
 		
 	function fs_custom_acf_settings_localization($localization){
 	  return true;
@@ -805,36 +858,6 @@ if( class_exists('acf') ) {
 	}
 	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
 	*/
-
-	// ACF colors
-
-	add_action('acf/input/admin_footer', 'fs_acf_colors_script');	
-
-	function fs_acf_colors_script() {
-
-		global $primary;
-		global $secondary;
-		global $accent;
-		global $text_color;
-		global $bg;
-				
-		$colors = ' "'.$primary.'", "'.$secondary.'", "'.$accent.'", "'.$text_color.'", "'.$bg.'" ';
-	 ?>
-	    <script type="text/javascript">
-	    (function($){
-	        
-			acf.add_filter('color_picker_args', function( args, field ){
-			
-			    args.palettes = [ <?php echo $colors; ?> ]
-			
-			    return args;
-			
-			});	
-	        
-	    })(jQuery);
-	    </script>
-	    <?php
-	}	
 		
 }
 
