@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '3.7.1' );
+define( 'FS_THEME_VERSION', '3.8' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -726,7 +726,7 @@ if( class_exists('acf') ) {
 	
 	// Custom blocks
 
-	$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );
+	$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.', '.DS_Store') );
 	
 	foreach( $my_blocks as $block ) {
 		include_once 'blocks/'. $block .'/'. $block .'.php';
