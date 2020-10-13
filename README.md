@@ -27,6 +27,12 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.8 - 2020.10.13
+* CPT nav higlight fix
+* CPT function reloaded
+* ACF widget fields
+* Woocommerce support and basic styles
+
 ### 3.7.1 - 2020.10.02
 * Hotfix for main JS
 * Blockquote basic style
