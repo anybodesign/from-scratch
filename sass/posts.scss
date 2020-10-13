@@ -5,51 +5,61 @@
 .post-block {
 	position: relative;
 }
+.post-figure {
+	
+}
+.post-content {
+	
+}
+.post-title {
+	
+}
+.post-meta {
+	
+	p, span {
+		a {
+			@include link-style();
+		}
+	}
+}
+.post-excerpt {
+	
+}
 
-
-.sticky {
-	display: block;
-}
-.tag-links {
-}
-.nav-links {
-	font-family: $font-regular;
-}
-.page-links {
-}
-.meta-infos {
-}
 
 /* ------------------------- */
 /* = Archives
 /* ------------------------- */
 
 .the-posts {
-	
+	display: flex;
+	flex-wrap: wrap;
+		
 	.page-content > & {
 		padding: 0;
 	}
-	
-	// @include rwd(medium) {
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-	// 			
-	// 	.post-block {
-	// 		width: calc(50% - #{$grid-padding}*2);
-	// 		margin: $grid-padding;
-	// 	}
-	// }
-	// 
-	// @include rwd(large) {
-	// 	.post-block {
-	// 		width: calc(33.3333% - #{$grid-padding}*2);
-	// 	}
-	// }
+
+	.post-block {
+		width: calc(50% - #{$grid-padding}*2);
+		margin: $grid-padding;
+		
+		@include rwd(medium) {
+			width: calc(33.3333% - #{$grid-padding}*2);
+		}
+	}			
 }
 
 // Sidebar
 
 
+
+/* ------------------------- */
+/* = Singles
+/* ------------------------- */
+
+.single-post {
+	
+}
 
 /* ------------------------- */
 /* = Pagination
@@ -179,12 +189,6 @@
 		}
 	}
 }
-
-
-/* ------------------------- */
-/* = Singles
-/* ------------------------- */
-
 
 /* ------------------------- */
 /* = Comments

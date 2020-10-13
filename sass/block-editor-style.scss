@@ -59,7 +59,9 @@ html.interface-interface-skeleton__html-container {
 	
 	// Import custom block styles in admin
 	@import 'buttons.scss';
+	@import 'posts.scss';	
 	@import 'blocks.scss';
+	@import 'forms-custom.scss';
 
 	h1, h2, h3, h4, h5, h6,
 	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {

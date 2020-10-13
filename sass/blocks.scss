@@ -272,43 +272,95 @@ hr,
 
 // Text 
 
-.acf-block--text {}
+.acf-block--text {
+	.acf-block-container {
+		
+	}
+}
 
 
 // Text+Img
 
-.acf-block--textimg {}
+.acf-block--textimg {
+	.acf-block-container {
+		
+	}
+}
 
 
 // Gallery 
 
-.acf-block--gallery {}
+.acf-block--gallery {
+	.acf-block-container {
+		
+	}
+}
 
 
 // CTA
 
-.acf-block--cta {}
+.acf-block--cta {
+	.acf-block-container {
+		
+	}
+}
 
 
 // Posts
 
 .acf-block--posts {
-	.acf-block-post-item {}
+	.acf-block-container {
+		
+		.acf-block-post-item {
+			@extend .post-block;
+		}
+		.acf-block-post-figure {
+			@extend .post-figure;
+		}
+		.acf-block-post-title {
+			@extend .post-title;
+		}
+		.acf-block-post-metas {
+			@extend .post-meta;
+		}
+		.acf-block-post-excerpt {
+			@extend .post-excerpt;
+		}
+	}
 }
 
 
 // Testimonial
 
-.acf-block--testimonial {}
+.acf-block--testimonial {
+	.acf-block-container {
+		
+	}
+}
 
 
 // Lists Advanced
 
-.acf-block--advanced-list {}
+.acf-block--advanced-list {
+	.acf-block-container {
+		
+	}
+}
 
 
 // Cards
 
 .acf-block--cards {	
-	.acf-block-cards-item {}
+	.acf-block-container {
+		
+	}
+}
+
+
+// Banner
+
+.acf-block--pagebanner {
+	.acf-block-container {
+		
+	}	
 }

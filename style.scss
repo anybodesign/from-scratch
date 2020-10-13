@@ -4,7 +4,7 @@ Author: Thomas Villain
 Author URI: https://anybodesign.com/
 Theme URI: https://github.com/anybodesign/from-scratch
 Description: A WordPress Starter Theme
-Version: 3.7.1
+Version: 3.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: from-scratch
@@ -25,8 +25,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'sass/webfonts.scss';
 @import 'sass/typography.scss';
 @import 'sass/buttons.scss';
-@import 'sass/blocks.scss';
 @import 'sass/forms.scss';
+@import 'sass/forms-custom.scss';
 
 // Specific Styles
 @import 'sass/basics.scss';
@@ -35,8 +35,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'sass/frontpage.scss';
 @import 'sass/content.scss';
 @import 'sass/posts.scss';
+@import 'sass/blocks.scss';
 @import 'sass/footer.scss';
 
 // Helpers & Plugins
 @import 'sass/animations.scss';
 @import 'sass/misc.scss';
+@import 'sass/woocommerce.scss';
