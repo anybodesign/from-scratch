@@ -133,7 +133,7 @@
 		transition: background .2s ease-in-out;
 		
 		&:hover,
-		&.focus-visible {
+		&:focus {
 			background-color: $primary-color;
 			color: #fff;
 		}
@@ -176,7 +176,7 @@
 			transition: .3s ease-in-out;
 		}
 		&:hover::after,
-		&.focus-visible::after {
+		&:focus::after {
 			width: 100%;
 		}
 

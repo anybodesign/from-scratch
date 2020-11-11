@@ -21,7 +21,7 @@
 		text-decoration: none;
 		transition: top .2s ease-in;
 	
-		&.focus-visible,
+		&:focus,
 		&:focus {
 			top: -.5rem;
 			
@@ -98,7 +98,7 @@
 			text-decoration: none;
 		}
 		& > a:hover, 
-		& > a.focus-visible,
+		& > a:focus,
 		&.current-menu-item > a {
 			
 		}
@@ -191,7 +191,7 @@
 			display: block;
 		}
 		a:hover, 
-		a.focus-visible,
+		a:focus,
 		&.current-menu-item a {
 			
 		}

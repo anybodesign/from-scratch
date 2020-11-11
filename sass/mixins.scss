@@ -15,7 +15,7 @@
 	&:hover {
 		border-bottom-width: .4rem;
 	}
-	&.focus-visible {
+	&:focus {
 		background-color: $secondary-color;
 		color: #fff;
 	}
@@ -83,7 +83,7 @@
 		transition: opacity .2s ease-in-out;
 	}
 	a:hover img,
-	a.focus-visible img {
+	a:focus img {
 		opacity: $opacity;
 	}	
 }

@@ -66,7 +66,7 @@
 		&:hover {
 			border-bottom-width: .4rem;
 		}
-		&.focus-visible {
+		&:focus {
 			background-color: $text-color;
 			border-bottom-color: $text-color;
 			color: #fff;
@@ -172,7 +172,7 @@
 			transition: .2s ease-in-out;
 			
 			&:hover,
-			&.focus-visible {
+			&:focus {
 				padding-left: $grid-padding;
 				padding-right: $grid-padding;
 				background-color: $primary-color;
@@ -225,7 +225,9 @@ hr,
 		margin-top: 2rem;
 
 		&.is-style-wide {
-			max-width: 50rem;
+			@include rwd(medium) {
+				max-width: 50rem;
+			}
 		}		
 	}
 }

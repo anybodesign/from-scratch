@@ -295,13 +295,6 @@ function fs_scripts_load() {
 
 			// Other stuff
 			wp_register_script(
-				'focus-visible', 
-				FS_THEME_URL . '/js/focus-visible.js', 
-				array(), 
-				FS_THEME_VERSION, 
-				true
-			);
-			wp_register_script(
 				'skiplink-focus-fix', 
 				FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 				array(), 
@@ -387,7 +380,6 @@ function fs_scripts_load() {
 				wp_enqueue_script( 'comment-reply' );
 			}
 			
-			wp_enqueue_script( 'focus-visible' );
 			wp_enqueue_script( 'skiplink-focus-fix' );
 			wp_enqueue_script( 'main' );			
 
@@ -443,7 +435,7 @@ add_action( 'init', 'fs_custom_nav_menus' );
 function fs_nav_classes( $classes, $item ) {
     
 	// Remove active state on page for posts
-    if( ( is_post_type_archive() || is_search() || is_singular('project') ) && $item->title == 'News' ) {
+    if( ( is_post_type_archive() || is_tax() || is_search() || is_singular('project') ) && $item->title == 'News' ) {
         $classes = array_diff( $classes, array( 'current_page_parent' ) );
     }
     return $classes;

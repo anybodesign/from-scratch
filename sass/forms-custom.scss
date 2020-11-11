@@ -12,6 +12,10 @@
 	
 	@include rwd(medium) {
 		display: flex;
+		
+		[class*="formfield-"] {
+			flex: 1 0 0;
+		}
 	}
 }
 
@@ -118,13 +122,13 @@ span.wpcf7-list-item {
 	margin: 0 $grid-padding 0 0;
 }
 
-.formfield-radio input[type="radio"].focus-visible + span,
-.formfield-radio input[type="checkbox"].focus-visible + span {
+.formfield-radio input[type="radio"]:focus + span,
+.formfield-radio input[type="checkbox"]:focus + span {
 	border-bottom: $primary-color 1px dashed;
 }
 
-.formfield-radio input[type="radio"].focus-visible + span::after,
-.formfield-radio input[type="checkbox"].focus-visible + span::after {
+.formfield-radio input[type="radio"]:focus + span::after,
+.formfield-radio input[type="checkbox"]:focus + span::after {
 	//opacity: .5;
 }
 
@@ -133,6 +137,13 @@ span.wpcf7-list-item {
 	@extend .formfield-checkbox;
 }
 
+// CF7
+.formfield-select {
+	.wpcf7-form-control-wrap {
+		display: block;
+		@extend .formfield-select--container;
+	}
+}
 
 
 // Select

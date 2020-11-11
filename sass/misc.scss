@@ -36,7 +36,7 @@
 			@include a11y-hide();
 			transition: .2s ease-in-out;
 			
-			&:hover, &.focus-visible {
+			&:hover, &:focus {
 				transform: scale(1.4);
 				background-color: $primary-color;
 			}
@@ -61,7 +61,12 @@
 /* = Misc
 /* ------------------------- */
 
-.error-404 {}
+.error404 {
+	
+	.searchform {
+		margin-bottom: $grid-padding*2;
+	}
+}
 
 
 // Back to top

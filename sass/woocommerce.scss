@@ -63,7 +63,7 @@
 					transition: background .4s ease-in-out;
 				}
 				a:hover,
-				a.focus-visible,
+				a:focus,
 				&.is-active a {
 					background-color: $accent-color;
 				}

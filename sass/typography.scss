@@ -18,10 +18,10 @@ body {
 
 // Focus visible
 
-.js-focus-visible :focus:not(.focus-visible) {
+.js-focus-visible :focus:not(:focus) {
 	outline: none;
 }
-.js-focus-visible .focus-visible {
+.js-focus-visible :focus {
 	// Focus styles 
 }
 
@@ -257,7 +257,7 @@ figure {
 			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
 		}
 		
-		&.focus-visible::before, 
+		&:focus::before, 
 		&:hover::before {
 			transform: translateX(-50%) translateY(-50%) scale(1.2);
 			background-color: $primary-color;
@@ -265,7 +265,7 @@ figure {
 		& img {
 			transition: opacity .2s ease-in-out;
 		}
-		&.focus-visible img, 
+		&:focus img, 
 		&:hover img {
 			opacity: .7;
 		}

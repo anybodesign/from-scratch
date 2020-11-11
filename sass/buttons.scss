@@ -17,7 +17,7 @@
 	color: #fff;
 	transition: background .2s linear;
 	
-	&.focus-visible, 
+	&:focus, 
 	&:hover {
 		background-color: $secondary-color;
 	}
@@ -33,7 +33,7 @@
 	background-color: #fff;
 	color: $text-color;
 
-	&.focus-visible, 
+	&:focus, 
 	&:hover {
 		background-color: $text-color;
 		color: #fff;
