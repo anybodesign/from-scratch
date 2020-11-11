@@ -21,8 +21,8 @@
 		text-decoration: none;
 		transition: top .2s ease-in;
 	
-		&:focus,
 		&:focus {
+			outline: none;
 			top: -.5rem;
 			
 			.admin-bar & {
@@ -32,9 +32,6 @@
 					top: 32px;
 				}
 			}
-		}
-		&:focus {
-			outline: none;
 		}
 
 	}
@@ -99,8 +96,10 @@
 		}
 		& > a:hover, 
 		& > a:focus,
-		&.current-menu-item > a {
-			
+		&.current-menu-item > a,
+		&.current_page_parent > a {
+			color: $secondary-color;
+			text-decoration: underline;
 		}
 		a:focus {
 			

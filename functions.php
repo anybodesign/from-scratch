@@ -435,7 +435,7 @@ add_action( 'init', 'fs_custom_nav_menus' );
 function fs_nav_classes( $classes, $item ) {
     
 	// Remove active state on page for posts
-    if( ( is_post_type_archive() || is_tax() || is_search() || is_singular('project') ) && $item->title == 'News' ) {
+    if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('project') ) && $item->title == 'Blog' ) {
         $classes = array_diff( $classes, array( 'current_page_parent' ) );
     }
     return $classes;
@@ -445,9 +445,11 @@ add_filter( 'nav_menu_css_class', 'fs_nav_classes', 10, 2 );
 
 // CPT highlights
 
-function fs_custom_active_item_classes($classes = array(), $menu_item = false){            
+function fs_custom_active_item_classes($classes = array(), $menu_item = false) {            
         global $post;
-        $classes[] = ($menu_item->url == get_post_type_archive_link($post->post_type)) ? 'current-menu-item' : '';
+		if ( is_singular() ) {
+        	$classes[] = ($menu_item->url == get_post_type_archive_link($post->post_type)) ? 'current-menu-item' : '';
+		}
         return $classes;
     }
 add_filter( 'nav_menu_css_class', 'fs_custom_active_item_classes', 10, 2 );
