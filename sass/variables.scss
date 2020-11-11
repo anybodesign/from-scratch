@@ -15,6 +15,7 @@ $half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the 
 
 // Break-Points
 
+$width-tiny: 23.375em;		// @note: 374px
 $width-small: 30em; 		// @note: 480px
 $width-medium: 45em;		// @note: 720px
 $width-large: 60em; 		// @note: 960px

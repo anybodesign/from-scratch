@@ -148,6 +148,11 @@
 			@content;
 		}
 	}
+	@else if $width == tiny {
+		@media only screen and (min-width: $width-tiny) {
+			@content;
+		}
+	}
 	@else {
 		@media only screen and (min-width: $width) {
 			@content;
