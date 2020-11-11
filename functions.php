@@ -234,10 +234,9 @@ function fs_scripts_load() {
 			    	null, 
 			    	true
 		    );
-			*/
 			
 			// Fancybox
-			/*
+			
 		   	wp_register_script( 
 			    	'fancybox', 
 			    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
@@ -252,7 +251,17 @@ function fs_scripts_load() {
 			    	null, 
 			    	true
 		    );
-
+			
+			// Scroll-Out
+			
+			wp_register_script(
+				'scrollout', 
+				FS_THEME_URL . '/js/scroll-out.min.js', 
+				array(), 
+				FS_THEME_VERSION, 
+				true
+			);
+			
 			// IAS
 						
 			if ( is_home() || is_archive() || is_search() ) {
@@ -272,7 +281,6 @@ function fs_scripts_load() {
 					true
 				);
 			}
-
 			*/			
 			
 			// Back 2 top
@@ -292,7 +300,7 @@ function fs_scripts_load() {
 				FS_THEME_VERSION, 
 				true
 			);
-
+			
 			// Other stuff
 			wp_register_script(
 				'skiplink-focus-fix', 
@@ -369,7 +377,22 @@ function fs_scripts_load() {
 				wp_enqueue_script( 'ias' );
 				wp_enqueue_script( 'ias-init' );
 			}
+			
+			wp_enqueue_script( 'scrollout' );
+			function fs_scrollout_js() {
+				print '
+				<script>
+					ScrollOut({
+						targets: "section, .post-block, hr, .wpcf7-form",
+						once: true,
+					});
+				</script>
+				';
+			}
+			add_action('wp_footer', 'fs_scrollout_js', 100);
+			
 			*/
+			
 			if ( get_theme_mod('back2top') == true ) {
 				wp_enqueue_script( 'back2top' );
 			}

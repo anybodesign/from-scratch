@@ -108,3 +108,55 @@
 		}
 	}	
 }
+
+
+// Scrollout Animations
+
+hr[data-scroll="in"] {
+	animation: stretch 1s ease-in-out;
+}
+section[data-scroll="in"],
+.wpcf7-form {
+	animation: slide_up 1s ease-in-out;
+}
+
+.boxed-cta[data-scroll="in"] {
+	
+	.acf-block-cta-text {
+		animation: move_left 1s ease-in-out;
+	}
+	.acf-block-cta-btn {
+		animation: move_right 1s ease-in-out;
+	}
+}
+
+.post-block[data-scroll="in"] {
+	
+	.post-figure,
+	.acf-block-post-figure {
+		animation: fade_in 1s ease-in-out;
+	}
+	.post-meta,
+	.acf-block-post-metas {
+		animation: border_opacity 1s ease-in-out;
+	}
+}
+
+@include rwd(medium) {
+	
+	.acf-block--textimg[data-scroll="in"] {
+		.acf-block-textimg-picture {
+			animation: slide_right 1s ease-in-out;
+		}
+		.right .acf-block-textimg-picture {
+			animation: slide_left 1s ease-in-out;
+		}
+		.acf-block-textimg-text {
+			animation: slide_left 1s ease-in-out;
+		}
+		.right .acf-block-textimg-picture {
+			animation: slide_right 1s ease-in-out;
+		}
+	}
+	
+}

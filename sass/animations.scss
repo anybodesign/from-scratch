@@ -2,7 +2,7 @@
 /* = Animations
 /* ------------------------- */
 
-@keyframes drop-in {
+@keyframes drop_in {
 	0% {
 		transform: translateY(-100%);
 	}
@@ -17,7 +17,7 @@
 	}
 }
 
-@keyframes pop-in {
+@keyframes pop_in {
 	0% {
 		transform: translateY(-1rem);
 	}
@@ -32,7 +32,7 @@
 	}
 }
 
-@keyframes go-back {
+@keyframes go_back {
 	0% {
 		margin-right: 2.5rem;
 	}
@@ -47,7 +47,7 @@
 	}
 }
 
-@keyframes fall-in {
+@keyframes fall_in {
 	from {
 		opacity: 0;
 		margin-top: -1.5rem;
@@ -58,11 +58,87 @@
 	}
 }
 
-@keyframes fade-in {
+@keyframes slide_down {
+	from {
+		opacity: 0;
+		top: -2.5rem;
+	}
+	to {
+		opacity: 1;
+		top: 0;
+	}
+}
+
+@keyframes slide_up {
+	from {
+		opacity: 0;
+		top: 2.5rem;
+	}
+	to {
+		opacity: 1;
+		top: 0;
+	}
+}
+
+@keyframes slide_left {
+	from {
+		transform: translateX(2.5rem);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide_right {
+	from {
+		transform: translateX(-2.5rem);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes move_left {
+	from {
+		margin-left: 2.5rem;
+	}
+	to {
+		margin-left: 0;
+	}
+}
+
+@keyframes move_right {
+	from {
+		margin-left: -2.5rem;
+	}
+	to {
+		margin-left: 0;
+	}
+}
+
+@keyframes fade_in {
 	from {
 		opacity: 0;
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes stretch {
+	from {
+		transform: scaleX(0.1);
+	}
+	to {
+		transform: none;
+	}
+}
+
+@keyframes border_opacity {
+    from {
+		border-bottom-color: transparent;
+	}
+	to {
+		border-bottom-color: initial;
 	}
 }
