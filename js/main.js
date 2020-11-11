@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 	
 	// Responsive Main Menu
 
-	$('#menu-toggle').click(function() {
+	$('#menu_toggle').click(function() {
 		$(this).toggleClass('menu-opened');
 			
 			if ($(this).hasClass('menu-opened')) {
@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 			if ($(window).width() > 960) {
 		    	$('.main-menu').show().removeAttr('style').removeAttr('aria-hidden');
 		    	$('.sub-menu').show().removeAttr('style');
-		    	$('#menu-toggle').removeClass('menu-opened').removeAttr('aria-expanded');
+		    	$('#menu_toggle').removeClass('menu-opened').removeAttr('aria-expanded');
 			}
 		});
 	
