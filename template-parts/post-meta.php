@@ -14,8 +14,12 @@
 							<div class="post-meta">
 								<p class="meta-infos">
 									<?php esc_html_e( 'Posted on&nbsp;', 'from-scratch' ); ?><?php echo the_time( get_option('date_format') ); ?>
-									<?php esc_html_e( 'by&nbsp;', 'from-scratch' ); the_author(); ?>
-									<?php esc_html_e( 'in&nbsp;', 'from-scratch' ); the_category(', '); ?>
+									<?php if ( get_theme_mod('meta_author') != false ) {
+										esc_html_e( 'by&nbsp;', 'from-scratch' ); the_author(); 
+									} ?>
+									<?php if ( get_theme_mod('meta_category') != false ) {
+										esc_html_e( 'in&nbsp;', 'from-scratch' ); the_category(', '); 
+									} ?>
 								</p>
 								
 								<?php $comment = get_comments_number(); if ( $comment > 0 ) : ?>

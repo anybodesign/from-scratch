@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-10-13 15:24+0200\n"
-"PO-Revision-Date: 2020-10-13 15:27+0200\n"
+"POT-Creation-Date: 2020-11-11 13:46+0100\n"
+"PO-Revision-Date: 2020-11-11 13:47+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -60,7 +60,7 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:37 functions.php:432
+#: footer.php:37 functions.php:447
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -104,84 +104,84 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:431 template-parts/header-nav.php:6
+#: functions.php:446 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:433
+#: functions.php:448
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:531
+#: functions.php:548
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:549
+#: functions.php:566
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:550
+#: functions.php:567
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:551
+#: functions.php:568
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:552
+#: functions.php:569
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:553
+#: functions.php:570
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:554
+#: functions.php:571
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:555
+#: functions.php:572
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:579
+#: functions.php:596
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:604
+#: functions.php:621
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:610
+#: functions.php:627
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:616
+#: functions.php:633
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:636
+#: functions.php:653
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:638
+#: functions.php:655
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:670
+#: functions.php:687
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:676
+#: functions.php:693
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:685
+#: functions.php:702
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:691
+#: functions.php:708
 msgid "Edit"
 msgstr "Modifier"
 
@@ -451,27 +451,35 @@ msgstr "Afficher un bouton Haut de page"
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:365
+#: inc/customizer.php:359
+msgid "Show the author in post meta"
+msgstr "Afficher l’auteur dans les post meta"
+
+#: inc/customizer.php:375
+msgid "Show the category in post meta"
+msgstr "Afficher la catégorie dans les post meta"
+
+#: inc/customizer.php:400
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:368
+#: inc/customizer.php:403
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:369
+#: inc/customizer.php:404
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:370
+#: inc/customizer.php:405
 msgid "Version 3"
 msgstr "Version 3"
 
-#: inc/customizer.php:394
+#: inc/customizer.php:429
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:395
+#: inc/customizer.php:430
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -576,15 +584,15 @@ msgstr "Oops! Page introuvable"
 msgid "Posted on&nbsp;"
 msgstr "Publié le&nbsp;"
 
-#: template-parts/post-meta.php:17
+#: template-parts/post-meta.php:18
 msgid "by&nbsp;"
 msgstr "par&nbsp;"
 
-#: template-parts/post-meta.php:18
+#: template-parts/post-meta.php:21
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
 
-#: template-parts/post-meta.php:24
+#: template-parts/post-meta.php:28
 #, php-format
 msgid "%s comment"
 msgid_plural "%s comments"
