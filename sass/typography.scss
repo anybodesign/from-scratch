@@ -293,11 +293,19 @@ figcaption {
 
 q,
 blockquote {
-	border-left: $accent-color 3px solid;
+	&::before {
+		content: '';
+		display: block;
+		width: .3rem;
+		height: 100%;
+		border-left: $accent-color 3px solid;
+		position: absolute;
+		top: 0;
+		left: $grid-padding;
+	}
 	
 	.page-content > & {
-		left: $grid-padding;
-		padding: $grid-padding*2;
+		padding: $grid-padding*2 $grid-padding*4;
 		
 		@include rwd(large) {
 			padding-right: 8.3333%;
@@ -421,11 +429,14 @@ code {
 	}
 }
 pre {
-	padding: $grid-padding;
 	border: $text-color 1px dashed;
 	white-space: pre-line;
+	
+	.page-content > & {
+		padding: $grid-padding;
+		width: calc(100% - #{$grid-padding}*2);
+	}
 }
-
 mark {
 	padding: $grid-padding;
 	background: rgba(255, 255, 0, .9); // Transparent yellow
