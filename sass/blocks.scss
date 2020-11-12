@@ -213,10 +213,8 @@
 
 // Separators 
 
-hr,
 .wp-block-separator {
-	border: 0;
-	border-top: $text-color 1px solid;
+	@extend hr;
 }
 .wp-block-separator {
 	
