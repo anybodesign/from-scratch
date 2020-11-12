@@ -15,14 +15,15 @@ $half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the 
 
 // Break-Points
 
-$width-tiny: 23.375em;		// @note: 374px
-$width-small: 30em; 		// @note: 480px
-$width-medium: 45em;		// @note: 720px
-$width-large: 60em; 		// @note: 960px
-$width-wide: 75em;	 		// @note: 1200px
-$width-xwide: 90em;	 		// @note: 1440px
+$width-tiny: 23.375em;			// @note: 374px
+$width-small: 30em; 			// @note: 480px
+$width-intermediate: 37.5em; 	// @note: 600px
+$width-medium: 45em;			// @note: 720px
+$width-large: 60em; 			// @note: 960px
+$width-wide: 75em;	 			// @note: 1200px
+$width-xwide: 90em;	 			// @note: 1440px
 
-$admin-bar: 48.875em;	 	// @note: 782px
+$admin-bar: 48.875em;	 		// @note: 782px
 
 
 // Colors

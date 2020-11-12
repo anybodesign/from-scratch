@@ -163,6 +163,11 @@
 			@content;
 		}
 	}
+	@else if $width == smallmedium {
+		@media only screen and (min-width: $width-intermediate) {
+			@content;
+		}
+	}
 	@else if $width == small {
 		@media only screen and (min-width: $width-small) {
 			@content;
