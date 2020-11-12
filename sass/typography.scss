@@ -111,7 +111,7 @@ li ul {
 }
 
 ::selection {
-	background-color: $accent-color;
+	background-color: transparentize($accent-color, .8);
 }
 
 // Custom Tinymce styles
@@ -151,6 +151,11 @@ a:hover {
 	p {
 		a:not([class*="-btn"]) {
 			@include link-style();
+		}
+	}
+	.white-text p {
+		a:not([class*="-btn"]) {
+			@include link-style-white();
 		}
 	}
 	
@@ -321,9 +326,13 @@ cite {
 // Misc
 
 hr {
-  box-sizing: content-box;
   height: 0; 
-  overflow: visible;
+  border: 0;
+  border-top: $text-color 1px solid;
+  
+  .page-content > & {
+	margin: $grid-padding*5 auto;
+  }
 }
 
 iframe {

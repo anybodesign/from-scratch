@@ -32,6 +32,26 @@
 		border-bottom-color: transparent;
 	}	
 }
+@mixin link-style-white() {
+
+	color: #fff;
+	border-bottom-color: #fff;
+	
+	&:hover {
+		border-bottom-width: .4rem;
+	}
+	&:focus {
+		background-color: #fff;
+		color: $text-color;
+	}
+	&:visited {
+		color: #fff;
+		border-bottom-color: #fff;
+	}
+	&:visited:focus {
+		color: $text-color;
+	}	
+}
 
 // Center mode
 
