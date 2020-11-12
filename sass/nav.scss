@@ -92,7 +92,15 @@
 		}
 		
 		a {
+			display: block;
+			padding: $grid-padding 0;
+			border-top: $text-color 1px solid;
 			text-decoration: none;
+			
+			@include rwd(large) {
+				padding: 0;
+				border-top: 0;
+			}
 		}
 		& > a:hover, 
 		& > a:focus,
@@ -217,7 +225,26 @@
 	border: 0; 
 	padding: 0;
 	background: transparent;
+
+	span {
+		@include a11y-hidden();
+	}
+	
+	@include rwd(large) {
+		height: 2.2rem; 
+		width: 2.2rem;
+		top: .2rem;
+		right: -2.8rem; 
+	}
+	@include rwd(wide) {
+		left: -999rem;
 		
+		&:focus {
+			left: auto;
+			right: 0;
+		}
+	}
+	
 	&::after, 
 	&::before {
 		content: '';
@@ -226,47 +253,46 @@
 		top: 2rem; 
 		left: 1.5rem;
 		width: 1.6rem; 
-		height: .3rem;
-		background-color: $text-color;
-		transition: transform .2s ease-in-out;
-	}
-	&::after {
-		transform: rotate(-90deg);
-	}
-	span {
-		@include a11y-hidden();
-	}
-	
-	&.sub-menu-opened::after {
-		transform: rotate(45deg);
-	}
-	&.sub-menu-opened::before {
-		transform: rotate(-45deg);
-	}
-	
-	@include rwd(large) {
-		height: 2.2rem; 
-		width: 2.2rem;
-		top: .2rem;
-		right: -2.8rem; 
+		height: 0;
+		border-top: $text-color 2px solid;
+		transition: transform .1s ease-in-out;
 		
-		&::after, 
-		&::before {
+		@include rwd(large) {
 			top: 1rem; 
 			left: .65rem;
 			width: $grid-padding; 
-			height: .2rem;
-		} 
+		}
 	}
 	
-	@include rwd(wide) {
-		left: -999rem;
-		
-		&:focus {
-			left: auto;
-			right: 0;
-		}
-	}	
+	// Plus version	
+	// &::after {
+	// 	transform: rotate(-90deg);
+	// }
+	// &.sub-menu-opened::after {
+	// 	transform: rotate(45deg);
+	// }
+	// &.sub-menu-opened::before {
+	// 	transform: rotate(-45deg);
+	// }
+	
+	// Pointer version
+	&::before {
+		left: 1rem;
+		transform: rotate(45deg);
+	}
+	&::after {
+		left: 2rem;
+		transform: rotate(-45deg);
+	}
+	&.sub-menu-opened::after {
+		left: 1.5rem;
+		transform: rotate(0);
+	}
+	&.sub-menu-opened::before {
+		left: 1.5rem;
+		transform: rotate(0);
+	}
+	
 
 }
 
