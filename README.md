@@ -27,6 +27,14 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 3.9 - 2020.11.12
+* Updated focus-visible (and optionnal)
+* Added two breakpoints
+* Added ScrollOut JS
+* Customizer: post meta options
+* CSS, blocks and style guide update
+* Fixed current item highlight
+
 ### 3.8 - 2020.10.13
 * CPT nav higlight fix
 * CPT function reloaded
