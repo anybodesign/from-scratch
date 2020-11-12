@@ -302,6 +302,15 @@ function fs_scripts_load() {
 			);
 			
 			// Other stuff
+			/*
+			wp_register_script(
+				'focus-visible', 
+				FS_THEME_URL . '/js/focus-visible.min.js', 
+				array(), 
+				FS_THEME_VERSION, 
+				true
+			);
+			*/
 			wp_register_script(
 				'skiplink-focus-fix', 
 				FS_THEME_URL . '/js/skip-link-focus-fix.js', 
@@ -390,8 +399,8 @@ function fs_scripts_load() {
 				';
 			}
 			add_action('wp_footer', 'fs_scrollout_js', 100);
-			
 			*/
+			
 			
 			if ( get_theme_mod('back2top') == true ) {
 				wp_enqueue_script( 'back2top' );
@@ -403,6 +412,7 @@ function fs_scripts_load() {
 				wp_enqueue_script( 'comment-reply' );
 			}
 			
+			//wp_enqueue_script( 'focus-visible' );
 			wp_enqueue_script( 'skiplink-focus-fix' );
 			wp_enqueue_script( 'main' );			
 
