@@ -5,51 +5,51 @@
 
 // Link Style
 
-@mixin link-style() {
-
+@mixin link-style($bg: dark) {
+	
+	$color: $secondary-color;
+	$text: $secondary-color;
+	
+	@if $bg == white {
+		$color: #fff;
+		$text: $accent-color;
+	}
+	
 	text-decoration: none;
-	color: $secondary-color;
-	border-bottom: $secondary-color 2px solid;
+	padding-bottom: .25rem;
+    background-image:
+		linear-gradient(
+			transparent 0,
+			transparent 0.9rem,
+			$color 0.9rem,
+			$color 1rem
+		);
+    background-size: 100% 1rem;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
 	transition: .2s ease-in-out;
 	
 	&:hover {
-		border-bottom-width: .4rem;
+		color: $text;
+		background-image:
+		linear-gradient(
+			transparent 0,
+			transparent 0.9rem,
+			$secondary-color 0.9rem,
+			$secondary-color 1rem
+		);
+		background-size: 20% 1rem;
 	}
 	&:focus {
-		background-color: $secondary-color;
+		background-color: $text-color;
 		color: #fff;
-	}
-	&:visited {
-		color: $text-color;
-		border-bottom-color: $text-color;
-		border-bottom-width: 1px;
-	}
-	&:visited:focus {
-		color: #fff;
+		background-image: none;
 	}
 	&:active {
 		color: $secondary-color;
-		border-bottom-color: transparent;
-	}	
-}
-@mixin link-style-white() {
-
-	color: #fff;
-	border-bottom-color: #fff;
-	
-	&:hover {
-		border-bottom-width: .4rem;
 	}
-	&:focus {
-		background-color: #fff;
-		color: $text-color;
-	}
-	&:visited {
+	&:focus:visited {
 		color: #fff;
-		border-bottom-color: #fff;
-	}
-	&:visited:focus {
-		color: $text-color;
 	}	
 }
 
@@ -98,7 +98,7 @@
 
 // Opacity effect on hovered images links
 
-@mixin img-opacity($opacity: .5) {
+@mixin img-opacity($opacity: .7) {
 	a img {
 		transition: opacity .2s ease-in-out;
 	}
