@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-11-11 13:46+0100\n"
-"PO-Revision-Date: 2020-11-11 13:47+0100\n"
+"POT-Creation-Date: 2020-11-26 18:41+0100\n"
+"PO-Revision-Date: 2020-11-26 18:41+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -60,7 +60,7 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:37 functions.php:447
+#: footer.php:37 functions.php:461
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -104,84 +104,88 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:446 template-parts/header-nav.php:6
+#: functions.php:459 template-parts/header-toolbar.php:4
+msgid "Toolbar Menu"
+msgstr "Menu barre d'outils"
+
+#: functions.php:460 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:448
+#: functions.php:462
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:548
+#: functions.php:562
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:566
+#: functions.php:580
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:567
+#: functions.php:581
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:568
+#: functions.php:582
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:569
+#: functions.php:583
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:570
+#: functions.php:584
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:571
+#: functions.php:585
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:572
+#: functions.php:586
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:596
+#: functions.php:624
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:621
+#: functions.php:649
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:627
+#: functions.php:655
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:633
+#: functions.php:661
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:653
+#: functions.php:681
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:655
+#: functions.php:683
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:687
+#: functions.php:715
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:693
+#: functions.php:721
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:702
+#: functions.php:730
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:708
+#: functions.php:736
 msgid "Edit"
 msgstr "Modifier"
 
@@ -475,11 +479,30 @@ msgstr "Version 2"
 msgid "Version 3"
 msgstr "Version 3"
 
+#: inc/customizer.php:428
+msgid "Default banner"
+msgstr "Bannière par défaut"
+
 #: inc/customizer.php:429
+msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
+"max.)"
+
+#: inc/customizer.php:449
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/customizer.php:450
+msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
+
+#: inc/customizer.php:470
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:430
+#: inc/customizer.php:471
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -580,6 +603,14 @@ msgstr "Résultats de la recherche pour : %s"
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
+#: template-parts/page-content.php:27 template-parts/post-pagination.php:38
+msgid "Page"
+msgstr "Page"
+
+#: template-parts/page-content.php:27
+msgid "Pages:"
+msgstr "Pages :"
+
 #: template-parts/post-meta.php:16
 msgid "Posted on&nbsp;"
 msgstr "Publié le&nbsp;"
@@ -614,10 +645,6 @@ msgstr "Page précédente"
 #: template-parts/post-pagination.php:37
 msgid "Next page"
 msgstr "Page suivante"
-
-#: template-parts/post-pagination.php:38
-msgid "Page"
-msgstr "Page"
 
 #. Theme Name of the plugin/theme
 msgid "From Scratch"
@@ -755,9 +782,6 @@ msgstr "Style Guide"
 
 #~ msgid "Tagged with:"
 #~ msgstr "Étiquetté&nbsp;:"
-
-#~ msgid "Pages:"
-#~ msgstr "Pages :"
 
 #~ msgid "A WordPress Starter Theme using Prid’x"
 #~ msgstr "Un starter thème WordPress utilisant Prid’x"
