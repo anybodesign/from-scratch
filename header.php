@@ -33,19 +33,16 @@
 	?>
 	
 	<header role="banner" id="site_head">
-		<div class="row inner justify-between">
+		<div class="row inner justify-between">	
+		<?php 
+			get_template_part('template-parts/header', 'toolbar'); 
+			get_template_part('template-parts/header', 'brand'); 
 			
-			<?php 
-				get_template_part('template-parts/header', 'brand'); 
-			?>
-			<?php 
-				if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
-					get_template_part('template-parts/header', 'nav');
-				}
-			?>
-
+			if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+				get_template_part('template-parts/header', 'nav');
+			}
+		?>
 		</div>
 	</header>
 
-
-		<main class="content-area" role="main" id="site_main">
+	<main class="content-area" role="main" id="site_main">
