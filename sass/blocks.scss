@@ -217,6 +217,21 @@
 
 // Separators 
 
+hr {
+	height: 0; 
+	border: 0;
+	border-top: $text-color 1px solid;
+	
+	.page-content > & {
+		width: calc(100% - #{$grid-padding*4});
+		margin: $grid-padding*5 auto;
+		
+		@include rwd(large) {
+			max-width: calc(#{$max-width} - #{$grid-padding*4});
+		}
+	}
+}
+
 .wp-block-separator {
 	@extend hr;
 }
