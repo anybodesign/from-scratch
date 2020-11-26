@@ -11,15 +11,10 @@
  */
 get_header(); ?>
 
-				<div class="page-wrap">
-					
-					<?php 
-						while ( have_posts() ) : the_post();
-							get_template_part( 'template-parts/page', 'banner' );
-							get_template_part( 'template-parts/page', 'content' );
-						endwhile;					
-					?>
-
+				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
+				
+				<div class="page-wrap">					
+					<?php get_template_part( 'template-parts/page', 'content' ); ?>
 				</div>
 				
 <?php get_footer(); ?>

@@ -12,7 +12,7 @@
 ?>
 					<div class="page-banner"<?php fs_bg_img(); ?>>
 						<div class="inner">
-
+						
 							<h1 class="page-title">
 							<?php 	
 								if ( is_home() && ! is_front_page() ) {
@@ -37,12 +37,14 @@
 									the_archive_description( '<div class="archive-desc">', '</div>' );
 								}
 								if ( is_single() ) {
-									get_template_part('template-parts/post', 'meta');							
+									while ( have_posts() ) : the_post();
+									get_template_part('template-parts/post', 'meta');
+									endwhile;							
 								} 
 							?>
 						</div>
 					</div>
-
+					
 					<?php if ( function_exists('bcn_display') ) { ?>
 					<div class="breadcrumbs-nav">
 						<nav class="inner">

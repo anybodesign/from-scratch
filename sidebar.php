@@ -10,13 +10,15 @@
  * @version 1.0
  */
 ?>
-				<aside class="widget-area" role="complementary">
-					
-					<?php // Sidebar example
-						
-							if ( is_active_sidebar( 'widgets_area1' ) ) { 
-								dynamic_sidebar( 'widgets_area1' ); 
-							} 
-					?>
-					
-				</aside>
+					<div class="page-sidebar">
+						<aside class="widget-area" role="complementary">
+							
+							<?php // Sidebar example
+								
+								if ( is_active_sidebar( 'widgets_area1' ) ) { 
+									dynamic_sidebar( 'widgets_area1' ); 
+								} 
+							?>
+							
+						</aside>
+					</div>

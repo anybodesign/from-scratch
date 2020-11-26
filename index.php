@@ -11,16 +11,13 @@
  */ 
 get_header(); ?>
 
+				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
+				
 				<div class="page-wrap has-sidebar">
 					
-					<?php 
-						get_template_part( 'template-parts/page', 'banner' ); 
-					?>
-
 					<div class="page-content">
-					
-						<?php // The Loop ?>
-						<?php if ( have_posts() ) : ?>		
+						
+						<?php if ( have_posts() ) : // The Loop ?>		
 						<div id="posts_list" class="the-posts" >
 							<?php 
 								while ( have_posts() ) : the_post();
@@ -30,19 +27,16 @@ get_header(); ?>
 						</div>
 						
 						<?php get_template_part( 'template-parts/post', 'pagination' ); ?>
-				
+						
 						<?php
 						else:
 							get_template_part( 'template-parts/nothing' );
 						endif; 
 						?>
 					</div>
-
-
-					<div class="page-sidebar">
-						<?php get_sidebar(); ?>
-					</div>
-										
+					
+					<?php get_sidebar(); ?>
+					
 				</div>
 
 <?php get_footer(); ?>
