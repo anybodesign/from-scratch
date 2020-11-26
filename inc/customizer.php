@@ -412,7 +412,48 @@ function fs_customize_register($fs_customize) {
 	// -
 	// + + + + + + + + + + 
 
-	
+		// Default Image
+		
+		$fs_customize->add_setting(
+			'bg_default', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$fs_customize->add_control( 
+			new WP_Customize_Image_control(
+				$fs_customize, 
+				'bg_default', 
+				array(
+					'label'			=> __('Default banner', 'from-scratch'),
+					'description'	=> __('Choose a default picture for the page banner. (2048 x 625 pixels max.)', 'from-scratch'),
+					'section'		=> 'fs_pictures_section',
+					'settings'		=> 'bg_default',
+				)
+			)
+		);
+		
+		// Blog Image
+		
+		$fs_customize->add_setting(
+			'bg_blog', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$fs_customize->add_control( 
+			new WP_Customize_Image_control(
+				$fs_customize, 
+				'bg_blog', 
+				array(
+					'label'			=> __('Blog', 'from-scratch'),
+					'description'	=> __('Choose a picture for the blog banner. (2048 x 625 pixels max.)', 'from-scratch'),
+					'section'		=> 'fs_pictures_section',
+					'settings'		=> 'bg_blog',
+				)
+			)
+		);
+		
 		// 404 Image
 		
 		$fs_customize->add_setting(
