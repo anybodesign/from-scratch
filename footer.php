@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-		</main> <?php // END content ?>
+	</main> <?php // END content ?>
 		
 	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 
