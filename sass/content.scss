@@ -55,6 +55,20 @@
 		@include center();
 	}
 	
+	@include rwd(medium) {
+		& > p,
+		& > [class*="contact-form-7"],
+		& .acf-block-text--1col,
+		& #comments {
+			padding-right: 20rem;
+		}
+		
+		& > p.has-text-align-center {
+			padding-right: 10rem;
+			padding-left: 10rem;
+		}
+	}
+	
 	& > *.alignwide {
 		max-width: $max-width-large;
 	}
