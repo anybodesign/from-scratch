@@ -27,6 +27,15 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
+### 4.0 - 2020.01.12
+* Functions update & fix
+* Customizer theme default pictures
+* Toolbar nav menu
+* Woocommerce templates
+* Markup update & cleaning
+* CSS update
+* FR translation update
+
 ### 3.9 - 2020.11.12
 * Updated focus-visible (and optionnal)
 * Added two breakpoints
