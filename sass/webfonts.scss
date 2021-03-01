@@ -6,11 +6,11 @@
 
 // Define your custom fonts :)
 
-$f-regular: Asap-Regular;
-$f-italic: Asap-Italic;
-$f-bold: Asap-Medium;
-$f-bolditalic: Asap-MediumItalic;
-$f-title: Miriam-Libre-Bold;
+$f-regular: barlow-medium-webfont;
+$f-italic: barlow-mediumitalic-webfont;
+$f-bold: barlow-bold-webfont;
+$f-bolditalic: barlow-bolditalic-webfont;
+$f-title: barlowsemicondensed-bold-webfont;
 
 $fontface-regular: local('#{$f-regular}'), url('fonts/#{$f-regular}.woff2') format('woff2'), url('fonts/#{$f-regular}.woff') format('woff');
 $fontface-italic: local('#{$f-italic}'), url('fonts/#{$f-italic}.woff2') format('woff2'), url('fonts/#{$f-italic}.woff') format('woff');	
