@@ -10,16 +10,17 @@
 	display: inline-block;
 	padding: $grid-padding $grid-padding*2;
 	font-size: 1.4rem;
-	font-family: $font-bold;
+	font-family: var(--font_bold);
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: $text-color;
-	color: #fff;
+	background-color: var(--accent_color);
+	color: var(--btn_text);
 	transition: background .2s linear;
 	
 	&:focus, 
 	&:hover {
-		background-color: $secondary-color;
+		background-color: var(--text_color);
+		color: var(--btn_text_hover);
 	}
 	&:focus {
 		outline: none;
@@ -31,11 +32,11 @@
 .white-btn {
 	@extend .action-btn;
 	background-color: #fff;
-	color: $text-color;
+	color: var(--text_color);
 
 	&:focus, 
 	&:hover {
-		background-color: $secondary-color;
-		color: #fff;
+		background-color: var(--text_color);
+		color: var(--btn_text_hover);
 	}	
 }
