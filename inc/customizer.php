@@ -103,11 +103,11 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'primary_color', 
 			array(
-				'default'			=> '',
+				'default'			=> '#23252b',
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
-				'transport'			=> 'refresh', 
+				'transport'			=> 'postMessage', 
 			)
 		);
 		$fs_customize->add_control(
@@ -115,9 +115,10 @@ function fs_customize_register($fs_customize) {
 				$fs_customize, 
 				'primary_color', 
 				array(
-					'label'		=> __('Primary color', 'from-scratch'),
-					'section'	=> 'colors',
-					'settings'	=> 'primary_color',
+					'label'			=> __('Primary color', 'from-scratch'),
+					'description'	=> __('Main color and titles color', 'from-scratch'),
+					'section'		=> 'colors',
+					'settings'		=> 'primary_color',
 				)
 			)
 		);
@@ -127,11 +128,11 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'secondary_color', 
 			array(
-				'default'			=> '',
+				'default'			=> '#606060',
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
-				'transport'			=> 'refresh', 
+				'transport'			=> 'postMessage', 
 			)
 		);
 		$fs_customize->add_control( 
@@ -151,18 +152,170 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'accent_color', 
 			array(
+				'default'			=> '#ceff00',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'accent_color', array(
+					'label'			=> __('Contrast color', 'from-scratch'),
+					'description'	=> __('Links and contrast color', 'from-scratch'),
+					'section'		=> 'colors',
+					'settings'		=> 'accent_color',
+				)
+			)
+		);
+		
+		// Buttons
+		
+		$fs_customize->add_setting(
+			'btn_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'refresh',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'btn_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Buttons white text', 'from-scratch'),
+				'section'		=> 'colors',
+				'settings'		=> 'btn_text',
+			)
+		);
+		$fs_customize->add_setting(
+			'btn_text_hover', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'refresh',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'btn_text_hover', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Buttons white text on mouse over', 'from-scratch'),
+				'section'		=> 'colors',
+				'settings'		=> 'btn_text_hover',
+			)
+		);
+		
+		// Text color
+		
+		$fs_customize->add_setting(
+			'text_color', 
+			array(
+				'default'			=> '#23252b',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'text_color', array(
+					'label'		=> __('Text color', 'from-scratch'),
+					'section'	=> 'colors',
+					'settings'	=> 'text_color',
+				)
+			)
+		);
+		
+		// Background color
+		
+		$fs_customize->add_setting(
+			'bg_color', 
+			array(
+				'default'			=> '#f0f0f0',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'bg_color', array(
+					'label'		=> __('Background color', 'from-scratch'),
+					'section'	=> 'colors',
+					'settings'	=> 'bg_color',
+				)
+			)
+		);
+		
+		// Header color
+		
+		$fs_customize->add_setting(
+			'header_color', 
+			array(
+				'default'			=> '#ffffff',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'header_color', array(
+					'label'		=> __('Header color', 'from-scratch'),
+					'section'	=> 'colors',
+					'settings'	=> 'header_color',
+				)
+			)
+		);
+		$fs_customize->add_setting(
+			'header_white_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'header_white_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White text in header', 'from-scratch'),
+				'section'		=> 'colors',
+				'settings'		=> 'header_white_text',
+			)
+		);
+		
+		// Footer color
+		
+		$fs_customize->add_setting(
+			'footer_color', 
+			array(
 				'default'			=> '',
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
-				'transport'			=> 'refresh', 
+				'transport'			=> 'postMessage', 
 			)
 		);
-		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'accent_color', array(
-					'label'		=> __('Contrast color', 'from-scratch'),
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'footer_color', array(
+					'label'		=> __('Footer color', 'from-scratch'),
 					'section'	=> 'colors',
-					'settings'	=> 'accent_color',
+					'settings'	=> 'footer_color',
 				)
+			)
+		);
+		$fs_customize->add_setting(
+			'footer_white_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'footer_white_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White text in footer', 'from-scratch'),
+				'section'		=> 'colors',
+				'settings'		=> 'footer_white_text',
 			)
 		);
 
@@ -250,6 +403,25 @@ function fs_customize_register($fs_customize) {
 				'label'			=> __('Hide the website tagline', 'from-scratch'),
 				'section'		=> 'fs_header_section',
 				'settings'		=> 'hide_tagline',
+			)
+		);
+		
+		// Searchbar
+		
+		$fs_customize->add_setting(
+			'searchbar', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'searchbar', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display search in toolbar', 'from-scratch'),
+				'section'		=> 'fs_header_section',
+				'settings'		=> 'searchbar',
 			)
 		);
 	
@@ -343,6 +515,63 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		// IAS
+		
+		$fs_customize->add_setting(
+			'use_ias', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'use_ias', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Load new posts on click', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'use_ias',
+			)
+		);
+		
+		// Scrollout
+		
+		$fs_customize->add_setting(
+			'use_scrollout', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'use_scrollout', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Use Scrollout to animate blocks on scroll', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'use_scrollout',
+			)
+		);
+		
+		// Fancybox
+		
+		$fs_customize->add_setting(
+			'use_fancybox', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'use_fancybox', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Use Fancybox to enlarge pictures', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'use_fancybox',
+			)
+		);
+			
 		// Post metas
 		
 		$fs_customize->add_setting(
@@ -392,7 +621,6 @@ function fs_customize_register($fs_customize) {
 				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
 			)
 		);
-		
 		$fs_customize->add_control(
 			'layout_option', 
 			array(
@@ -407,6 +635,32 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 
+	// Theme Fonts
+	// -
+	// + + + + + + + + + + 
+
+		$fs_customize->add_setting(
+			'webfont', 
+			array(
+				'default' => 'barlow',
+				'sanitize_callback' => 'fs_customizer_sanitize_font_layout',
+			)
+		);
+		$fs_customize->add_control(
+			'webfont', 
+			array(
+				'type' => 'radio',
+				'label' => __( 'Choose your fonts', 'from-scratch' ),
+				'section' => 'fs_fonts_section',
+				'choices' => array(
+					'barlow' => __( 'Barlow', 'from-scratch' ),
+					'bebas' => __( 'Bebas & Bitter', 'from-scratch' ),
+					'playfair' => __( 'Playfair & Atkinson', 'from-scratch' ),
+					'luciole' => __( 'Luciole', 'from-scratch' ),
+					'miriam' => __( 'Miriam Libre & Asap', 'from-scratch' ),
+				),
+			)
+		);
 
 	// Theme Pictures
 	// -
@@ -500,22 +754,103 @@ function fs_customizer_sanitize_radio_layout( $input ) {
     }
     return $input;
 }
+function fs_customizer_sanitize_font_layout( $input ) {
+    if( !in_array( $input, array( 'barlow', 'bebas', 'playfair', 'luciole', 'miriam' ) ) ) {
+        $input = 'barlow';
+    }
+    return $input;
+}
 
 
 // Customizer Colors Output
 
-function fs_colors() {
-	?>
+function fs_inline_styles() { ?>
+
 	<style>
-		/* If using CSS vars
-			
 		:root {
-			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#FF0055')); ?>; 
-			--secondary_color: <?php echo esc_attr(get_theme_mod('title_color', '#23252B')); ?>;
-			--accent_color: <?php echo esc_attr(get_theme_mod('sidebar_color', '#FBFF00')); ?>;
+			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#23252b')); ?>; 
+			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#606060')); ?>;
+			--accent_color: <?php echo esc_attr(get_theme_mod('accent_color', '#ceff00')); ?>;	
+			--bg_color: <?php echo esc_attr(get_theme_mod('bg_color', '#f0f0f0')); ?>;			
+			--text_color: <?php echo esc_attr(get_theme_mod('text_color', '#23252b')); ?>;				
+			--header_color: <?php echo esc_attr(get_theme_mod('header_color', '#ffffff')); ?>;
+			
+			<?php if ( get_theme_mod('btn_text') ) { ?>
+			--btn_text: #ffffff;
+			<?php }
+				if ( get_theme_mod('btn_text_hover') ) { ?>
+			--btn_text_hover: #ffffff;
+			<?php } ?>
+			
+			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
+			--font_title: 'Title-Bebas', var(--font_stack);
+			--font_regular: 'Regular-Bebas', var(--font_stack);
+			--font_italic: 'Italic-Bebas', var(--font_stack);
+			--font_bold: 'Bold-Bebas', var(--font_stack);
+			--font_bolditalic: 'BoldItalic-Bebas', var(--font_stack);
+			<?php }
+				if ( get_theme_mod('webfont') == 'playfair' ) { ?>
+			--font_title: 'Title-Playfair', var(--font_stack);
+			--font_regular: 'Regular-Playfair', var(--font_stack);
+			--font_italic: 'Italic-Playfair', var(--font_stack);
+			--font_bold: 'Bold-Playfair', var(--font_stack);
+			--font_bolditalic: 'BoldItalic-Playfair', var(--font_stack);
+			<?php }
+				if ( get_theme_mod('webfont') == 'luciole' ) { ?>
+			--font_title: 'Title-Luciole', var(--font_stack);
+			--font_regular: 'Regular-Luciole', var(--font_stack);
+			--font_italic: 'Italic-Luciole', var(--font_stack);
+			--font_bold: 'Bold-Luciole', var(--font_stack);
+			--font_bolditalic: 'BoldItalic-Luciole', var(--font_stack);
+			<?php }
+				if ( get_theme_mod('webfont') == 'miriam' ) { ?>
+			--font_title: 'Title-Miriam', var(--font_stack);
+			--font_regular: 'Regular-Miriam', var(--font_stack);
+			--font_italic: 'Italic-Miriam', var(--font_stack);
+			--font_bold: 'Bold-Miriam', var(--font_stack);
+			--font_bolditalic: 'BoldItalic-Miriam', var(--font_stack);
+			<?php } ?>
 		}
-		*/
 	</style>
-	<?php
-}
-add_action('wp_head','fs_colors');
+
+<?php }
+add_action('wp_head','fs_inline_styles');
+
+// Admin fonts
+
+add_action('admin_print_styles', 'fs_admin_inline_styles' );
+function fs_admin_inline_styles() { ?>
+	
+	<style>
+		:root {
+			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
+			--font_title: 'Title-Bebas', var(--font_stack) !important;
+			--font_regular: 'Regular-Bebas', var(--font_stack) !important;
+			--font_italic: 'Italic-Bebas', var(--font_stack) !important;
+			--font_bold: 'Bold-Bebas', var(--font_stack) !important;
+			--font_bolditalic: 'BoldItalic-Bebas', var(--font_stack) !important;
+			<?php }
+				if ( get_theme_mod('webfont') == 'playfair' ) { ?>
+			--font_title: 'Title-Playfair', var(--font_stack) !important;
+			--font_regular: 'Regular-Playfair', var(--font_stack) !important;
+			--font_italic: 'Italic-Playfair', var(--font_stack) !important;
+			--font_bold: 'Bold-Playfair', var(--font_stack) !important;
+			--font_bolditalic: 'BoldItalic-Playfair', var(--font_stack) !important;
+			<?php }
+				if ( get_theme_mod('webfont') == 'luciole' ) { ?>
+			--font_title: 'Title-Luciole', var(--font_stack) !important;
+			--font_regular: 'Regular-Luciole', var(--font_stack) !important;
+			--font_italic: 'Italic-Luciole', var(--font_stack) !important;
+			--font_bold: 'Bold-Luciole', var(--font_stack) !important;
+			--font_bolditalic: 'BoldItalic-Luciole', var(--font_stack) !important;
+			<?php }
+				if ( get_theme_mod('webfont') == 'miriam' ) { ?>
+			--font_title: 'Title-Miriam', var(--font_stack) !important;
+			--font_regular: 'Regular-Miriam', var(--font_stack) !important;
+			--font_italic: 'Italic-Miriam', var(--font_stack) !important;
+			--font_bold: 'Bold-Miriam', var(--font_stack) !important;
+			--font_bolditalic: 'BoldItalic-Miriam', var(--font_stack) !important;
+			<?php } ?>
+		}
+	</style>
+<?php }
