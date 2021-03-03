@@ -30,16 +30,16 @@ select {
 	width: 100%;
 	margin: 0 0 $grid-padding*2 0;
 	padding: $grid-padding;
-	color: $text-color; 
-	border: $text-color 1px solid; 
+	color: var(--text_color); 
+	border: var(--text_color) 1px solid; 
 	background-color: #fff;
 	font-size: 1.6rem;
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 	border-radius: 0;
 	appearance: none;
 	
 	&:focus {
-		background-color: $text-color;
+		background-color: var(--text_color);
 		color: #fff; 	
 	}
 	&:focus {
@@ -59,7 +59,7 @@ textarea {
 
 input[type="checkbox"]:focus + label, 
 input[type="radio"]:focus + label {
-	border-bottom: $text-color 2px dashed; 
+	border-bottom: var(--text_color) 2px dashed; 
 }
 
 input[type="checkbox"], 
@@ -101,8 +101,8 @@ input[type="submit"] {
 // Placeholders
 
 ::placeholder {
-	color: lighten($text-color, 20%);
-	font-family: $font-italic;
+	color: #777;
+	font-family: var(--font_italic);
 	font-size: 1.4rem;
 }
 :focus::placeholder,
@@ -191,14 +191,14 @@ input[type="submit"].gform_button {
 	color: #fff;
 	margin: $grid-padding 0 0 0 !important; 
 	padding: $grid-padding !important;
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 	
 	.sent & {
-		background-color: $accent-color;
-		color: $text-color;
+		background-color: var(--accent_color);
+		color: var(--text_color);
 	}
 	.spam & {
-		background-color: $primary-color;
+		background-color: var(--primary_color);
 		color: #fff;
 	}
 }
@@ -210,7 +210,7 @@ input[type="submit"].gform_button {
 	margin-top: -2rem;
 	padding-top: .5rem;
 	border-top: #B3003C 4px solid;
-	font-family: $font-bold;
+	font-family: var(--font_bold);
 }
 input[type="submit"].wpcf7-submit {
 	@extend .action-btn;

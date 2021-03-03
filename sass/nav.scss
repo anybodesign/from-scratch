@@ -5,7 +5,6 @@
 
 // Skiplinks
 
-
 .skiplinks {
 	position: absolute; 
 	padding-top: 0;
@@ -15,8 +14,8 @@
 		position: fixed; 
 		top: -6.5rem;
 		padding: $grid-padding;
-		background-color: $text-color;
-		font-family: $font-bold;
+		background-color: var(--text_color);
+		font-family: var(--font_bold);
 		color: #fff;
 		text-decoration: none;
 		transition: top .2s ease-in;
@@ -37,21 +36,30 @@
 	}
 }
 
+// Toolbar
+
+.toolbar-menu {
+	display: flex;
+	justify-content: flex-end;
+	
+	& > li {
+		font-size: 1.4rem;
+		margin-left: $grid-padding;
+		
+		& > a {
+			
+		}
+	}
+}
 
 // Main nav
 
-
-.site-nav {
-	padding: $grid-padding;
-}
-
 .main-menu {
 	position: absolute;
-	top: 0; 
+	top: auto; 
 	left: 0;
 	width: 100%;
 	padding: $grid-padding;
-	padding-top: 10rem;
 	background-color: #fff;
 	
 	transform: translateX(-110%);
@@ -71,7 +79,6 @@
 	
 	@include rwd(large) {
 		position: relative;
-		top: auto;
 		left: auto;
 		padding: 0;
 		width: auto;
@@ -88,13 +95,16 @@
 		display: block;
 		
 		@include rwd(large) {
-			margin-right: $grid-padding;
+			margin-left: $grid-padding;
+		}
+		@include rwd(wide) {
+			margin-left: $grid-padding*2;
 		}
 		
-		a {
+		& > a {
 			display: block;
 			padding: $grid-padding 0;
-			border-top: $text-color 1px solid;
+			border-top: var(--text_color) 1px solid;
 			text-decoration: none;
 			
 			@include rwd(large) {
@@ -106,48 +116,50 @@
 		& > a:focus,
 		&.current-menu-item > a,
 		&.current_page_parent > a {
-			color: $secondary-color;
+			color: var(--secondary_color);
 			text-decoration: underline;
 		}
 		a:focus {
 			
 		}
-	}
-}
-
-
-// Sub-Menus behaviors
-
-
-.menu-item-has-children {
-	
-	& > a {
-		padding-right: 2.4rem;
 		
-		@include rwd(large) {
-			padding-right: 1.8rem;
-		}
-		@include rwd(wide) {
-			padding-right: 0;
-		}
-	}
-
-	@include rwd(wide) {
 		
-		&.unfold-parent > a {
-			padding-right: 1.8rem;
-		}
+		// Sub-Menus behaviors
 		
-		&:hover > .sub-menu {
-			left: auto;
-			opacity: 1;
+		&.menu-item-has-children {
 			
-			& > li {
-				display: block;
+			& > a {
+				padding-right: 2.4rem;
+				
+				@include rwd(large) {
+					//padding-right: 2rem;
+				}
+				@include rwd(wide) {
+					padding-right: 0;
+				}
+			}
+		
+			@include rwd(wide) {
+				
+				&.unfold-parent > a {
+					padding-right: 1.8rem;
+				}
+				
+				&:hover > .sub-menu {
+					left: auto;
+					opacity: 1;
+					
+					& > li {
+						display: block;
+					}
+				}
 			}
 		}
 	}
 }
+
+
+// Sub-menus
 
 .sub-menu-opened + .sub-menu {
 	transform: scaleY(1);
@@ -234,7 +246,7 @@
 		height: 2.2rem; 
 		width: 2.2rem;
 		top: .2rem;
-		right: -2.8rem; 
+		right: 0; 
 	}
 	@include rwd(wide) {
 		left: -999rem;
@@ -254,7 +266,7 @@
 		left: 1.5rem;
 		width: 1.6rem; 
 		height: 0;
-		border-top: $text-color 2px solid;
+		border-top: var(--text_color) 2px solid;
 		transition: transform .1s ease-in-out;
 		
 		@include rwd(large) {
@@ -277,19 +289,19 @@
 	
 	// Pointer version
 	&::before {
-		left: 1rem;
+		left: .5rem;
 		transform: rotate(45deg);
 	}
 	&::after {
-		left: 2rem;
+		left: 1.2rem;
 		transform: rotate(-45deg);
 	}
 	&.sub-menu-opened::after {
-		left: 1.5rem;
+		left: .75rem;
 		transform: rotate(0);
 	}
 	&.sub-menu-opened::before {
-		left: 1.5rem;
+		left: .75rem;
 		transform: rotate(0);
 	}
 	
@@ -324,7 +336,7 @@
 		width: 3.4rem; 
 		height: 0;
 		margin: 0;
-		border-top: $primary-color 2px solid;
+		border-top: var(--primary_color) 2px solid;
 		transition: .3s linear;
 	}
 	span {
@@ -358,7 +370,7 @@
 				top: 0;
 				left: 0;
 				width: 3.4rem;
-				border-color: $secondary-color;
+				border-color: var(--secondary_color);
 			}
 			&::before {
 				//transform: rotate(-45deg);
@@ -366,7 +378,7 @@
 			}
 			&::after {
 				//transform: rotate(45deg);
-				border-color: $secondary-color;
+				border-color: var(--secondary_color);
 			}
 		}
 	}

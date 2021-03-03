@@ -85,7 +85,7 @@
 		height: 4.4rem;
 		
 		circle {
-			fill: $text-color;
+			fill: var(--text_color);
 			
 			.white-text & {
 				fill: #fff;
@@ -116,7 +116,7 @@
 		height: 3.4rem;
 		margin: 0 $grid-padding $grid-padding 0;
 		
-		background-color: $text-color;
+		background-color: var(--text_color);
 		color: #fff;
 		border-radius: 50%;
 		
@@ -125,7 +125,7 @@
 		
 		.white-text & {
 			background-color: #fff;
-			color: $text-color;
+			color: var(--text_color);
 		}
 	}
 	a {
@@ -134,15 +134,15 @@
 		
 		&:hover,
 		&:focus {
-			background-color: $primary-color;
+			background-color: var(--primary_color);
 			color: #fff;
 		}
 	}
 	.current {
-		background-color: $primary-color;
+		background-color: var(--primary_color);
 
 		.white-text & {
-			background-color: $primary-color;
+			background-color: var(--primary_color);
 		}
 	}
 	
@@ -162,7 +162,7 @@
 	a.prev {
 		position: relative;
 		background-color: transparent;
-		color: $text-color;
+		color: var(--text_color);
 		padding: 0 $grid-padding;
 		border-radius: 0;
 		width: auto;
@@ -172,7 +172,7 @@
 			display: block;
 			width: 25%;
 			height: 1px;
-			border-top: $text-color 1px solid;
+			border-top: var(--text_color) 1px solid;
 			transition: .3s ease-in-out;
 		}
 		&:hover::after,
@@ -234,18 +234,18 @@
 		.pending {
 			display: block;
 			margin: $grid-padding 0;
-			background-color: $secondary-color;
+			background-color: var(--secondary_color);
 			padding: $grid-padding;
 			color: #fff;
 		}		
 	}
 	.comment-author-name {
-		font-family: $font-bold;
+		font-family: var(--font_bold);
 		font-size: 1.8rem;
 	}
 	.comment-date {
 		font-size: 1.4rem;
-		font-family: $font-mono;
+		font-family: var(--font_mono);
 		margin-bottom: $grid-padding*2;
 	}
 	
@@ -266,7 +266,7 @@
 	
 	small {
 		display: block;
-		font-family: $font-regular;
+		font-family: var(--font_regular);
 		font-size: 1.6rem;
 		a {
 			display: inline-block;

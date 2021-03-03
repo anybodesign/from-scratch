@@ -26,28 +26,24 @@ $width-xwide: 90em;	 			// @note: 1440px
 $admin-bar: 48.875em;	 		// @note: 782px
 
 
-// Colors
-
-$primary-color: #303030;
-$secondary-color: #606060;
-$accent-color: #ffff00;
-$text-color: #303030;
-$bg-color: #f0f0f0;
-
-
 // Root CSS vars
-// Ex: var(--primary-color)
-/*
+
 :root {
 	
 	// Colors 
 	
-	--primary_color: #303030; 
+	--primary_color: #23252b; 
 	--secondary_color: #606060; 
-	--accent_color: #404040;
+	--accent_color: #CEFF00;
+	--bg_color: #f0f0f0;
 	
-	--text_color: #303030;
-	--bg_color: #fff;
+	--text_color: #23252b;
+	
+	--btn_text: #23252b;
+	--btn_text_hover: #fff;
+	
+	--header_color: #fff;
+	--footer_color: transparent;
 
 
 	// Fonts
@@ -63,4 +59,3 @@ $bg-color: #f0f0f0;
 	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
 	
 }
-*/

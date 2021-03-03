@@ -11,7 +11,7 @@
 	// Forms & Buttons
 	
 	.woocommerce-form {
-		border-color: $text-color;
+		border-color: var(--text_color);
 		border-radius: 0;
 	}
 	.woocommerce-form__label-for-checkbox {
@@ -48,7 +48,7 @@
 	
 	.woocommerce-MyAccount-navigation {
 		ul {
-			border-top: $text-color 1px solid;
+			border-top: var(--text_color) 1px solid;
 			margin-top: 0;
 			margin-bottom: $grid-padding*4;
 			
@@ -58,21 +58,21 @@
 				a {
 					display: block;
 					padding: $grid-padding 0;
-					border-bottom: $text-color 1px solid;
+					border-bottom: var(--text_color) 1px solid;
 					text-decoration: none;
 					transition: background .4s ease-in-out;
 				}
 				a:hover,
 				a:focus,
 				&.is-active a {
-					background-color: $accent-color;
+					background-color: var(--accent_color);
 				}
 			}
 		}
 	}
 	
 	.woocommerce-MyAccount-content {
-		//border-top: $text-color 1px solid;
+		//border-top: var(--text_color) 1px solid;
 		
 		@include rwd(large) {
 			padding-left: 8.3333%;
@@ -91,7 +91,7 @@
 	.woocommerce-info {
 		
 		&::before {
-			color: $primary-color;
+			color: var(--primary_color);
 		}
 	}
 	
@@ -118,8 +118,8 @@
 			font-size: 2.2rem;
 		}
 		.price {
-			color: $secondary-color;
-			font-family: $font-bold;
+			color: var(--secondary_color);
+			font-family: var(--font_bold);
 			font-size: 2.8rem;
 		}
 		
@@ -148,8 +148,8 @@
 	}
 	ul.tabs li {
 		border-radius: 0;
-		background-color: $bg-color;
-		color: $text-color;
+		background-color: var(--bg_color);
+		color: var(--text_color);
 		
 		&.active {
 			background-color: #fff;
@@ -161,7 +161,7 @@
 	}
 	.stars {
 		a {
-			color: $secondary-color;
+			color: var(--secondary_color);
 			text-decoration: none;
 			
 			&::after {
@@ -169,7 +169,7 @@
 			}
 			&.active {
 				& ~ a::before {
-					color: $text-color;
+					color: var(--text_color);
 				} 
 			}
 		}
@@ -188,7 +188,7 @@
 		}
 	}
 	.cart_totals table.shop_table th {
-		color: $primary-color;
+		color: var(--primary_color);
 	}
 
 }

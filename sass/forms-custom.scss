@@ -60,7 +60,7 @@
 			position: absolute; 
 			top: .3rem; 
 			left: 0;
-			border: $text-color 1px solid;
+			border: var(--text_color) 1px solid;
 			background-color: #fff;
 		}
 		
@@ -83,7 +83,7 @@
 .formfield-radio input[type="radio"] + span::after {
 	width: .6rem; 
 	height: .6rem;
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	top: .9rem; 
 	left: .6rem;
 	border-radius: 100%;
@@ -102,8 +102,8 @@
 	content: '';
 	width: 1rem;
 	height: .5rem;
-	border-left: 4px solid $primary-color;
-	border-bottom: 4px solid $primary-color;	
+	border-left: 4px solid var(--primary_color);
+	border-bottom: 4px solid var(--primary_color);	
 	opacity: 0;
 	transform: rotate(-45deg);
 	transition: opacity .2s linear;
@@ -124,7 +124,7 @@ span.wpcf7-list-item {
 
 .formfield-radio input[type="radio"]:focus + span,
 .formfield-radio input[type="checkbox"]:focus + span {
-	border-bottom: $primary-color 1px dashed;
+	border-bottom: var(--primary_color) 1px dashed;
 }
 
 .formfield-radio input[type="radio"]:focus + span::after,
@@ -152,7 +152,7 @@ span.wpcf7-list-item {
 	position: relative; 
 	overflow: hidden;
 	background-color: #fff;
-	border: $text-color 1px solid;
+	border: var(--text_color) 1px solid;
 	margin: 0 0 $grid-padding*2 0;
 	padding: 0;
 	
@@ -166,7 +166,7 @@ span.wpcf7-list-item {
 		width: 0; 
 		height: 0;
 		border-color: transparent;
-		border-top-color: $primary-color; 
+		border-top-color: var(--primary_color); 
 		border-width: .6rem;
 		border-style: solid;
 		pointer-events: none;
@@ -200,7 +200,7 @@ span.wpcf7-list-item {
 		display: inline-block; 
 		content: "\1F4CE";
 		font-size: 2rem;
-		color: $text-color;
+		color: var(--text_color);
 		position: absolute; 
 		top: .5em; 
 		right: .5em;

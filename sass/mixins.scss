@@ -7,12 +7,12 @@
 
 @mixin link-style($bg: dark) {
 	
-	$color: $secondary-color;
-	$text: $secondary-color;
+	$color: var(--secondary_color);
+	$text: var(--secondary_color);
 	
 	@if $bg == white {
 		$color: #fff;
-		$text: $accent-color;
+		$text: var(--accent_color);
 	}
 	
 	text-decoration: none;
@@ -35,18 +35,18 @@
 		linear-gradient(
 			transparent 0,
 			transparent 0.9rem,
-			$secondary-color 0.9rem,
-			$secondary-color 1rem
+			var(--secondary_color) 0.9rem,
+			var(--secondary_color) 1rem
 		);
 		background-size: 20% 1rem;
 	}
 	&:focus {
-		background-color: $text-color;
+		background-color: var(--text_color);
 		color: #fff;
 		background-image: none;
 	}
 	&:active {
-		color: $secondary-color;
+		color: var(--secondary_color);
 	}
 	&:focus:visited {
 		color: #fff;

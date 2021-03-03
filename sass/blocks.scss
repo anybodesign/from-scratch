@@ -6,42 +6,48 @@
 // Colors
 
 .has-primary-background-color {
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 }
 .has-secondary-background-color {
-	background-color: $secondary-color;
+	background-color: var(--secondary_color);
 }
 .has-accent-background-color {
-	background-color: $accent-color;
+	background-color: var(--accent_color);
 }
 .has-text-background-color {
-	background-color: $text-color;
+	background-color: var(--text_color);
 }
 .has-bg-background-color {
-	background-color: $bg-color;
+	background-color: var(--bg_color);
+}
+.has-white-background-color {
+	background-color: #fff;
 }
 
 .has-inline-color.has-primary-color,
 .has-text-color.has-primary-color {
-	color: $primary-color;
+	color: var(--primary_color);
 }
 .has-inline-color.has-secondary-color,
 .has-text-color.has-secondary-color {
-	color: $secondary-color;
+	color: var(--secondary_color);
 }
 .has-inline-color.has-accent-color,
 .has-text-color.has-accent-color {
-	color: $accent-color;
+	color: var(--accent_color);
 }
 .has-inline-color.has-text-color,
 .has-text-color.has-text-color {
-	color: $text-color;
+	color: var(--text_color);
 }
 .has-inline-color.has-bg-color,
 .has-text-color.has-bg-color {
-	color: $bg-color;
+	color: var(--bg_color);
 }
-
+.has-inline-color.has-white-color,
+.has-text-color.has-white-color {
+	color: #fff;
+}
 
 // Links / Button
 
@@ -58,17 +64,17 @@
 .wp-block-file {
 	
 	a:first-child {
-		font-family: $font-regular;
+		font-family: var(--font_regular);
 		text-decoration: none;
-		border-bottom: $secondary-color 2px solid;
+		border-bottom: var(--secondary_color) 2px solid;
 		transition: border .2s ease-in-out;
 		
 		&:hover {
 			border-bottom-width: .4rem;
 		}
 		&:focus {
-			background-color: $text-color;
-			border-bottom-color: $text-color;
+			background-color: var(--text_color);
+			border-bottom-color: var(--text_color);
 			color: #fff;
 		}
 	}
@@ -164,10 +170,10 @@
 	
 	li {
 		margin-left: 0;
-		border-bottom: $text-color 1px solid;
+		border-bottom: var(--text_color) 1px solid;
 		
 		&:first-child {
-			border-top: $text-color 1px solid;
+			border-top: var(--text_color) 1px solid;
 		}
 			
 		a {
@@ -179,7 +185,7 @@
 			&:focus {
 				padding-left: $grid-padding;
 				padding-right: $grid-padding;
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 				color: #fff;
 			}
 		}
@@ -220,7 +226,7 @@
 hr {
 	height: 0; 
 	border: 0;
-	border-top: $text-color 1px solid;
+	border-top: var(--text_color) 1px solid;
 	
 	.page-content > & {
 		width: calc(100% - #{$grid-padding*4});
@@ -239,7 +245,7 @@ hr {
 	
 	.page-content > & {
 		max-width: 20rem;
-
+		
 		&.is-style-wide {
 			max-width: 80%;
 			
@@ -247,6 +253,25 @@ hr {
 				max-width: 50rem;
 			}
 		}		
+	}
+	
+	&.has-primary-background-color {
+		border-top-color: var(--primary_color);
+	}
+	&.has-secondary-background-color {
+		border-top-color: var(--secondary_color);
+	}
+	&.has-accent-background-color {
+		border-top-color: var(--accent_color);
+	}
+	&.has-text-background-color {
+		border-top-color: var(--text_color);
+	}
+	&.has-bg-background-color {
+		border-top-color: var(--bg_color);
+	}
+	&.has-white-background-color {
+		border-top-color: white;
 	}
 }
 
@@ -298,7 +323,7 @@ hr {
 	.blocks-gallery-item { 
 		figcaption {
 			padding: $grid-padding;
-			background-color: $text-color;
+			background-color: var(--text_color);
 		}
 	}
 	

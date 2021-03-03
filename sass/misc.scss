@@ -30,21 +30,21 @@
 			height: 1.6rem;
 			margin: 0 .8rem;
 			border-radius: 50%;
-			border: $primary-color 2px solid;
-			background-color: $secondary-color;
+			border: var(--primary_color) 2px solid;
+			background-color: var(--secondary_color);
 			
 			@include a11y-hide();
 			transition: .2s ease-in-out;
 			
 			&:hover, &:focus {
 				transform: scale(1.4);
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 			}
 		
 		}
 		
 		&.slick-active button {
-			background-color: $primary-color;
+			background-color: var(--primary_color);
 		}
 		&.slick-disabled {
 			visibility: hidden;

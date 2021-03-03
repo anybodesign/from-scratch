@@ -11,7 +11,7 @@ html .mceContentBody {
 }
 * {
 	color: #444;
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 	line-height: 1.5;
 }
 p,
@@ -28,13 +28,13 @@ thead th,
 label,
 tr th,
 thead th {
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 }
 pre {
-	font-family: $font-mono;
+	font-family: var(--font_mono);
 }
 code, code var {
-	font-family: $font-mono;
+	font-family: var(--font_mono);
 }
 body, input, textarea {
 	font-size: 12px;
@@ -198,7 +198,7 @@ h6 {
 	font-weight: normal;
 	line-height: 1.5em;
 	margin: 0 0 20px 0;
-	font-family: $font-title;
+	font-family: var(--font_title);
 }
 h1 {
 	font-size: 2.4em;

@@ -5,7 +5,7 @@ Description: Have fun with Gutenberg style editor.
 
 @import 'variables.scss';
 @import 'mixins.scss';
-@import 'webfonts.scss';
+//@import 'webfonts.scss';
 @import 'webfonts-admin.scss';
 
 
@@ -18,7 +18,7 @@ html.interface-interface-skeleton__html-container {
 	.block-editor-block-list__layout {
 		font-size: 1.6rem;
 		line-height: 1.5;
-		color: $text-color;
+		color: var(--text_color);
 	}
 }
 .edit-post-layout {
@@ -45,13 +45,17 @@ html.interface-interface-skeleton__html-container {
 		border-bottom: #ddd 1px solid;
 	}	
 }
+.block-editor-block-list__block.is-selected[data-type*="acf"] {
+	max-width: 960px !important;
+	margin: 0 auto;
+}
 
 // Typography
 
 	
 .editor-post-title .editor-post-title__input {
-	font-family: $font-title;
-	color: $primary-color;
+	font-family: var(--font_title);
+	color: var(--primary_color);
 }
 
 .edit-post-visual-editor .wp-block,
@@ -65,13 +69,13 @@ html.interface-interface-skeleton__html-container {
 
 	h1, h2, h3, h4, h5, h6,
 	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-		font-family: $font-title;
+		font-family: var(--font_title);
 		font-weight: normal;
-		color: $primary-color;
+		color: var(--primary_color);
 	}
 	p, li, small, span {
-		font-family: $font-regular;
-		color: $text-color;
+		font-family: var(--font_regular);
+		color: var(--text_color);
 	}
 	figure {
 		width: 100%;
@@ -102,7 +106,7 @@ p.text-mentions {
 	}
 }
 a.action-btn {
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	//color: #fff !important;
 	padding: 5px 15px;
 	text-decoration: none;
