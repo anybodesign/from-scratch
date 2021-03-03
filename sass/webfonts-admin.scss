@@ -1,86 +1,195 @@
 // ------------------------------
 //
-// = Web fonts Admin (SASS)
+// = Web fonts Admin (CSS vars)
 //
 // ------------------------------
 
+// Default (Barlow)
+
 @font-face {
 	font-family: 'Regular';
-	src: $fontface-regular-admin;
+	src: url('../fonts/barlow-medium-webfont.woff2') format('woff2'), url('../fonts/barlow-medium-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Italic';
-	src: $fontface-italic-admin;
+	src: url('../fonts/barlow-mediumitalic-webfont.woff2') format('woff2'), url('../fonts/barlow-mediumitalic-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Bold';
-	src: $fontface-bold-admin;
+	src: url('../fonts/barlow-bold-webfont.woff2') format('woff2'), url('../fonts/barlow-bold-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'BoldItalic';
-	src: $fontface-bolditalic-admin;
+	src: url('../fonts/barlow-bolditalic-webfont.woff2') format('woff2'), url('../fonts/barlow-bolditalic-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Title';
-	src: $fontface-title-admin;
+	src: url('../fonts/barlowsemicondensed-bold-webfont.woff2') format('woff2'), url('../fonts/barlowsemicondensed-bold-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
+// Bebas
 
-// ------------------------------
-//
-// = Web fonts Admin (CSS vars)
-//
-// ------------------------------
-
-/*
 @font-face {
-	font-family: 'Regular';
+	font-family: 'Regular-Bebas';
+	src: url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('../fonts/LibreBaskerville-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic-Bebas';
+	src: url('../fonts/LibreBaskerville-Italic.woff2') format('woff2'), url('../fonts/LibreBaskerville-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold-Bebas';
+	src: url('../fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('../fonts/LibreBaskerville-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic-Bebas';
+	src: url('../fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('../fonts/LibreBaskerville-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title-Bebas';
+	src: url('../fonts/BebasNeue-Bold.woff2') format('woff2'), url('../fonts/BebasNeue-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Playfair
+
+@font-face {
+	font-family: 'Regular-Playfair';
+	src: url('../fonts/atkinson-hyperlegible-regular.woff2') format('woff2'), url('../fonts/atkinson-hyperlegible-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic-Playfair';
+	src: url('../fonts/atkinson-hyperlegible-italic.woff2') format('woff2'), url('../fonts/atkinson-hyperlegible-italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold-Playfair';
+	src: url('../fonts/atkinson-hyperlegible-bold.woff2') format('woff2'), url('../fonts/atkinson-hyperlegible-bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic-Playfair';
+	src: url('../fonts/atkinson-hyperlegible-bolditalic.woff2') format('woff2'), url('../fonts/atkinson-hyperlegible-bolditalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title-Playfair';
+	src: url('../fonts/playfairdisplay-regular.woff2') format('woff2'), url('../fonts/playfairdisplay-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Luciole
+
+@font-face {
+	font-family: 'Regular-Luciole';
+	src: url('../fonts/Luciole.woff2') format('woff2'), url('../fonts/Luciole.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic-Luciole';
+	src: url('../fonts/Luciole_Italic.woff2') format('woff2'), url('../fonts/Luciole_Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold-Luciole';
+	src: url('../fonts/Luciole_Bold.woff2') format('woff2'), url('../fonts/Luciole_Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic-Luciole';
+	src: url('../fonts/Luciole_Bold_Italic.woff2') format('woff2'), url('../fonts/Luciole_Bold_Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title-Luciole';
+	src: url('../fonts/Luciole_Bold.woff2') format('woff2'), url('../fonts/Luciole_Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Miriam
+
+@font-face {
+	font-family: 'Regular-Miriam';
 	src: url('../fonts/Asap-Regular.woff2') format('woff2'), url('../fonts/Asap-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Italic';
+	font-family: 'Italic-Miriam';
 	src: url('../fonts/Asap-Italic.woff2') format('woff2'), url('../fonts/Asap-Italic.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Bold';
+	font-family: 'Bold-Miriam';
 	src: url('../fonts/Asap-Medium.woff2') format('woff2'), url('../fonts/Asap-Medium.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'BoldItalic';
+	font-family: 'BoldItalic-Miriam';
 	src: url('../fonts/Asap-MediumItalic.woff2') format('woff2'), url('../fonts/Asap-MediumItalic.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Title';
+	font-family: 'Title-Miriam';
 	src: url('../fonts/Miriam-Libre-Bold.woff2') format('woff2'), url('../fonts/Miriam-Libre-Bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
-*/
