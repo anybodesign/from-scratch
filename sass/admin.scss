@@ -14,6 +14,7 @@ $dash: #777 1px dashed;
 	margin-bottom: 1.5em;
 }
 
+#customize-control-webfont,
 #customize-control-layout_option {
 	
 	.customize-inside-control-row {
@@ -23,11 +24,14 @@ $dash: #777 1px dashed;
 			opacity: 0;
 			position: absolute;
 		}
+		input[type=radio] + label {
+			opacity: .4;
+		}
 		input[type=radio]:checked + label {
 			font-weight: bold;
+			opacity: 1;
 		}
 		input[type=radio]:checked + label::before {
-			border-color: #777;
 			opacity: 1;
 		}
 		label::before {
@@ -45,13 +49,45 @@ $dash: #777 1px dashed;
 	}
 	
 	#_customize-input-layout_option-radio-version1 + label::before {
-		background-image: url(../img/admin/version-1.png);
+		background-image: url(../img/admin/layout/version-1.png);
 	}
 	#_customize-input-layout_option-radio-version2 + label::before {
-		background-image: url(../img/admin/version-2.png);
+		background-image: url(../img/admin/layout/version-2.png);
 	}
 	#_customize-input-layout_option-radio-version3 + label::before {
-		background-image: url(../img/admin/version-3.png);
+		background-image: url(../img/admin/layout/version-3.png);
+	}
+	
+	#_customize-input-webfont-radio-barlow + label::before {
+		background-image: url(../img/admin/webfonts/barlow.png);
+	}
+	#_customize-input-webfont-radio-bebas + label::before {
+		background-image: url(../img/admin/webfonts/bebas.png);
+	}
+	#_customize-input-webfont-radio-playfair + label::before {
+		background-image: url(../img/admin/webfonts/playfair.png);
+	}
+	#_customize-input-webfont-radio-luciole + label::before {
+		background-image: url(../img/admin/webfonts/luciole.png);
+	}
+	#_customize-input-webfont-radio-miriam + label::before {
+		background-image: url(../img/admin/webfonts/miriam.png);
+	}
+}
+
+#customize-control-webfont {
+	.customize-inside-control-row {
+		label {
+			padding-top: .25em;
+			margin-top: .25em;
+			border-top: #777 1px solid;
+			
+			&::before {
+				width: 220px;
+				height: 100px;
+			}
+		}
+			
 	}
 }
 
