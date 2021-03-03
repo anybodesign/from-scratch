@@ -13,28 +13,58 @@
 	</main> <?php // END content ?>
 		
 	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
-
+		
 		<footer role="contentinfo" id="site_foot">
-			
 			<div class="row inner">
-				<div class="footer-content">				
+				
+				<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
+				<div class="footer-social">
+					<nav role="navigation" aria-label="<?php esc_html_e('Social Networks', 'collectif'); ?>">
+						<?php wp_nav_menu( array(
+								'theme_location'	=> 	'social_menu',
+								'menu_class'		=>	'social-menu',
+								'container'			=>	false
+								));
+						?>
+					</nav>
+				</div>
+				<?php endif; ?>
+				
+				
+				<div class="footer-widgets">
+					<?php if ( is_active_sidebar( 'widgets_footer1' ) ) { ?>
+					<div class="widgets-area">
+						<?php dynamic_sidebar( 'widgets_footer1' ); ?>
+					</div>
+					<?php } ?>
 					
-					<?php // The credit/copyright line, settings in the Customizer ?>
+					<?php if ( is_active_sidebar( 'widgets_footer2' ) ) { ?>
+					<div class="widgets-area">
+						<?php dynamic_sidebar( 'widgets_footer2' ); ?>
+					</div>
+					<?php } ?>
 					
-					<p class="footer-copyright">
+					<?php if ( is_active_sidebar( 'widgets_footer3' ) ) { ?>
+					<div class="widgets-area">
+						<?php dynamic_sidebar( 'widgets_footer3' ); ?>
+					</div>
+					<?php } ?>					
+				</div>
+				
+				
+				<div class="footer-copyright">				
+					
+					<p>
 						<?php if(get_theme_mod('footer_text')) {
 							echo esc_html(get_theme_mod('footer_text', '')); 
 						} else {
 							echo esc_html('&copy;'); echo date(' Y '); echo esc_html(bloginfo('name')).'.'; 	
 						} ?>
 						
-						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo esc_attr(' out-of-reach'); } ?>" href="//wordpress.org"><?php esc_html_e('Powered by WordPress!', 'from-scratch'); ?></a>
+						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo esc_attr(' out-of-reach'); } ?>" href="//wordpress.org"><?php esc_html_e('Powered by WordPress!', 'collectif'); ?></a>
 					</p>
-					
-					<?php // The footer menu location ?>
-					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav class="footer-nav" role="navigation" aria-label="<?php esc_html_e('Footer Menu', 'from-scratch'); ?>">
+					<nav role="navigation" aria-label="<?php esc_html_e('Footer Menu', 'collectif'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',
@@ -45,18 +75,18 @@
 					<?php endif; ?>
 					
 				</div>
+				
 			</div>
-			
 		</footer>
-
+		
 		<?php if(get_theme_mod('back2top') == true) { ?>
 			<button id="back2top" title="<?php esc_html_e('Back to top','from-scratch'); ?>">
 				<img src="<?php echo FS_THEME_URL; ?>/img/ui/back-to-top.svg" alt="">
 			</button>
 		<?php } ?>
-
-	<?php } ?>	
 		
+	<?php } ?>	
+
 </div> <?php // END wrapper ?>
 
 <?php wp_footer(); ?>

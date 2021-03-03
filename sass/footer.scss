@@ -4,27 +4,54 @@
 
 
 #site_foot {
-	
+	position: relative;
+	background-color: var(--footer_color);
 }
 
-.footer-content {
-	display: flex;
+.footer-social {
 	width: 100%;
 	padding: $grid-padding;
 }
 
-.footer-copyright {
-	margin-bottom: 0;
+.footer-widgets {
+	width: 100%;
+	
+	@include rwd(medium) {
+		display: flex;
+		flex-wrap: wrap;				
+	}
+}
+.widgets-area {
+	padding: $grid-padding;
+	margin-bottom: $grid-padding*2;
+	
+	@include rwd(medium) {
+		flex: 1 1 0;
+	}
+	@include rwd(large) {
+		max-width: 33.3333%;
+	}
 }
 
-.footer-nav {
+.footer-copyright {
+	padding: $grid-padding;
 	
+	@include rwd(medium) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline; 
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
 }
 .footer-menu {
-	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 0 $grid-padding;
 	
 	li {
-		display: inline;
-		margin: 0 .25em;
+		margin: 0 $grid-padding 0 0;
 	}
 }
