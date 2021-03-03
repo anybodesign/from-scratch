@@ -5,12 +5,12 @@
 
 #site_head {
 	position: relative;
-	background-color: #fff;
+	background-color: var(--header_color);
 	
 	& > .row {
 		flex-direction: row-reverse;
+		justify-content: space-between;
 		align-items: center;
-		padding: $grid-padding*2 0;
 		
 		@include rwd(large) {
 			flex-direction: row;	
@@ -18,9 +18,33 @@
 	}
 }
 
+// Layout
+
+.site-toolbar {
+	position: relative;
+	width: 100%;
+	padding: $grid-padding;
+	margin-bottom: $grid-padding*2;
+}
+
+.site-brand {
+	padding: $grid-padding;
+}
+
+.site-nav {
+	padding: $grid-padding;
+}
+
+
+// Styles
+
+.site-toolbar {
+	
+}
+
 .site-title {
 	display: block;
-	font-family: $font-title;
+	font-family: var(--font_title);
 	text-transform: uppercase;
 	font-size: 2.4rem;
 	line-height: 1;
@@ -44,10 +68,6 @@
 .site-desc {
 	display: block;
 	margin: 0;
-}
-
-.site-brand {
-	padding: $grid-padding;
 }
 
 // Sticky Nav

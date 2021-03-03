@@ -33,7 +33,7 @@
 	?>
 	
 	<header role="banner" id="site_head">
-		<div class="row inner justify-between">	
+		<div class="row inner">	
 		<?php 
 			get_template_part('template-parts/header', 'toolbar'); 
 			get_template_part('template-parts/header', 'brand'); 
