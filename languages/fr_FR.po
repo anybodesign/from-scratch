@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-11-26 18:41+0100\n"
-"PO-Revision-Date: 2020-11-26 18:41+0100\n"
+"POT-Creation-Date: 2021-03-02 14:02+0100\n"
+"PO-Revision-Date: 2021-03-02 14:02+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -56,314 +56,158 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:31
+#: footer.php:22
+msgid "Social Networks"
+msgstr "Réseaux sociaux"
+
+#: footer.php:64
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:37 functions.php:461
+#: footer.php:67 functions.php:437
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: footer.php:53
+#: footer.php:83
 msgid "Back to top"
 msgstr "Haut de page"
 
-#: functions.php:124 inc/customizer.php:118
+#: functions.php:127 inc/customizer.php:118
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:129 inc/customizer.php:142
+#: functions.php:132 inc/customizer.php:143
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:134
+#: functions.php:137
 msgid "Accent color"
 msgstr "Couleur d’accentuation"
 
-#: functions.php:139
+#: functions.php:142 inc/customizer.php:221
 msgid "Text color"
 msgstr "Couleur du texte"
 
-#: functions.php:144
+#: functions.php:147 inc/customizer.php:241
 msgid "Background color"
 msgstr "Couleur d’arrière-plan"
 
-#: functions.php:155
+#: functions.php:152
+msgid "White"
+msgstr "Blanc"
+
+#: functions.php:163
 msgid "Small"
 msgstr "Petite"
 
-#: functions.php:156
+#: functions.php:164
 msgid "S"
 msgstr "S"
 
-#: functions.php:161
+#: functions.php:169
 msgid "Large"
 msgstr "Grande"
 
-#: functions.php:162
+#: functions.php:170
 msgid "L"
 msgstr "L"
 
-#: functions.php:459 template-parts/header-toolbar.php:4
+#: functions.php:435 template-parts/header-toolbar.php:4
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:460 template-parts/header-nav.php:6
+#: functions.php:436 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:462
+#: functions.php:438
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:562
+#: functions.php:532
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:580
+#: functions.php:550
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:581
+#: functions.php:551
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:582
+#: functions.php:552
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:583
+#: functions.php:553
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:584
+#: functions.php:554
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:585
+#: functions.php:555
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:586
+#: functions.php:556
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:624
-msgid "Primary Widgets Area"
-msgstr "Zone primaire Widgets"
+#: functions.php:594
+msgid "Blog Widgets"
+msgstr "Widget du blog"
 
-#: functions.php:649
+#: functions.php:603
+msgid "Footer Widgets #1"
+msgstr "Widgets pied de page #1"
+
+#: functions.php:612
+msgid "Footer Widgets #2"
+msgstr "Widgets pied de page #2"
+
+#: functions.php:621
+msgid "Footer Widgets #3"
+msgstr "Widgets pied de page #3"
+
+#: functions.php:646
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:655
+#: functions.php:652
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:661
+#: functions.php:658
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:681
+#: functions.php:678
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:683
+#: functions.php:680
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:715
+#: functions.php:712
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:721
+#: functions.php:718
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:730
+#: functions.php:727
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:736
+#: functions.php:733
 msgid "Edit"
 msgstr "Modifier"
-
-#: inc/custom-post-type.php:31
-msgctxt "Post Type General Name"
-msgid "Projects"
-msgstr "Projets"
-
-#: inc/custom-post-type.php:32
-msgctxt "Post Type Singular Name"
-msgid "Project"
-msgstr "Projet"
-
-#: inc/custom-post-type.php:33 inc/custom-post-type.php:34
-msgid "Projects"
-msgstr "Projets"
-
-#: inc/custom-post-type.php:35
-msgid "Item Archives"
-msgstr "Archives de l'élément"
-
-#: inc/custom-post-type.php:36
-msgid "Item Attributes"
-msgstr "Attributs de l'élément"
-
-#: inc/custom-post-type.php:37 inc/custom-post-type.php:144
-msgid "Parent Item:"
-msgstr "Élément parent :"
-
-#: inc/custom-post-type.php:38 inc/custom-post-type.php:142
-msgid "All Items"
-msgstr "Tous les éléments"
-
-#: inc/custom-post-type.php:39 inc/custom-post-type.php:146
-msgid "Add New Item"
-msgstr "Ajoute un nouvel élément"
-
-#: inc/custom-post-type.php:40
-msgid "Add New"
-msgstr "Ajouter"
-
-#: inc/custom-post-type.php:41
-msgid "New Item"
-msgstr "Nouvel élément"
-
-#: inc/custom-post-type.php:42 inc/custom-post-type.php:147
-msgid "Edit Item"
-msgstr "Modifier l’élément"
-
-#: inc/custom-post-type.php:43 inc/custom-post-type.php:148
-msgid "Update Item"
-msgstr "Mettre à jour"
-
-#: inc/custom-post-type.php:44 inc/custom-post-type.php:149
-msgid "View Item"
-msgstr "Voir l’élément"
-
-#: inc/custom-post-type.php:45
-msgid "View Items"
-msgstr "Voir les éléments"
-
-#: inc/custom-post-type.php:46
-msgid "Search Item"
-msgstr "Rechercher un article"
-
-#: inc/custom-post-type.php:47
-msgid "Not found"
-msgstr "Aucun résultat"
-
-#: inc/custom-post-type.php:48
-msgid "Not found in Trash"
-msgstr "Introuvable dans la corbeille"
-
-#: inc/custom-post-type.php:49
-msgid "Featured Image"
-msgstr "Image mise en avant"
-
-#: inc/custom-post-type.php:50
-msgid "Set featured image"
-msgstr "Définir l’image mise en avant"
-
-#: inc/custom-post-type.php:51
-msgid "Remove featured image"
-msgstr "Supprimer l'image mise en avant"
-
-#: inc/custom-post-type.php:52
-msgid "Use as featured image"
-msgstr "Utiliser comme image mise en avant"
-
-#: inc/custom-post-type.php:53
-msgid "Insert into item"
-msgstr "Insérer dans l'élément"
-
-#: inc/custom-post-type.php:54
-msgid "Uploaded to this item"
-msgstr "Téléversé dans l’élément"
-
-#: inc/custom-post-type.php:55 inc/custom-post-type.php:157
-msgid "Items list"
-msgstr "Liste des éléments"
-
-#: inc/custom-post-type.php:56 inc/custom-post-type.php:158
-msgid "Items list navigation"
-msgstr "Navigation de la liste des éléments"
-
-#: inc/custom-post-type.php:57
-msgid "Filter items list"
-msgstr "Filtrer la liste des éléments"
-
-#: inc/custom-post-type.php:60
-msgid "project"
-msgstr "projet"
-
-#: inc/custom-post-type.php:66
-msgid "Project"
-msgstr "Projet"
-
-#: inc/custom-post-type.php:67
-msgid "Post Type Description"
-msgstr "Description du Post Type"
-
-#: inc/custom-post-type.php:94
-msgid "Choose a title for this project"
-msgstr "Choisissez un titre pour ce projet"
-
-#: inc/custom-post-type.php:139
-msgctxt "Taxonomy General Name"
-msgid "Project types"
-msgstr "Types de projets"
-
-#: inc/custom-post-type.php:140
-msgctxt "Taxonomy Singular Name"
-msgid "Project type"
-msgstr "Type de projet"
-
-#: inc/custom-post-type.php:141
-msgid "Project types"
-msgstr "Types de projets"
-
-#: inc/custom-post-type.php:143
-msgid "Parent Item"
-msgstr "Élément parent"
-
-#: inc/custom-post-type.php:145
-msgid "New Item Name"
-msgstr "Nouveau nom d’élément"
-
-#: inc/custom-post-type.php:150
-msgid "Separate items with commas"
-msgstr "Séparer les éléments par des virgules"
-
-#: inc/custom-post-type.php:151
-msgid "Add or remove items"
-msgstr "Ajouter ou supprimer des éléments"
-
-#: inc/custom-post-type.php:152
-msgid "Choose from the most used"
-msgstr "Choisir parmi les plus utilisés"
-
-#: inc/custom-post-type.php:153
-msgid "Popular Items"
-msgstr "Éléments populaires"
-
-#: inc/custom-post-type.php:154
-msgid "Search Items"
-msgstr "Rechercher des éléments"
-
-#: inc/custom-post-type.php:155
-msgid "Not Found"
-msgstr "Aucun résultat"
-
-#: inc/custom-post-type.php:156
-msgid "No items"
-msgstr "Aucun élément"
-
-#: inc/custom-post-type.php:161
-msgid "project-type"
-msgstr "type-projet"
 
 #: inc/customizer.php:53
 msgid "Header Options"
@@ -403,23 +247,55 @@ msgstr "Polices du thème"
 msgid "Choose a font combination for the site."
 msgstr "Choisissez une combinaison de polices pour le site."
 
-#: inc/customizer.php:162
+#: inc/customizer.php:119
+msgid "Main color and titles color"
+msgstr "Couleur principale et couleur des titres"
+
+#: inc/customizer.php:163
 msgid "Contrast color"
 msgstr "Couleur de contraste"
 
-#: inc/customizer.php:188
+#: inc/customizer.php:164
+msgid "Links and contrast color"
+msgstr "Couleur des liens et de contraste"
+
+#: inc/customizer.php:185
+msgid "Buttons white text"
+msgstr "Texte blanc pour les boutons"
+
+#: inc/customizer.php:202
+msgid "Buttons white text on mouse over"
+msgstr "Texte blanc pour les boutons au survol de la souris"
+
+#: inc/customizer.php:261
+msgid "Header color"
+msgstr "Couleur de l'en-tête"
+
+#: inc/customizer.php:279
+msgid "White text in header"
+msgstr "Texte blanc dans l’en-tête"
+
+#: inc/customizer.php:298
+msgid "Footer color"
+msgstr "Couleur du pied de page"
+
+#: inc/customizer.php:316
+msgid "White text in footer"
+msgstr "Texte blanc dans le footer"
+
+#: inc/customizer.php:341
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:342
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:208
+#: inc/customizer.php:361
 msgid "Site Logo - Mobile"
 msgstr "Logo du site - mobile"
 
-#: inc/customizer.php:209
+#: inc/customizer.php:362
 msgid ""
 "Specific version of the logo for mobile devices. If none, the default logo "
 "will be used."
@@ -427,82 +303,118 @@ msgstr ""
 "Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
 "par défaut sera utilisé."
 
-#: inc/customizer.php:230
+#: inc/customizer.php:383
 msgid "Hide the site title"
 msgstr "Masquer le titre du site"
 
-#: inc/customizer.php:250
+#: inc/customizer.php:403
 msgid "Hide the website tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:275
+#: inc/customizer.php:422
+msgid "Display search in toolbar"
+msgstr "Afficher la recherche dans la barre d’outils"
+
+#: inc/customizer.php:447
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:276
+#: inc/customizer.php:448
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:297
+#: inc/customizer.php:469
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:321
+#: inc/customizer.php:493
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:340
+#: inc/customizer.php:512
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:359
+#: inc/customizer.php:531
+msgid "Load new posts on click"
+msgstr "Charger les nouveaux articles au clic"
+
+#: inc/customizer.php:550
+msgid "Use Scrollout to animate blocks on scroll"
+msgstr "Utilisez Scrollout pour animer les blocs au scroll"
+
+#: inc/customizer.php:569
+msgid "Use Fancybox to enlarge pictures"
+msgstr "Utilisez Fancybox pour agrandir les images"
+
+#: inc/customizer.php:588
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:375
+#: inc/customizer.php:604
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:400
+#: inc/customizer.php:628
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:403
+#: inc/customizer.php:631
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:404
+#: inc/customizer.php:632
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:405
+#: inc/customizer.php:633
 msgid "Version 3"
 msgstr "Version 3"
 
-#: inc/customizer.php:428
+#: inc/customizer.php:653
+msgid "Choose your fonts"
+msgstr "Choisissez vos polices"
+
+#: inc/customizer.php:656
+msgid "Barlow"
+msgstr "Barlow"
+
+#: inc/customizer.php:657
+msgid "Bebas & Libre Baskerville"
+msgstr "Bebas & Libre Baskerville"
+
+#: inc/customizer.php:658
+msgid "Playfair & Atkinson"
+msgstr "Playfair & Atkinson"
+
+#: inc/customizer.php:659
+msgid "Luciole"
+msgstr "Luciole"
+
+#: inc/customizer.php:681
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:429
+#: inc/customizer.php:682
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:449
+#: inc/customizer.php:702
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:450
+#: inc/customizer.php:703
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:470
+#: inc/customizer.php:723
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:471
+#: inc/customizer.php:724
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -603,7 +515,7 @@ msgstr "Résultats de la recherche pour : %s"
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
-#: template-parts/page-content.php:27 template-parts/post-pagination.php:38
+#: template-parts/page-content.php:27 template-parts/post-pagination.php:27
 msgid "Page"
 msgstr "Page"
 
@@ -630,19 +542,19 @@ msgid_plural "%s comments"
 msgstr[0] "%s commentaire"
 msgstr[1] "%s commentaires"
 
-#: template-parts/post-pagination.php:19
+#: template-parts/post-pagination-nomore.php:11
+msgid "Nothing more more to display"
+msgstr "Rien de plus à afficher"
+
+#: template-parts/post-pagination-trigger.php:12
 msgid "Load more posts"
 msgstr "Afficher plus d’articles"
 
 #: template-parts/post-pagination.php:25
-msgid "Nothing more more to display"
-msgstr "Rien de plus à afficher"
-
-#: template-parts/post-pagination.php:36
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: template-parts/post-pagination.php:37
+#: template-parts/post-pagination.php:26
 msgid "Next page"
 msgstr "Page suivante"
 
@@ -670,18 +582,150 @@ msgstr "https://anybodesign.com/"
 msgid "Maintenance"
 msgstr "Maintenance"
 
-#. Template Name of the plugin/theme
-msgid "Style Guide"
-msgstr "Style Guide"
+#~ msgctxt "Post Type General Name"
+#~ msgid "Projects"
+#~ msgstr "Projets"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Project"
+#~ msgstr "Projet"
+
+#~ msgid "Projects"
+#~ msgstr "Projets"
+
+#~ msgid "Item Archives"
+#~ msgstr "Archives de l'élément"
+
+#~ msgid "Item Attributes"
+#~ msgstr "Attributs de l'élément"
+
+#~ msgid "Parent Item:"
+#~ msgstr "Élément parent :"
+
+#~ msgid "All Items"
+#~ msgstr "Tous les éléments"
+
+#~ msgid "Add New Item"
+#~ msgstr "Ajoute un nouvel élément"
+
+#~ msgid "Add New"
+#~ msgstr "Ajouter"
+
+#~ msgid "New Item"
+#~ msgstr "Nouvel élément"
+
+#~ msgid "Edit Item"
+#~ msgstr "Modifier l’élément"
+
+#~ msgid "Update Item"
+#~ msgstr "Mettre à jour"
+
+#~ msgid "View Item"
+#~ msgstr "Voir l’élément"
+
+#~ msgid "View Items"
+#~ msgstr "Voir les éléments"
+
+#~ msgid "Search Item"
+#~ msgstr "Rechercher un article"
+
+#~ msgid "Not found"
+#~ msgstr "Aucun résultat"
+
+#~ msgid "Not found in Trash"
+#~ msgstr "Introuvable dans la corbeille"
+
+#~ msgid "Featured Image"
+#~ msgstr "Image mise en avant"
+
+#~ msgid "Set featured image"
+#~ msgstr "Définir l’image mise en avant"
+
+#~ msgid "Remove featured image"
+#~ msgstr "Supprimer l'image mise en avant"
+
+#~ msgid "Use as featured image"
+#~ msgstr "Utiliser comme image mise en avant"
+
+#~ msgid "Insert into item"
+#~ msgstr "Insérer dans l'élément"
+
+#~ msgid "Uploaded to this item"
+#~ msgstr "Téléversé dans l’élément"
+
+#~ msgid "Items list"
+#~ msgstr "Liste des éléments"
+
+#~ msgid "Items list navigation"
+#~ msgstr "Navigation de la liste des éléments"
+
+#~ msgid "Filter items list"
+#~ msgstr "Filtrer la liste des éléments"
+
+#~ msgid "project"
+#~ msgstr "projet"
+
+#~ msgid "Project"
+#~ msgstr "Projet"
+
+#~ msgid "Post Type Description"
+#~ msgstr "Description du Post Type"
+
+#~ msgid "Choose a title for this project"
+#~ msgstr "Choisissez un titre pour ce projet"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Project types"
+#~ msgstr "Types de projets"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Project type"
+#~ msgstr "Type de projet"
+
+#~ msgid "Project types"
+#~ msgstr "Types de projets"
+
+#~ msgid "Parent Item"
+#~ msgstr "Élément parent"
+
+#~ msgid "New Item Name"
+#~ msgstr "Nouveau nom d’élément"
+
+#~ msgid "Separate items with commas"
+#~ msgstr "Séparer les éléments par des virgules"
+
+#~ msgid "Add or remove items"
+#~ msgstr "Ajouter ou supprimer des éléments"
+
+#~ msgid "Choose from the most used"
+#~ msgstr "Choisir parmi les plus utilisés"
+
+#~ msgid "Popular Items"
+#~ msgstr "Éléments populaires"
+
+#~ msgid "Search Items"
+#~ msgstr "Rechercher des éléments"
+
+#~ msgid "Not Found"
+#~ msgstr "Aucun résultat"
+
+#~ msgid "No items"
+#~ msgstr "Aucun élément"
+
+#~ msgid "project-type"
+#~ msgstr "type-projet"
+
+#~ msgid "Style Guide"
+#~ msgstr "Style Guide"
+
+#~ msgid "Primary Widgets Area"
+#~ msgstr "Zone primaire Widgets"
 
 #~ msgid "Site Options"
 #~ msgstr "Options du site"
 
 #~ msgid "Archives Customizer"
 #~ msgstr "Personnalisation des pages d’archives"
-
-#~ msgid "Social Networks"
-#~ msgstr "Réseaux sociaux"
 
 #~ msgid "Parent project:"
 #~ msgstr "Projet parent :"
@@ -733,9 +777,6 @@ msgstr "Style Guide"
 
 #~ msgid "Black"
 #~ msgstr "Noir"
-
-#~ msgid "White"
-#~ msgstr "Blanc"
 
 #~ msgid "Complementary color"
 #~ msgstr "Couleur complémentaire"
