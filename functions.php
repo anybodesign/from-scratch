@@ -229,18 +229,18 @@ function fs_scripts_load() {
 			// Fancybox
 			
 		    wp_register_script( 
-			    	'fancybox', 
-			    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
-			    	array('jquery'), 
-			    	'3.1.20', 
-			    	true
+		    	'fancybox', 
+		    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
+		    	array('jquery'), 
+		    	'3.1.20', 
+		    	true
 		    );
 		    wp_register_script( 
-			    	'fancybox-init', 
-			    	FS_THEME_URL . '/js/fancybox-init.js',
-			    	array('fancybox'), 
-			    	null, 
-			    	true
+		    	'fancybox-fs-init', 
+		    	FS_THEME_URL . '/js/fancybox-init.js',
+		    	array('fancybox'), 
+		    	null, 
+		    	true
 		    );
 			
 			// Scroll-Out
@@ -263,7 +263,7 @@ function fs_scripts_load() {
 				true
 			);
 			wp_register_script(
-				'ias-init', 
+				'ias-fs-init', 
 				FS_THEME_URL . '/js/infinite-ajax-scroll-init.js', 
 				array('ias'), 
 				FS_THEME_VERSION, 
@@ -332,7 +332,7 @@ function fs_scripts_load() {
 			// Fancybox
 			
 			wp_register_style( 
-				'fancybox', 
+				'fancybox-css', 
 				FS_THEME_URL . '/css/jquery.fancybox.min.css',
 				array(), 
 				null, 
@@ -354,31 +354,35 @@ function fs_scripts_load() {
 		// ------------------------
 			
 			wp_enqueue_script( 'jquery' );
-			/*
-			wp_enqueue_script( 'fancybox' );
-			wp_enqueue_script( 'fancybox-init' );
-
-			$has_pages = get_the_posts_pagination();
-			if (! empty( $has_pages) ) {
-				if ( is_home() || is_archive() || is_search() || is_tax() ) {
-					wp_enqueue_script( 'ias' );
-					wp_enqueue_script( 'ias-init' );
+			
+			if ( get_theme_mod('use_fancybox') == true ) {
+				wp_enqueue_script( 'fancybox' );
+				wp_enqueue_script( 'fancybox-fs-init' );
+			}
+			if ( get_theme_mod('use_ias') == true ) {
+				$has_pages = get_the_posts_pagination();
+				if (! empty( $has_pages) ) {
+					if ( is_home() || is_archive() || is_search() || is_tax() ) {
+						wp_enqueue_script( 'ias' );
+						wp_enqueue_script( 'ias-fs-init' );
+					}
 				}
 			}
 			
-			wp_enqueue_script( 'scrollout' );
-			function fs_scrollout_js() {
-				print '
-				<script>
-					ScrollOut({
-						targets: "section, .post-block, hr, .wpcf7-form",
-						once: true,
-					});
-				</script>
-				';
+			if ( get_theme_mod('use_scrollout') == true ) {
+				wp_enqueue_script( 'scrollout' );
+				function fs_scrollout_js() {
+					print '
+					<script>
+						ScrollOut({
+							targets: "section, .post-block, hr, .wpcf7-form",
+							once: true,
+						});
+					</script>
+					';
+				}
+				add_action('wp_footer', 'fs_scrollout_js', 100);
 			}
-			add_action('wp_footer', 'fs_scrollout_js', 100);
-			*/
 			
 			
 			if ( get_theme_mod('back2top') == true ) {
@@ -399,11 +403,12 @@ function fs_scripts_load() {
 		// Enqueue CSS
 		// ------------------------
 
-			// Slick
-			//wp_enqueue_style( 'slick' );
+			
 			
 			// Fancybox
-			//wp_enqueue_style( 'fancybox' );
+			if ( get_theme_mod('use_fancybox') == true ) {
+				wp_enqueue_style( 'fancybox-css' );
+			}
 	
 			// Back to top
 			if ( get_theme_mod('back2top') == true ) {

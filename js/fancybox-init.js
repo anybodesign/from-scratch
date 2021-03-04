@@ -12,4 +12,6 @@ jQuery(document).ready(function($) {
 		}
 	});
 	
+	$('body').find("a:has(img)").attr('data-fancybox', '');
+	
 });

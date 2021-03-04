@@ -6,7 +6,7 @@
  * @version 1.0
  */
 ?>
-						<?php 
+						<?php if ( get_theme_mod('use_ias') == true ) {
 							$pages = get_the_posts_pagination();
 							if (! empty( $pages) ) {
 								
@@ -14,7 +14,7 @@
 								get_template_part('template-parts/post', 'pagination-trigger');
 								get_template_part('template-parts/post', 'pagination-nomore');
 							} 
-						?>
+						} ?>
 						
 						<div class="pagination" id="posts_nav">
 						<?php
