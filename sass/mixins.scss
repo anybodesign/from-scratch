@@ -7,12 +7,12 @@
 
 @mixin link-style($bg: dark) {
 	
-	$color: var(--secondary_color);
-	$text: var(--secondary_color);
+	$color: var(--text_color);
+	$text: var(--text_color);
 	
 	@if $bg == white {
 		$color: #fff;
-		$text: var(--accent_color);
+		$text: #fff;
 	}
 	
 	text-decoration: none;
@@ -35,8 +35,8 @@
 		linear-gradient(
 			transparent 0,
 			transparent 0.9rem,
-			var(--secondary_color) 0.9rem,
-			var(--secondary_color) 1rem
+			$color 0.9rem,
+			$color 1rem
 		);
 		background-size: 20% 1rem;
 	}
@@ -86,7 +86,7 @@
 
 // Extend the click area to the entire block 
 
-@mixin linkblock() {
+@mixin link-block() {
 	content: '';
 	position: absolute;
 	top: 0; 
