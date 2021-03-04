@@ -11,6 +11,17 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
+		padding-bottom: $grid-padding*2;
+		
+		&::after {
+			content: '';
+			display: block;
+			border-bottom: var(--text_color) 1px solid;
+			width: calc(100% - #{$grid-padding*2});
+			position: absolute;
+			left: $grid-padding;
+			bottom: 0;
+		}
 		
 		@include rwd(large) {
 			flex-direction: row;	
@@ -25,21 +36,113 @@
 	width: 100%;
 	padding: $grid-padding;
 	margin-bottom: $grid-padding*2;
+
+	&.has-search {
+		
+		@include rwd(medium) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}	
 }
 
 .site-brand {
 	padding: $grid-padding;
+	margin-top: $grid-padding*2;
+	
+	.site-toolbar + & {
+		margin-top: 0;
+	}
 }
 
 .site-nav {
 	padding: $grid-padding;
+	margin-top: $grid-padding*2;
+	
+	.site-toolbar + .site-brand + & {
+		margin-top: 0;
+	}
 }
 
 
 // Styles
 
 .site-toolbar {
-	
+
+	.searchform {
+		position: relative;
+		margin-top: $grid-padding;
+		
+		@include rwd(medium) {
+			margin-top: 0;
+		}
+		
+		label {
+			position: absolute;
+			top: 1.25rem;
+			right: 3rem;
+			padding-left: 2.5rem;
+			font-family: var(--font-regular);
+			font-size: 1.3rem;
+			transition: .2s ease-in-out;
+			opacity: 0;
+			border: 0;
+		}
+		&:hover label {
+			opacity: 1;
+		}
+		input[type="search"] {
+			margin: 0;
+			border-color: transparent;
+			background-color: transparent;
+			transition: .3s ease-in-out;
+			
+			@include rwd(medium) {
+				width: 20rem;
+			}
+			
+			&:focus {
+				border-color: var(--primary-color);
+				background-color: transparent;
+				color: var(--text-color);
+			}
+			&:focus + label,
+			&:not(:placeholder-shown) + label {
+				opacity: 0;
+				visibility: none;
+			}
+			&:focus + label + #searchsubmit,
+			&:not(:placeholder-shown) + label + #searchsubmit {
+				transform: translateX(-1rem);
+				pointer-events: initial;
+
+				&:hover,
+				&.focus-visible {
+					transform: translateX(-1rem) scale(1.2);
+				}				
+			}	
+		}
+		::placeholder {
+		  opacity: 0;
+		}
+		#searchsubmit {
+			display: block;
+			width: 2rem;
+			height: 2rem;
+			padding: 0;
+			background: transparent url(img/ui/search.svg) 0 0 no-repeat;
+			background-size: contain;
+			transition: .5s ease-in-out;
+			pointer-events: none;
+
+			position: absolute;
+			top: $grid-padding*1.1;
+			right: 0;
+
+			@include a11y-hide();
+		}
+	}	
 }
 
 .site-title {
@@ -68,6 +171,14 @@
 .site-desc {
 	display: block;
 	margin: 0;
+	max-width: 22rem;
+	
+	@include rwd(medium) {
+		max-width: none;
+	}
+	@include rwd(large) {
+		max-width: 24rem;
+	}
 }
 
 // Sticky Nav

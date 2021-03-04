@@ -46,8 +46,16 @@
 		font-size: 1.4rem;
 		margin-left: $grid-padding;
 		
+		@include rwd(medium) {
+			.has-search & {
+				margin-left: 0;
+				margin-right: $grid-padding;
+			}
+		}
+		
 		& > a {
-			
+			text-decoration: none;
+			@include link-style();
 		}
 	}
 }
@@ -186,6 +194,7 @@
 	transform-origin: center top;
 	overflow: hidden;
 	transition: .2s ease-in-out;
+	background-color: var(--header_color);
 	
 	@include rwd(large) {
 		position: absolute;
@@ -262,7 +271,7 @@
 		content: '';
 		display: block;
 		position: absolute;
-		top: 2rem; 
+		top: 2.4rem; 
 		left: 1.5rem;
 		width: 1.6rem; 
 		height: 0;
@@ -271,8 +280,8 @@
 		
 		@include rwd(large) {
 			top: 1rem; 
-			left: .65rem;
-			width: $grid-padding; 
+			width: $grid-padding;
+			border-top-width: 1px; 
 		}
 	}
 	
@@ -289,20 +298,31 @@
 	
 	// Pointer version
 	&::before {
-		left: .5rem;
+		left: 1rem;
 		transform: rotate(45deg);
+		
+		@include rwd(large) {
+			left: .5rem;
+		}
 	}
 	&::after {
-		left: 1.2rem;
+		left: 2rem;
 		transform: rotate(-45deg);
+		
+		@include rwd(large) {
+			left: 1.2rem;
+		}
 	}
-	&.sub-menu-opened::after {
-		left: .75rem;
-		transform: rotate(0);
-	}
+	&.sub-menu-opened::after,
 	&.sub-menu-opened::before {
-		left: .75rem;
+		left: 1.5rem;
+		top: 2.2rem;
 		transform: rotate(0);
+		
+		@include rwd(large) {
+			top: 1rem;
+			left: .75rem;
+		}
 	}
 	
 
