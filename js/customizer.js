@@ -51,6 +51,7 @@
     wp.customize( 'accent_color', rootCustomProperty );
     wp.customize( 'text_color', rootCustomProperty );
     wp.customize( 'bg_color', rootCustomProperty );
+    wp.customize( 'page_color', rootCustomProperty );
     wp.customize( 'header_color', rootCustomProperty );
     wp.customize( 'footer_color', rootCustomProperty );
 	

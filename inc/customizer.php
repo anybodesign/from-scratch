@@ -238,9 +238,28 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'bg_color', array(
-					'label'		=> __('Background color', 'from-scratch'),
+					'label'			=> __('Background color', 'from-scratch'),
+					'description'	=> __('Used for components backgrounds', 'from-scratch'),
+					'section'		=> 'colors',
+					'settings'		=> 'bg_color',
+				)
+			)
+		);
+		
+		$fs_customize->add_setting(
+			'page_color', 
+			array(
+				'default'			=> '#ffffff',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'page_color', array(
+					'label'		=> __('Page background color', 'from-scratch'),
 					'section'	=> 'colors',
-					'settings'	=> 'bg_color',
+					'settings'	=> 'page_color',
 				)
 			)
 		);
@@ -250,7 +269,7 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'header_color', 
 			array(
-				'default'			=> '#ffffff',
+				'default'			=> '',
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
@@ -772,8 +791,15 @@ function fs_inline_styles() { ?>
 			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#606060')); ?>;
 			--accent_color: <?php echo esc_attr(get_theme_mod('accent_color', '#ceff00')); ?>;	
 			--bg_color: <?php echo esc_attr(get_theme_mod('bg_color', '#f0f0f0')); ?>;			
+			--page_color: <?php echo esc_attr(get_theme_mod('page_color', '#ffffff')); ?>;			
 			--text_color: <?php echo esc_attr(get_theme_mod('text_color', '#23252b')); ?>;				
-			--header_color: <?php echo esc_attr(get_theme_mod('header_color', '#ffffff')); ?>;
+			
+			<?php if ( get_theme_mod('header_color') ) { ?>
+			--header_color: <?php echo esc_attr(get_theme_mod('header_color', '')); ?>;
+			<?php }
+				if ( get_theme_mod('footer_color') ) { ?>
+			--footer_color: <?php echo esc_attr(get_theme_mod('footer_color', '')); ?>;
+			<?php } ?>
 			
 			<?php if ( get_theme_mod('btn_text') ) { ?>
 			--btn_text: #ffffff;
