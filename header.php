@@ -19,12 +19,22 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+<?php 
+	$layout1 = get_theme_mod('layout_option') == 'version1';
+	$layout2 = get_theme_mod('layout_option') == 'version2';
+	$has_bg = get_theme_mod('has_bg'); 
+	
+	if ( $layout2 ) { $layout = 'layout-v2'; }
+	else { $layout = 'layout-v1'; }
+	if ( $has_bg ) { $banner = ' banner-has-bg'; }
+	else { $banner = null; }
+?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div id="wrapper">
+<div id="wrapper" class="<?php echo $layout; echo $banner; ?>">
 
 	<?php 
 		if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {

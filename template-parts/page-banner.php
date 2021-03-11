@@ -9,8 +9,9 @@
  * @since 1.0
  * @version 1.0
  */
+ 	$has_bg = get_theme_mod('has_bg'); 
 ?>
-					<div class="page-banner"<?php fs_bg_img(); ?>>
+					<div class="page-banner"<?php if ( $has_bg ) { fs_bg_img(); } ?>>
 						<div class="inner">
 						
 							<h1 class="page-title">

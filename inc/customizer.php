@@ -649,7 +649,6 @@ function fs_customize_register($fs_customize) {
 				'choices' => array(
 					'version1' => __( 'Version 1', 'from-scratch' ),
 					'version2' => __( 'Version 2', 'from-scratch' ),
-					'version3' => __( 'Version 3', 'from-scratch' ),
 				),
 			)
 		);
@@ -684,7 +683,24 @@ function fs_customize_register($fs_customize) {
 	// Theme Pictures
 	// -
 	// + + + + + + + + + + 
-
+		
+		$fs_customize->add_setting(
+			'has_bg', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'has_bg', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show background images in the banner', 'from-scratch'),
+				'section'		=> 'fs_pictures_section',
+				'settings'		=> 'has_bg',
+			)
+		);
+		
 		// Default Image
 		
 		$fs_customize->add_setting(
@@ -768,7 +784,7 @@ function fs_customizer_sanitize_checkbox( $input ) {
 	return '';
 }
 function fs_customizer_sanitize_radio_layout( $input ) {
-    if( !in_array( $input, array( 'version1', 'version2', 'version3' ) ) ) {
+    if( !in_array( $input, array( 'version1', 'version2' ) ) ) {
         $input = 'version1';
     }
     return $input;

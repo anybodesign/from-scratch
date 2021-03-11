@@ -21,11 +21,21 @@
 			position: absolute;
 			left: $grid-padding;
 			bottom: 0;
+			
+			.banner-has-bg & {
+				content: none;
+			}
 		}
 		
 		@include rwd(large) {
-			flex-direction: row;	
+			flex-direction: row;
+			
+			.layout-v2 & {
+				flex-direction: column;
+				justify-content: flex-start;
+			}	
 		}
+		
 	}
 }
 
@@ -53,6 +63,13 @@
 	
 	.site-toolbar + & {
 		margin-top: 0;
+	}
+	
+	@include rwd(large) {
+	
+		.layout-v2 & {
+			text-align: center;
+		}	
 	}
 }
 
@@ -156,6 +173,14 @@
 	a,
 	img {
 		display: block;
+	}
+	img {
+		@include rwd(large) {
+		
+			.layout-v2 & {
+				margin: 0 auto;
+			}	
+		}		
 	}
 
 	.logo.has-mobile-logo { display: none; }
