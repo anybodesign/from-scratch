@@ -1,17 +1,19 @@
 jQuery(document).ready(function($) {
 	
-	$('[data-fancybox]').fancybox({
+	$().fancybox({
+		selector : '.fancypop',
 		buttons : [
 			'close'
 		],
 		beforeShow: function(){
-			$("body").css({'overflow-y':'hidden'});
+			$('body').css({'overflow-y':'hidden'});
 		},
 		afterClose: function(){
-			$("body").css({'overflow-y':'visible'});
+			$('body').css({'overflow-y':'visible'});
 		}
 	});
 	
-	$('body').find("a:has(img)").attr('data-fancybox', '');
+	//$('.page-wrap').find("a:has(img)").attr('data-fancybox', '');
+	$('.page-wrap').find('figure a:has(img)').addClass('fancypop');
 	
 });
