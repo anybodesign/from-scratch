@@ -44,6 +44,10 @@
 	
 	p {
 		margin-bottom: 0;
+		
+		a {
+			@include link-style();
+		}
 	}
 }
 .footer-menu {
@@ -53,5 +57,9 @@
 	
 	li {
 		margin: 0 $grid-padding 0 0;
+		
+		a {
+			@include link-style();
+		}
 	}
 }

@@ -156,12 +156,16 @@ p.text-mentions {
 
 // White text, inside a .white-text class container
 
+.has-text-background-color,
 .white-text {
 	
 	p, li, span, small, time, div,
 	h1, h2, h3, h4, h5, h6,
 	label, legend, address, figcaption {
 		color: #fff;
+	}
+	::selection {
+		color: var(--text_color);
 	}
 	
 }
