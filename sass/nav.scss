@@ -110,25 +110,55 @@
 		}
 		
 		& > a {
+			position: relative;
 			display: block;
 			padding: $grid-padding 0;
-			border-top: var(--text_color) 1px solid;
+			transition: .2s ease-in-out;
 			text-decoration: none;
 			
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 1px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				border-top: var(--text_color) 1px solid;
+				transition: .2s ease-in-out;
+			}
+			
 			@include rwd(large) {
-				padding: 0;
-				border-top: 0;
+				padding: $grid-padding;
+				
+				&::after {
+					width: 0;
+					border-top: transparent 3px solid;
+				}
 			}
 		}
 		& > a:hover, 
 		& > a:focus,
 		&.current-menu-item > a,
 		&.current_page_parent > a {
-			color: var(--secondary_color);
-			text-decoration: underline;
-		}
-		a:focus {
+			background-color: var(--accent_color);
 			
+			@include rwd(large) {
+				background-color: transparent;
+			}
+			
+			&::after {
+				width: 100%;
+				border-top-color: var(--accent_color);
+				
+				@include rwd(large) {
+					border-top-width: 3px;
+				}
+			}
+		}
+		&.current-menu-item > a,
+		&.current_page_parent > a {
+			font-family: var(--font_bold);
 		}
 		
 		
@@ -139,11 +169,8 @@
 			& > a {
 				padding-right: 2.4rem;
 				
-				@include rwd(large) {
-					//padding-right: 2rem;
-				}
 				@include rwd(wide) {
-					padding-right: 0;
+					padding-right: $grid-padding;
 				}
 			}
 		
@@ -237,7 +264,7 @@
 
 .sub-menu-unfold {
 	position: absolute;
-	top: .5rem; 
+	top: -.25rem; 
 	right: 0;
 	display: block;
 	height: 4.4rem; 
@@ -254,7 +281,7 @@
 	@include rwd(large) {
 		height: 2.2rem; 
 		width: 2.2rem;
-		top: .2rem;
+		top: 1.1rem;
 		right: 0; 
 	}
 	@include rwd(wide) {
@@ -345,21 +372,27 @@
 	padding: 0;
 	cursor: pointer;
 	background-color: transparent;
-	@include a11y-hide();
 	z-index: 200;
+	
+	.burger-title {
+		position: absolute;
+		font-size: 1.6rem;
+		top: -1rem;
+		left: 4.4rem;
+	}
 
-	span,
-	span::before,
-	span::after {
+	& > span,
+	& > span::before,
+	& > span::after {
 		position: absolute; 
 		display: block;
 		width: 3.4rem; 
 		height: 0;
 		margin: 0;
 		border-top: var(--primary_color) 2px solid;
-		transition: .3s linear;
+		transition: .15s linear;
 	}
-	span {
+	& > span {
 		top: 2.1rem; 
 		left: 0;
 		
@@ -380,9 +413,9 @@
 	}
 	
 	&.menu-opened {
-		span {
+		& > span {
 			border-color: transparent; 
-			transform: rotate(-45deg);
+			width: 0;
 			
 			&::before,
 			&::after {
@@ -393,12 +426,12 @@
 				border-color: var(--secondary_color);
 			}
 			&::before {
-				//transform: rotate(-45deg);
-				transform: rotate(90deg);
+				transform: rotate(-135deg);
+				//transform: rotate(90deg);
 			}
 			&::after {
-				//transform: rotate(45deg);
-				border-color: var(--secondary_color);
+				transform: rotate(-45deg);
+				//border-color: var(--secondary_color);
 			}
 		}
 	}
@@ -409,5 +442,84 @@
 	
 	@include rwd(large) {
 		display: none;				
+	}
+}
+
+// Widget nav menus
+
+.widget-container {
+	
+	ul {		
+		padding: 0;
+		list-style: none;
+		border-top: var(--text_color) 1px solid;
+		
+		.white-text & {
+			border-top-color: #fff;
+		}
+		
+		li {
+			
+			a {
+				display: block;
+				padding: $grid-padding 0;
+				text-decoration: none;
+				border-bottom: var(--text_color) 1px solid;
+				transition: .2s ease-in-out;
+				
+				.white-text & {
+					border-bottom-color: #fff;
+				}
+				
+				&:hover,
+				&:focus {
+					padding-left: .5rem;
+					background-color: var(--accent_color);
+					color: var(--text_color);
+				}
+			}
+			
+			&.recentcomments {
+				display: block;
+				padding: $grid-padding 0;
+			}
+		}
+	}
+}
+
+// Share box
+
+.share-box {
+	
+	p {
+		padding-bottom: $grid-padding/2;
+		border-bottom: var(--text_color) 1px solid;
+		margin-bottom: $grid-padding;
+	}
+}
+
+.share-items {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	
+	& > li {
+		display: block;
+		margin-right: $grid-padding;
+		
+		img {
+			display: block;
+			transition: .2s ease-in-out;
+		}
+		a {
+			text-decoration: none;
+			
+			&:hover,
+			&:focus {
+				img {
+					transform: translateY(-$grid-padding/2);
+				}
+			}
+		}
 	}
 }
