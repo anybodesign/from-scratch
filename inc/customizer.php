@@ -69,6 +69,13 @@ function fs_customize_register($fs_customize) {
 		)
 	);
 	$fs_customize->add_section(
+		'fs_blog_section',
+		array(
+			'title'			=> __('Blog Options', 'from-scratch'),
+			'priority'		=> 50,
+		)
+	);
+	$fs_customize->add_section(
 		'fs_layout_section', 
 		array(
 			'title' 		=> __('Layout Options', 'from-scratch'),
@@ -590,9 +597,87 @@ function fs_customize_register($fs_customize) {
 				'settings'		=> 'use_fancybox',
 			)
 		);
-			
+		
+		
+	// Blog options
+	// -
+	// + + + + + + + + + + 		
+		
+		// Sidebars
+		
+		$fs_customize->add_setting(
+			'blog_sidebar', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'blog_sidebar', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the sidebar on the blog page', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'blog_sidebar',
+			)
+		);
+		
+		// Category dropdown
+		
+		$fs_customize->add_setting(
+			'cat_dropdown', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'cat_dropdown', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the category dropdown on the blog page', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'cat_dropdown',
+			)
+		);
+		
+		// Excerpt
+		
+		$fs_customize->add_setting(
+			'ex_lenght', 
+			array(
+				'default'				=> 24,
+				'sanitize_callback'		=> 'sanitize_text_field'		
+			)
+		);
+		$fs_customize->add_control(
+			'ex_lenght', 
+			array(
+				'type'			=> 'number',
+				'label'			=> __('Excerpt lenght (number of words)', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'ex_lenght',
+			)
+		);
+		
 		// Post metas
 		
+		$fs_customize->add_setting(
+			'meta_date', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_date', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the publication date in post meta', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'meta_date',
+			)
+		);
 		$fs_customize->add_setting(
 			'meta_author', 
 			array(
@@ -605,7 +690,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Show the author in post meta', 'from-scratch'),
-				'section'		=> 'fs_options_section',
+				'section'		=> 'fs_blog_section',
 				'settings'		=> 'meta_author',
 			)
 		);
@@ -621,8 +706,27 @@ function fs_customize_register($fs_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Show the category in post meta', 'from-scratch'),
-				'section'		=> 'fs_options_section',
+				'section'		=> 'fs_blog_section',
 				'settings'		=> 'meta_category',
+			)
+		);
+		
+		// Sharing 
+		
+		$fs_customize->add_setting(
+			'share_box', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'share_box', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Add basic social networks sharing buttons on single posts (Facebook, Twitter, LinkedIn, e-mail)', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'share_box',
 			)
 		);
 
