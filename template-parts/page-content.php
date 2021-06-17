@@ -28,9 +28,20 @@
 									'after'       => '</nav>',
 									'link_before' => '<span class="page-number">',
 									'link_after'  => '</span>',
+									'aria_current'     => 'page',
+        							'next_or_number'   => 'number',
+									'separator'        => ' ',
+									'nextpagelink'     => __( 'Next page', 'from-scratch' ),
+									'previouspagelink' => __( 'Previous page', 'from-scratch' ),
+        							'pagelink'         => '%',
 								)
 							); 
-						 
+						    
+							if ( is_single() && get_theme_mod('share_box') == true ) {
+								get_template_part( 'template-parts/post', 'share' );
+							}
+							
+							
 							if ( comments_open() || get_comments_number() ) {
 								comments_template();
 							}
