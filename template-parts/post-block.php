@@ -16,7 +16,7 @@
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<div class="post-figure">
 							<a href="<?php the_permalink(); ?>" rel="nofollow">
-							<?php the_post_thumbnail('thumbnail-hd'); ?>
+							<?php the_post_thumbnail('screen-hd'); ?>
 							</a>
 						</div>
 						<?php } ?>
