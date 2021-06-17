@@ -524,7 +524,8 @@ add_filter( 'get_the_archive_title', function ($title) {
 // Excerpts lenght
 
 function fs_custom_excerpt_length( $length ) {
-	return 24;
+	$words = get_theme_mod('ex_lenght', 24);
+	return $words;
 }
 add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
 
@@ -538,6 +539,21 @@ function fs_excerpt_more( $more ) {
     );
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
+
+// Custom excerpt
+// https://gist.github.com/samjbmason/4050714
+
+function fs_share_excerpt($count, $post_id){
+  $permalink = get_permalink($post_id);
+  $excerpt = get_post($post_id);
+  $excerpt = $excerpt->post_content;
+  $excerpt = strip_tags($excerpt);
+  $excerpt = substr($excerpt, 0, $count);
+  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+
+  $excerpt = $excerpt.'...';
+  return $excerpt;
+}
 
 
 // Image Sizes
