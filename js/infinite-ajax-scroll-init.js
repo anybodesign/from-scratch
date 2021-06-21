@@ -33,3 +33,10 @@ ias.on('last', function() {
 
   el.style.display = 'block';
 });
+
+// A11Y Move Focus
+ias.on('append', function() {
+  let lastpost = document.querySelector('.post-block:last-of-type .read-more');
+  
+  lastpost.focus();
+});
