@@ -450,7 +450,25 @@ function fs_customize_register($fs_customize) {
 				'settings'		=> 'searchbar',
 			)
 		);
-	
+		
+		// High contrast
+		
+		$fs_customize->add_setting(
+			'contrast', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'contrast', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display high Contrast button in toolbar', 'from-scratch'),
+				'section'		=> 'fs_header_section',
+				'settings'		=> 'contrast',
+			)
+		);	
 
 	// Footer Options
 	// -
