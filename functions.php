@@ -293,6 +293,21 @@ function fs_scripts_load() {
 			// Other stuff
 			
 			wp_register_script(
+				'high-contrast', 
+				FS_THEME_URL . '/js/high-contrast.js', 
+				array('jquery'), 
+				FS_THEME_VERSION, 
+				true
+			);
+			wp_register_script(
+				'cookie', 
+				FS_THEME_URL . '/js/jquery.cookie.js', 
+				array('jquery'), 
+				FS_THEME_VERSION, 
+				true
+			);
+			
+			wp_register_script(
 				'focus-visible', 
 				FS_THEME_URL . '/js/focus-visible.min.js', 
 				array(), 
@@ -384,7 +399,10 @@ function fs_scripts_load() {
 				add_action('wp_footer', 'fs_scrollout_js', 100);
 			}
 			
-			
+			if ( get_theme_mod('contrast') == true ) {
+				wp_enqueue_script( 'high-contrast' );
+				wp_enqueue_script( 'cookie' );
+			}
 			if ( get_theme_mod('back2top') == true ) {
 				wp_enqueue_script( 'back2top' );
 			}
