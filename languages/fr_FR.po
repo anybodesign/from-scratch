@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2021-06-17 16:40+0200\n"
-"PO-Revision-Date: 2021-06-17 16:40+0200\n"
+"POT-Creation-Date: 2021-06-22 08:41+0200\n"
+"PO-Revision-Date: 2021-06-22 08:42+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -327,63 +327,67 @@ msgstr "Masquer le slogan du site"
 msgid "Display search in toolbar"
 msgstr "Afficher la recherche dans la barre d’outils"
 
-#: inc/customizer.php:473
+#: inc/customizer.php:467
+msgid "Display high Contrast button in toolbar"
+msgstr "Afficher un bouton de contraste élevé dans la barre d’outils"
+
+#: inc/customizer.php:491
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:474
+#: inc/customizer.php:492
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:495
+#: inc/customizer.php:513
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:519
+#: inc/customizer.php:537
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:538
+#: inc/customizer.php:556
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:557
+#: inc/customizer.php:575
 msgid "Load new posts on click"
 msgstr "Charger les nouveaux articles au clic"
 
-#: inc/customizer.php:576
+#: inc/customizer.php:594
 msgid "Use Scrollout to animate blocks on scroll"
 msgstr "Utilisez Scrollout pour animer les blocs au scroll"
 
-#: inc/customizer.php:595
+#: inc/customizer.php:613
 msgid "Use Fancybox to enlarge pictures"
 msgstr "Utilisez Fancybox pour agrandir les images"
 
-#: inc/customizer.php:619
+#: inc/customizer.php:637
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:638
+#: inc/customizer.php:656
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:657
+#: inc/customizer.php:675
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:676
+#: inc/customizer.php:694
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:692
+#: inc/customizer.php:710
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:708
+#: inc/customizer.php:726
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:727
+#: inc/customizer.php:745
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -391,70 +395,70 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:751
+#: inc/customizer.php:769
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:754
+#: inc/customizer.php:772
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:755
+#: inc/customizer.php:773
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:775
+#: inc/customizer.php:793
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:778
+#: inc/customizer.php:796
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:779
+#: inc/customizer.php:797
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:780
+#: inc/customizer.php:798
 msgid "Playfair & Atkinson"
 msgstr "Playfair & Atkinson"
 
-#: inc/customizer.php:781
+#: inc/customizer.php:799
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:782
+#: inc/customizer.php:800
 msgid "Miriam Libre & Asap"
 msgstr "Miriam Libre & Asap"
 
-#: inc/customizer.php:802
+#: inc/customizer.php:820
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:821
+#: inc/customizer.php:839
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:822
+#: inc/customizer.php:840
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:842
+#: inc/customizer.php:860
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:843
+#: inc/customizer.php:861
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:863
+#: inc/customizer.php:881
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:864
+#: inc/customizer.php:882
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"

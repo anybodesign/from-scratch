@@ -244,6 +244,10 @@ img {
 	height: auto;
 	border: 0;
 	border-style: none;
+	
+	.high-contrast & {
+		filter: grayscale(100);
+	}
 }
 
 figure {

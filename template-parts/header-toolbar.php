@@ -14,6 +14,9 @@
 				</nav>
 				<?php } ?>
 				
+			<?php if ( get_theme_mod('searchbar') || get_theme_mod('contrast') ) { ?>
+				<div class="toolbar-widgets">
+				
 				<?php if ( get_theme_mod('searchbar') ) { ?>
 				<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
 				    <input type="search" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php esc_html_e( 'Enter keyword', 'from-scratch' ); ?>">
@@ -21,6 +24,22 @@
 					<input type="submit" class="action-btn" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'from-scratch' ); ?>">
 			    </form>
 				<?php } ?>
+				
+				<?php if ( get_theme_mod('contrast') == true ) { ?>
+				<div class="contrast-switch">
+					<button class="toggle-highcontrast" type="button">
+						<img src="<?php echo FS_THEME_URL; ?>/img/ui/contrast-on.svg" alt="">
+						<span><?php esc_html_e('High contrast', 'from-scratch'); ?></span>
+					</button>
+					<button class="toggle-remove" type="button">
+						<img src="<?php echo FS_THEME_URL; ?>/img/ui/contrast-off.svg" alt="">
+						<span><?php esc_html_e('Restore contrast', 'from-scratch'); ?></span>
+					</button>
+				</div>
+				<?php } ?>
+				
+				</div>
+			<?php } ?>
 			
 			</div>	
 			<?php endif; ?>	

@@ -45,6 +45,24 @@ $admin-bar: 48.875em;	 		// @note: 782px
 	
 	--header_color: transparent;
 	--footer_color: transparent;
+	
+	
+	.high-contrast {
+
+		--primary_color: #222; 
+		--secondary_color: #222; 
+		--accent_color: #222;
+		--bg_color: #fff;
+		--page_color: #fff;
+		
+		--text_color: #222;
+		
+		--btn_text: #fff;
+		--btn_text_hover: #fff;
+		
+		--header_color: transparent;
+		--footer_color: transparent;		
+	}
 
 
 	// Fonts

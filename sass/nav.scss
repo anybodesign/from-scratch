@@ -98,7 +98,7 @@
 	}
 
 	
-	& > li {
+	& li {
 		position: relative;
 		display: block;
 		
@@ -109,7 +109,7 @@
 			margin-left: $grid-padding*2;
 		}
 		
-		& > a {
+		& a {
 			position: relative;
 			display: block;
 			padding: $grid-padding 0;
@@ -137,14 +137,24 @@
 				}
 			}
 		}
-		& > a:hover, 
-		& > a:focus,
-		&.current-menu-item > a,
-		&.current_page_parent > a {
+		
+		& a:hover, 
+		& a:focus,
+		&.current-menu-item a,
+		&.current_page_parent a {
 			background-color: var(--accent_color);
+			padding-left: $grid-padding;
+			
+			.high-contrast & {
+				color: #fff;
+			}
 			
 			@include rwd(large) {
 				background-color: transparent;
+				
+				.high-contrast & {
+					color: var(--text_color);
+				}
 			}
 			
 			&::after {
@@ -156,8 +166,8 @@
 				}
 			}
 		}
-		&.current-menu-item > a,
-		&.current_page_parent > a {
+		&.current-menu-item a,
+		&.current_page_parent a {
 			font-family: var(--font_bold);
 		}
 		
@@ -199,9 +209,14 @@
 .sub-menu-opened + .sub-menu {
 	transform: scaleY(1);
 	height: auto;
+	background-color: var(--header_color);
 	
 	& > li {
 		display: block;
+		
+		a {
+			display: block;
+		}
 	}
 	
 	@include rwd(large) {
@@ -236,7 +251,13 @@
 	}
 
 	& > li {
+		font-size: 1.6rem;
 		
+		@include rwd(large) {
+			&:first-child {
+				border-top: var(--text_color) 1px dotted;
+			}
+		}
 		@include rwd(wide) {
 			display: none;
 		}
@@ -244,11 +265,25 @@
 		
 		a {
 			display: block;
+			
+			&::after {
+				border-top: var(--text_color) 1px dotted;
+				width: 100%;
+			}
+			
+			@include rwd(large) {
+				padding: $grid-padding/2 0;
+			}
 		}
 		a:hover, 
 		a:focus,
 		&.current-menu-item a {
+			background-color: var(--accent_color);
 			
+			&::after {
+				border-top-color: var(--text_color);
+				border-top-width: 1px;
+			}
 		}
 	}
 	
@@ -476,6 +511,10 @@
 					padding-left: .5rem;
 					background-color: var(--accent_color);
 					color: var(--text_color);
+					
+					.high-contrast & {
+						color: #fff;
+					}
 				}
 			}
 			
@@ -522,4 +561,54 @@
 			}
 		}
 	}
+}
+
+
+// Contrast
+
+.contrast-switch {
+	
+	& button {
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 40px;
+		font-family: var(--font_regular);
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.1rem;
+		padding: 0;
+		margin: 0;
+		background-color: transparent;
+		
+		span {
+			@include a11y-hidden();
+		}
+		
+		img {
+			display: block;
+			width: 20px;
+			height: 20px;
+			position: relative;
+			top: 0;
+			margin: 0 auto;
+			transition: .2s ease-in-out;
+		}
+	}
+	
+	& button:focus, 
+	& button:hover {
+		
+		img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.toggle-remove { display: none !important; }
+
+
+.high-contrast {
+	.toggle-highcontrast { display: none; }
+	.toggle-remove { display: block !important; }
 }

@@ -21,10 +21,17 @@
 	&:hover {
 		background-color: var(--text_color);
 		color: var(--btn_text_hover);
+		
+		.high-contrast & {
+			background-color: #fff;
+			color: #222;	
+		}
 	}
 	&:focus {
 		outline: none;
 	}
+	
+		
 }
 
 // Variation example of .action-btn

@@ -57,6 +57,10 @@
 	}	
 }
 
+.toolbar-widgets {
+	display: flex;
+}
+
 .site-brand {
 	padding: $grid-padding;
 	margin-top: $grid-padding*2;
