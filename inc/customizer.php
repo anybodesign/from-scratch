@@ -372,6 +372,18 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		$fs_customize->add_setting('site_logo_height', array(
+			'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('site_logo_height', array(
+			'type'			=> 'number',
+			'label'			=> __('Logo height', 'from-scratch'),
+			'description'	=> __('Set a maximum height in pixels.', 'from-scratch'),
+			'section'		=> 'fs_header_section',
+			'settings'		=> 'site_logo_height',
+		));
+		
 		// Site logo - Mobile
 		
 		$fs_customize->add_setting(
@@ -391,6 +403,18 @@ function fs_customize_register($fs_customize) {
 				)
 			)
 		);
+		
+		$fs_customize->add_setting('site_logo_mobile_height', array(
+			'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('site_logo_mobile_height', array(
+			'type'			=> 'number',
+			'label'			=> __('Mobile logo height', 'from-scratch'),
+			'description'	=> __('Set a maximum height in pixels.', 'from-scratch'),
+			'section'		=> 'fs_header_section',
+			'settings'		=> 'site_logo_mobile_height',
+		));
 
 		// Hide site name
 		

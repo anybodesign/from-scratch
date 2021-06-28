@@ -35,6 +35,31 @@
             }
         });
     });
+	
+	// Logo height
+	wp.customize( 'site_logo_height', function( value ) {
+		value.bind( function( to ) {
+			if( to ) {
+				$height1 = to/10;
+				$( '.site-title img.logo' ).attr( 'style', 'max-height:'+$height1+'rem' );
+			} 
+			else {
+				$( '.site-title img.logo' ).removeAttr( 'style' );
+			}
+		});
+	});
+	
+	wp.customize( 'site_logo_mobile_height', function( value ) {
+		value.bind( function( to ) {
+			if( to ) {
+				$height2 = to/10;
+				$( '.site-title img.logo-mobile' ).attr( 'style', 'max-height:'+$height2+'rem' );
+			} 
+			else {
+				$( '.site-title img.logo-mobile' ).removeAttr( 'style' );
+			}
+		});
+	});
 
 
     // Colors // if using CSS vars
