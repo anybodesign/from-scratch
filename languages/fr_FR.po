@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2021-06-22 08:41+0200\n"
-"PO-Revision-Date: 2021-06-22 08:42+0200\n"
+"POT-Creation-Date: 2021-06-28 16:56+0200\n"
+"PO-Revision-Date: 2021-06-28 16:57+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -23,22 +23,6 @@ msgstr ""
 #: 404.php:22
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
-
-#: blocks/block-custom/block-custom-fields.php:9
-msgid "Block Custom"
-msgstr "Block Custom"
-
-#: blocks/block-custom/block-custom-fields.php:13
-msgid "Field"
-msgstr "Champ"
-
-#: blocks/block-custom/block-custom.php:14
-msgid "Block"
-msgstr "Bloc"
-
-#: blocks/block-custom/block-custom.php:15
-msgid "Block description."
-msgstr "Description du bloc."
 
 #: comments.php:19
 msgid "They talk about it"
@@ -64,7 +48,7 @@ msgstr "Réseaux sociaux"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:67 functions.php:442
+#: footer.php:67 functions.php:460
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -112,102 +96,110 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:440 template-parts/header-toolbar.php:7
+#: functions.php:458 template-parts/header-toolbar.php:7
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:441 template-parts/header-nav.php:6
+#: functions.php:459 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:443
+#: functions.php:461
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:538
+#: functions.php:556
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:571
+#: functions.php:589
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:572
+#: functions.php:590
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:573
+#: functions.php:591
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:574
+#: functions.php:592
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:575
+#: functions.php:593
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:576
+#: functions.php:594
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:577
+#: functions.php:595
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:615
+#: functions.php:633
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:624
+#: functions.php:642
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:633
+#: functions.php:651
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:642
+#: functions.php:660
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:667
+#: functions.php:685
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:673
+#: functions.php:691
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:679
+#: functions.php:697
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:699
+#: functions.php:717
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:701 template-parts/header-toolbar.php:21
+#: functions.php:719 template-parts/header-toolbar.php:24
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:733
+#: functions.php:751
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:739
+#: functions.php:757
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:748
+#: functions.php:766
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:754
+#: functions.php:772
 msgid "Edit"
 msgstr "Modifier"
+
+#: inc/acf/social-icons-fields.php:9
+msgid "Social icons"
+msgstr "Icônes de réseaux sociaux"
+
+#: inc/acf/social-icons-fields.php:13
+msgid "Icon"
+msgstr "Icône"
 
 #: inc/customizer.php:53
 msgid "Header Options"
@@ -303,11 +295,19 @@ msgstr "Logo du site"
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:387
+#: inc/customizer.php:381
+msgid "Logo height"
+msgstr "Hauteur du logo"
+
+#: inc/customizer.php:382 inc/customizer.php:414
+msgid "Set a maximum height in pixels."
+msgstr "Définir une hauteur maximale en pixels."
+
+#: inc/customizer.php:399
 msgid "Site Logo - Mobile"
 msgstr "Logo du site - mobile"
 
-#: inc/customizer.php:388
+#: inc/customizer.php:400
 msgid ""
 "Specific version of the logo for mobile devices. If none, the default logo "
 "will be used."
@@ -315,79 +315,83 @@ msgstr ""
 "Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
 "par défaut sera utilisé."
 
-#: inc/customizer.php:409
+#: inc/customizer.php:413
+msgid "Mobile logo height"
+msgstr "Hauteur du logo mobile"
+
+#: inc/customizer.php:433
 msgid "Hide the site title"
 msgstr "Masquer le titre du site"
 
-#: inc/customizer.php:429
+#: inc/customizer.php:453
 msgid "Hide the website tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:448
+#: inc/customizer.php:472
 msgid "Display search in toolbar"
 msgstr "Afficher la recherche dans la barre d’outils"
 
-#: inc/customizer.php:467
+#: inc/customizer.php:491
 msgid "Display high Contrast button in toolbar"
 msgstr "Afficher un bouton de contraste élevé dans la barre d’outils"
 
-#: inc/customizer.php:491
+#: inc/customizer.php:515
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:492
+#: inc/customizer.php:516
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:513
+#: inc/customizer.php:537
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:537
+#: inc/customizer.php:561
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:556
+#: inc/customizer.php:580
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:575
+#: inc/customizer.php:599
 msgid "Load new posts on click"
 msgstr "Charger les nouveaux articles au clic"
 
-#: inc/customizer.php:594
+#: inc/customizer.php:618
 msgid "Use Scrollout to animate blocks on scroll"
 msgstr "Utilisez Scrollout pour animer les blocs au scroll"
 
-#: inc/customizer.php:613
+#: inc/customizer.php:637
 msgid "Use Fancybox to enlarge pictures"
 msgstr "Utilisez Fancybox pour agrandir les images"
 
-#: inc/customizer.php:637
+#: inc/customizer.php:661
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:656
+#: inc/customizer.php:680
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:675
+#: inc/customizer.php:699
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:694
+#: inc/customizer.php:718
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:710
+#: inc/customizer.php:734
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:726
+#: inc/customizer.php:750
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:745
+#: inc/customizer.php:769
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -395,111 +399,111 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:769
+#: inc/customizer.php:793
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:772
+#: inc/customizer.php:796
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:773
+#: inc/customizer.php:797
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:793
+#: inc/customizer.php:817
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:796
+#: inc/customizer.php:820
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:797
+#: inc/customizer.php:821
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:798
+#: inc/customizer.php:822
 msgid "Playfair & Atkinson"
 msgstr "Playfair & Atkinson"
 
-#: inc/customizer.php:799
+#: inc/customizer.php:823
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:800
+#: inc/customizer.php:824
 msgid "Miriam Libre & Asap"
 msgstr "Miriam Libre & Asap"
 
-#: inc/customizer.php:820
+#: inc/customizer.php:844
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:839
+#: inc/customizer.php:863
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:840
+#: inc/customizer.php:864
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:860
+#: inc/customizer.php:884
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:861
+#: inc/customizer.php:885
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:881
+#: inc/customizer.php:905
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:882
+#: inc/customizer.php:906
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:54
+#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:54
 msgid "View details"
 msgstr "Voir les détails"
 
-#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:77
+#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:77
 #, php-format
 msgid "More information about %s"
 msgstr "Plus d'informations sur %s"
 
-#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:128
+#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:128
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:213
+#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:214
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:215
+#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:216
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:217
+#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:218
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
 msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
 
-#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:223
+#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:224
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p9/Vcs/PluginUpdateChecker.php:98
+#: inc/plugin-update-checker/Puc/v4p11/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
@@ -531,13 +535,21 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: template-parts/header-toolbar.php:19
+#: template-parts/header-toolbar.php:22
 msgid "Enter keyword"
 msgstr "Entrer un mot clé"
 
-#: template-parts/header-toolbar.php:20
+#: template-parts/header-toolbar.php:23
 msgid "Search for"
 msgstr "Rechercher"
+
+#: template-parts/header-toolbar.php:32
+msgid "High contrast"
+msgstr "Contraste élevé"
+
+#: template-parts/header-toolbar.php:36
+msgid "Restore contrast"
+msgstr "Retablir le contraste"
 
 #: template-parts/nothing.php:14
 msgid "Nothing Found"
@@ -665,6 +677,18 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid "Block Custom"
+#~ msgstr "Block Custom"
+
+#~ msgid "Field"
+#~ msgstr "Champ"
+
+#~ msgid "Block"
+#~ msgstr "Bloc"
+
+#~ msgid "Block description."
+#~ msgstr "Description du bloc."
 
 #~ msgid "Version 3"
 #~ msgstr "Version 3"
