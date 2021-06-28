@@ -818,7 +818,7 @@ if( class_exists('acf') ) {
 	add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
 	function fs_acf_json_save_point( $path ) {
 	    
-	    $path = FS_THEME_DIR . '/inc/acf-json';
+	    $path = FS_THEME_DIR . '/inc/acf';
 	    
 	    return $path;
 	}
@@ -827,7 +827,7 @@ if( class_exists('acf') ) {
 	    
 	    unset($paths[0]);
 	
-	    $paths[] = FS_THEME_DIR . '/inc/acf-json';
+	    $paths[] = FS_THEME_DIR . '/inc/acf';
 	    
 	    return $paths;
 	}
@@ -863,6 +863,8 @@ if( class_exists('acf') ) {
 	}
 	
 	// Social Menu icons
+	
+	require_once( FS_THEME_DIR . '/inc/acf/social-icons-fields.php' );
 	
 	add_filter('wp_nav_menu_objects', 'fs_nav_menu_icons', 10, 2);
 	

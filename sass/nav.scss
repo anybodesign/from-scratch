@@ -537,6 +537,33 @@
 	}
 }
 
+// Social items
+
+.social-menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	& > li {
+		margin-right: $grid-padding;
+		
+		a {
+			display: block;
+			transition: .2s ease-in-out;
+			text-decoration: none;
+			
+			img + span {
+				@include a11y-hidden();
+			} 
+			
+			&:focus,
+			&:hover {
+				transform: translateY(-$grid-padding/2);
+			}
+		}
+	}
+}
+
 // Share box
 
 .share-box {
