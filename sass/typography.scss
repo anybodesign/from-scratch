@@ -135,6 +135,10 @@ li ul {
 ::selection {
 	background-color: var(--accent_color);
 	//background-color: transparentize(#333, .9);
+	
+	.high-contrast & {
+		color: #fff;
+	}
 }
 
 // Custom Tinymce styles
@@ -246,7 +250,7 @@ img {
 	border-style: none;
 	
 	.high-contrast & {
-		filter: grayscale(100);
+		filter: grayscale(100) contrast(1.5);
 	}
 }
 
