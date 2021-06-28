@@ -98,7 +98,7 @@
 	}
 
 	
-	& li {
+	& > li {
 		position: relative;
 		display: block;
 		
@@ -109,7 +109,7 @@
 			margin-left: $grid-padding*2;
 		}
 		
-		& a {
+		& > a {
 			position: relative;
 			display: block;
 			padding: $grid-padding 0;
@@ -138,10 +138,10 @@
 			}
 		}
 		
-		& a:hover, 
-		& a:focus,
-		&.current-menu-item a,
-		&.current_page_parent a {
+		& > a:hover, 
+		& > a:focus,
+		&.current-menu-item > a,
+		&.current_page_parent > a {
 			background-color: var(--accent_color);
 			padding-left: $grid-padding;
 			
@@ -166,8 +166,8 @@
 				}
 			}
 		}
-		&.current-menu-item a,
-		&.current_page_parent a {
+		&.current-menu-item > a,
+		&.current_page_parent > a {
 			font-family: var(--font_bold);
 		}
 		
@@ -252,10 +252,15 @@
 
 	& > li {
 		font-size: 1.6rem;
+		border-bottom: var(--text_color) 1px dotted;
+		
+		&:first-child {
+			border-top: var(--text_color) 1px solid;
+		}
 		
 		@include rwd(large) {
 			&:first-child {
-				border-top: var(--text_color) 1px dotted;
+				border-top: 0;
 			}
 		}
 		@include rwd(wide) {
@@ -265,6 +270,10 @@
 		
 		a {
 			display: block;
+			padding: $grid-padding 0;
+			padding-left: $grid-padding;
+			text-decoration: none;
+			transition: .2s ease-in-out;
 			
 			&::after {
 				border-top: var(--text_color) 1px dotted;
@@ -272,13 +281,14 @@
 			}
 			
 			@include rwd(large) {
-				padding: $grid-padding/2 0;
+				padding: $grid-padding/2 $grid-padding;
 			}
 		}
 		a:hover, 
 		a:focus,
 		&.current-menu-item a {
 			background-color: var(--accent_color);
+			
 			
 			&::after {
 				border-top-color: var(--text_color);
@@ -414,6 +424,7 @@
 		font-size: 1.6rem;
 		top: -1rem;
 		left: 4.4rem;
+		font-family: var(--font_regular);
 	}
 
 	& > span,
