@@ -35,8 +35,15 @@ ias.on('last', function() {
 });
 
 // A11Y Move Focus
+
 ias.on('append', function() {
   let lastpost = document.querySelector('.post-block:last-of-type .read-more');
   
   lastpost.focus();
 });
+
+// ias.on('appended', function(items) {
+//   let firstPostOfNewPage = items[0];
+//   
+//   firstPostOfNewPage.focus();
+// }); 
