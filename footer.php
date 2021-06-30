@@ -18,9 +18,9 @@
 		<footer role="contentinfo" id="site_foot"<?php if ( $footer_white ) { echo ' class="white-text"'; } ?>>
 			<div class="row inner">
 				
-				<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
+				<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
 				<div class="footer-social">
-					<nav role="navigation" aria-label="<?php esc_html_e('Social Networks', 'collectif'); ?>">
+					<nav role="navigation" aria-label="<?php esc_html_e('Social Networks', 'from-scratch'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'social_menu',
 								'menu_class'		=>	'social-menu',
@@ -62,10 +62,10 @@
 							echo esc_html('&copy;'); echo date(' Y '); echo esc_html(bloginfo('name')).'.'; 	
 						} ?>
 						
-						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo esc_attr(' out-of-reach'); } ?>" href="//wordpress.org"><?php esc_html_e('Powered by WordPress!', 'collectif'); ?></a>
+						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo esc_attr(' out-of-reach'); } ?>" href="//wordpress.org"><?php esc_html_e('Powered by WordPress!', 'from-scratch'); ?></a>
 					</p>
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav role="navigation" aria-label="<?php esc_html_e('Footer Menu', 'collectif'); ?>">
+					<nav role="navigation" aria-label="<?php esc_html_e('Footer Menu', 'from-scratch'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',

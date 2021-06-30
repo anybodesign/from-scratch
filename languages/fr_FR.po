@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2021-06-28 16:56+0200\n"
-"PO-Revision-Date: 2021-06-28 16:57+0200\n"
+"POT-Creation-Date: 2021-06-30 11:47+0200\n"
+"PO-Revision-Date: 2021-06-30 11:47+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -40,19 +40,19 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:22
+#: footer.php:23
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: footer.php:64
+#: footer.php:65
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:67 functions.php:460
+#: footer.php:68 functions.php:460
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: footer.php:83
+#: footer.php:84
 msgid "Back to top"
 msgstr "Haut de page"
 
