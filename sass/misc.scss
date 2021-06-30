@@ -53,8 +53,55 @@
 	}
 }
 
-// Fancybox
+// Complianz
 
+.cmplz-dropdown {
+	position: relative;
+	margin-bottom: $grid-padding/2;
+}
+.cmplz-service-header {
+	background-color: var(--bg_color);
+	padding: $grid-padding;
+	
+	p {
+		font-size: 1.6rem;
+		margin: $grid-padding/2 0;
+	}
+
+	&::after {
+		@include pointer(top, 1rem);
+		position: absolute;
+		right: $grid-padding;
+		top: 2.4rem;
+		border-top-color: var(--primary_color);
+		transition: .3s ease-in-out;
+	}
+	[open] &::after {
+		transform: rotate(180deg);
+		top: 1.4rem;
+	}	
+}
+.cmplz-service-description,
+.cmplz-sharing-data,
+.cookies-per-purpose {
+	padding: $grid-padding;
+	font-size: 75%;
+}
+.cookies-per-purpose {
+	background-color: #f4f4f4;
+	border-top: #ccc 1px solid;
+	margin-bottom: $grid-padding;
+	
+	h5 {
+		font-family: var(--font_bold);
+		color: var(--text_color);
+		font-size: 1.6rem;
+	}
+}
+
+p.cmplz-subtitle {
+	@extend h3;
+}
 
 
 /* ------------------------- */
