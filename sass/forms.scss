@@ -195,7 +195,7 @@ span.wpcf7-list-item {
 .wpcf7-acceptance {
 	
 	label {
-		font-family: $font-regular;
+		font-family: var(--font_regular);
 		font-size: 1.4rem;
 		border: 0;	
 	}
