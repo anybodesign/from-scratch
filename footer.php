@@ -9,12 +9,13 @@
  * @since 1.0
  * @version 1.0
  */
+ $footer_white = get_theme_mod('footer_white_text');
 ?>
 	</main> <?php // END content ?>
 		
 	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 		
-		<footer role="contentinfo" id="site_foot">
+		<footer role="contentinfo" id="site_foot"<?php if ( $footer_white ) { echo ' class="white-text"'; } ?>>
 			<div class="row inner">
 				
 				<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>

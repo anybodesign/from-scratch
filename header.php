@@ -28,6 +28,8 @@
 	else { $layout = 'layout-v1'; }
 	if ( $has_bg ) { $banner = ' banner-has-bg'; }
 	else { $banner = null; }
+	
+	$header_white = get_theme_mod('header_white_text');
 ?>
 </head>
 
@@ -42,7 +44,7 @@
 		}
 	?>
 	
-	<header role="banner" id="site_head">
+	<header role="banner" id="site_head"<?php if ( $header_white ) { echo ' class="white-text"'; } ?>>
 		<div class="row inner">	
 		<?php 
 			get_template_part('template-parts/header', 'toolbar'); 
