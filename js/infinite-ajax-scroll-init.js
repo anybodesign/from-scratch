@@ -41,9 +41,9 @@ ias.on('append', function() {
   
   lastpost.focus();
 });
-
-// ias.on('appended', function(items) {
-//   let firstPostOfNewPage = items[0];
+// 
+// ias.on('appended', function(event) {
+//   let first = event.items[0];
 //   
-//   firstPostOfNewPage.focus();
-// }); 
+//   first.focus();
+// });
