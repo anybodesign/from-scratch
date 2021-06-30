@@ -1,217 +1,213 @@
-// -------------------------
+// ------------------------------
+//
+//  Forms : Custom 
 // 
-// = Forms
-// 
-// -------------------------
+// ------------------------------
 
 
-// Regular and Custom Styles for Forms
+// Containers for inputs
+// Inputs must be wrapped inside them
 
-
-fieldset {
-	margin: $grid-padding*2 0; 
-	border: 0;
-	padding: 0;
+.formfield-half {
+	
+	@include rwd(medium) {
+		display: flex;
+		
+		[class*="formfield-"] {
+			flex: 1 0 0;
+		}
+	}
 }
 
-input[type="text"], 
-input[type="email"], 
-input[type="tel"], 
-input[type="url"],
-input[type="date"],
-input[type="password"],
-input[type="file"],
-input[type="number"],
-input[type="search"],
-textarea, 
-select {
-	display: block;
-	box-sizing: border-box;
-	width: 100%;
-	margin: 0 0 $grid-padding*2 0;
-	padding: $grid-padding;
-	color: var(--text_color); 
-	border: var(--text_color) 1px solid; 
-	background-color: #fff;
-	font-size: 1.6rem;
-	font-family: var(--font_regular);
-	border-radius: 0;
-	appearance: none;
-	
-	&:focus {
-		background-color: var(--text_color);
-		color: #fff; 	
-	}
-	&:focus {
-		outline: none;
+.formfield-text, // Generic container
+.formfield-textarea,
+.formfield-select, 
+.formfield-file, 
+.formfield-checkbox, 
+.formfield-radio {
+	position: relative;
+	margin: $grid-padding 0;
+
+	.formfield-half &:first-child {
+		@include rwd(medium) {
+			margin-right: $grid-padding*2;
+		}
 	}	
 }
 
-input[type="search"] {
-	border-radius: 0;
-	padding-left: $grid-padding;
-}
 
-textarea {
-	min-height: 18rem;
-	resize: vertical;
-}
+// Radio buttons & Chekboxes
 
-input[type="checkbox"]:focus + label, 
-input[type="radio"]:focus + label {
-	border-bottom: var(--text_color) 2px dashed; 
-}
-
-input[type="checkbox"], 
-input[type="radio"],
-input[type="checkbox"] + label, 
-input[type="radio"] + label {
-	width: auto; 
-	margin: 0 0 .5rem 0;
-	display: inline-block;
-	vertical-align: middle;
-	cursor: pointer;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    right: .5em; 
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-label, legend {
-	display: block;
-	font-weight: normal;
-	margin: 0;
-}
-
-button,
-input[type="submit"],
-input[type="button"] {
-	border: 0;
-	border-radius: 0;
-	cursor: pointer;
-	appearance: none;
-}
-input[type="submit"] {
-	@extend .action-btn;
-}
-
-// Placeholders
-
-::placeholder {
-	color: #777;
-	font-family: var(--font_italic);
-	font-size: 1.4rem;
-}
-:focus::placeholder,
-*:focus::placeholder {
-	color: transparentize(#fff, .5);
-}
-
-
-// -------------------------
-//
-// = Gravity Forms
-//
-// -------------------------
-
-// If you use the Gravity Forms Plugin (CSS disabled)
-
-.gform_fields,
-.gfield_checkbox {
-	padding: 0;
-	list-style: none;
-}
-.gfield {
-	margin-bottom: 1em;
-}
-.gfield_visibility_ {
-	display: none;
-	position: absolute !important;
-	left: -9000px;
-}
-.ginput_container_checkbox {
-	padding: $grid-padding*2 0;
-}
-
-.gform_wrapper {
-	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-		padding: $grid-padding !important;
-		margin-bottom: 0 !important;
+.formfield-radio input[type="radio"],
+.formfield-checkbox input[type="checkbox"] {
+	opacity: 0; 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	
+	& + label,
+	& + span {					// @note: span is for CF7
+		padding: 0 0 0 2.6rem;
+		
+		&::before {
+			content: ''; 
+			vertical-align: middle;
+			display: inline-block; 
+			width: 1.6rem;
+			height: 1.6rem;
+			position: absolute; 
+			top: .3rem; 
+			left: 0;
+			border: var(--text_color) 1px solid;
+			background-color: #fff;
+		}
+		
+		&::after {
+			content: ''; 
+			vertical-align: middle;
+			display: inline-block;
+			position: absolute; 
+			top: 0; 
+			left: 0;
+		}
 	}
 }
 
-// Checkbox, Radio & Select
+.formfield-radio input[type="radio"] + label::before,
+.formfield-radio input[type="radio"] + span::before {
+	border-radius: 100%;
+}
+.formfield-radio input[type="radio"] + label::after,
+.formfield-radio input[type="radio"] + span::after {
+	width: .6rem; 
+	height: .6rem;
+	background-color: var(--primary_color);
+	top: .9rem; 
+	left: .6rem;
+	border-radius: 100%;
+	opacity: 0;
+	transition: opacity .2s linear;
+}
+.formfield-radio input[type="radio"]:checked + label::after,
+.formfield-radio input[type="radio"]:checked + span::after {
+	opacity: 1;
+}
 
-.gfield_checkbox li {
+.formfield-checkbox input[type="checkbox"] + label::after,
+.formfield-checkbox input[type="checkbox"] + span::after {
+	top: .5rem; 
+	left: .35rem;
+	content: '';
+	width: 1rem;
+	height: .5rem;
+	border-left: 4px solid var(--primary_color);
+	border-bottom: 4px solid var(--primary_color);	
+	opacity: 0;
+	transform: rotate(-45deg);
+	transition: opacity .2s linear;
+}
+.formfield-checkbox input[type="checkbox"]:checked + label::after,
+.formfield-checkbox input[type="checkbox"]:checked + span::after  {
+	opacity: 1;
+}
+
+// Select
+
+.formfield-select--container {
+	position: relative; 
+	overflow: hidden;
+	background-color: #fff;
+	border: var(--text_color) 1px solid;
+	margin: 0 0 $grid-padding*2 0;
+	padding: 0;
+	
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%; 
+		margin-top: -.3rem;
+		right: .5em;  
+		display: block; 
+		width: 0; 
+		height: 0;
+		border-color: transparent;
+		border-top-color: var(--primary_color); 
+		border-width: .6rem;
+		border-style: solid;
+		pointer-events: none;
+	}
+	
+	& select {
+		padding-right: 6rem;
+		width: 110%; 
+		height: auto;
+		border: 0; 
+		margin: 0;
+		border-radius: 0;
+		appearance: none;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+.formfield-select--container select::-ms-expand {
+    display: none;
+}
+
+// File
+
+.formfield-file--container {
+	position: relative;
+	margin: 0 0 $grid-padding*2 0;
+
+	&::after {
+		display: inline-block; 
+		content: "\1F4CE";
+		font-size: 2rem;
+		color: var(--text_color);
+		position: absolute; 
+		top: .5em; 
+		right: .5em;
+		z-index: 100;
+	}
+}
+
+// For CF7
+
+.wpcf7-list-item label {
+	position: relative;
+}
+span.wpcf7-list-item {
+	margin: 0 $grid-padding 0 0;
+}
+
+.formfield-radio input[type="radio"]:focus,
+.formfield-checkbox input[type="checkbox"]:focus {
+	
+	& + span {
+		font-family: var(--font_bold);
+		
+		&::before {
+			background-color: var(--primary_color);
+		}
+	}
+}
+
+.wpcf7-acceptance {
+	
+	label {
+		font-family: $font-regular;
+		font-size: 1.4rem;
+		border: 0;	
+	}
+}
+
+.comment-form-cookies-consent {
 	@extend .formfield-checkbox;
 }
-.gfield_radio li {
-	@extend .formfield-radio;
-}
-.ginput_container_select {
-	@extend .formfield-select--container;
-	margin-bottom: 0;
-	
-	select {
-		line-height: normal !important;
-		padding: $grid-padding !important;		
+
+.formfield-select {
+	.wpcf7-form-control-wrap {
+		display: block;
+		@extend .formfield-select--container;
 	}
-}
-
-// Submit
-
-input[type="submit"].gform_button {
-	@extend .action-btn;
-}
-
-// Honeypot
-
-.gform_validation_container, .gform_wrapper .gform_validation_container, body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container, body .gform_wrapper li.gform_validation_container, body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
-	display: none!important;
-	position: absolute!important;
-	left: -9000px;
-}
-
-
-
-// -------------------------
-//
-// = ContactForm 7
-//
-// -------------------------
-
-// If you use the ContactForm7 Plugin
-
-.wpcf7-response-output {
-	border: 0 !important; 
-	background-color: #B3003C; 
-	color: #fff;
-	margin: $grid-padding 0 0 0 !important; 
-	padding: $grid-padding !important;
-	font-family: var(--font_regular);
-	
-	.sent & {
-		background-color: var(--accent_color);
-		color: var(--text_color);
-	}
-	.spam & {
-		background-color: var(--primary_color);
-		color: #fff;
-	}
-}
-.wpcf7-not-valid {
-	border: #B3003C 2px solid !important;
-}
-.wpcf7-not-valid-tip {
-	color: #B3003C;
-	margin-top: -2rem;
-	padding-top: .5rem;
-	border-top: #B3003C 4px solid;
-	font-family: var(--font_bold);
-}
-input[type="submit"].wpcf7-submit {
-	@extend .action-btn;
 }
