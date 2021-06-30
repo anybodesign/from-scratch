@@ -19,7 +19,6 @@
 	}
 }
 
-
 .formfield-text, // Generic container
 .formfield-textarea,
 .formfield-select, 
@@ -38,7 +37,6 @@
 
 
 // Radio buttons & Chekboxes
-
 
 .formfield-radio input[type="radio"],
 .formfield-checkbox input[type="checkbox"] {
@@ -113,39 +111,6 @@
 	opacity: 1;
 }
 
-// @note: for CF7
-
-.wpcf7-list-item label {
-	position: relative;
-}
-span.wpcf7-list-item {
-	margin: 0 $grid-padding 0 0;
-}
-
-.formfield-radio input[type="radio"]:focus + span,
-.formfield-radio input[type="checkbox"]:focus + span {
-	border-bottom: var(--primary_color) 1px dashed;
-}
-
-.formfield-radio input[type="radio"]:focus + span::after,
-.formfield-radio input[type="checkbox"]:focus + span::after {
-	//opacity: .5;
-}
-
-
-.comment-form-cookies-consent {
-	@extend .formfield-checkbox;
-}
-
-// CF7
-.formfield-select {
-	.wpcf7-form-control-wrap {
-		display: block;
-		@extend .formfield-select--container;
-	}
-}
-
-
 // Select
 
 .formfield-select--container {
@@ -188,9 +153,7 @@ span.wpcf7-list-item {
     display: none;
 }
 
-
 // File
-
 
 .formfield-file--container {
 	position: relative;
@@ -205,5 +168,46 @@ span.wpcf7-list-item {
 		top: .5em; 
 		right: .5em;
 		z-index: 100;
+	}
+}
+
+// For CF7
+
+.wpcf7-list-item label {
+	position: relative;
+}
+span.wpcf7-list-item {
+	margin: 0 $grid-padding 0 0;
+}
+
+.formfield-radio input[type="radio"]:focus,
+.formfield-checkbox input[type="checkbox"]:focus {
+	
+	& + span {
+		font-family: var(--font_bold);
+		
+		&::before {
+			background-color: var(--primary_color);
+		}
+	}
+}
+
+.wpcf7-acceptance {
+	
+	label {
+		font-family: var(--font_regular);
+		font-size: 1.4rem;
+		border: 0;	
+	}
+}
+
+.comment-form-cookies-consent {
+	@extend .formfield-checkbox;
+}
+
+.formfield-select {
+	.wpcf7-form-control-wrap {
+		display: block;
+		@extend .formfield-select--container;
 	}
 }
