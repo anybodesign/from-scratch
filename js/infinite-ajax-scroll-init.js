@@ -36,14 +36,14 @@ ias.on('last', function() {
 
 // A11Y Move Focus
 
-ias.on('append', function() {
-  let lastpost = document.querySelector('.post-block:last-of-type .read-more');
-  
-  lastpost.focus();
-});
-// 
-// ias.on('appended', function(event) {
-//   let first = event.items[0];
+// ias.on('append', function() {
+//   let lastpost = document.querySelector('.post-block:last-of-type .read-more');
 //   
-//   first.focus();
+//   lastpost.focus();
 // });
+
+ias.on('appended', function(event) {
+  let first = event.items[0];
+
+  first.querySelector('a').focus();
+});
