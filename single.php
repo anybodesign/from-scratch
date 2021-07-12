@@ -22,7 +22,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 				
-				<div class="page-wrap has-sidebar">					
+				<div class="page-wrap<?php if ($sidebar) { echo ' has-sidebar'; } ?>">					
 					<?php 
 						if ($sidebar) { 					
 							get_template_part( 'template-parts/sidebar', 'burger' );
