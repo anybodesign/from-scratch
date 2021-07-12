@@ -13,10 +13,14 @@
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('post-block'); ?>>
 						
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
+						<?php if ( '' != get_the_post_thumbnail() ) {
+							$img_id = get_post_thumbnail_id();
+							$img_url = wp_get_attachment_image_src( $img_id, 'screen-md' );
+							$img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+						?>
 						<div class="post-figure">
 							<a href="<?php the_permalink(); ?>" rel="nofollow">
-							<?php the_post_thumbnail('screen-hd'); ?>
+							<img src="<?php echo $img_url[0]; ?>" alt="<?php echo $img_alt; ?>">
 							</a>
 						</div>
 						<?php } ?>
