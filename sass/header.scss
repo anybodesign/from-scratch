@@ -155,7 +155,7 @@
 			pointer-events: none;
 
 			position: absolute;
-			top: $grid-padding;
+			top: 1.2rem;
 			right: 0;
 
 			@include a11y-hide();
@@ -218,7 +218,7 @@
 			top: 0;
 			left: 0;
 			
-			animation: drop-in .8s;
+			animation: drop_in .8s;
 			z-index: 100;		
 			
 		}

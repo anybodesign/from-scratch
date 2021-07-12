@@ -143,6 +143,13 @@
 	
 	&.alignfull {
 		width: 100%;
+	}
+	
+	// WP block fix
+	
+	&:not([class*="is-resized"]) img {
+		width: 100%; 
+		height: auto;
 	}	
 }
 
@@ -394,6 +401,9 @@ hr {
 		}
 		.acf-block-post-figure {
 			@extend .post-figure;
+		}
+		.acf-block-post-header {
+			@extend .post-header;
 		}
 		.acf-block-post-title {
 			@extend .post-title;

@@ -52,6 +52,7 @@
 	
 	p {
 		margin-bottom: 0;
+		margin-right: $grid-padding;
 		font-size: 1.4rem;
 		
 		a {
@@ -66,7 +67,6 @@
 .footer-menu {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 0 0 $grid-padding;
 	
 	li {
 		margin: 0 $grid-padding 0 0;

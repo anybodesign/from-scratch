@@ -13,6 +13,7 @@
 		
 		@include rwd(large) {
 			display: flex;
+			flex-direction: row-reverse;
 			flex-wrap: wrap;
 		}
 	}
@@ -27,23 +28,22 @@
 .page-banner {
 	margin-bottom: $grid-padding*2;
 	
+	.banner-has-bg & {
+		min-height: 20rem;
+		background-color: var(--bg_color);
+		background-size: cover;
+		background-position: center center;
+		
+		@include rwd(medium) {
+			min-height: 29rem;
+		}
+	}
+	
 	.inner {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		padding: $grid-padding*2 $grid-padding;
-		
-		.banner-has-bg & {
-			min-height: 15rem;
-			
-			@include rwd(medium) {
-				min-height: 20rem;
-			}
-		}
-	}
-	
-	.banner-has-bg & {
-		background-color: var(--bg_color);
 	}
 	
 	.page-title {
