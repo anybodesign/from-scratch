@@ -645,6 +645,18 @@ function fs_customize_register($fs_customize) {
 	// -
 	// + + + + + + + + + + 		
 		
+		// Banner text
+		
+		$fs_customize->add_setting('blog_excerpt', array(
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('blog_excerpt', array(
+			'type'			=> 'textarea',
+			'label'			=> __('Blog introduction text', 'from-scratch'),
+			'section'		=> 'fs_blog_section',
+			'settings'		=> 'blog_excerpt',
+		));
+		
 		// Sidebars
 		
 		$fs_customize->add_setting(
@@ -661,6 +673,23 @@ function fs_customize_register($fs_customize) {
 				'label'			=> __('Show the sidebar on the blog page', 'from-scratch'),
 				'section'		=> 'fs_blog_section',
 				'settings'		=> 'blog_sidebar',
+			)
+		);
+		
+		$fs_customize->add_setting(
+			'post_sidebar', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'post_sidebar', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the sidebar on single posts', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'post_sidebar',
 			)
 		);
 		
