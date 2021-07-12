@@ -9,11 +9,16 @@
  * @since 1.0
  * @version 1.0
  */ 
-	if ( get_theme_mod('blog_sidebar') != true ) {
+	 if ( is_search() || is_post_type_archive('project') ) {
 		$sidebar = false;
-	} else {
+	} else if ( get_theme_mod('blog_sidebar') == false ) {
+		$sidebar = false;
+	} else if ( get_theme_mod('blog_sidebar') != false || get_theme_mod('blog_sidebar') == null ) {
 		$sidebar = true;
+	} else {
+		$sidebar = false;
 	}
+	
 	$cats = get_theme_mod('cat_dropdown');
 	
 get_header(); ?>
@@ -21,6 +26,11 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 				
 				<div class="page-wrap<?php if ($sidebar) { echo ' has-sidebar'; } ?>">
+					
+					<?php if ($sidebar) { 					
+							get_template_part( 'template-parts/sidebar', 'burger' );
+							get_sidebar(); 
+					} ?>
 					
 					<div class="page-content">
 							
@@ -66,8 +76,6 @@ get_header(); ?>
 						endif; 
 						?>
 					</div>
-					
-					<?php if ($sidebar) { get_sidebar(); } ?>
 					
 				</div>
 

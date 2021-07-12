@@ -8,15 +8,27 @@
  * @subpackage From_Scratch
  * @since 1.0
  * @version 1.0
- */
+ */	
+ 	if ( is_singular('project') ) {
+		$sidebar = false;
+	} else if ( get_theme_mod('post_sidebar') == false ) {
+		$sidebar = false;
+	} else if ( get_theme_mod('post_sidebar') != false || get_theme_mod('post_sidebar') == null ) {
+		$sidebar = true;
+	} else {
+		$sidebar = false;
+	}
 get_header(); ?>
 
 				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 				
 				<div class="page-wrap has-sidebar">					
 					<?php 
+						if ($sidebar) { 					
+							get_template_part( 'template-parts/sidebar', 'burger' );
+							get_sidebar();						
+						}
 						get_template_part( 'template-parts/page', 'content' ); 
-						get_sidebar();
 					?>
 				</div>
 				
