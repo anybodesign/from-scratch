@@ -470,8 +470,12 @@ add_action( 'init', 'fs_custom_nav_menus' );
 
 function fs_nav_classes( $classes, $item ) {
     
+	$blogpage = get_option( 'page_for_posts' );
+	$blogpage_content = get_post( $blogpage );
+	$itemname = $blogpage_content->post_title;
+	
 	// Remove active state on page for posts
-    if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('project') ) && $item->title == 'Blog' ) {
+    if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('project') ) && $item->title == $itemname ) {
         $classes = array_diff( $classes, array( 'current_page_parent' ) );
     }
     return $classes;
@@ -573,6 +577,17 @@ function fs_share_excerpt($count, $post_id){
   return $excerpt;
 }
 
+// Page excerpt
+
+function fs_page_excerpt() {
+	global $post;   
+    if( $post->post_excerpt ) {
+        $content = get_the_excerpt();
+    } else {
+		$content = null;
+	}
+    return $content;
+}
 
 // Image Sizes
 
