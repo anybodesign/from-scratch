@@ -13,12 +13,6 @@
 					<div class="page-content">
 					<?php while ( have_posts() ) : the_post(); ?>
 						
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<div class="post-figure">
-							<?php the_post_thumbnail('large-hd'); ?>
-						</div>
-						<?php } ?>
-						
 						<?php 
 							the_content();
 							
