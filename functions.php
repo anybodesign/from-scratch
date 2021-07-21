@@ -332,11 +332,11 @@ function fs_scripts_load() {
 			    	FS_THEME_VERSION, 
 			    	true
 		    );
-
-
+			
+			
 		// Register CSS
 		// ------------------------
-
+			
 			wp_register_style( 'back2top', 
 				FS_THEME_URL . '/css/back2top.css',
 				array(), 
@@ -354,17 +354,7 @@ function fs_scripts_load() {
 				'screen' 
 			);
 			
-			// Main stylesheet
 			
-			wp_register_style( 
-				'from-scratch-style', 
-				get_stylesheet_uri(), 
-				array(), 
-				FS_THEME_VERSION, 
-				'screen'
-			);
-
-		
 		// Enqueue JS
 		// ------------------------
 			
@@ -416,28 +406,42 @@ function fs_scripts_load() {
 			//wp_enqueue_script( 'focus-visible' );
 			wp_enqueue_script( 'skiplink-focus-fix' );
 			wp_enqueue_script( 'main' );			
-
-
+			
+			
 		// Enqueue CSS
 		// ------------------------
-
 			
 			
 			// Fancybox
 			if ( get_theme_mod('use_fancybox') == true ) {
 				wp_enqueue_style( 'fancybox-css' );
 			}
-	
+			
 			// Back to top
 			if ( get_theme_mod('back2top') == true ) {
 				wp_enqueue_style( 'back2top' );
 			}
 			
-			// Main stylesheet
-			wp_enqueue_style( 'from-scratch-style' );
 	}
 }    
 add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
+
+
+// Main stylesheet
+
+function fs_main_style() {
+		
+		wp_register_style( 
+			'from-scratch-style', 
+			get_stylesheet_uri(), 
+			array(), 
+			FS_THEME_VERSION, 
+			'screen'
+		);
+		
+		wp_enqueue_style( 'from-scratch-style' );
+}
+add_action( 'wp_enqueue_scripts', 'fs_main_style' );
 
 
 // ------------------------
