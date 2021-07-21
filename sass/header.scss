@@ -155,7 +155,8 @@
 			pointer-events: none;
 
 			position: absolute;
-			top: 1.2rem;
+			top: 50%;
+			margin-top: -1rem;
 			right: 0;
 
 			@include a11y-hide();
