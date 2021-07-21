@@ -825,12 +825,12 @@ if( class_exists('acf') ) {
 	
 	// Custom blocks
 
-	$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.', '.DS_Store') );
-	
-	foreach( $my_blocks as $block ) {
-		include_once 'blocks/'. $block .'/'. $block .'.php';
-		include_once 'blocks/'. $block .'/'. $block .'-fields.php';
-	}	
+	// $my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.', '.DS_Store') );
+	// 
+	// foreach( $my_blocks as $block ) {
+	// 	include_once 'blocks/'. $block .'/'. $block .'.php';
+	// 	include_once 'blocks/'. $block .'/'. $block .'-fields.php';
+	// }	
 	
 	// Front-End ACF Functions
 	
