@@ -58,50 +58,50 @@ h1, h2, h3, h4, h5, h6,
 
 h1, 
 .h1-like {
-    font-size: 3.6rem;
+    font-size: 3.4rem;
 	
 	@include rwd(large) {
-		font-size: 3.4rem;
+		font-size: 3.6rem;
 	}
 }
 h2, 
 .h2-like {
-	font-size: 3.2rem;
+	font-size: 3rem;
 	
 	@include rwd(large) {
-		font-size: 3rem;
+		font-size: 3.2rem;
 	}
 }
 h3, 
 .h3-like {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
 	
 	@include rwd(large) {
-		font-size: 2.6rem;
+		font-size: 2.8rem;
 	}
 }
 h4, 
 .h4-like {
-    font-size: 2.2rem;
+    font-size: 2rem;
+	
+	@include rwd(large) {
+		font-size: 2.2rem;
+	}
+}
+h5, 
+.h5-like {
+    font-size: 1.8rem;
 	
 	@include rwd(large) {
 		font-size: 2rem;
 	}
 }
-h5, 
-.h5-like {
-    font-size: 2rem;
+h6, 
+.h6-like {
+    font-size: 1.6rem;
 	
 	@include rwd(large) {
 		font-size: 1.8rem;
-	}
-}
-h6, 
-.h6-like {
-    font-size: 1.8rem;
-	
-	@include rwd(large) {
-		font-size: 1.6rem;
 	}
 }
 
