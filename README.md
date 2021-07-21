@@ -14,9 +14,6 @@ Documentation: <https://github.com/YahnisElsts/plugin-update-checker>
 
 If you don’t need the ACF features, remove or edit the concerned ACF lines in the functions.php file. ACF Pro is required.\
 If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://github.com/anybodesign/ad-acf-blocks).
-If needed, you can create custom blocks in the `blocks` folder, or remove it and the lines in functions.php starting with:\
-`$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );`
-
 
 ## Changelog
 
