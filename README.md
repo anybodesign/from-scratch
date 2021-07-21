@@ -10,13 +10,6 @@ First of all, remove or customize the Auto-Updater lines at the bottom of the fu
 If you don't want to use Github/Bitbucket auto-update feature, remove the _plugin-update-checker_ dependency in the _inc_ directory.\
 Documentation: <https://github.com/YahnisElsts/plugin-update-checker>
 
-### Custom Post Type
-
-You can add or customize Custom Post Types, find the sample files as declared in functions.php:\
-`include_once( dirname( __FILE__ ) . '/inc/custom-post-type.php' );`\
-`include_once( dirname( __FILE__ ) . '/inc/custom-post-type-functions.php' );`\
-If you don’t need any custom post type, remove these lines.
-
 ### ACF Option page and json output
 
 If you don’t need the ACF features, remove or edit the concerned ACF lines in the functions.php file. ACF Pro is required.\
@@ -27,7 +20,28 @@ If needed, you can create custom blocks in the `blocks` folder, or remove it and
 
 ## Changelog
 
-### 4.0 - 2020.01.12
+### 4.1 - 2020.07.21
+* New base webfonts
+* Customizer: webfonts option
+* Customizer: new sections and blog options
+* Customizer: sharing buttons
+* Customizer: layout and background options
+* Customizer: High contrast button option
+* Customizer: Search bar option
+* Customizer: logo options
+* Responsive Blog Sidebar
+* A11y fix for infinite scroll
+* Template parts update
+* CSS updates and fix
+* Sass vars to CSS vars
+* Functions updates and fix
+* Removed Slick, CPT, Styleguide template, Custom block
+* Custom size for post thumbnails
+* Conditionnal JS Enqueue
+* Footer widgets and Social menu
+* PUC Update
+
+### 4.0 - 2021.01.12
 * Functions update & fix
 * Customizer theme default pictures
 * Toolbar nav menu
