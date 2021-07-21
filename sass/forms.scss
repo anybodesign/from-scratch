@@ -38,12 +38,16 @@ select {
 	border-radius: 0;
 	appearance: none;
 	
-	&:focus {
+	&:focus-visible {
 		background-color: var(--text_color);
-		color: #fff; 	
+		color: #fff;
+		outline: none;	 	
 	}
-	&:focus {
-		outline: none;
+	@include focus() {
+		&:focus {
+			background-color: var(--text_color);
+			color: #fff;
+		}
 	}	
 }
 
@@ -57,9 +61,15 @@ textarea {
 	resize: vertical;
 }
 
-input[type="checkbox"]:focus + label, 
-input[type="radio"]:focus + label {
-	border-bottom: var(--text_color) 2px dashed; 
+input[type="checkbox"]:focus-visible + label, 
+input[type="radio"]:focus-visible + label {
+	border-bottom: var(--text_color) 2px dashed;
+}
+@include focus() {
+	input[type="checkbox"]:focus + label, 
+	input[type="radio"]:focus + label {
+		border-bottom: var(--text_color) 2px dashed;
+	}
 }
 
 input[type="checkbox"], 

@@ -3,6 +3,16 @@
 // -------------------------
 
 
+
+// Focus visible fallback
+
+@mixin focus() {
+
+	@supports not selector(:focus-visible) {
+		@content
+	}	
+}
+
 // Link Style
 
 @mixin link-style($bg: dark) {
