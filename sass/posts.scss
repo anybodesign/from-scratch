@@ -40,6 +40,10 @@
 		
 	.page-content > & {
 		padding: 0;
+		
+		.has-sidebar & {
+			padding-right: 8.3333%;
+		}
 	}
 
 	.post-block {
@@ -48,6 +52,10 @@
 		
 		@include rwd(medium) {
 			width: calc(33.3333% - #{$grid-padding}*2);
+			
+			.has-sidebar & {
+				width: calc(50% - #{$grid-padding}*2);
+			}
 		}
 	}			
 }

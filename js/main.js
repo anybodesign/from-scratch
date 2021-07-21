@@ -88,7 +88,28 @@ jQuery(document).ready(function($) {
 	});
 
 
-				
+	// Toggle sidebar
+
+	$('#sidebar_toggle').click(function() {
+		$(this).toggleClass('menu-opened');
+			
+			if ($(this).hasClass('menu-opened')) {
+				$(this).attr('aria-expanded','true');
+				$('.page-sidebar').attr('aria-hidden','false');
+			} else {
+				$(this).attr('aria-expanded','false');
+				$('.page-sidebar').attr('aria-hidden','true');
+			}
+			
+		return false;
+	});
+		$(window).resize(function() {
+			if ($(window).width() > 960) {
+		    	$('.page-sidebar').show().removeAttr('style').removeAttr('aria-hidden');
+		    	$('#sidebar_toggle').removeClass('menu-opened').removeAttr('aria-expanded');
+			}
+		});
+		
 
 	// Responsive Video Players (Youtube, Vimeo)
 			
