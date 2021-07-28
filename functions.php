@@ -326,11 +326,11 @@ function fs_scripts_load() {
 			// Main
 			
 		    wp_register_script( 
-			    	'main', 
-			    	FS_THEME_URL . '/js/main.js',
-			    	array('jquery'), 
-			    	FS_THEME_VERSION, 
-			    	true
+		    	'main', 
+		    	FS_THEME_URL . '/js/main.js',
+		    	array('jquery'), 
+		    	FS_THEME_VERSION, 
+		    	true
 		    );
 			
 			
