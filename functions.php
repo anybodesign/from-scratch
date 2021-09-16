@@ -797,18 +797,18 @@ function fs_custom_comments($comment, $args, $depth) {
 
 // Custom loops 
 
-function fs_showall_loop( $query ) {
-	if ( is_admin() || ! $query->is_main_query() )
-		return;
-
-	if ( is_post_type_archive( 'project' ) ) {
-		$query->set( 'posts_per_page', -1 );
-		$query->set( 'orderby', 'title' );
-		$query->set( 'order', 'ASC' );
-		return;
-	}
-}
-add_action( 'pre_get_posts', 'fs_showall_loop', 1 );
+// function fs_showall_loop( $query ) {
+// 	if ( is_admin() || ! $query->is_main_query() )
+// 		return;
+// 
+// 	if ( is_post_type_archive( 'project' ) ) {
+// 		$query->set( 'posts_per_page', -1 );
+// 		$query->set( 'orderby', 'title' );
+// 		$query->set( 'order', 'ASC' );
+// 		return;
+// 	}
+// }
+// add_action( 'pre_get_posts', 'fs_showall_loop', 1 );
 
 
 
