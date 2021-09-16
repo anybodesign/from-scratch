@@ -17,6 +17,12 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.2 - 2020.09.16
+* Filetype icons
+* Icons folder reorganized
+* CSS updates
+* pre_get_posts function commented
+
 ### 4.1 - 2020.07.21
 * New base webfonts
 * Customizer: webfonts option
