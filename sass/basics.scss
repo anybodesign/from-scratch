@@ -2,16 +2,29 @@
 /* = Basics
 /* ------------------------- */
 
+// Basics
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: var(--font_regular);
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: var(--text_color);
+	text-size-adjust: none;
+	background-color: var(--page_color);
+	
+	@include rwd(large) {
+		font-size: 1.8rem;
+	}
+}
+
 html, 
 body, 
 #wrapper {
 	width: 100%; 
 	height: 100%; 
-}
-
-body {
-	text-size-adjust: none;
-	background-color: var(--page_color);
 }
 
 .row {
