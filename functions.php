@@ -7,8 +7,8 @@ define( 'FS_THEME_URL', get_template_directory_uri() );
 $primary = get_theme_mod('primary_color', '#23252b');
 $secondary = get_theme_mod('secondary_color', '#606060');
 $accent = get_theme_mod('accent_color', '#ceff00');
-$text_color = get_theme_mod('text_color', '#23252b');;
-$bg = get_theme_mod('bg_color', '#f0f0f0');;		
+$text_color = get_theme_mod('text_color', '#23252b');
+$bg = get_theme_mod('bg_color', '#f0f0f0');
 
 // ------------------------
 // Theme Setup
