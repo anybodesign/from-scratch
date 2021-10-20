@@ -24,7 +24,7 @@ class fs_subnav_walker extends Walker_Nav_Menu {
     }
 
 
-    function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
+    function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output) {
 
         $element->is_dropdown = !empty( $children_elements[$element->ID] );
 
