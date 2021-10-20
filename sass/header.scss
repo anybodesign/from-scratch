@@ -103,7 +103,7 @@
 			top: 1.25rem;
 			right: 3rem;
 			padding-left: 2.5rem;
-			font-family: var(--font-regular);
+			font-family: var(--font_regular);
 			font-size: 1.3rem;
 			transition: .2s ease-in-out;
 			opacity: 0;
@@ -120,9 +120,9 @@
 			width: 5rem;
 			
 			&:focus {
-				border-color: var(--primary-color);
+				border-color: var(--primary_color);
 				background-color: transparent;
-				color: var(--text-color);
+				color: var(--text_color);
 				width: 20rem;
 			}
 			&:focus + label,
