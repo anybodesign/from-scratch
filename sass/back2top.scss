@@ -1,0 +1,33 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+#back2top {
+	display: block;
+	padding: .5rem;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	background-color: transparent;
+	
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	
+	opacity: 0;
+	transition: .2s ease-in-out;
+	z-index: 900;
+	
+	& img {
+		width: 100%;
+		height: auto;
+	}
+	&:hover,
+	&:focus {
+		transform: scale(1.1);
+	}
+	
+	.back2top-btn & {
+		opacity: 1;
+	}
+
+}
