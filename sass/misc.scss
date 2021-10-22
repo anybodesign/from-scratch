@@ -128,7 +128,7 @@ p.cmplz-subtitle {
 /* = Helpers
 /* ------------------------- */
 
-.screen-reader-text {
+.a11y-hidden {
 	@include a11y-hidden();
 }
 .out-of-reach {

@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
 		$lang = 'Actif';
 	}
 	
-	$($el).append('<span class="screen-reader-text"> - '+$lang+'</span>');
+	$($el).append('<span class="a11y-hidden"> - '+$lang+'</span>');
 
 
 	// Toggle class focus on <li>

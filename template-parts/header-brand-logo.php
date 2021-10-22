@@ -23,4 +23,4 @@
 					<img class="logo<?php if ( get_theme_mod('site_logo_mobile') ) { echo esc_attr(' has-mobile-logo'); } ?>" src="<?php echo esc_url(get_theme_mod('site_logo', 'none')); ?>" alt=""<?php if ($logo_h1) { echo ' style="max-height:'.$height1.'rem"'; } ?>>
 					<?php } ?>					
 					
-					<span class="site-name<?php if (get_theme_mod( 'hide_sitetitle' )) { echo esc_attr(' screen-reader-text'); } ?>"><?php echo esc_html(bloginfo('name')); ?></span>
+					<span class="site-name<?php if (get_theme_mod( 'hide_sitetitle' )) { echo esc_attr(' a11y-hidden'); } ?>"><?php echo esc_html(bloginfo('name')); ?></span>

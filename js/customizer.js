@@ -16,10 +16,10 @@
     wp.customize('hide_sitetitle', function( value ) {
         value.bind( function( to ) {
             if( to ) {
-                $( '.site-title span' ).hide().addClass('screen-reader-text');
+                $( '.site-title span' ).hide().addClass('a11y-hidden');
             }
             else {
-                $( '.site-title span' ).show().removeClass('screen-reader-text');
+                $( '.site-title span' ).show().removeClass('a11y-hidden');
             }
         });
     });
@@ -28,10 +28,10 @@
     wp.customize('hide_tagline', function( value ) {
         value.bind( function( to ) {
             if( to ) {
-                $( '.site-desc' ).hide().addClass('screen-reader-text');
+                $( '.site-desc' ).hide().addClass('a11y-hidden');
             }
             else {
-                $( '.site-desc' ).show().removeClass('screen-reader-text');
+                $( '.site-desc' ).show().removeClass('a11y-hidden');
             }
         });
     });

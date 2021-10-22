@@ -733,7 +733,7 @@ add_filter('tiny_mce_before_init', 'fs_tiny_formats');
 
 function fs_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <label class="screen-reader-text" for="s">' . __( 'Search for:', 'from-scratch' ) . '</label>
+    <label class="a11y-hidden" for="s">' . __( 'Search for:', 'from-scratch' ) . '</label>
     <input type="search" value="' . get_search_query() . '" name="s" id="s">
     <input type="submit" class="action-btn" id="searchsubmit" value="'. esc_attr__( 'Search', 'from-scratch' ) .'">
     </form>';

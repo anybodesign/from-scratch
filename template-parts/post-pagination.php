@@ -24,7 +24,7 @@
 								the_posts_pagination(array(
 									'prev_text'          => __( 'Previous page', 'from-scratch' ),
 									'next_text'          => __( 'Next page', 'from-scratch' ),
-									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'from-scratch' ) . ' </span>',
+									'before_page_number' => '<span class="meta-nav a11y-hidden">' . __( 'Page', 'from-scratch' ) . ' </span>',
 								));
 							}
 						?>
