@@ -17,6 +17,9 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.3 - 2020.10.22
+* Fixes & Optimizations
+
 ### 4.2 - 2020.09.16
 * Filetype icons
 * Icons folder reorganized
