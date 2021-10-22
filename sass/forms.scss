@@ -38,16 +38,10 @@ select {
 	border-radius: 0;
 	appearance: none;
 	
-	&:focus-visible {
+	@include focus2() {
 		background-color: var(--text_color);
 		color: #fff;
 		outline: none;	 	
-	}
-	@include focus() {
-		&:focus {
-			background-color: var(--text_color);
-			color: #fff;
-		}
 	}	
 }
 

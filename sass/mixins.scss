@@ -13,6 +13,47 @@
 	}	
 }
 
+@mixin focus2() {
+	&:focus-visible {
+		@content
+	}
+	@supports not selector(:focus-visible) {
+		&:focus {
+			@content
+		}
+	}	
+}
+
+// Link underline
+
+@mixin underline($color: $primary_color, $width: .4rem) {
+
+	text-decoration: none;
+	background-image:
+		linear-gradient(
+			$color 0,
+			$color .2rem
+		);
+	background-size: 0% $width;
+	background-position: 0 bottom;
+	background-repeat: no-repeat;
+	transition: .2s ease-in-out;
+	
+	&:hover {
+		background-size: 100% $width;
+	}
+	&:focus-visible {
+		background-size: 100% $width;
+	}
+	
+	@include focus {
+		&:focus {
+			background-size: 100% $width;
+		}
+	}
+	
+}
+
 // Link Style
 
 @mixin link-style($bg: dark) {

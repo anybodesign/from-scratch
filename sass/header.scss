@@ -17,7 +17,7 @@
 			content: '';
 			display: block;
 			border-bottom: var(--text_color) 1px solid;
-			width: calc(100% - #{$grid-padding*2});
+			width: calc(100% - #{$grid-padding}*2);
 			position: absolute;
 			left: $grid-padding;
 			bottom: 0;
@@ -135,8 +135,10 @@
 				transform: translateX(-1rem);
 				pointer-events: initial;
 
-				&:hover,
-				&.focus-visible {
+				&:hover {
+					transform: translateX(-1rem) scale(1.2);
+				}
+				@include focus2 {
 					transform: translateX(-1rem) scale(1.2);
 				}				
 			}	
