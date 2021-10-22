@@ -12,6 +12,8 @@
 	$date = get_theme_mod('meta_date', true);
 	$author = get_theme_mod('meta_author', true);
 	$cat = get_theme_mod('meta_category', true);
+	
+	$type = get_post_type( $post->ID );
 ?>
 							<div class="post-meta">
 								
@@ -22,10 +24,10 @@
 										esc_html_e( 'on&nbsp;', 'from-scratch' ); 
 										echo the_time( get_option('date_format') ); 
 									} ?>
-									<?php if ( $author != false ) {
+									<?php if ( $author != false  && $type == 'post' ) {
 										esc_html_e( 'by&nbsp;', 'from-scratch' ); the_author(); 
 									} ?>
-									<?php if ( $cat != false ) {
+									<?php if ( $cat != false  && $type == 'post' ) {
 										esc_html_e( 'in&nbsp;', 'from-scratch' ); the_category(', '); 
 									} ?>
 								</p>
