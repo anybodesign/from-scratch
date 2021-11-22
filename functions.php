@@ -196,6 +196,19 @@ function fs_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
 
 
+// Gutenberg allowed blocks
+
+function fs_allowed_blocks() {
+    wp_enqueue_script(
+        'byebyeblocks',
+		FS_THEME_URL . '/js/byebyeblocks.js',
+        array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), 
+        FS_THEME_VERSION
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'fs_allowed_blocks' );
+
+
 //	Admin style and script
 
 add_action('admin_enqueue_scripts', 'fs_acf_admin_css', 11 );
