@@ -47,3 +47,33 @@
 		color: var(--btn_text_hover);
 	}	
 }
+
+
+// Icons 
+
+// .icon-btn--arrow {
+// 	@extend .action-btn;
+// 	position: relative;
+// 	padding-right: 5rem;
+// 	
+// 	&::after {
+// 		content: '';
+// 		display: block;
+// 		position: absolute;
+// 		top: 50%;
+// 		right: $grid-padding*1.5;
+// 		transform: translateY(-50%);
+// 		width: 1.8rem;
+// 		height: 1.6rem;
+// 		background-image: url(img/ui/arrow.svg);
+// 		background-position: center center;
+// 		background-repeat: no-repeat;
+// 		background-size: contain;
+// 	}
+// 	&:focus, 
+// 	&:hover {
+// 		&::after {
+// 			background-image: url(img/ui/arrow-white.svg);
+// 		}
+// 	}
+// }
