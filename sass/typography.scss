@@ -387,38 +387,38 @@ sup {
 // Tables (responsive)
 
 
-.table-container {  // Wrap the <table> inside this container
-	width: 100%; 
-	overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    margin-bottom: $grid-padding*2;
-}
-thead {
-	background-color: var(--primary_color);
-}
-th {
-	color: #fff;
-	font-weight: normal;
-	font-family: var(--font_bold);
-}
-td, th {
-	vertical-align: middle;
-	margin-bottom: 0;
-	padding: $grid-padding;
-	border: var(--primary_color) 1px solid;
-	
-	thead + tbody &, 
-	tfoot & {
-		border-top: 0;
-	}
-	thead & {
-		border-top: var(--primary_color) 1px solid;
-	}
-
-}
+// .table-container {  // Wrap the <table> inside this container
+// 	width: 100%; 
+// 	overflow-x: auto;
+// }
+// 
+// table {
+//     width: 100%;
+//     margin-bottom: $grid-padding*2;
+// }
+// thead {
+// 	background-color: var(--primary_color);
+// }
+// th {
+// 	color: #fff;
+// 	font-weight: normal;
+// 	font-family: var(--font_bold);
+// }
+// td, th {
+// 	vertical-align: middle;
+// 	margin-bottom: 0;
+// 	padding: $grid-padding;
+// 	border: var(--primary_color) 1px solid;
+// 	
+// 	thead + tbody &, 
+// 	tfoot & {
+// 		border-top: 0;
+// 	}
+// 	thead & {
+// 		border-top: var(--primary_color) 1px solid;
+// 	}
+// 
+// }
 
 
 // Code
