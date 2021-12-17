@@ -17,6 +17,12 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.4 - 2020.12.17
+* Bye bye blocks: blocks white list
+* Admin CSS update
+* Icon button template
+* Post meta condition
+
 ### 4.3 - 2020.10.22
 * Fixes & Optimizations
 
