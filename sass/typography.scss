@@ -7,11 +7,10 @@
 
 // Focus visible
 
-.js-focus-visible :focus:not(:focus) {
-	outline: none;
-}
-.js-focus-visible :focus {
-	// Focus styles 
+a, button {
+	@include focus2() {
+		outline: 2px var(--text_color) dotted;
+	}
 }
 
 // Typography
@@ -125,6 +124,12 @@ li ul {
 	background-color: var(--accent_color);
 	//background-color: transparentize(#333, .9);
 	
+	.has-inline-color.has-accent-color &,
+	.has-text-color.has-accent-color &,
+	.has-accent-background-color & {
+		background-color: var(--text_color);
+		color: #fff;
+	}
 	.high-contrast & {
 		color: #fff;
 	}
@@ -133,10 +138,10 @@ li ul {
 // Custom Tinymce styles
 
 p.text-intro {
-	font-size: 2.2rem;
+	font-size: 2rem;
 	
 	@include rwd(large) {
-		font-size: 2rem;
+		font-size: 2.2rem;
 	}
 }
 p.text-mentions {
