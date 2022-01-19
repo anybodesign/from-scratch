@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.5.1 - 2022.01.19
+* esc_attr fix
+* FR update
+
 ### 4.5 - 2022.01.19
 * Subnav walker enhanced
 * Post title in excerpt read more 
