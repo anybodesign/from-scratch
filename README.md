@@ -17,22 +17,28 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
-### 4.4 - 2020.12.17
+### 4.5 - 2022.01.19
+* Subnav walker enhanced
+* Post title in excerpt read more 
+* Page subnav function
+* CSS updates & fix
+
+### 4.4 - 2021.12.17
 * Bye bye blocks: blocks white list
 * Admin CSS update
 * Icon button template
 * Post meta condition
 
-### 4.3 - 2020.10.22
+### 4.3 - 2021.10.22
 * Fixes & Optimizations
 
-### 4.2 - 2020.09.16
+### 4.2 - 2021.09.16
 * Filetype icons
 * Icons folder reorganized
 * CSS updates
 * pre_get_posts function commented
 
-### 4.1 - 2020.07.21
+### 4.1 - 2021.07.21
 * New base webfonts
 * Customizer: webfonts option
 * Customizer: new sections and blog options
