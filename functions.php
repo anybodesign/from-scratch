@@ -482,6 +482,48 @@ function fs_custom_nav_menus() {
 }
 add_action( 'init', 'fs_custom_nav_menus' );
 
+// Subpages menu
+
+function fs_subpages_menu() {
+	global $post;
+
+	// Get post ancestors 
+	$post_ancestors = get_post_ancestors($post);
+
+	// Check if a page has any parent pages
+	if ($post_ancestors) {
+
+		//get the top page id
+		$top_page = $post_ancestors ? end($post_ancestors) : $post->ID;
+
+		// How many ancestors does this page have? Counts the array adds one.
+		$n = count($post_ancestors) + 1;
+
+		// Get the pages children, if it has any
+		$pages = get_pages();
+		$page_children = get_page_children($post->ID, $pages);
+
+		// Checks if a page has children
+		if (!empty($page_children)) {
+			$children = wp_list_pages("title_li=&child_of=". $top_page ."&echo=0&sort_column=menu_order&depth=" . $n);
+		} else { // If the page doesn't have children
+			$children = wp_list_pages("title_li=&child_of=". $top_page ."&echo=0&sort_column=menu_order&depth=" . ($n - 1));
+		}
+		
+	} else {
+		$children = wp_list_pages("title_li=&child_of=". $post->ID ."&echo=0&sort_column=menu_order&depth=1");
+	}
+
+	// Only show child navigation if there are children
+	if ( $children ) {
+		$menu = '<nav class="sub-pages" aria-label="'.__("Secondary navigation","from-scratch").'">';
+		$menu .= '<ul class="subpages-list">';
+		$menu .= $children;
+		$menu .= '</ul>';
+		$menu .= '</nav>';
+	}
+	print $menu;
+}
 
 // Nav highlights fix
 
@@ -574,7 +616,7 @@ add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
 function fs_excerpt_more( $more ) {
     return sprintf( '&hellip; <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
         get_permalink( get_the_ID() ),
-        __( 'Read More', 'from-scratch' )
+        __( 'Read More', 'cfhe' ) . ' <span class="a11y-hidden">'.__( 'of ', 'from-scratch' ).get_the_title().'</span>'
     );
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );

@@ -10,15 +10,17 @@
  * @version 1.0
  */
 ?>
-					<div class="page-sidebar">
-						<aside class="widget-area" role="complementary">
+					<aside class="page-sidebar widget-area" role="complementary">
+						
+						<?php 
 							
-							<?php // Sidebar example
-								
-								if ( is_active_sidebar( 'widgets_area1' ) ) { 
-									dynamic_sidebar( 'widgets_area1' ); 
-								} 
-							?>
+							if ( ( is_home() || is_singular('post') || is_category() ) && is_active_sidebar( 'widgets_area1' ) ) { 
+								dynamic_sidebar( 'widgets_area1' ); 
+							} 
 							
-						</aside>
-					</div>
+							if ( is_page() ) {	
+								fs_subpages_menu();		
+							}
+						?>
+						
+					</aside>
