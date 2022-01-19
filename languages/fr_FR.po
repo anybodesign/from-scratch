@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2021-06-30 11:47+0200\n"
-"PO-Revision-Date: 2021-06-30 11:47+0200\n"
+"POT-Creation-Date: 2022-01-19 11:37+0100\n"
+"PO-Revision-Date: 2022-01-19 11:37+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -48,13 +48,9 @@ msgstr "Réseaux sociaux"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:68 functions.php:460
+#: footer.php:68 functions.php:477
 msgid "Footer Menu"
 msgstr "Menu pied de page"
-
-#: footer.php:84
-msgid "Back to top"
-msgstr "Haut de page"
 
 #: functions.php:127 inc/customizer.php:125
 msgid "Primary color"
@@ -96,100 +92,108 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:458 template-parts/header-toolbar.php:7
+#: functions.php:475 template-parts/header-toolbar.php:7
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:459 template-parts/header-nav.php:6
+#: functions.php:476 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:461
+#: functions.php:478
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:556
+#: functions.php:519
+msgid "Secondary navigation"
+msgstr "Navigation secondaire"
+
+#: functions.php:619
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:589
+#: functions.php:619
+msgid "of "
+msgstr "de "
+
+#: functions.php:663
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:590
+#: functions.php:664
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:591
+#: functions.php:665
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:592
+#: functions.php:666
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:593
+#: functions.php:667
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:594
+#: functions.php:668
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:595
+#: functions.php:669
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:633
+#: functions.php:707
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:642
+#: functions.php:716
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:651
+#: functions.php:725
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:660
+#: functions.php:734
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:685
+#: functions.php:759
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:691
+#: functions.php:765
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:697
+#: functions.php:771
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:717
+#: functions.php:791
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:719 template-parts/header-toolbar.php:24
+#: functions.php:793 template-parts/header-toolbar.php:24
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:751
+#: functions.php:825
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:757
+#: functions.php:831
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:766
+#: functions.php:840
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:772
+#: functions.php:846
 msgid "Edit"
 msgstr "Modifier"
 
@@ -367,31 +371,39 @@ msgstr "Utilisez Scrollout pour animer les blocs au scroll"
 msgid "Use Fancybox to enlarge pictures"
 msgstr "Utilisez Fancybox pour agrandir les images"
 
-#: inc/customizer.php:661
+#: inc/customizer.php:655
+msgid "Blog introduction text"
+msgstr "Texte d’introduction du blog"
+
+#: inc/customizer.php:673
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:680
+#: inc/customizer.php:690
+msgid "Show the sidebar on single posts"
+msgstr "Afficher la barre latérale sur les articles"
+
+#: inc/customizer.php:709
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:699
+#: inc/customizer.php:728
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:718
+#: inc/customizer.php:747
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:734
+#: inc/customizer.php:763
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:750
+#: inc/customizer.php:779
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:769
+#: inc/customizer.php:798
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -399,70 +411,70 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:793
+#: inc/customizer.php:822
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:796
+#: inc/customizer.php:825
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:797
+#: inc/customizer.php:826
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:817
+#: inc/customizer.php:846
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:820
+#: inc/customizer.php:849
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:821
+#: inc/customizer.php:850
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:822
+#: inc/customizer.php:851
 msgid "Playfair & Atkinson"
 msgstr "Playfair & Atkinson"
 
-#: inc/customizer.php:823
+#: inc/customizer.php:852
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:824
+#: inc/customizer.php:853
 msgid "Miriam Libre & Asap"
 msgstr "Miriam Libre & Asap"
 
-#: inc/customizer.php:844
+#: inc/customizer.php:873
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:863
+#: inc/customizer.php:892
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:864
+#: inc/customizer.php:893
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:884
+#: inc/customizer.php:913
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:885
+#: inc/customizer.php:914
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:905
+#: inc/customizer.php:934
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:906
+#: inc/customizer.php:935
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -507,17 +519,21 @@ msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
-#: inc/subnav-walker.php:20
+#: inc/subnav-walker.php:21
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:32
+#: index.php:42
 msgid "Categories"
 msgstr "Catégories"
 
-#: index.php:37
+#: index.php:47
 msgid "All categories"
 msgstr "Toutes les catégories"
+
+#: template-parts/footer-back2top.php:3
+msgid "Back to top"
+msgstr "Haut de page"
 
 #: template-parts/header-brand.php:15
 msgid "Go to Home Page"
@@ -587,39 +603,39 @@ msgstr "Résultats de la recherche pour : %s"
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
-#: template-parts/page-content.php:27 template-parts/post-pagination.php:27
+#: template-parts/page-content.php:21 template-parts/post-pagination.php:27
 msgid "Page"
 msgstr "Page"
 
-#: template-parts/page-content.php:27
+#: template-parts/page-content.php:21
 msgid "Pages:"
 msgstr "Pages :"
 
-#: template-parts/page-content.php:34 template-parts/post-pagination.php:26
+#: template-parts/page-content.php:28 template-parts/post-pagination.php:26
 msgid "Next page"
 msgstr "Page suivante"
 
-#: template-parts/page-content.php:35 template-parts/post-pagination.php:25
+#: template-parts/page-content.php:29 template-parts/post-pagination.php:25
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: template-parts/post-meta.php:20
+#: template-parts/post-meta.php:22
 msgid "Posted "
 msgstr "Publié "
 
-#: template-parts/post-meta.php:22
+#: template-parts/post-meta.php:24
 msgid "on&nbsp;"
 msgstr "le&nbsp;"
 
-#: template-parts/post-meta.php:26
+#: template-parts/post-meta.php:28
 msgid "by&nbsp;"
 msgstr "par&nbsp;"
 
-#: template-parts/post-meta.php:29
+#: template-parts/post-meta.php:31
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
 
-#: template-parts/post-meta.php:37
+#: template-parts/post-meta.php:39
 #, php-format
 msgid "%s comment"
 msgid_plural "%s comments"
@@ -653,6 +669,10 @@ msgstr "Partager sur LinkedIn"
 #: template-parts/post-share.php:17
 msgid "Share by e-mail"
 msgstr "Partager par email"
+
+#: template-parts/sidebar-burger.php:6
+msgid "Sidebar Menu"
+msgstr "Menu barre latérale"
 
 #. Theme Name of the plugin/theme
 msgid "From Scratch"
