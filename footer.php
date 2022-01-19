@@ -20,7 +20,7 @@
 				
 				<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
 				<div class="footer-social">
-					<nav role="navigation" aria-label="<?php esc_html_e('Social Networks', 'from-scratch'); ?>">
+					<nav role="navigation" aria-label="<?php esc_attr_e('Social Networks', 'from-scratch'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'social_menu',
 								'menu_class'		=>	'social-menu',
@@ -65,7 +65,7 @@
 						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo esc_attr(' out-of-reach'); } ?>" href="//wordpress.org"><?php esc_html_e('Powered by WordPress!', 'from-scratch'); ?></a>
 					</p>
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav role="navigation" aria-label="<?php esc_html_e('Footer Menu', 'from-scratch'); ?>">
+					<nav role="navigation" aria-label="<?php esc_attr_e('Footer Menu', 'from-scratch'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',
