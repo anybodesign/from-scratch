@@ -1,0 +1,45 @@
+// -------------------------
+// = Variables Colors
+// -------------------------
+
+
+
+// Root CSS vars
+
+:root {
+	
+	// Colors 
+	
+	--primary_color: #23252b; 
+	--secondary_color: #606060; 
+	--accent_color: #CEFF00;
+	--bg_color: #f0f0f0;
+	--page_color: #ffffff;
+	
+	--text_color: #23252b;
+	
+	--btn_text: #23252b;
+	--btn_text_hover: #fff;
+	
+	--header_color: transparent;
+	--footer_color: transparent;
+	
+	
+	.high-contrast {
+
+		--primary_color: #222; 
+		--secondary_color: #222; 
+		--accent_color: #222;
+		--bg_color: #f0f0f0;
+		--page_color: #f0f0f0;
+		
+		--text_color: #222;
+		
+		--btn_text: #f0f0f0;
+		--btn_text_hover: #f0f0f0;
+		
+		--header_color: #f0f0f0;
+		--footer_color: #f0f0f0;		
+	}
+	
+}

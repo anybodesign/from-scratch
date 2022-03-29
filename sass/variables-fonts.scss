@@ -1,0 +1,21 @@
+// -------------------------
+// = Variables - Fonts
+// -------------------------
+
+// Root CSS vars
+
+:root {
+	
+	// Fonts
+	
+	--font_stack: Helvetica, Arial, sans-serif;
+	
+	--font_title: 'Title', var(--font_stack);
+	--font_regular: 'Regular', var(--font_stack);
+	--font_italic: 'Italic', var(--font_stack);
+	--font_bold: 'Bold', var(--font_stack);
+	--font_bolditalic: 'BoldItalic', var(--font_stack);
+	
+	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+	
+}
