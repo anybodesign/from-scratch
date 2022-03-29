@@ -176,7 +176,12 @@ function fs_setup() {
 	add_theme_support( 'disable-custom-font-sizes' );
 	
 	add_theme_support( 'responsive-embeds' );
-
+	
+	// Remove widgets blocks
+	remove_theme_support( 'widgets-block-editor' );
+	
+	// Remove fucking patterns 
+	remove_theme_support( 'core-block-patterns' );
 }
 endif;
 add_action( 'after_setup_theme', 'fs_setup' );
@@ -434,6 +439,10 @@ function fs_scripts_load() {
 			if ( get_theme_mod('back2top') == true ) {
 				wp_enqueue_style( 'back2top' );
 			}
+			
+			// Deregister Fuckin Bullshit
+			wp_dequeue_style( 'global-styles' );
+			wp_deregister_style( 'global-styles' );
 			
 	}
 }    
@@ -1037,6 +1046,15 @@ function fs_wp_rocket_add_purge_posts_to_author() {
 	$role->add_cap('rocket_purge_cache', true);
 }
 add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
+
+
+// Koko 
+
+function fs_koko() {
+	$role = get_role('editor');
+	$role->add_cap('view_koko_analytics', true);
+}
+add_action('init', 'fs_koko', 12);
 
 
 // ------------------------
