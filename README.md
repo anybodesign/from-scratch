@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.5.2 - 2022.03.29
+* Koko function for editor role
+* Sass vars split
+
 ### 4.5.1 - 2022.01.19
 * esc_attr fix
 * FR update
