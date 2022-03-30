@@ -73,6 +73,22 @@ $dash: #777 1px dashed;
 	#_customize-input-webfont-radio-miriam + label::before {
 		background-image: url(../img/admin/webfonts/miriam.png);
 	}
+	
+	#_customize-input-webfont-radio-custom {
+		opacity: 1;
+		position: relative;
+		margin: auto;
+		
+		& + label {
+			opacity: 1;
+			border: 0;
+			
+			&::before {
+				content: none;
+			}
+		}
+		
+	}
 }
 
 #customize-control-webfont {
@@ -87,6 +103,8 @@ $dash: #777 1px dashed;
 				height: 100px;
 			}
 		}
-			
+		&:last-child {
+			margin-top: 1rem;
+		}	
 	}
 }

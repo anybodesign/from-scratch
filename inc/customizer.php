@@ -851,6 +851,7 @@ function fs_customize_register($fs_customize) {
 					'playfair' => __( 'Playfair & Atkinson', 'from-scratch' ),
 					'luciole' => __( 'Luciole', 'from-scratch' ),
 					'miriam' => __( 'Miriam Libre & Asap', 'from-scratch' ),
+					'custom' => __( 'Custom Child Theme Font', 'from-scratch' ),
 				),
 			)
 		);
@@ -965,7 +966,7 @@ function fs_customizer_sanitize_radio_layout( $input ) {
     return $input;
 }
 function fs_customizer_sanitize_font_layout( $input ) {
-    if( !in_array( $input, array( 'barlow', 'bebas', 'playfair', 'luciole', 'miriam' ) ) ) {
+    if( !in_array( $input, array( 'barlow', 'bebas', 'playfair', 'luciole', 'miriam', 'custom' ) ) ) {
         $input = 'barlow';
     }
     return $input;
