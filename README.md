@@ -17,6 +17,9 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.5.4 - 2022.03.30
+* Footer template parts
+
 ### 4.5.3 - 2022.03.30
 * Custom theme font option
 
