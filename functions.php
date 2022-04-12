@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '4.5.4' );
+define( 'FS_THEME_VERSION', '4.5.5' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -211,7 +211,8 @@ function fs_allowed_blocks() {
         FS_THEME_VERSION
     );
 }
-add_action( 'enqueue_block_editor_assets', 'fs_allowed_blocks' );
+// Uncomment to disable blocks
+//add_action( 'enqueue_block_editor_assets', 'fs_allowed_blocks' );
 
 
 //	Admin style and script
