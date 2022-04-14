@@ -17,6 +17,9 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.5.6 - 2022.04.14
+* Text domain fix
+
 ### 4.5.5 - 2022.04.12
 * Disable byebyeblocks
 
