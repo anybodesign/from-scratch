@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '4.5.5' );
+define( 'FS_THEME_VERSION', '4.5.6' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -626,7 +626,7 @@ add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
 function fs_excerpt_more( $more ) {
     return sprintf( '&hellip; <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
         get_permalink( get_the_ID() ),
-        __( 'Read More', 'cfhe' ) . ' <span class="a11y-hidden">'.__( 'of ', 'from-scratch' ).get_the_title().'</span>'
+        __( 'Read More', 'from-scratch' ) . ' <span class="a11y-hidden">'.__( 'of ', 'from-scratch' ).get_the_title().'</span>'
     );
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
