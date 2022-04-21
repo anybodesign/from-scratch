@@ -531,6 +531,8 @@ function fs_subpages_menu() {
 		$menu .= $children;
 		$menu .= '</ul>';
 		$menu .= '</nav>';
+	} else {
+		$menu = null;
 	}
 	print $menu;
 }
