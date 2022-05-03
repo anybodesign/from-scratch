@@ -900,7 +900,7 @@ if( class_exists('acf') ) {
 	// }	
 	
 	// Front-End ACF Functions
-	
+	/*
 	add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
 	function fs_acf_json_save_point( $path ) {
 	    
@@ -917,6 +917,7 @@ if( class_exists('acf') ) {
 	    
 	    return $paths;
 	}
+	*/
 
 	// ACF colors
 
@@ -1025,7 +1026,7 @@ if( class_exists('acf') ) {
 	*/
 	
 	// Translate ACF fields
-		
+	/*	
 	function fs_custom_acf_settings_localization($localization){
 	  return true;
 	}
@@ -1035,7 +1036,7 @@ if( class_exists('acf') ) {
 	  return 'from-scratch';
 	}
 	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
-	
+	*/
 }
 
 
