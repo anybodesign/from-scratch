@@ -2,7 +2,14 @@
 // = Mixins
 // -------------------------
 
+// Dotted line
 
+@mixin dotted-line($color1: var(--text_color), $color2: transparent, $space: 6, $width: 1) {
+    background-image: linear-gradient(to right, $color1 0%, $color1 (100% / $space), $color2 (100% / $space));
+    background-position: 0 bottom; 
+    background-size: ($space + px) ($width + px);
+    background-repeat: repeat-x;
+}
 
 // Focus visible fallback
 
