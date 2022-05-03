@@ -17,6 +17,11 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.6 - 2022.05.03
+* ACF functions disabled
+* Header wrapper template
+* CSS & Mixins updates
+
 ### 4.5.6 - 2022.04.14
 * Text domain fix
 
