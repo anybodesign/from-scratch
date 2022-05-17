@@ -17,6 +17,9 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.6.1 - 2022.05.17
+* Color vars in admin
+
 ### 4.6 - 2022.05.03
 * ACF functions disabled
 * Header wrapper template
