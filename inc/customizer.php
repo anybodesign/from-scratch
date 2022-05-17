@@ -994,10 +994,10 @@ function fs_inline_styles() { ?>
 			<?php } ?>
 			
 			<?php if ( get_theme_mod('btn_text') ) { ?>
-			--btn_text: #ffffff;
+			--btn_text: <?php echo esc_attr(get_theme_mod('btn_text', '#fff')); ?>;
 			<?php }
 				if ( get_theme_mod('btn_text_hover') ) { ?>
-			--btn_text_hover: #ffffff;
+			--btn_text_hover: <?php echo esc_attr(get_theme_mod('btn_text_hover', '#fff')); ?>;
 			<?php } ?>
 			
 			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
@@ -1041,6 +1041,20 @@ function fs_admin_inline_styles() { ?>
 	
 	<style>
 		:root {
+			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#23252b')); ?>; 
+			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#606060')); ?>;
+			--accent_color: <?php echo esc_attr(get_theme_mod('accent_color', '#ceff00')); ?>;	
+			--bg_color: <?php echo esc_attr(get_theme_mod('bg_color', '#f0f0f0')); ?>;			
+			--page_color: <?php echo esc_attr(get_theme_mod('page_color', '#ffffff')); ?>;			
+			--text_color: <?php echo esc_attr(get_theme_mod('text_color', '#23252b')); ?>;
+			
+			<?php if ( get_theme_mod('btn_text') ) { ?>
+			--btn_text: <?php echo esc_attr(get_theme_mod('btn_text', '#fff')); ?>;
+			<?php }
+				if ( get_theme_mod('btn_text_hover') ) { ?>
+			--btn_text_hover: <?php echo esc_attr(get_theme_mod('btn_text_hover', '#fff')); ?>;
+			<?php } ?>	
+			
 			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
 			--font_title: 'Title-Bebas', var(--font_stack) !important;
 			--font_regular: 'Regular-Bebas', var(--font_stack) !important;
@@ -1068,6 +1082,13 @@ function fs_admin_inline_styles() { ?>
 			--font_italic: 'Italic-Miriam', var(--font_stack) !important;
 			--font_bold: 'Bold-Miriam', var(--font_stack) !important;
 			--font_bolditalic: 'BoldItalic-Miriam', var(--font_stack) !important;
+			<?php }
+				else { ?>
+			--font_title: 'Title', var(--font_stack) !important;
+			--font_regular: 'Regular', var(--font_stack) !important;
+			--font_italic: 'Italic', var(--font_stack) !important;
+			--font_bold: 'Bold', var(--font_stack) !important;
+			--font_bolditalic: 'BoldItalic', var(--font_stack) !important;
 			<?php } ?>
 		}
 	</style>
