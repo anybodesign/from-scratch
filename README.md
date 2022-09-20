@@ -17,6 +17,11 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.7 - 2022.09.20
+* Brand logo height fix
+* Editor styles fix
+* Customizer: btn text color fix
+
 ### 4.6.1 - 2022.05.17
 * Color vars in admin
 
