@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2022-03-30 08:26+0200\n"
-"PO-Revision-Date: 2022-03-30 08:26+0200\n"
+"POT-Creation-Date: 2022-06-16 13:20+0200\n"
+"PO-Revision-Date: 2022-06-16 13:20+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -39,18 +39,6 @@ msgstr "On en discute ?"
 #: comments.php:44
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
-
-#: footer.php:23
-msgid "Social Networks"
-msgstr "Réseaux sociaux"
-
-#: footer.php:65
-msgid "Powered by WordPress!"
-msgstr "Propulsé par WordPress !"
-
-#: footer.php:68 functions.php:486
-msgid "Footer Menu"
-msgstr "Menu pied de page"
 
 #: functions.php:127 inc/customizer.php:125
 msgid "Primary color"
@@ -92,108 +80,112 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:484 template-parts/header-toolbar.php:7
+#: functions.php:485 template-parts/header-toolbar.php:7
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:485 template-parts/header-nav.php:6
+#: functions.php:486 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:487
+#: functions.php:487 template-parts/footer-copyright.php:16
+msgid "Footer Menu"
+msgstr "Menu pied de page"
+
+#: functions.php:488
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:528
+#: functions.php:529
 msgid "Secondary navigation"
 msgstr "Navigation secondaire"
 
-#: functions.php:628
+#: functions.php:631
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:628
+#: functions.php:631
 msgid "of "
 msgstr "de "
 
-#: functions.php:672
+#: functions.php:675
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:673
+#: functions.php:676
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:674
+#: functions.php:677
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:675
+#: functions.php:678
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:676
+#: functions.php:679
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:677
+#: functions.php:680
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:678
+#: functions.php:681
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:716
+#: functions.php:719
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:725
+#: functions.php:728
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:734
+#: functions.php:737
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:743
+#: functions.php:746
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:768
+#: functions.php:771
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:774
+#: functions.php:777
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:780
+#: functions.php:783
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:800
+#: functions.php:803
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:802 template-parts/header-toolbar.php:24
+#: functions.php:805 template-parts/header-toolbar.php:24
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:834
+#: functions.php:837
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:840
+#: functions.php:843
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:849
+#: functions.php:852
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:855
+#: functions.php:858
 msgid "Edit"
 msgstr "Modifier"
 
@@ -538,6 +530,14 @@ msgstr "Toutes les catégories"
 #: template-parts/footer-back2top.php:3
 msgid "Back to top"
 msgstr "Haut de page"
+
+#: template-parts/footer-copyright.php:12
+msgid "Powered by WordPress!"
+msgstr "Propulsé par WordPress !"
+
+#: template-parts/footer-social.php:5
+msgid "Social Networks"
+msgstr "Réseaux sociaux"
 
 #: template-parts/header-brand.php:15
 msgid "Go to Home Page"
