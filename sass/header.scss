@@ -179,6 +179,7 @@
 		display: block;
 	}
 	img {
+		width: auto;
 		@include rwd(large) {
 		
 			.layout-v2 & {
