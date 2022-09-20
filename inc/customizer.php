@@ -994,10 +994,10 @@ function fs_inline_styles() { ?>
 			<?php } ?>
 			
 			<?php if ( get_theme_mod('btn_text') ) { ?>
-			--btn_text: <?php echo esc_attr(get_theme_mod('btn_text', '#fff')); ?>;
+			--btn_text: <?php echo esc_attr('#fff'); ?>;
 			<?php }
 				if ( get_theme_mod('btn_text_hover') ) { ?>
-			--btn_text_hover: <?php echo esc_attr(get_theme_mod('btn_text_hover', '#fff')); ?>;
+			--btn_text_hover: <?php echo esc_attr('#fff'); ?>;
 			<?php } ?>
 			
 			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
@@ -1049,10 +1049,10 @@ function fs_admin_inline_styles() { ?>
 			--text_color: <?php echo esc_attr(get_theme_mod('text_color', '#23252b')); ?>;
 			
 			<?php if ( get_theme_mod('btn_text') ) { ?>
-			--btn_text: <?php echo esc_attr(get_theme_mod('btn_text', '#fff')); ?>;
+			--btn_text: <?php echo esc_attr('#fff'); ?>;
 			<?php }
 				if ( get_theme_mod('btn_text_hover') ) { ?>
-			--btn_text_hover: <?php echo esc_attr(get_theme_mod('btn_text_hover', '#fff')); ?>;
+			--btn_text_hover: <?php echo esc_attr('#fff'); ?>;
 			<?php } ?>	
 			
 			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
