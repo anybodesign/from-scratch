@@ -19,7 +19,7 @@
 	
 	&:focus, 
 	&:hover {
-		background-color: var(--text_color);
+		background-color: var(--text_color) !important;
 		color: var(--btn_text_hover) !important;
 		
 		.high-contrast & {
@@ -43,7 +43,7 @@
 
 	&:focus, 
 	&:hover {
-		background-color: var(--text_color);
+		background-color: var(--text_color) !important;
 		color: var(--btn_text_hover) !important;
 	}	
 }
