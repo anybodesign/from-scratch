@@ -543,7 +543,12 @@ function fs_nav_classes( $classes, $item ) {
     
 	$blogpage = get_option( 'page_for_posts' );
 	$blogpage_content = get_post( $blogpage );
-	$itemname = $blogpage_content->post_title;
+	
+	if (is_404()) {
+		$itemname = esc_html__( 'Oops! That page can&rsquo;t be found', 'from-scratch' );
+	} else {
+		$itemname = $blogpage_content->post_title;
+	}
 	
 	// Remove active state on page for posts
     if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('project') ) && $item->title == $itemname ) {
