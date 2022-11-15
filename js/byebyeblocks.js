@@ -16,6 +16,7 @@ wp.domReady( function() {
 		'core/paragraph',
 		'core/heading',
 		'core/list',
+		'core/list-item',
 	    'core/image',
 		'core/audio',
 	    'core/quote',
