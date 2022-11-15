@@ -17,6 +17,11 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.7.1 - 2022.11.15
+* Add list-item block to byebyeblocks
+* Update URI in header
+* Fix notice in 404 (dabaaaz)
+
 ### 4.7 - 2022.09.20
 * Brand logo height fix
 * Editor styles fix
