@@ -9,7 +9,7 @@
  * @since 1.0
  * @version 1.0
  */ 
-	 if ( is_search() || is_post_type_archive('project') ) {
+	 if ( is_search() || is_post_type_archive() ) {
 		$sidebar = false;
 	} else if ( get_theme_mod('blog_sidebar') == false ) {
 		$sidebar = false;
