@@ -1,7 +1,4 @@
 .DS_Store
-.codekit-cache
-.sass-cache
-_trash
-config.codekit3
+.trash
 .nova
 prepros.config
