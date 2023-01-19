@@ -827,6 +827,49 @@ function fs_customize_register($fs_customize) {
 				),
 			)
 		);
+		
+		// Subnavs
+		
+		$fs_customize->add_setting(
+			'child_pages', 
+			array(
+				'default'			=> 'none',
+				'sanitize_callback' => 'fs_customizer_sanitize_radio_child_pages',		
+			)
+		);
+		$fs_customize->add_control(
+			'child_pages', 
+			array(
+				'type'			=> 'radio',
+				'label'			=> __('Child pages location', 'from-scratch'),
+				'section'		=> 'fs_layout_section',
+				'settings'		=> 'child_pages',
+				'choices' => array(
+					'banner' => __( 'Page banner', 'from-scratch' ),
+					'sidebar' => __( 'Sidebar', 'from-scratch' ),
+					'none' => __( 'Do not display child pages', 'from-scratch' ),
+				),
+			)
+		);
+		
+		// Banner descriptions
+		
+		$fs_customize->add_setting(
+			'show_desc', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'show_desc', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display page description or post metas in the banner', 'from-scratch'),
+				'section'		=> 'fs_layout_section',
+				'settings'		=> 'show_desc',
+			)
+		);
 
 	// Theme Fonts
 	// -
@@ -962,6 +1005,12 @@ function fs_customizer_sanitize_checkbox( $input ) {
 function fs_customizer_sanitize_radio_layout( $input ) {
     if( !in_array( $input, array( 'version1', 'version2' ) ) ) {
         $input = 'version1';
+    }
+    return $input;
+}
+function fs_customizer_sanitize_radio_child_pages( $input ) {
+    if( !in_array( $input, array( 'banner', 'sidebar', 'none' ) ) ) {
+        $input = 'none';
     }
     return $input;
 }
