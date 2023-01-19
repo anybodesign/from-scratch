@@ -18,7 +18,7 @@ class fs_subnav_walker extends Walker_Nav_Menu {
        if ( $item->is_dropdown ) {
 		   $title = apply_filters( 'the_title', $item->title, $item->ID );
 		   
-           $item_html = str_replace( '</a>', '</a> <button class="sub-menu-unfold" aria-expanded="false"><span>'.__("Unfold Sub-Menu","cfhe").' '.$title.'</span></button>', $item_html );
+           $item_html = str_replace( '</a>', '</a> <button class="sub-menu-unfold" aria-expanded="false"><span>'.__("Unfold Sub-Menu","from-scratch").' '.$title.'</span></button>', $item_html );
        }
        $output .= $item_html;
     }
