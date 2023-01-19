@@ -12,38 +12,9 @@
 get_header(); ?>
 
 				<div class="page-wrap">
-					
-					<?php get_template_part( 'template-parts/page', 'content' ); ?>					
-					
 					<?php 
-						
-						// Custom Post type Loop Example
-						
-						$args = array(
-							'posts_per_page' 	=> 4,
-							'post_type' 		=> 'your-post-type',
-							'meta_key'			=> 'your-meta-key',
-							'orderby'			=> 'meta_value',
-							'order'				=> 'DESC'
-						);
-						$query = new WP_Query($args);
-					?>						
-				
-					<?php if ($query->have_posts()) : ?>
-					
-					<div class="page-content">
-										
-						<?php while ($query->have_posts()) : $query->the_post(); ?>
-					
-							<?php get_template_part( 'template-parts/post', 'content' ); ?>
-
-						<?php endwhile; ?>
-					
-					</div>
-					
-					<?php endif; ?>
-					<?php wp_reset_postdata(); ?>
-									
+						get_template_part( 'template-parts/page', 'content' ); 
+					?>					
 				</div>
 
 <?php get_footer(); ?>
