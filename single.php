@@ -9,9 +9,7 @@
  * @since 1.0
  * @version 1.0
  */	
- 	if ( is_singular('project') ) {
-		$sidebar = false;
-	} else if ( get_theme_mod('post_sidebar') == false ) {
+ 	if ( get_theme_mod('post_sidebar') == false ) {
 		$sidebar = false;
 	} else if ( get_theme_mod('post_sidebar') != false || get_theme_mod('post_sidebar') == null ) {
 		$sidebar = true;
