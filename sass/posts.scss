@@ -69,6 +69,58 @@
 	@extend h4;
 }
 
+// Widgets
+
+.widget_categories {
+	
+	li.cat-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		a {
+			width: 100%;
+		}	
+	}
+	form {
+		@extend .formfield-select--container;
+	}
+}
+
+.widget_search {
+	
+	form {
+		position: relative;
+	}
+	#searchsubmit {
+		display: block;
+		width: 3rem;
+		height: 3rem;
+		padding: 0;
+		background: #fff url(img/ui/search.svg) center center no-repeat;
+		background-size: 2rem 2rem;
+		border-radius: 50%;
+		transition: .5s ease-in-out;
+		
+		position: absolute;
+		top: 50%;
+		margin-top: -1.5rem;
+		right: 1rem;
+		
+		@include a11y-hide();
+		
+		&:hover {
+			background-color: var(--accent_color) !important;
+			transform: scale(1.2);
+		}
+		@include focus2 {
+			background-color: var(--accent_color) !important;
+			transform: scale(1.2);
+		}		
+	}
+}
+	
+
 /* ------------------------- */
 /* = Singles
 /* ------------------------- */
