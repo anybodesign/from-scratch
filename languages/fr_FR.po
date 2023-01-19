@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2022-06-16 13:20+0200\n"
-"PO-Revision-Date: 2022-06-16 13:20+0200\n"
+"POT-Creation-Date: 2023-01-19 12:12+0100\n"
+"PO-Revision-Date: 2023-01-19 12:13+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -100,92 +100,96 @@ msgstr "Menu réseaux sociaux"
 msgid "Secondary navigation"
 msgstr "Navigation secondaire"
 
-#: functions.php:631
+#: functions.php:548 template-parts/header-title.php:12
+msgid "Oops! That page can&rsquo;t be found"
+msgstr "Oops! Page introuvable"
+
+#: functions.php:636
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:631
+#: functions.php:636
 msgid "of "
 msgstr "de "
 
-#: functions.php:675
+#: functions.php:680
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:676
+#: functions.php:681
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:677
+#: functions.php:682
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:678
+#: functions.php:683
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:679
+#: functions.php:684
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:680
+#: functions.php:685
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:681
+#: functions.php:686
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:719
+#: functions.php:724
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:728
+#: functions.php:733
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:737
+#: functions.php:742
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:746
+#: functions.php:751
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:771
+#: functions.php:776
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:777
+#: functions.php:782
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:783
+#: functions.php:788
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:803
+#: functions.php:808
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:805 template-parts/header-toolbar.php:24
+#: functions.php:810 template-parts/header-toolbar.php:24
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:837
+#: functions.php:842
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:843
+#: functions.php:848
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:852
+#: functions.php:857
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:858
+#: functions.php:863
 msgid "Edit"
 msgstr "Modifier"
 
@@ -415,62 +419,82 @@ msgstr "Version 1"
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:846
+#: inc/customizer.php:844
+msgid "Child pages location"
+msgstr "Emplacement des pages enfants"
+
+#: inc/customizer.php:848
+msgid "Page banner"
+msgstr "Bannière de page"
+
+#: inc/customizer.php:849
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: inc/customizer.php:850
+msgid "Do not display child pages"
+msgstr "Ne pas afficher les pages enfants"
+
+#: inc/customizer.php:868
+msgid "Display page description or post metas in the banner"
+msgstr "Afficher la description de la page ou les post metas dans la bannière"
+
+#: inc/customizer.php:889
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:849
+#: inc/customizer.php:892
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:850
+#: inc/customizer.php:893
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:851
+#: inc/customizer.php:894
 msgid "Playfair & Atkinson"
 msgstr "Playfair & Atkinson"
 
-#: inc/customizer.php:852
+#: inc/customizer.php:895
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:853
+#: inc/customizer.php:896
 msgid "Miriam Libre & Asap"
 msgstr "Miriam Libre & Asap"
 
-#: inc/customizer.php:854
+#: inc/customizer.php:897
 msgid "Custom Child Theme Font"
 msgstr "Police personnalisée du thème enfant"
 
-#: inc/customizer.php:874
+#: inc/customizer.php:917
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:893
+#: inc/customizer.php:936
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:894
+#: inc/customizer.php:937
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:914
+#: inc/customizer.php:957
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:915
+#: inc/customizer.php:958
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:935
+#: inc/customizer.php:978
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:936
+#: inc/customizer.php:979
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -555,6 +579,11 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
+#: template-parts/header-title.php:10
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
+
 #: template-parts/header-toolbar.php:22
 msgid "Enter keyword"
 msgstr "Entrer un mot clé"
@@ -597,15 +626,6 @@ msgid ""
 msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
-
-#: template-parts/page-banner.php:24
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour : %s"
-
-#: template-parts/page-banner.php:26
-msgid "Oops! That page can&rsquo;t be found"
-msgstr "Oops! Page introuvable"
 
 #: template-parts/page-content.php:21 template-parts/post-pagination.php:27
 msgid "Page"
@@ -967,9 +987,6 @@ msgstr "Maintenance"
 
 #~ msgid "Comment(s)"
 #~ msgstr "Commentaire(s)"
-
-#~ msgid "Page builder"
-#~ msgstr "Constructeur de Page"
 
 #~ msgid "Custom page template with Sidebar"
 #~ msgstr "Page avec colonne latérale"
