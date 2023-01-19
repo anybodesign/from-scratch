@@ -8,14 +8,17 @@
  * @subpackage From_Scratch
  * @since 1.0
  * @version 1.0
- */
+ */	
+	
+	$in_sidebar = get_theme_mod('child_pages') == 'sidebar';
+	 
 	$parent = $post->post_parent;
 	if ( $parent ) {
 		$children = wp_list_pages("title_li=&child_of=".$parent."&echo=0");
 	} else {
 		$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
 	}
-	if ( is_page() && $children ) {
+	if ( is_page() && $children && $in_sidebar ) {
 		$sidebar = true;
 	} else {
 		$sidebar = false;
