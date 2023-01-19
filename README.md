@@ -17,6 +17,14 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.8 - 2023.01.19
+* Page banner title template part
+* Customizer options for child pages
+* Customizer option banner description
+* Fixed active state in menu for CPT
+* Some widgets CSS
+* A few fixes and cleaning
+
 ### 4.7.1 - 2022.11.15
 * Add list-item block to byebyeblocks
 * Update URI in header
