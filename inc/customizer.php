@@ -640,6 +640,25 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		// Fancybox
+		
+		$fs_customize->add_setting(
+			'disable_colors', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'disable_colors', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Disable custom color palette', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'disable_colors',
+			)
+		);
+		
 		
 	// Blog options
 	// -

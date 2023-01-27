@@ -4,12 +4,6 @@ define( 'FS_THEME_VERSION', '4.8' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
-$primary = get_theme_mod('primary_color', '#23252b');
-$secondary = get_theme_mod('secondary_color', '#606060');
-$accent = get_theme_mod('accent_color', '#ceff00');
-$text_color = get_theme_mod('text_color', '#23252b');
-$bg = get_theme_mod('bg_color', '#f0f0f0');
-
 // ------------------------
 // Theme Setup
 // ------------------------
@@ -21,12 +15,6 @@ if ( ! isset( $content_width ) )
 if ( ! function_exists( 'fs_setup' ) ) :
 
 function fs_setup() {
-
-	global $primary;
-	global $secondary;
-	global $accent;
-	global $text_color;
-	global $bg;	
 	
 	// I18n
 	
@@ -119,45 +107,6 @@ function fs_setup() {
 	
 	add_theme_support( 'align-wide' );
 	
-	add_theme_support( 'editor-color-palette', array(
-	    
-	    // Customizer colors
-	    
-	    array(
-	        'name' => esc_html__( 'Primary color', 'from-scratch' ),
-	        'slug' => 'primary',
-	        'color' => $primary,
-	    ),
-	    array(
-	        'name' => esc_html__( 'Secondary color', 'from-scratch' ),
-	        'slug' => 'secondary',
-	        'color' => $secondary,
-	    ),
-	    array(
-	        'name' => esc_html__( 'Accent color', 'from-scratch' ),
-	        'slug' => 'accent',
-	        'color' => $accent,
-	    ),
-		array(
-			'name' => esc_html__( 'Text color', 'from-scratch' ),
-			'slug' => 'text',
-			'color' => $text_color,
-		),
-	    array(
-	        'name' => esc_html__( 'Background color', 'from-scratch' ),
-	        'slug' => 'bg',
-	        'color' => $bg,
-	    ),
-		array(
-	        'name' => esc_html__( 'White', 'from-scratch' ),
-	        'slug' => 'white',
-	        'color' => '#fff',
-	    ),
-	    
-	));	
-	
-	add_theme_support( 'disable-custom-colors' );
-
 	add_theme_support( 'editor-font-sizes', array(
 	    array(
 	        'name' => __( 'Small', 'from-scratch' ),
@@ -476,6 +425,12 @@ add_action( 'wp_enqueue_scripts', 'fs_main_style' );
 
 require FS_THEME_DIR . '/inc/customizer.php';
 
+
+// Colors
+
+if ( get_theme_mod('disable_colors') != true ) {
+	include_once( FS_THEME_DIR . '/inc/color-palettes.php' );
+}
 
 // Register Navigation Menus
 
@@ -924,36 +879,6 @@ if( class_exists('acf') ) {
 	}
 	*/
 
-	// ACF colors
-
-	add_action('acf/input/admin_footer', 'fs_acf_colors_script');	
-
-	function fs_acf_colors_script() {
-
-		global $primary;
-		global $secondary;
-		global $accent;
-		global $text_color;
-		global $bg;
-				
-		$colors = ' "'.$primary.'", "'.$secondary.'", "'.$accent.'", "'.$text_color.'", "'.$bg.'" ';
-	 ?>
-	    <script type="text/javascript">
-	    (function($){
-	        
-			acf.add_filter('color_picker_args', function( args, field ){
-			
-			    args.palettes = [ <?php echo $colors; ?> ]
-			
-			    return args;
-			
-			});	
-	        
-	    })(jQuery);
-	    </script>
-	    <?php
-	}
-	
 	// Social Menu icons
 	
 	require_once( FS_THEME_DIR . '/inc/acf/social-icons-fields.php' );
