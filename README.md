@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 4.9 - 2023.01.27
+* Page banner & breadcrumbs template part
+* Customizer option to disable custom color palette
+
 ### 4.8 - 2023.01.19
 * Page banner title template part
 * Customizer options for child pages
