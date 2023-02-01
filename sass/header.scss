@@ -134,7 +134,7 @@
 			&:not(:placeholder-shown) + label + #searchsubmit {
 				transform: translateX(-1rem);
 				pointer-events: initial;
-
+				
 				&:hover {
 					transform: translateX(-1rem) scale(1.2);
 				}
@@ -155,12 +155,12 @@
 			background-size: contain;
 			transition: .5s ease-in-out;
 			pointer-events: none;
-
+			
 			position: absolute;
 			top: 50%;
 			margin-top: -1rem;
 			right: 0;
-
+			
 			@include a11y-hide();
 		}
 	}	
