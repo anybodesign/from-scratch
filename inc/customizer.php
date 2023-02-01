@@ -640,7 +640,7 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
-		// Fancybox
+		// Custom palettes
 		
 		$fs_customize->add_setting(
 			'disable_colors', 
@@ -656,6 +656,109 @@ function fs_customize_register($fs_customize) {
 				'label'			=> __('Disable custom color palette', 'from-scratch'),
 				'section'		=> 'fs_options_section',
 				'settings'		=> 'disable_colors',
+			)
+		);
+		
+		// Custom font sizes
+		
+		$fs_customize->add_setting(
+			'disable_fontsizes', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'disable_fontsizes', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Disable custom font sizes', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'disable_fontsizes',
+			)
+		);
+		
+		
+		// Old theme support
+		
+		$fs_customize->add_setting(
+			'enable_customlogo', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'enable_customlogo', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable custom logo', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'enable_customlogo',
+			)
+		);
+		$fs_customize->add_setting(
+			'enable_custombg', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'enable_custombg', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable custom background', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'enable_custombg',
+			)
+		);
+		$fs_customize->add_setting(
+			'enable_customheader', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'enable_customheader', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable custom header', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'enable_customheader',
+			)
+		);
+		$fs_customize->add_setting(
+			'enable_postformats', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'enable_postformats', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable post formats', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'enable_postformats',
+			)
+		);
+		$fs_customize->add_setting(
+			'enable_woocommerce', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'enable_woocommerce', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable Woocommerce support', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'enable_woocommerce',
 			)
 		);
 		
@@ -817,6 +920,23 @@ function fs_customize_register($fs_customize) {
 				'label'			=> __('Add basic social networks sharing buttons on single posts (Facebook, Twitter, LinkedIn, e-mail)', 'from-scratch'),
 				'section'		=> 'fs_blog_section',
 				'settings'		=> 'share_box',
+			)
+		);
+		
+		$fs_customize->add_setting(
+			'enable_posttags', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'enable_posttags', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable post tags', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'enable_posttags',
 			)
 		);
 

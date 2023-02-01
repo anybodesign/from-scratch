@@ -90,6 +90,20 @@
 .has-small-font-size {
 	@extend .text-mentions;
 }
+.has-regular-font-size {
+	font-size: 1.6rem;
+	
+	@include rwd(large) {
+		font-size: 1.8rem;
+	}
+}
+.has-medium-font-size {
+	font-size: 1.8rem;
+	
+	@include rwd(large) {
+		font-size: 2rem;
+	}
+}
 .has-large-font-size {
 	@extend .text-intro;
 }

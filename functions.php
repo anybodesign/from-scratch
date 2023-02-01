@@ -39,90 +39,77 @@ function fs_setup() {
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	
-	add_theme_support( 'woocommerce' );
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
-
+	if ( get_theme_mod('enable_woocommerce') == true ) {
+			
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+	}
 	
-/*
-	// https://codex.wordpress.org/Custom_Backgrounds
+	if ( get_theme_mod('enable_custombg') == true ) {
+		
+		add_theme_support( 'custom-background', array(
+			'default-color'          => 'ffffff',
+			'default-image'          => '',
+			'default-repeat'         => 'repeat',
+			'default-position-x'     => 'left',
+	    	'default-position-y'     => 'top',
+	    	'default-size'           => 'auto',
+			'default-attachment'     => 'scroll',
+			'wp-head-callback'       => '_custom_background_cb',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => ''
+		));
+	}
 	
-	add_theme_support( 'custom-background', array(
-		'default-color'          => 'ffffff',
-		'default-image'          => '',
-		'default-repeat'         => 'repeat',
-		'default-position-x'     => 'left',
-	    'default-position-y'     => 'top',
-	    'default-size'           => 'auto',
-		'default-attachment'     => 'scroll',
-		'wp-head-callback'       => '_custom_background_cb',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => ''
-	));
+	if ( get_theme_mod('enable_customheader') == true ) {
+		
+		add_theme_support( 'custom-header', array(
+			'default-image'          => get_template_directory_uri() . '/img/header.jpg',
+			'width'                  => 0,
+			'height'                 => 0,
+			'flex-height'            => false,
+			'flex-width'             => true,
+			'uploads'                => true,
+			'random-default'         => false,
+			'header-text'            => true,
+			'default-text-color'     => '',
+			'wp-head-callback'       => '',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => '',
+		));
+	}
 	
-	// https://codex.wordpress.org/Custom_Headers
+	if ( get_theme_mod('enable_customlogo') == true ) {
+		
+		add_theme_support( 'custom-logo', array(
+			'height'      => '',
+			'width'       => '',
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-desc' ),
+		));	
+	}
 	
-	add_theme_support( 'custom-header', array(
-		'default-image'          => get_template_directory_uri() . '/img/header.jpg',
-		'width'                  => 0,
-		'height'                 => 0,
-		'flex-height'            => false,
-		'flex-width'             => true,
-		'uploads'                => true,
-		'random-default'         => false,
-		'header-text'            => true,
-		'default-text-color'     => '',
-		'wp-head-callback'       => '',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => '',
-	));
-	
-	// https://codex.wordpress.org/Theme_Logo
-
-	add_theme_support( 'custom-logo', array(
-		'height'      => '',
-		'width'       => '',
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array( 'site-title', 'site-desc' ),
-	));	
-
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-		'gallery',
-		'status',
-		'audio',
-		'chat',
-	));
-*/
-
-
+	if ( get_theme_mod('enable_postformats') == true ) {
+		
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+			'gallery',
+			'status',
+			'audio',
+			'chat',
+		));
+	}
 
 	// Gutenberg support 
 	
 	add_theme_support( 'align-wide' );
-	
-	add_theme_support( 'editor-font-sizes', array(
-	    array(
-	        'name' => __( 'Small', 'from-scratch' ),
-	        'shortName' => __( 'S', 'from-scratch' ),
-	        'size' => 14,
-	        'slug' => 'small'
-	    ),
-	    array(
-	        'name' => __( 'Large', 'from-scratch' ),
-	        'shortName' => __( 'L', 'from-scratch' ),
-	        'size' => 22,
-	        'slug' => 'large'
-	    ),
-	));
-	
-	add_theme_support( 'disable-custom-font-sizes' );
 	
 	add_theme_support( 'responsive-embeds' );
 	
@@ -135,6 +122,15 @@ function fs_setup() {
 endif;
 add_action( 'after_setup_theme', 'fs_setup' );
 
+
+// Disable Tags
+
+if ( get_theme_mod('enable_posttags') != true ) {
+	function fs_unregister_tags() {
+		register_taxonomy( 'post_tag', array() );
+	}
+	add_action( 'init', 'fs_unregister_tags' );
+}
 
 // Gutenberg editor styles
 
@@ -430,6 +426,12 @@ require FS_THEME_DIR . '/inc/customizer.php';
 
 if ( get_theme_mod('disable_colors') != true ) {
 	include_once( FS_THEME_DIR . '/inc/color-palettes.php' );
+}
+
+// Font sizes
+
+if ( get_theme_mod('disable_fontsizes') != true ) {
+	include_once( FS_THEME_DIR . '/inc/font-sizes.php' );
 }
 
 // Register Navigation Menus
