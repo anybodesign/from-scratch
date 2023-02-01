@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2021-06-28 16:56+0200\n"
-"PO-Revision-Date: 2021-06-28 16:57+0200\n"
+"POT-Creation-Date: 2023-02-01 11:50+0100\n"
+"PO-Revision-Date: 2023-02-01 11:50+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -40,156 +40,116 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:22
-msgid "Social Networks"
-msgstr "Réseaux sociaux"
-
-#: footer.php:64
-msgid "Powered by WordPress!"
-msgstr "Propulsé par WordPress !"
-
-#: footer.php:67 functions.php:460
-msgid "Footer Menu"
-msgstr "Menu pied de page"
-
-#: footer.php:83
-msgid "Back to top"
-msgstr "Haut de page"
-
-#: functions.php:127 inc/customizer.php:125
-msgid "Primary color"
-msgstr "Couleur primaire"
-
-#: functions.php:132 inc/customizer.php:150
-msgid "Secondary color"
-msgstr "Couleur secondaire"
-
-#: functions.php:137
-msgid "Accent color"
-msgstr "Couleur d’accentuation"
-
-#: functions.php:142 inc/customizer.php:228
-msgid "Text color"
-msgstr "Couleur du texte"
-
-#: functions.php:147 inc/customizer.php:248
-msgid "Background color"
-msgstr "Couleur d’arrière-plan"
-
-#: functions.php:152
-msgid "White"
-msgstr "Blanc"
-
-#: functions.php:163
-msgid "Small"
-msgstr "Petite"
-
-#: functions.php:164
-msgid "S"
-msgstr "S"
-
-#: functions.php:169
-msgid "Large"
-msgstr "Grande"
-
-#: functions.php:170
-msgid "L"
-msgstr "L"
-
-#: functions.php:458 template-parts/header-toolbar.php:7
+#: functions.php:442 template-parts/header-toolbar.php:7
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:459 template-parts/header-nav.php:6
+#: functions.php:443 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:461
+#: functions.php:444 template-parts/footer-copyright.php:16
+msgid "Footer Menu"
+msgstr "Menu pied de page"
+
+#: functions.php:445
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:556
+#: functions.php:486
+msgid "Secondary navigation"
+msgstr "Navigation secondaire"
+
+#: functions.php:505 template-parts/page-banner-title.php:12
+msgid "Oops! That page can&rsquo;t be found"
+msgstr "Oops! Page introuvable"
+
+#: functions.php:593
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:589
+#: functions.php:593
+msgid "of "
+msgstr "de "
+
+#: functions.php:637
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:590
+#: functions.php:638
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:591
+#: functions.php:639
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:592
+#: functions.php:640
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:593
+#: functions.php:641
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:594
+#: functions.php:642
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:595
+#: functions.php:643
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:633
+#: functions.php:681
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:642
+#: functions.php:690
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:651
+#: functions.php:699
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:660
+#: functions.php:708
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:685
+#: functions.php:733
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:691
+#: functions.php:739
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:697
+#: functions.php:745
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:717
+#: functions.php:765
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:719 template-parts/header-toolbar.php:24
+#: functions.php:767 template-parts/header-toolbar.php:24
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:751
+#: functions.php:799
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:757
+#: functions.php:805
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:766
+#: functions.php:814
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:772
+#: functions.php:820
 msgid "Edit"
 msgstr "Modifier"
 
@@ -200,6 +160,30 @@ msgstr "Icônes de réseaux sociaux"
 #: inc/acf/social-icons-fields.php:13
 msgid "Icon"
 msgstr "Icône"
+
+#: inc/color-palettes.php:25 inc/customizer.php:125
+msgid "Primary color"
+msgstr "Couleur primaire"
+
+#: inc/color-palettes.php:30 inc/customizer.php:150
+msgid "Secondary color"
+msgstr "Couleur secondaire"
+
+#: inc/color-palettes.php:35
+msgid "Accent color"
+msgstr "Couleur d’accentuation"
+
+#: inc/color-palettes.php:40 inc/customizer.php:228
+msgid "Text color"
+msgstr "Couleur du texte"
+
+#: inc/color-palettes.php:45 inc/customizer.php:248
+msgid "Background color"
+msgstr "Couleur d’arrière-plan"
+
+#: inc/color-palettes.php:50
+msgid "White"
+msgstr "Blanc"
 
 #: inc/customizer.php:53
 msgid "Header Options"
@@ -367,31 +351,67 @@ msgstr "Utilisez Scrollout pour animer les blocs au scroll"
 msgid "Use Fancybox to enlarge pictures"
 msgstr "Utilisez Fancybox pour agrandir les images"
 
-#: inc/customizer.php:661
+#: inc/customizer.php:656
+msgid "Disable custom color palette"
+msgstr "Désactiver la palette de couleurs personnalisée"
+
+#: inc/customizer.php:675
+msgid "Disable custom font sizes"
+msgstr "Désactiver les tailles de police personnalisées"
+
+#: inc/customizer.php:695
+msgid "Enable custom logo"
+msgstr "Activer le logo personnalisé"
+
+#: inc/customizer.php:711
+msgid "Enable custom background"
+msgstr "Activer l’arrière-plan personnalisé"
+
+#: inc/customizer.php:727
+msgid "Enable custom header"
+msgstr "Activer l’en-tête personnalisé"
+
+#: inc/customizer.php:743
+msgid "Enable post formats"
+msgstr "Activez les formats d’articles"
+
+#: inc/customizer.php:759
+msgid "Enable Woocommerce support"
+msgstr "Activer le support Woocommerce"
+
+#: inc/customizer.php:777
+msgid "Blog introduction text"
+msgstr "Texte d’introduction du blog"
+
+#: inc/customizer.php:795
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:680
+#: inc/customizer.php:812
+msgid "Show the sidebar on single posts"
+msgstr "Afficher la barre latérale sur les articles"
+
+#: inc/customizer.php:831
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:699
+#: inc/customizer.php:850
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:718
+#: inc/customizer.php:869
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:734
+#: inc/customizer.php:885
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:750
+#: inc/customizer.php:901
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:769
+#: inc/customizer.php:920
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -399,73 +419,117 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:793
+#: inc/customizer.php:937
+msgid "Enable post tags"
+msgstr "Activer les étiquettes"
+
+#: inc/customizer.php:961
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:796
+#: inc/customizer.php:964
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:797
+#: inc/customizer.php:965
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:817
+#: inc/customizer.php:983
+msgid "Child pages location"
+msgstr "Emplacement des pages enfants"
+
+#: inc/customizer.php:987
+msgid "Page banner"
+msgstr "Bannière de page"
+
+#: inc/customizer.php:988
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: inc/customizer.php:989
+msgid "Do not display child pages"
+msgstr "Ne pas afficher les pages enfants"
+
+#: inc/customizer.php:1007
+msgid "Display page description or post metas in the banner"
+msgstr "Afficher la description de la page ou les post metas dans la bannière"
+
+#: inc/customizer.php:1028
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:820
+#: inc/customizer.php:1031
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:821
+#: inc/customizer.php:1032
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:822
+#: inc/customizer.php:1033
 msgid "Playfair & Atkinson"
 msgstr "Playfair & Atkinson"
 
-#: inc/customizer.php:823
+#: inc/customizer.php:1034
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:824
+#: inc/customizer.php:1035
 msgid "Miriam Libre & Asap"
 msgstr "Miriam Libre & Asap"
 
-#: inc/customizer.php:844
+#: inc/customizer.php:1036
+msgid "Custom Child Theme Font"
+msgstr "Police personnalisée du thème enfant"
+
+#: inc/customizer.php:1056
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:863
+#: inc/customizer.php:1075
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:864
+#: inc/customizer.php:1076
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:884
+#: inc/customizer.php:1096
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:885
+#: inc/customizer.php:1097
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:905
+#: inc/customizer.php:1117
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:906
+#: inc/customizer.php:1118
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
+
+#: inc/font-sizes.php:6
+msgid "Small"
+msgstr "Petite"
+
+#: inc/font-sizes.php:11
+msgid "Regular"
+msgstr "Normale"
+
+#: inc/font-sizes.php:16
+msgid "Medium"
+msgstr "Moyenne"
+
+#: inc/font-sizes.php:21
+msgid "Large"
+msgstr "Grande"
 
 #: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:54
 msgid "View details"
@@ -507,17 +571,29 @@ msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
-#: inc/subnav-walker.php:20
+#: inc/subnav-walker.php:21
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:32
+#: index.php:42
 msgid "Categories"
 msgstr "Catégories"
 
-#: index.php:37
+#: index.php:47
 msgid "All categories"
 msgstr "Toutes les catégories"
+
+#: template-parts/footer-back2top.php:3
+msgid "Back to top"
+msgstr "Haut de page"
+
+#: template-parts/footer-copyright.php:12
+msgid "Powered by WordPress!"
+msgstr "Propulsé par WordPress !"
+
+#: template-parts/footer-social.php:5
+msgid "Social Networks"
+msgstr "Réseaux sociaux"
 
 #: template-parts/header-brand.php:15
 msgid "Go to Home Page"
@@ -578,48 +654,44 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/page-banner.php:24
+#: template-parts/page-banner-title.php:10
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
 
-#: template-parts/page-banner.php:26
-msgid "Oops! That page can&rsquo;t be found"
-msgstr "Oops! Page introuvable"
-
-#: template-parts/page-content.php:27 template-parts/post-pagination.php:27
+#: template-parts/page-content.php:21 template-parts/post-pagination.php:27
 msgid "Page"
 msgstr "Page"
 
-#: template-parts/page-content.php:27
+#: template-parts/page-content.php:21
 msgid "Pages:"
 msgstr "Pages :"
 
-#: template-parts/page-content.php:34 template-parts/post-pagination.php:26
+#: template-parts/page-content.php:28 template-parts/post-pagination.php:26
 msgid "Next page"
 msgstr "Page suivante"
 
-#: template-parts/page-content.php:35 template-parts/post-pagination.php:25
+#: template-parts/page-content.php:29 template-parts/post-pagination.php:25
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: template-parts/post-meta.php:20
+#: template-parts/post-meta.php:22
 msgid "Posted "
 msgstr "Publié "
 
-#: template-parts/post-meta.php:22
+#: template-parts/post-meta.php:24
 msgid "on&nbsp;"
 msgstr "le&nbsp;"
 
-#: template-parts/post-meta.php:26
+#: template-parts/post-meta.php:28
 msgid "by&nbsp;"
 msgstr "par&nbsp;"
 
-#: template-parts/post-meta.php:29
+#: template-parts/post-meta.php:31
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
 
-#: template-parts/post-meta.php:37
+#: template-parts/post-meta.php:39
 #, php-format
 msgid "%s comment"
 msgid_plural "%s comments"
@@ -654,6 +726,10 @@ msgstr "Partager sur LinkedIn"
 msgid "Share by e-mail"
 msgstr "Partager par email"
 
+#: template-parts/sidebar-burger.php:6
+msgid "Sidebar Menu"
+msgstr "Menu barre latérale"
+
 #. Theme Name of the plugin/theme
 msgid "From Scratch"
 msgstr "From Scratch"
@@ -677,6 +753,18 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid "S"
+#~ msgstr "S"
+
+#~ msgid "R"
+#~ msgstr "R"
+
+#~ msgid "M"
+#~ msgstr "M"
+
+#~ msgid "L"
+#~ msgstr "L"
 
 #~ msgid "Block Custom"
 #~ msgstr "Block Custom"
@@ -943,9 +1031,6 @@ msgstr "Maintenance"
 
 #~ msgid "Comment(s)"
 #~ msgstr "Commentaire(s)"
-
-#~ msgid "Page builder"
-#~ msgstr "Constructeur de Page"
 
 #~ msgid "Custom page template with Sidebar"
 #~ msgstr "Page avec colonne latérale"
