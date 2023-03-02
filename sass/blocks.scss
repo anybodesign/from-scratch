@@ -253,7 +253,7 @@ hr {
 	border: 0;
 	border-top: var(--text_color) 1px solid;
 	
-	.page-content > & {
+	.page-content & {
 		width: calc(100% - #{$grid-padding*4});
 		margin: $grid-padding*5 auto;
 		
@@ -268,7 +268,7 @@ hr {
 }
 .wp-block-separator {
 	
-	.page-content > & {
+	.page-content & {
 		max-width: 20rem;
 		
 		&.is-style-wide {

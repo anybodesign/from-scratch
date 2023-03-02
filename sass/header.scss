@@ -125,6 +125,10 @@
 				color: var(--text_color);
 				width: 20rem;
 			}
+			&:not(:placeholder-shown) {
+				width: auto;
+				border-color: var(--text_color);
+			}
 			&:focus + label,
 			&:not(:placeholder-shown) + label {
 				opacity: 0;

@@ -11,6 +11,7 @@ $max-width-large: $max-width*1.3;		// @note: 1248px
 $max-width-small: $max-width*0.675;		// @note: 648px
 
 $half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the viewport
+$half-space-sans: calc( (100% - #{$max-width}) /2 );  				
 
 
 // Break-Points
