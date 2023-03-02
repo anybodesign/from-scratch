@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2023-02-01 11:50+0100\n"
-"PO-Revision-Date: 2023-02-01 11:50+0100\n"
+"POT-Creation-Date: 2023-03-02 08:17+0100\n"
+"PO-Revision-Date: 2023-03-02 08:17+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -20,10 +20,6 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:22
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
-
 #: comments.php:19
 msgid "They talk about it"
 msgstr "Ils en parlent"
@@ -40,116 +36,108 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: functions.php:442 template-parts/header-toolbar.php:7
+#: functions.php:463 template-parts/header-toolbar.php:7
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:443 template-parts/header-nav.php:6
+#: functions.php:464 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:444 template-parts/footer-copyright.php:16
+#: functions.php:465 template-parts/footer-copyright.php:16
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:445
+#: functions.php:466
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:486
+#: functions.php:507
 msgid "Secondary navigation"
 msgstr "Navigation secondaire"
 
-#: functions.php:505 template-parts/page-banner-title.php:12
+#: functions.php:526 template-parts/page-banner-title.php:12
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
-#: functions.php:593
+#: functions.php:614
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:593
+#: functions.php:614
 msgid "of "
 msgstr "de "
 
-#: functions.php:637
+#: functions.php:658
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:638
+#: functions.php:659
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:639
+#: functions.php:660
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:640
+#: functions.php:661
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:641
+#: functions.php:662
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:642
-msgid "Video Medium"
-msgstr "Vidéo taille moyenne"
-
-#: functions.php:643
-msgid "Video Full"
-msgstr "Vidéo plein écran"
-
-#: functions.php:681
+#: functions.php:702
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:690
+#: functions.php:711
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:699
+#: functions.php:720
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:708
+#: functions.php:729
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:733
+#: functions.php:754
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:739
+#: functions.php:760
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:745
+#: functions.php:766
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:765
+#: functions.php:786
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:767 template-parts/header-toolbar.php:24
+#: functions.php:788 template-parts/header-toolbar.php:24
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:799
+#: functions.php:820
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:805
+#: functions.php:826
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:814
+#: functions.php:835
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:820
+#: functions.php:841
 msgid "Edit"
 msgstr "Modifier"
 
@@ -506,7 +494,7 @@ msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:1117
+#: inc/customizer.php:1117 template-parts/nothing.php:27
 msgid "404 error"
 msgstr "Erreur 404"
 
@@ -627,18 +615,22 @@ msgstr "Contraste élevé"
 msgid "Restore contrast"
 msgstr "Retablir le contraste"
 
-#: template-parts/nothing.php:14
-msgid "Nothing Found"
-msgstr "Aucun résultat"
+#: template-parts/nothing.php:15
+msgid "No post for now"
+msgstr "Aucun article pour l’instant"
 
-#: template-parts/nothing.php:18
+#: template-parts/nothing.php:16
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
 
-#: template-parts/nothing.php:22
+#: template-parts/nothing.php:20
+msgid "Nothing found"
+msgstr "Aucun résultat"
+
+#: template-parts/nothing.php:21
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -647,6 +639,14 @@ msgstr ""
 "d’autres mots clés."
 
 #: template-parts/nothing.php:28
+msgid ""
+"It seems that page or post doesn’t exists anymore. Or maybe the URL is wrong "
+"or has changed… Perhaps searching can help."
+msgstr ""
+"Il semble que cette page ou cette publication n’existe plus. Ou peut-être "
+"que l’URL est erronée ou a changé... Peut-être qu’une recherche peut aider."
+
+#: template-parts/nothing.php:34
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -753,6 +753,16 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid ""
+#~ "It looks like nothing was found at this location. Maybe try a search?"
+#~ msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
+
+#~ msgid "Video Medium"
+#~ msgstr "Vidéo taille moyenne"
+
+#~ msgid "Video Full"
+#~ msgstr "Vidéo plein écran"
 
 #~ msgid "S"
 #~ msgstr "S"
