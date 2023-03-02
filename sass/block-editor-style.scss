@@ -3,6 +3,7 @@ Theme Name: From Scratch
 Description: Have fun with Gutenberg style editor.
 */
 
+@import 'reset.scss';
 @import 'variables.scss';
 @import 'variables-colors.scss';
 @import 'variables-fonts.scss';
@@ -53,7 +54,6 @@ html.interface-interface-skeleton__html-container {
 }
 
 // Typography
-
 	
 .editor-post-title,
 .editor-post-title .-post-title__input {
@@ -98,6 +98,45 @@ html.interface-interface-skeleton__html-container {
 		}
 	}	
 }
+
+// Blocks
+
+.wp-block-group,
+.wp-block-columns,
+.wp-block-column {
+	position: relative;
+	padding: 1.5rem;
+	border: #515151 1px solid;
+	
+	&::before {
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		left: -1px;
+		background: #515151;
+		color: #FFF;
+		font-size: .85rem;
+		text-transform: uppercase;
+		padding: 0 .5rem;
+	}
+}
+.wp-block-columns {
+	padding-bottom: 3rem;
+}
+.wp-block-column {
+	border-style: dashed;
+}
+
+.wp-block-group::before {
+	content: 'Group';
+}
+.wp-block-columns::before {
+	content: 'Columns';
+}
+.wp-block-column::before {
+	content: 'Column';
+}
+
 
 
 // TinyMCE Custom
