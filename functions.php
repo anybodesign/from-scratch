@@ -132,6 +132,27 @@ if ( get_theme_mod('enable_posttags') != true ) {
 	add_action( 'init', 'fs_unregister_tags' );
 }
 
+// Block Patterns Example
+
+// function fs_register_blocks_patterns() {
+// 	register_block_pattern(
+// 		'my-pattern',
+// 		array(
+//     		'title'       => __( 'My pattern', 'from-scratch' ),
+//     		'description' => _x( 'Yolo', 'from-scratch' ),
+//     		'content'     => '<!-- wp:paragraph {"fontSize":"large"} -->
+// <p class="has-large-font-size">Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper.  </p>
+// <!-- /wp:paragraph -->
+// 
+// <!-- wp:paragraph {"fontSize":"medium"} -->
+// <p class="has-medium-font-size">Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+// <!-- /wp:paragraph -->',
+// 		)
+// 	);
+// }
+// add_action( 'init', 'fs_register_blocks_patterns' );
+
+
 // Gutenberg editor styles
 
 function fs_block_editor_styles() {
@@ -629,8 +650,8 @@ add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
 add_image_size( 'screen-md', 720, 450, true );
 add_image_size( 'screen-hd', 1440, 900, true );
-add_image_size( 'video-md', 960, 540, true );
-add_image_size( 'video-hd', 1920, 1080, true );
+// add_image_size( 'video-md', 960, 540, true );
+// add_image_size( 'video-hd', 1920, 1080, true );
 
 function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
@@ -639,8 +660,8 @@ function fs_custom_sizes( $sizes ) {
         'large-hd'		=> __( 'Large x2', 'from-scratch' ),
         'screen-md'		=> __( 'Screen Medium', 'from-scratch' ),
         'screen-hd'		=> __( 'Screen Full', 'from-scratch' ),
-        'video-md'		=> __( 'Video Medium', 'from-scratch' ),
-        'video-hd'		=> __( 'Video Full', 'from-scratch' ),
+        // 'video-md'		=> __( 'Video Medium', 'from-scratch' ),
+        // 'video-hd'		=> __( 'Video Full', 'from-scratch' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
