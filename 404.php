@@ -10,20 +10,14 @@
  * @version 1.0
  */
 get_header(); ?>
-					
 				<div class="page-wrap">
-
-					<?php 
-						get_template_part( 'template-parts/page', 'banner' ); 
-					?>
+					
+					<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 					
 					<div class="page-content">
-							
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'from-scratch' ); ?></p>
-						<?php get_search_form(); ?>		
-																			
+						<?php echo get_template_part( 'template-parts/nothing' ); ?>	
 					</div>	
-									
+					
 				</div>
 
 <?php get_footer(); ?>
