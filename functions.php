@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '5.0' );
+define( 'FS_THEME_VERSION', '5.1' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -999,7 +999,7 @@ if (function_exists('rocket_load_textdomain')) {
 	function fs_wp_rocket_add_purge_posts_to_author() {
 		// gets the author role object
 		$role = get_role('editor');
- 	
+		
 		// add a new capability
 		$role->add_cap('rocket_purge_cache', true);
 	}

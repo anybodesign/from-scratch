@@ -17,6 +17,11 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.1 - 2023.03.23
+* No content template part
+* More editor CSS, for column & group blocks
+* Some other fixes
+
 ### 5.0 - 2023.02.01
 * Customizer option to disable custom font sizes
 * Customizer options to enable theme supports
