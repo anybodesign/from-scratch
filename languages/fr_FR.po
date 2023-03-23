@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2023-03-02 08:17+0100\n"
-"PO-Revision-Date: 2023-03-02 08:17+0100\n"
+"POT-Creation-Date: 2023-03-04 14:34+0100\n"
+"PO-Revision-Date: 2023-03-04 14:35+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -494,7 +494,7 @@ msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:1117 template-parts/nothing.php:27
+#: inc/customizer.php:1117 template-parts/nothing.php:37
 msgid "404 error"
 msgstr "Erreur 404"
 
@@ -615,7 +615,8 @@ msgstr "Contraste élevé"
 msgid "Restore contrast"
 msgstr "Retablir le contraste"
 
-#: template-parts/nothing.php:15
+#: template-parts/nothing.php:15 template-parts/nothing.php:20
+#: template-parts/nothing.php:25
 msgid "No post for now"
 msgstr "Aucun article pour l’instant"
 
@@ -626,11 +627,19 @@ msgid ""
 msgstr ""
 "Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
 
-#: template-parts/nothing.php:20
+#: template-parts/nothing.php:21
+msgid "Sorry, no post have been published yet."
+msgstr "Désolé, aucun article n’a encore été publié."
+
+#: template-parts/nothing.php:26
+msgid "Sorry, no post have been published in this category yet."
+msgstr "Désolé, aucun article n’a encore été publié dans cette catégorie."
+
+#: template-parts/nothing.php:30
 msgid "Nothing found"
 msgstr "Aucun résultat"
 
-#: template-parts/nothing.php:21
+#: template-parts/nothing.php:31
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -638,7 +647,7 @@ msgstr ""
 "Aucun résultat ne correspond à vos critères de recherche. Essayez avec "
 "d’autres mots clés."
 
-#: template-parts/nothing.php:28
+#: template-parts/nothing.php:38
 msgid ""
 "It seems that page or post doesn’t exists anymore. Or maybe the URL is wrong "
 "or has changed… Perhaps searching can help."
@@ -646,7 +655,7 @@ msgstr ""
 "Il semble que cette page ou cette publication n’existe plus. Ou peut-être "
 "que l’URL est erronée ou a changé... Peut-être qu’une recherche peut aider."
 
-#: template-parts/nothing.php:34
+#: template-parts/nothing.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."

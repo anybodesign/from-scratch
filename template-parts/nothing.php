@@ -15,6 +15,16 @@
 						<h2><?php esc_html_e( 'No post for now', 'from-scratch' ); ?></h2>
 						<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'from-scratch' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 						
+					<?php elseif ( is_home() || is_post_type_archive() ) : ?>
+						
+						<h2><?php esc_html_e( 'No post for now', 'from-scratch' ); ?></h2>
+						<p><?php esc_html_e( 'Sorry, no post have been published yet.', 'from-scratch' ); ?></p>
+						
+					<?php elseif ( is_category() || is_tax() ) : ?>
+						
+						<h2><?php esc_html_e( 'No post for now', 'from-scratch' ); ?></h2>
+						<p><?php esc_html_e( 'Sorry, no post have been published in this category yet.', 'from-scratch' ); ?></p>	
+						
 					<?php elseif ( is_search() ) : ?>
 						
 						<h2><?php esc_html_e( 'Nothing found', 'from-scratch' ); ?></h2>
