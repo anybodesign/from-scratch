@@ -995,23 +995,26 @@ if( class_exists('acf') ) {
 
 // WP-Rocket
 
-function fs_wp_rocket_add_purge_posts_to_author() {
-	// gets the author role object
-	$role = get_role('editor');
- 
-	// add a new capability
-	$role->add_cap('rocket_purge_cache', true);
+if (function_exists('rocket_load_textdomain')) {
+	function fs_wp_rocket_add_purge_posts_to_author() {
+		// gets the author role object
+		$role = get_role('editor');
+ 	
+		// add a new capability
+		$role->add_cap('rocket_purge_cache', true);
+	}
+	add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
 }
-add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
-
 
 // Koko 
 
-function fs_koko() {
-	$role = get_role('editor');
-	$role->add_cap('view_koko_analytics', true);
+if (function_exists('maybe_collect_request')) {
+	function fs_koko() {
+		$role = get_role('editor');
+		$role->add_cap('view_koko_analytics', true);
+	}
+	add_action('init', 'fs_koko', 12);
 }
-add_action('init', 'fs_koko', 12);
 
 
 // ------------------------
