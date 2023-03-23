@@ -108,6 +108,20 @@
 	@extend .text-intro;
 }
 
+// Group
+
+.wp-block-group {
+	
+	&.has-background {
+		padding-top: 2.4rem;
+		padding-bottom: 2.4rem;
+		
+		& > .wp-block-group__inner-container {
+			@include center();
+		}
+	}
+}
+
 
 // Columns 
 
