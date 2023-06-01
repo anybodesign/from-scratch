@@ -21,7 +21,7 @@
 	
 	p, span {
 		a {
-			@include link-style();
+			
 		}
 	}
 }
@@ -297,7 +297,7 @@
 		}
 
 		a {
-			@include link-style();
+			
 		}
 		.pending {
 			display: block;
@@ -326,7 +326,7 @@
 		}
 		
 		a {
-			@include link-style();
+			
 		}
 	}
 }
@@ -336,10 +336,10 @@
 		display: block;
 		font-family: var(--font_regular);
 		font-size: 1.6rem;
+		
 		a {
 			display: inline-block;
 			margin-top: $grid-padding;
-			@include link-style();
 		}
 	}
 }

@@ -182,13 +182,13 @@ a:hover {
 	
 	p {
 		a:not([class*="-btn"]) {
-			@include link-style();
+			//@include link-style();
 		}
 	}
 	.has-text-background-color p,
 	.white-text p {
 		a:not([class*="-btn"]) {
-			@include link-style(white);
+			//@include link-style(white);
 		}
 	}
 	
