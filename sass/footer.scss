@@ -56,11 +56,6 @@
 		font-size: 1.4rem;
 		
 		a {
-			@include link-style();
-			
-			.white-text & {
-				@include link-style(white);
-			}
 		}
 	}
 }
@@ -73,11 +68,6 @@
 		font-size: 1.4rem;
 		
 		a {
-			@include link-style();
-			
-			.white-text & {
-				@include link-style(white);
-			}
 		}
 	}
 }

@@ -54,8 +54,7 @@
 		}
 		
 		& > a {
-			text-decoration: none;
-			@include link-style();
+		
 		}
 	}
 }
@@ -112,30 +111,8 @@
 		& > a {
 			position: relative;
 			display: block;
-			padding: $grid-padding 0;
-			transition: .2s ease-in-out;
+			padding: $grid-padding;
 			text-decoration: none;
-			
-			&::after {
-				content: '';
-				display: block;
-				width: 100%;
-				height: 1px;
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				border-top: var(--text_color) 1px solid;
-				transition: .2s ease-in-out;
-			}
-			
-			@include rwd(large) {
-				padding: $grid-padding;
-				
-				&::after {
-					width: 0;
-					border-top: transparent 3px solid;
-				}
-			}
 		}
 		
 		& > a:hover, 
@@ -154,15 +131,6 @@
 				
 				.high-contrast & {
 					color: var(--text_color);
-				}
-			}
-			
-			&::after {
-				width: 100%;
-				border-top-color: var(--accent_color);
-				
-				@include rwd(large) {
-					border-top-width: 3px;
 				}
 			}
 		}
@@ -252,11 +220,6 @@
 
 	& > li {
 		font-size: 1.6rem;
-		border-bottom: var(--text_color) 1px dotted;
-		
-		&:first-child {
-			border-top: var(--text_color) 1px solid;
-		}
 		
 		@include rwd(large) {
 			&:first-child {
@@ -275,11 +238,6 @@
 			text-decoration: none;
 			transition: .2s ease-in-out;
 			
-			&::after {
-				border-top: var(--text_color) 1px dotted;
-				width: 100%;
-			}
-			
 			@include rwd(large) {
 				padding: $grid-padding/2 $grid-padding;
 			}
@@ -288,12 +246,6 @@
 		a:focus,
 		&.current-menu-item a {
 			background-color: var(--accent_color);
-			
-			
-			&::after {
-				border-top-color: var(--text_color);
-				border-top-width: 1px;
-			}
 		}
 	}
 	
@@ -562,12 +514,11 @@
 		margin-right: $grid-padding*1.5;
 		
 		a {
-			@include link-style();	
+			text-decoration: none;
 		}
 		
 		&.current_page_item a {
 			font-family: var(--font_bold);
-			background-size: 20% 1.2rem;
 		}
 		
 	}
@@ -580,11 +531,6 @@
 	ul {		
 		padding: 0;
 		list-style: none;
-		border-top: var(--text_color) 1px solid;
-		
-		.white-text & {
-			border-top-color: #fff;
-		}
 		
 		li {
 			
@@ -592,12 +538,6 @@
 				display: block;
 				padding: $grid-padding 0;
 				text-decoration: none;
-				border-bottom: var(--text_color) 1px solid;
-				transition: .2s ease-in-out;
-				
-				.white-text & {
-					border-bottom-color: #fff;
-				}
 				
 				&:hover,
 				&:focus {

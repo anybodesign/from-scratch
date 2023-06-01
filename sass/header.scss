@@ -13,20 +13,6 @@
 		align-items: center;
 		padding-bottom: $grid-padding*2;
 		
-		&::after {
-			content: '';
-			display: block;
-			border-bottom: var(--text_color) 1px solid;
-			width: calc(100% - #{$grid-padding}*2);
-			position: absolute;
-			left: $grid-padding;
-			bottom: 0;
-			
-			.banner-has-bg & {
-				content: none;
-			}
-		}
-		
 		@include rwd(large) {
 			flex-direction: row;
 			
