@@ -4,9 +4,9 @@
 //
 // ------------------------------
 
-// You can use the class .action-btn on <a>, <button> or <input> 
-
-.action-btn {
+.action-btn,
+.wp-block-button__link,
+.wp-block-file__button {
 	display: inline-block;
 	padding: $grid-padding $grid-padding*2;
 	font-size: 1.4rem;
@@ -16,11 +16,12 @@
 	background-color: var(--accent_color);
 	color: var(--btn_text);
 	transition: background .2s linear;
+	border-radius: 0;
 	
 	&:focus, 
 	&:hover {
-		background-color: var(--text_color) !important;
-		color: var(--btn_text_hover) !important;
+		background-color: var(--text_color);
+		color: var(--btn_text_hover);
 		
 		.high-contrast & {
 			background-color: #fff;
@@ -31,7 +32,14 @@
 		outline: none;
 	}
 	
-		
+	&.has-accent-background-color,
+	&.has-bg-background-color {
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
+	
 }
 
 // Variation example of .action-btn
@@ -43,8 +51,8 @@
 
 	&:focus, 
 	&:hover {
-		background-color: var(--text_color) !important;
-		color: var(--btn_text_hover) !important;
+		background-color: var(--text_color);
+		color: var(--btn_text_hover);
 	}	
 }
 

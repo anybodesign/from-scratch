@@ -119,20 +119,7 @@
 		& > a:focus,
 		&.current-menu-item > a,
 		&.current_page_parent > a {
-			background-color: var(--accent_color);
-			padding-left: $grid-padding;
 			
-			.high-contrast & {
-				color: #fff;
-			}
-			
-			@include rwd(large) {
-				background-color: transparent;
-				
-				.high-contrast & {
-					color: var(--text_color);
-				}
-			}
 		}
 		&.current-menu-item > a,
 		&.current_page_parent > a {
@@ -245,7 +232,7 @@
 		a:hover, 
 		a:focus,
 		&.current-menu-item a {
-			background-color: var(--accent_color);
+			
 		}
 	}
 	
@@ -494,7 +481,6 @@
 		font-size: 1.4rem;
 		
 		a {
-			@include link-style();
 		}
 	}
 	.current-item {
@@ -537,17 +523,10 @@
 			a {
 				display: block;
 				padding: $grid-padding 0;
-				text-decoration: none;
 				
 				&:hover,
 				&:focus {
-					padding-left: .5rem;
-					background-color: var(--accent_color);
-					color: var(--text_color);
-					
-					.high-contrast & {
-						color: #fff;
-					}
+				
 				}
 			}
 			

@@ -49,19 +49,12 @@
 	color: #fff;
 }
 
-// Links / Button
+// Links / Button 		// See buttons.scss
 
 .wp-block-buttons {
 	display: flex;
 }
 
-.wp-block-button {}
-	
-.wp-block-button__link,
-.wp-block-file__button {
-	@extend .action-btn;
-	border-radius: 0;
-}
 
 // Files
 

@@ -65,7 +65,7 @@
 				a:hover,
 				a:focus,
 				&.is-active a {
-					background-color: var(--accent_color);
+					
 				}
 			}
 		}
@@ -124,7 +124,7 @@
 		}
 		
 		.added_to_cart {
-			@include link-style();
+			//@include link-style();
 		}
 	}
 	
@@ -141,7 +141,7 @@
 		}
 	}
 	.posted_in a {
-		@include link-style();
+		//@include link-style();
 	}
 	.single_add_to_cart_button {
 		height: 4.3rem;

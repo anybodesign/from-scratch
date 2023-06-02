@@ -26,10 +26,10 @@
 	margin-bottom: $grid-padding*2;
 
 	p a {
-		@include link-style();
+		//@include link-style();
 		
 		.white-text & {
-			@include link-style(white);
+			//@include link-style(white);
 		}
 	}
 		
