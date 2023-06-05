@@ -17,6 +17,13 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.3 - 2023.06.05
+* Blog excerpt diplasy
+* Some CSS and markup fix$
+* Page filters in a template part
+* Removed color vars
+* Add allowed CF7 block
+
 ### 5.2.1 - 2023.06.02
 * Removed more custom CSS styles for buttons and links
 
