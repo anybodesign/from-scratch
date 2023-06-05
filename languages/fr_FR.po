@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2023-03-04 14:34+0100\n"
-"PO-Revision-Date: 2023-03-04 14:35+0100\n"
+"POT-Creation-Date: 2023-06-02 18:43+0200\n"
+"PO-Revision-Date: 2023-06-02 18:43+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -715,23 +715,23 @@ msgstr "Rien de plus à afficher"
 msgid "Load more posts"
 msgstr "Afficher plus d’articles"
 
-#: template-parts/post-share.php:6
-msgid "Share post"
-msgstr "Partager l’article"
+#: template-parts/post-share.php:6 template-parts/post-share.php:7
+msgid "Share this post"
+msgstr "Partager cet article"
 
-#: template-parts/post-share.php:8
+#: template-parts/post-share.php:9
 msgid "Share on Facebook"
 msgstr "Partager sur Facebook"
 
-#: template-parts/post-share.php:11
+#: template-parts/post-share.php:12
 msgid "Share on Twitter"
 msgstr "Partager sur Twitter"
 
-#: template-parts/post-share.php:14
+#: template-parts/post-share.php:15
 msgid "Share on LinkedIn"
 msgstr "Partager sur LinkedIn"
 
-#: template-parts/post-share.php:17
+#: template-parts/post-share.php:18
 msgid "Share by e-mail"
 msgstr "Partager par email"
 
