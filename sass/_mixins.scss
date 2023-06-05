@@ -33,7 +33,7 @@
 
 // Link underline
 
-@mixin underline($color: $primary_color, $width: .4rem) {
+@mixin underline($color: var(--text_color), $width: .4rem) {
 
 	text-decoration: none;
 	background-image:
