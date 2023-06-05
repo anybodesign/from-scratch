@@ -42,7 +42,8 @@ wp.domReady( function() {
 		'core/media-text',
 		'core/text-columns',
 		'core/preformatted',
-		'gravityforms/form', // Gravity & plugins		
+		'gravityforms/form', // Gravity & plugins
+		'contact-form-7/contact-form-selector', // CF7		
 	];
 	
 	const allowedEmbedBlocks = [
