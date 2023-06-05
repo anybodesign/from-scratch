@@ -5,6 +5,8 @@
  * @since 1.0
  * @version 1.0
  */
+ 
+ $blog_excerpt = get_theme_mod('blog_excerpt');
 ?>
 						<?php 
 							if ( is_page_template( 'pagecustom-maintenance.php' ) ) {
@@ -12,6 +14,9 @@
 							} 
 							if ( is_archive() ) {
 								the_archive_description();
+							}
+							if ( is_home() && $blog_excerpt ) {
+								echo '<p>'.esc_html($blog_excerpt).'</p>';
 							}
 							if ( is_singular('post') ) {
 								while ( have_posts() ) : the_post();
