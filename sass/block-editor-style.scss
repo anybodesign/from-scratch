@@ -5,7 +5,7 @@ Description: Have fun with Gutenberg style editor.
 
 @import 'reset.scss';
 @import 'variables.scss';
-@import 'variables-colors.scss';
+//@import 'variables-colors.scss';
 @import 'variables-fonts.scss';
 @import 'mixins.scss';
 //@import 'webfonts.scss';
@@ -59,6 +59,7 @@ html.interface-interface-skeleton__html-container {
 .editor-post-title .-post-title__input {
 	font-family: var(--font_title);
 	color: var(--primary_color);
+	font-weight: normal;
 }
 
 .edit-post-visual-editor .wp-block,
