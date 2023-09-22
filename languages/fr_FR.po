@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2023-06-02 18:43+0200\n"
-"PO-Revision-Date: 2023-06-02 18:43+0200\n"
+"POT-Creation-Date: 2023-08-24 12:01+0200\n"
+"PO-Revision-Date: 2023-08-24 12:01+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -563,14 +563,6 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:42
-msgid "Categories"
-msgstr "Catégories"
-
-#: index.php:47
-msgid "All categories"
-msgstr "Toutes les catégories"
-
 #: template-parts/footer-back2top.php:3
 msgid "Back to top"
 msgstr "Haut de page"
@@ -684,6 +676,14 @@ msgstr "Page suivante"
 msgid "Previous page"
 msgstr "Page précédente"
 
+#: template-parts/page-filters.php:4
+msgid "Categories"
+msgstr "Catégories"
+
+#: template-parts/page-filters.php:9
+msgid "All categories"
+msgstr "Toutes les catégories"
+
 #: template-parts/post-meta.php:22
 msgid "Posted "
 msgstr "Publié "
@@ -724,8 +724,8 @@ msgid "Share on Facebook"
 msgstr "Partager sur Facebook"
 
 #: template-parts/post-share.php:12
-msgid "Share on Twitter"
-msgstr "Partager sur Twitter"
+msgid "Share on X"
+msgstr "Partager sur X"
 
 #: template-parts/post-share.php:15
 msgid "Share on LinkedIn"
