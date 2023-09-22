@@ -128,32 +128,6 @@
 
 	@include rwd(medium) {
 		display: flex;
-
-		.wp-block-column {
-			margin: 0 $grid-padding;
-
-			&:first-child {
-				margin-left: 0;
-			}
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-		&.columns-2 {
-			.wp-block-column {
-				width: 50%;
-			}
-		}
-		&.columns-3 {
-			.wp-block-column {
-				width: 33.3333%;
-			}
-		}
-		&.columns-4 {
-			.wp-block-column {
-				width: 25%;
-			}
-		}
 	}
 }
 
