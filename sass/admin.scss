@@ -3,7 +3,11 @@
 
 $dash: #777 1px dashed;
 
+//
 // Customizer
+// ------------------ *
+
+// Controls
 
 #customize-control-site_icon {
 	border-top: $dash;
@@ -107,4 +111,16 @@ $dash: #777 1px dashed;
 			margin-top: 1rem;
 		}	
 	}
+}
+
+
+//
+// Plugins
+// ------------- *
+
+// Password protected 
+
+#pp-sidebar,
+#adminmenu li.toplevel_page_password-protected .wp-submenu  {
+	display: none;
 }
