@@ -117,7 +117,8 @@ function fs_setup() {
 	remove_theme_support( 'widgets-block-editor' );
 	
 	// Remove fucking patterns 
-	remove_theme_support( 'core-block-patterns' );
+	remove_theme_support( 'core-block-patterns' );	
+	
 }
 endif;
 add_action( 'after_setup_theme', 'fs_setup' );
@@ -180,6 +181,17 @@ function fs_allowed_blocks() {
 // Uncomment to disable blocks
 //add_action( 'enqueue_block_editor_assets', 'fs_allowed_blocks' );
 
+// Gutenberg block styles
+
+function fs_allowed_blocks_styles() {
+	wp_enqueue_script(
+		'byebyeblocks-styles_for_block_core_search( $attributes )',
+		FS_THEME_URL . '/js/byebyeblocks-styles.js',
+		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), 
+		FS_THEME_VERSION
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'fs_allowed_blocks_styles' );
 
 //	Admin style and script
 

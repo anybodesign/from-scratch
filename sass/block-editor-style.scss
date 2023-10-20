@@ -104,7 +104,8 @@ html.interface-interface-skeleton__html-container {
 
 .wp-block-group,
 .wp-block-columns,
-.wp-block-column {
+.wp-block-column,
+.wp-block-spacer {
 	position: relative;
 	padding: 1.5rem;
 	border: #515151 1px solid;
@@ -127,6 +128,9 @@ html.interface-interface-skeleton__html-container {
 .wp-block-column {
 	border-style: dashed;
 }
+.wp-block-spacer {
+	border-style: dotted;
+}
 
 .wp-block-group::before {
 	content: 'Group';
@@ -136,6 +140,9 @@ html.interface-interface-skeleton__html-container {
 }
 .wp-block-column::before {
 	content: 'Column';
+}
+.wp-block-spacer::before {
+	content: 'Space';
 }
 
 
