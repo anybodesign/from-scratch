@@ -141,8 +141,12 @@ html.interface-interface-skeleton__html-container {
 .wp-block-column::before {
 	content: 'Column';
 }
-.wp-block-spacer::before {
-	content: 'Space';
+.wp-block-spacer {
+	background: rgba(255, 255, 255, 0.1);
+	
+	&::before {
+		content: 'Space';
+	}
 }
 
 
@@ -166,7 +170,6 @@ p.text-mentions {
 }
 a.action-btn {
 	background-color: var(--primary_color);
-	//color: #fff !important;
 	padding: 5px 15px;
 	text-decoration: none;
 }	
