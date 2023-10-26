@@ -17,6 +17,9 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.4.1 - 2023.10.26
+* Fix back 2 top svg
+
 ### 5.4 - 2023.10.20
 * Disable block styles
 * More admin styles
