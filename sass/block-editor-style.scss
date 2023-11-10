@@ -105,21 +105,32 @@ html.interface-interface-skeleton__html-container {
 .wp-block-group,
 .wp-block-columns,
 .wp-block-column,
-.wp-block-spacer {
+.block-editor-block-list__block[data-type="core/spacer"] {
 	position: relative;
 	padding: 1.5rem;
-	border: #515151 1px solid;
+	border: #ccc 1px solid;
 	
 	&::before {
 		display: block;
+		height: auto;
+		width: auto;
 		position: absolute;
 		bottom: -1px;
 		left: -1px;
-		background: #515151;
-		color: #FFF;
+		background: #ccc;
+		color: #666;
 		font-size: .85rem;
 		text-transform: uppercase;
 		padding: 0 .5rem;
+	}
+	
+	&:hover {
+		border-color: #515151;
+		
+		&::before {
+			background: #515151;
+			color: #fff;
+		}
 	}
 }
 .wp-block-columns {
@@ -128,8 +139,8 @@ html.interface-interface-skeleton__html-container {
 .wp-block-column {
 	border-style: dashed;
 }
-.wp-block-spacer {
-	border-style: dotted;
+.block-editor-block-list__block[data-type="core/spacer"] {
+	border-style: dashed;
 }
 
 .wp-block-group::before {
@@ -141,12 +152,8 @@ html.interface-interface-skeleton__html-container {
 .wp-block-column::before {
 	content: 'Column';
 }
-.wp-block-spacer {
-	background: rgba(255, 255, 255, 0.1);
-	
-	&::before {
-		content: 'Space';
-	}
+.block-editor-block-list__block[data-type="core/spacer"]::before {
+	content: 'Space';
 }
 
 
