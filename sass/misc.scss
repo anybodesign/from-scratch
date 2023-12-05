@@ -103,6 +103,31 @@ p.cmplz-subtitle {
 	@extend h3;
 }
 
+// User switching
+
+p#user_switching_switch_on {
+	position: fixed;
+	bottom: 3rem;
+	left: 3rem;
+	
+	a {
+		display: inline-flex;
+		padding: .5rem 1rem;
+		background-color: var(--accent_color);
+		color: var(--text_color);
+		font-size: 1.4rem;
+		border-radius: .4rem;
+		text-decoration: none;
+		transition: background .3s ease-in-out;
+		
+		&:hover,
+		&:focus {
+			background-color: var(--text_color);
+			color: #fff;
+		}
+	}
+}
+
 
 /* ------------------------- */
 /* = Misc
