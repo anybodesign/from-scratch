@@ -817,7 +817,7 @@ function fs_custom_comments($comment, $args, $depth) {
 					echo get_avatar( $comment, 192 );
 				?>
 			</div>
-
+			
 			<div class="comment-content">
 				<div class="comment-author-name">
 					<?php 
@@ -841,7 +841,7 @@ function fs_custom_comments($comment, $args, $depth) {
 					<?php comment_text(); ?>
 				</div>
 			</div>
-
+			
 			<div class="reply">
 				<?php comment_reply_link( array_merge($args, array(
 				    'reply_text' => __('Reply', 'from-scratch'),
@@ -851,7 +851,7 @@ function fs_custom_comments($comment, $args, $depth) {
 				)); ?>
 			</div>
 			<?php edit_comment_link( __( 'Edit', 'from-scratch' ), '<span class="edit-link">', '</span>' ); ?>
-
+			
 		</article>
 		
 <?php }
@@ -1007,7 +1007,7 @@ if( class_exists('acf') ) {
 
 // WP-Rocket
 
-if (function_exists('rocket_load_textdomain')) {
+if ( function_exists('rocket_load_textdomain') ) {
 	function fs_wp_rocket_add_purge_posts_to_author() {
 		// gets the author role object
 		$role = get_role('editor');
@@ -1020,7 +1020,7 @@ if (function_exists('rocket_load_textdomain')) {
 
 // Koko 
 
-if (function_exists('maybe_collect_request')) {
+if ( class_exists('KokoAnalytics\Plugin') ) {
 	function fs_koko() {
 		$role = get_role('editor');
 		$role->add_cap('view_koko_analytics', true);
@@ -1036,7 +1036,9 @@ if (function_exists('maybe_collect_request')) {
 // Remove these lines and dependencies for your theme
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
 	'https://github.com/anybodesign/from-scratch',
 	__FILE__,
 	'from-scratch'
