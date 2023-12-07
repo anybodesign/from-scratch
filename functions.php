@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '5.5' );
+define( 'FS_THEME_VERSION', '5.6' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -161,13 +161,14 @@ function fs_allowed_blocks() {
 
 function fs_allowed_blocks_styles() {
 	wp_enqueue_script(
-		'byebyeblocks-styles_for_block_core_search( $attributes )',
+		'byebyeblocks-styles',
 		FS_THEME_URL . '/js/byebyeblocks-styles.js',
 		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), 
 		FS_THEME_VERSION
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'fs_allowed_blocks_styles' );
+
 
 //	Admin style and script
 

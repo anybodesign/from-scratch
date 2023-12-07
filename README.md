@@ -17,6 +17,13 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.6 - 2023.12.07
+* Editor styles update
+* Nav Group Option
+* Comments template fullwidth
+* Functions update
+* CSS update
+
 ### 5.5 - 2023.12.05
 * Block admin styles fix
 * Functions fix
