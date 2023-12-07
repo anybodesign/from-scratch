@@ -48,6 +48,7 @@ wp.domReady( function() {
 		'core/media-text',
 		'core/text-columns',
 		'core/preformatted',
+		'core/details',
 		'gravityforms/form', // Gravity & plugins
 		'contact-form-7/contact-form-selector', // CF7		
 	];
