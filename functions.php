@@ -113,9 +113,6 @@ function fs_setup() {
 	
 	add_theme_support( 'responsive-embeds' );
 	
-	// Remove widgets blocks
-	remove_theme_support( 'widgets-block-editor' );
-	
 	// Remove fucking patterns 
 	remove_theme_support( 'core-block-patterns' );	
 	
@@ -132,27 +129,6 @@ if ( get_theme_mod('enable_posttags') != true ) {
 	}
 	add_action( 'init', 'fs_unregister_tags' );
 }
-
-// Block Patterns Example
-
-// function fs_register_blocks_patterns() {
-// 	register_block_pattern(
-// 		'my-pattern',
-// 		array(
-//     		'title'       => __( 'My pattern', 'from-scratch' ),
-//     		'description' => _x( 'Yolo', 'from-scratch' ),
-//     		'content'     => '<!-- wp:paragraph {"fontSize":"large"} -->
-// <p class="has-large-font-size">Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper.  </p>
-// <!-- /wp:paragraph -->
-// 
-// <!-- wp:paragraph {"fontSize":"medium"} -->
-// <p class="has-medium-font-size">Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-// <!-- /wp:paragraph -->',
-// 		)
-// 	);
-// }
-// add_action( 'init', 'fs_register_blocks_patterns' );
-
 
 // Gutenberg editor styles
 
