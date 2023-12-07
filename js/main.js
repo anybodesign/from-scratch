@@ -8,18 +8,18 @@ jQuery(document).ready(function($) {
 			
 			if ($(this).hasClass('menu-opened')) {
 				$(this).attr('aria-expanded','true');
-				$('.main-menu').attr('aria-hidden','false');
+				$('.nav-container').attr('aria-hidden','false');
 			} else {
 				$(this).attr('aria-expanded','false');
-				$('.main-menu').attr('aria-hidden','true');
+				$('.nav-container').attr('aria-hidden','true');
 			}
 			
 		return false;
 	});
-
+		
 		$(window).resize(function() {
 			if ($(window).width() > 960) {
-		    	$('.main-menu').show().removeAttr('style').removeAttr('aria-hidden');
+		    	$('.nav-container').show().removeAttr('style').removeAttr('aria-hidden');
 		    	$('.sub-menu').show().removeAttr('style');
 		    	$('#menu_toggle').removeClass('menu-opened').removeAttr('aria-expanded');
 			}
@@ -31,11 +31,12 @@ jQuery(document).ready(function($) {
 	$('.sub-menu-unfold').click(function() {
 		
 	    if($(this).hasClass('sub-menu-opened')) {
-	        $(this).removeClass('sub-menu-opened').attr('aria-expanded','false');
+	        
+			$(this).removeClass('sub-menu-opened').attr('aria-expanded','false');
 			$(this).next('.sub-menu').hide().attr('aria-hidden','true');
-
+			
 	    } else {
-
+			
 			$(this).parent().parent().find('.sub-menu-opened').removeClass('sub-menu-opened');
 	        $(this).addClass('sub-menu-opened').attr('aria-expanded','true');
 	        $(this).next('.sub-menu').removeAttr('style').attr('aria-hidden','false');

@@ -9,6 +9,7 @@
 						<span class="burger-title"><?php esc_html_e('Menu', 'from-scratch'); ?></span>
 					</span>
 				</button>
+				<div class="nav-container">
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',
 					'menu_class'		=>	'main-menu',
@@ -16,5 +17,6 @@
 					'walker'			=>	new fs_subnav_walker()
 					));
 				?>
+				</div>
 			</nav>
 			<?php endif; ?>

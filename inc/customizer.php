@@ -545,8 +545,27 @@ function fs_customize_register($fs_customize) {
 	// -
 	// + + + + + + + + + + 
 		
+		// Nav container
+		
+		$fs_customize->add_setting(
+			'nav_group', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'nav_group', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Group toolbar and main menu in the same container', 'from-scratch'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'nav_group',
+			)
+		);
+		
 		// Back to top
-	
+		
 		$fs_customize->add_setting(
 			'back2top', 
 			array(

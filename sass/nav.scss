@@ -61,12 +61,11 @@
 
 // Main nav
 
-.main-menu {
+.nav-container {
 	position: absolute;
-	top: auto; 
+	top: 0; 
 	left: 0;
 	width: 100%;
-	padding: $grid-padding;
 	background-color: #fff;
 	
 	transform: translateX(-110%);
@@ -93,9 +92,31 @@
 		transform: none;
 		
 		display: flex;
+		flex-direction: column;
+	}
+	
+	.has-nav-group & {
+		display: flex;
+		flex-direction: column-reverse;
+		padding-top: 10rem;
+		
+		@include rwd(large) {
+			flex-direction: column;
+			padding-top: 0;
+		}
+	}
+}
+
+.main-menu {
+	position: relative;
+	width: 100%;
+	padding: $grid-padding;
+	background-color: #fff;
+	
+	@include rwd(large) {		
+		display: flex;
 		flex-wrap: wrap;
 	}
-
 	
 	& > li {
 		position: relative;
@@ -344,6 +365,10 @@
 
 #menu_toggle {
 	position: relative;
+	
+	.has-nav-group & {
+		margin-left: 1rem;
+	}
 }
 
 .burger {
