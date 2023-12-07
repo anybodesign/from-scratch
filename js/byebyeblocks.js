@@ -1,6 +1,12 @@
 wp.domReady( function() {
 
 	var allowedBlocks = [
+		'acf/posts-2',
+		'acf/files-2',
+		'acf/anchor-2',
+		'acf/carousel-2',
+		'acf/counter-2',
+		'acf/pagebanner-2',
 	    'acf/gallery',	// ACF blocks
 		'acf/posts',
 		'acf/cta',
