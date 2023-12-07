@@ -262,6 +262,17 @@
 /* = Comments
 /* ------------------------- */
 
+#comments {
+	padding: 2rem 1rem;
+	width: 100%;
+	background-color: var(--bg_color);
+	
+	& > * {
+		@include center();
+	}
+}
+
+
 .comment-list {
 	list-style: none;
 	padding-left: 0;	

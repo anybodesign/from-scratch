@@ -34,12 +34,7 @@
 							if ( is_single() && get_theme_mod('share_box') == true ) {
 								get_template_part( 'template-parts/post', 'share' );
 							}
-							
-							
-							if ( comments_open() || get_comments_number() ) {
-								comments_template();
-							}
 						?>
 						
 					<?php endwhile; ?>
-					</div>					
+					</div>
