@@ -22,6 +22,7 @@
 	&:hover {
 		background-color: var(--text_color);
 		color: var(--btn_text_hover);
+		opacity: 1;
 		
 		.high-contrast & {
 			background-color: #fff;
@@ -33,6 +34,7 @@
 	}
 	
 	&.has-accent-background-color,
+	&.has-white-background-color,
 	&.has-bg-background-color {
 		&:hover,
 		&:focus {
@@ -41,21 +43,6 @@
 	}
 	
 }
-
-// Variation example of .action-btn
-
-.white-btn {
-	@extend .action-btn;
-	background-color: #fff;
-	color: var(--text_color);
-
-	&:focus, 
-	&:hover {
-		background-color: var(--text_color);
-		color: var(--btn_text_hover);
-	}	
-}
-
 
 // Icons 
 

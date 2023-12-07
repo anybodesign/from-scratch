@@ -92,10 +92,25 @@ html.interface-interface-skeleton__html-container {
 	
 	figure {
 		width: 100%;
+	}
+	
+	.wp-block-quote	{
+		max-width: 960px;
+	}
+	
+	.wp-block-group__inner-container {
 		
-		img {
-			max-width: 96% !important;
-			height: auto;
+		& > * {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
+	.wp-block-button__link {	
+		&:hover,
+		&:focus {
+			background-color: var(--text_color);
+			color: #fff;
 		}
 	}	
 }

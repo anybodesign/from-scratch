@@ -38,7 +38,7 @@ function fs_palette_setup() {
 	    ),
 		array(
 			'name' => esc_html__( 'Text color', 'from-scratch' ),
-			'slug' => 'text',
+			'slug' => 'text-color',
 			'color' => $text_color,
 		),
 	    array(
