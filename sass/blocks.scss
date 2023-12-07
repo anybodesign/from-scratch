@@ -120,8 +120,6 @@ p.has-background,
 .wp-block-group {
 	
 	&.has-background {
-		// padding-left: 0;
-		// padding-right: 0;
 		
 		& > .wp-block-group__inner-container {
 			@include center();
