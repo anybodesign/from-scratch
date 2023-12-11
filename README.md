@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.7 - 2023.12.11
+* Index template parts
+* CSS updates
+
 ### 5.6 - 2023.12.07
 * Editor styles update
 * Nav Group Option
