@@ -1,4 +1,10 @@
-<?php if ( !defined('ABSPATH') ) die(); ?>
+<?php if ( !defined('ABSPATH') ) die(); 
+	
+	$cats = get_theme_mod('cat_dropdown');
+?>
+
+						<?php if ( $cats && ( is_home() ) ) { ?>
+						
 						<div class="page-filters">
 							<label for="cat">
 								<?php _e('Categories', 'from-scratch'); ?>
@@ -19,4 +25,6 @@
 									}
 								}
 							</script>
-						</div>				
+						</div>
+						
+						<?php } ?>
