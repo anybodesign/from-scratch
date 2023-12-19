@@ -129,9 +129,6 @@ li ul {
 		background-color: var(--text_color);
 		color: #fff;
 	}
-	.high-contrast & {
-		color: #fff;
-	}
 }
 
 // Custom Tinymce styles
@@ -241,10 +238,6 @@ img {
 	height: auto;
 	border: 0;
 	border-style: none;
-	
-	.high-contrast & {
-		filter: grayscale(100) contrast(1.5);
-	}
 }
 
 figure {

@@ -23,11 +23,6 @@
 		background-color: var(--text_color);
 		color: var(--btn_text_hover);
 		opacity: 1;
-		
-		.high-contrast & {
-			background-color: #fff;
-			color: #222;	
-		}
 	}
 	&:focus {
 		outline: none;
