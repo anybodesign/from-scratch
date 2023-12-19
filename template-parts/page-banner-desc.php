@@ -18,7 +18,7 @@
 							if ( is_home() && $blog_excerpt ) {
 								echo '<p>'.esc_html($blog_excerpt).'</p>';
 							}
-							if ( is_singular('post') ) {
+							if ( is_single() ) {
 								while ( have_posts() ) : the_post();
 								get_template_part('template-parts/post', 'meta');
 								endwhile;							
