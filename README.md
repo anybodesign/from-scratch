@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.7.5 - 2023.12.19
+* Removed high-contrast CSS
+* Post meta template fix, for all singles
+
 ### 5.7 - 2023.12.11
 * Index template parts
 * CSS updates
