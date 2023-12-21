@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2023-12-07 15:54+0100\n"
-"PO-Revision-Date: 2023-12-07 15:54+0100\n"
+"POT-Creation-Date: 2023-12-21 15:03+0100\n"
+"PO-Revision-Date: 2023-12-21 15:03+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -121,7 +121,7 @@ msgstr "Bouton d’action"
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:777 template-parts/header-toolbar.php:24
+#: functions.php:777 template-parts/header-toolbar-search.php:6
 msgid "Search"
 msgstr "Chercher"
 
@@ -581,7 +581,7 @@ msgstr "Propulsé par WordPress !"
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: template-parts/header-brand.php:15
+#: template-parts/header-brand-title.php:11
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
 
@@ -597,21 +597,26 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: template-parts/header-toolbar.php:22
-msgid "Enter keyword"
-msgstr "Entrer un mot clé"
+#: template-parts/header-toolbar-contrast.php:4
+msgid "Toggle high contrast"
+msgstr "Activation du contraste élevé"
 
-#: template-parts/header-toolbar.php:23
-msgid "Search for"
-msgstr "Rechercher"
-
-#: template-parts/header-toolbar.php:32
+#: template-parts/header-toolbar-contrast.php:6
 msgid "High contrast"
 msgstr "Contraste élevé"
 
-#: template-parts/header-toolbar.php:36
+#: template-parts/header-toolbar-contrast.php:8
+#: template-parts/header-toolbar-contrast.php:10
 msgid "Restore contrast"
 msgstr "Retablir le contraste"
+
+#: template-parts/header-toolbar-search.php:4
+msgid "Enter keyword"
+msgstr "Entrer un mot clé"
+
+#: template-parts/header-toolbar-search.php:5
+msgid "Search for"
+msgstr "Rechercher"
 
 #: template-parts/nothing.php:15 template-parts/nothing.php:20
 #: template-parts/nothing.php:25
@@ -682,11 +687,11 @@ msgstr "Page suivante"
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: template-parts/page-filters.php:4
+#: template-parts/page-filters.php:10
 msgid "Categories"
 msgstr "Catégories"
 
-#: template-parts/page-filters.php:9
+#: template-parts/page-filters.php:15
 msgid "All categories"
 msgstr "Toutes les catégories"
 
@@ -768,6 +773,9 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid "Restore high contrast"
+#~ msgstr "Retablir le contraste"
 
 #~ msgid ""
 #~ "It looks like nothing was found at this location. Maybe try a search?"
