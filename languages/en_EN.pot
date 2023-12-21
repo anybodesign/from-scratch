@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2023-03-02 08:17+0100\n"
-"PO-Revision-Date: 2023-03-02 08:17+0100\n"
+"POT-Creation-Date: 2023-12-21 15:03+0100\n"
+"PO-Revision-Date: 2023-12-21 15:03+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -36,108 +36,109 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: functions.php:463 template-parts/header-toolbar.php:7
+#: functions.php:452 template-parts/header-toolbar.php:7
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:464 template-parts/header-nav.php:6
+#: functions.php:453 template-parts/header-nav-alt.php:17
+#: template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:465 template-parts/footer-copyright.php:16
+#: functions.php:454 template-parts/footer-copyright.php:16
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:466
+#: functions.php:455
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:507
+#: functions.php:496
 msgid "Secondary navigation"
 msgstr "Navigation secondaire"
 
-#: functions.php:526 template-parts/page-banner-title.php:12
+#: functions.php:515 template-parts/page-banner-title.php:12
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
-#: functions.php:614
+#: functions.php:603
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:614
+#: functions.php:603
 msgid "of "
 msgstr "de "
 
-#: functions.php:658
+#: functions.php:647
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:659
+#: functions.php:648
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:660
+#: functions.php:649
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:661
+#: functions.php:650
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:662
+#: functions.php:651
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:702
+#: functions.php:691
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:711
+#: functions.php:700
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:720
+#: functions.php:709
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:729
+#: functions.php:718
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:754
+#: functions.php:743
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:760
+#: functions.php:749
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:766
+#: functions.php:755
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:786
+#: functions.php:775
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:788 template-parts/header-toolbar.php:24
+#: functions.php:777 template-parts/header-toolbar-search.php:6
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:820
+#: functions.php:809
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:826
+#: functions.php:815
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:835
+#: functions.php:824
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:841
+#: functions.php:830
 msgid "Edit"
 msgstr "Modifier"
 
@@ -320,86 +321,91 @@ msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
 #: inc/customizer.php:561
+msgid "Group toolbar and main menu in the same container"
+msgstr ""
+"Regrouper la barre d'outils et le menu principal dans le même conteneur"
+
+#: inc/customizer.php:580
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:580
+#: inc/customizer.php:599
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:599
+#: inc/customizer.php:618
 msgid "Load new posts on click"
 msgstr "Charger les nouveaux articles au clic"
 
-#: inc/customizer.php:618
+#: inc/customizer.php:637
 msgid "Use Scrollout to animate blocks on scroll"
 msgstr "Utilisez Scrollout pour animer les blocs au scroll"
 
-#: inc/customizer.php:637
+#: inc/customizer.php:656
 msgid "Use Fancybox to enlarge pictures"
 msgstr "Utilisez Fancybox pour agrandir les images"
 
-#: inc/customizer.php:656
+#: inc/customizer.php:675
 msgid "Disable custom color palette"
 msgstr "Désactiver la palette de couleurs personnalisée"
 
-#: inc/customizer.php:675
+#: inc/customizer.php:694
 msgid "Disable custom font sizes"
 msgstr "Désactiver les tailles de police personnalisées"
 
-#: inc/customizer.php:695
+#: inc/customizer.php:714
 msgid "Enable custom logo"
 msgstr "Activer le logo personnalisé"
 
-#: inc/customizer.php:711
+#: inc/customizer.php:730
 msgid "Enable custom background"
 msgstr "Activer l’arrière-plan personnalisé"
 
-#: inc/customizer.php:727
+#: inc/customizer.php:746
 msgid "Enable custom header"
 msgstr "Activer l’en-tête personnalisé"
 
-#: inc/customizer.php:743
+#: inc/customizer.php:762
 msgid "Enable post formats"
 msgstr "Activez les formats d’articles"
 
-#: inc/customizer.php:759
+#: inc/customizer.php:778
 msgid "Enable Woocommerce support"
 msgstr "Activer le support Woocommerce"
 
-#: inc/customizer.php:777
+#: inc/customizer.php:796
 msgid "Blog introduction text"
 msgstr "Texte d’introduction du blog"
 
-#: inc/customizer.php:795
+#: inc/customizer.php:814
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:812
+#: inc/customizer.php:831
 msgid "Show the sidebar on single posts"
 msgstr "Afficher la barre latérale sur les articles"
 
-#: inc/customizer.php:831
+#: inc/customizer.php:850
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:850
+#: inc/customizer.php:869
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:869
+#: inc/customizer.php:888
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:885
+#: inc/customizer.php:904
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:901
+#: inc/customizer.php:920
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:920
+#: inc/customizer.php:939
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -407,98 +413,98 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:937
+#: inc/customizer.php:956
 msgid "Enable post tags"
 msgstr "Activer les étiquettes"
 
-#: inc/customizer.php:961
+#: inc/customizer.php:980
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:964
+#: inc/customizer.php:983
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:965
+#: inc/customizer.php:984
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:983
+#: inc/customizer.php:1002
 msgid "Child pages location"
 msgstr "Emplacement des pages enfants"
 
-#: inc/customizer.php:987
+#: inc/customizer.php:1006
 msgid "Page banner"
 msgstr "Bannière de page"
 
-#: inc/customizer.php:988
+#: inc/customizer.php:1007
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: inc/customizer.php:989
+#: inc/customizer.php:1008
 msgid "Do not display child pages"
 msgstr "Ne pas afficher les pages enfants"
 
-#: inc/customizer.php:1007
+#: inc/customizer.php:1026
 msgid "Display page description or post metas in the banner"
 msgstr "Afficher la description de la page ou les post metas dans la bannière"
 
-#: inc/customizer.php:1028
+#: inc/customizer.php:1047
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:1031
+#: inc/customizer.php:1050
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:1032
+#: inc/customizer.php:1051
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:1033
+#: inc/customizer.php:1052
 msgid "Playfair & Atkinson"
 msgstr "Playfair & Atkinson"
 
-#: inc/customizer.php:1034
+#: inc/customizer.php:1053
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:1035
+#: inc/customizer.php:1054
 msgid "Miriam Libre & Asap"
 msgstr "Miriam Libre & Asap"
 
-#: inc/customizer.php:1036
+#: inc/customizer.php:1055
 msgid "Custom Child Theme Font"
 msgstr "Police personnalisée du thème enfant"
 
-#: inc/customizer.php:1056
+#: inc/customizer.php:1075
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:1075
+#: inc/customizer.php:1094
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:1076
+#: inc/customizer.php:1095
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:1096
+#: inc/customizer.php:1115
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:1097
+#: inc/customizer.php:1116
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:1117 template-parts/nothing.php:27
+#: inc/customizer.php:1136 template-parts/nothing.php:37
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:1118
+#: inc/customizer.php:1137
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -519,57 +525,49 @@ msgstr "Moyenne"
 msgid "Large"
 msgstr "Grande"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:54
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:56
 msgid "View details"
 msgstr "Voir les détails"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:77
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:79
 #, php-format
 msgid "More information about %s"
 msgstr "Plus d'informations sur %s"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:128
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:130
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:214
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:217
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:216
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:219
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:218
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:221
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
 msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:224
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:227
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p11/Vcs/PluginUpdateChecker.php:98
+#: inc/plugin-update-checker/Puc/v5p3/Vcs/PluginUpdateChecker.php:113
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
 #: inc/subnav-walker.php:21
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
-
-#: index.php:42
-msgid "Categories"
-msgstr "Catégories"
-
-#: index.php:47
-msgid "All categories"
-msgstr "Toutes les catégories"
 
 #: template-parts/footer-back2top.php:3
 msgid "Back to top"
@@ -583,11 +581,11 @@ msgstr "Propulsé par WordPress !"
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: template-parts/header-brand.php:15
+#: template-parts/header-brand-title.php:11
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
 
-#: template-parts/header-nav.php:9
+#: template-parts/header-nav-alt.php:7 template-parts/header-nav.php:9
 msgid "Menu"
 msgstr "Menu"
 
@@ -599,23 +597,29 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: template-parts/header-toolbar.php:22
-msgid "Enter keyword"
-msgstr "Entrer un mot clé"
+#: template-parts/header-toolbar-contrast.php:4
+msgid "Toggle high contrast"
+msgstr "Activation du contraste élevé"
 
-#: template-parts/header-toolbar.php:23
-msgid "Search for"
-msgstr "Rechercher"
-
-#: template-parts/header-toolbar.php:32
+#: template-parts/header-toolbar-contrast.php:6
 msgid "High contrast"
 msgstr "Contraste élevé"
 
-#: template-parts/header-toolbar.php:36
+#: template-parts/header-toolbar-contrast.php:8
+#: template-parts/header-toolbar-contrast.php:10
 msgid "Restore contrast"
 msgstr "Retablir le contraste"
 
-#: template-parts/nothing.php:15
+#: template-parts/header-toolbar-search.php:4
+msgid "Enter keyword"
+msgstr "Entrer un mot clé"
+
+#: template-parts/header-toolbar-search.php:5
+msgid "Search for"
+msgstr "Rechercher"
+
+#: template-parts/nothing.php:15 template-parts/nothing.php:20
+#: template-parts/nothing.php:25
 msgid "No post for now"
 msgstr "Aucun article pour l’instant"
 
@@ -626,11 +630,19 @@ msgid ""
 msgstr ""
 "Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
 
-#: template-parts/nothing.php:20
+#: template-parts/nothing.php:21
+msgid "Sorry, no post have been published yet."
+msgstr "Désolé, aucun article n’a encore été publié."
+
+#: template-parts/nothing.php:26
+msgid "Sorry, no post have been published in this category yet."
+msgstr "Désolé, aucun article n’a encore été publié dans cette catégorie."
+
+#: template-parts/nothing.php:30
 msgid "Nothing found"
 msgstr "Aucun résultat"
 
-#: template-parts/nothing.php:21
+#: template-parts/nothing.php:31
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -638,7 +650,7 @@ msgstr ""
 "Aucun résultat ne correspond à vos critères de recherche. Essayez avec "
 "d’autres mots clés."
 
-#: template-parts/nothing.php:28
+#: template-parts/nothing.php:38
 msgid ""
 "It seems that page or post doesn’t exists anymore. Or maybe the URL is wrong "
 "or has changed… Perhaps searching can help."
@@ -646,7 +658,7 @@ msgstr ""
 "Il semble que cette page ou cette publication n’existe plus. Ou peut-être "
 "que l’URL est erronée ou a changé... Peut-être qu’une recherche peut aider."
 
-#: template-parts/nothing.php:34
+#: template-parts/nothing.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -674,6 +686,14 @@ msgstr "Page suivante"
 #: template-parts/page-content.php:29 template-parts/post-pagination.php:25
 msgid "Previous page"
 msgstr "Page précédente"
+
+#: template-parts/page-filters.php:10
+msgid "Categories"
+msgstr "Catégories"
+
+#: template-parts/page-filters.php:15
+msgid "All categories"
+msgstr "Toutes les catégories"
 
 #: template-parts/post-meta.php:22
 msgid "Posted "
@@ -706,23 +726,23 @@ msgstr "Rien de plus à afficher"
 msgid "Load more posts"
 msgstr "Afficher plus d’articles"
 
-#: template-parts/post-share.php:6
-msgid "Share post"
-msgstr "Partager l’article"
+#: template-parts/post-share.php:6 template-parts/post-share.php:7
+msgid "Share this post"
+msgstr "Partager cet article"
 
-#: template-parts/post-share.php:8
+#: template-parts/post-share.php:9
 msgid "Share on Facebook"
 msgstr "Partager sur Facebook"
 
-#: template-parts/post-share.php:11
-msgid "Share on Twitter"
-msgstr "Partager sur Twitter"
+#: template-parts/post-share.php:12
+msgid "Share on X"
+msgstr "Partager sur X"
 
-#: template-parts/post-share.php:14
+#: template-parts/post-share.php:15
 msgid "Share on LinkedIn"
 msgstr "Partager sur LinkedIn"
 
-#: template-parts/post-share.php:17
+#: template-parts/post-share.php:18
 msgid "Share by e-mail"
 msgstr "Partager par email"
 
@@ -753,6 +773,9 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid "Restore high contrast"
+#~ msgstr "Retablir le contraste"
 
 #~ msgid ""
 #~ "It looks like nothing was found at this location. Maybe try a search?"
