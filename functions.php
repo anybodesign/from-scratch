@@ -177,17 +177,6 @@ function fs_acf_admin_css() {
 	wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
 }
 
-// WordPress no bloody admin mail notice and no bloody fullscreen
-
-add_filter('admin_email_check_interval', '__return_false');
-
-if (is_admin()) {
-	function fs_disable_bloody_fullscreen() {
-		$script = "jQuery( window ).load(function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } });";
-		wp_add_inline_script( 'wp-blocks', $script );
-	}
-	add_action( 'enqueue_block_editor_assets', 'fs_disable_bloody_fullscreen' );
-}
 
 // ------------------------
 // JS & CSS
@@ -605,6 +594,7 @@ function fs_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
 
+
 // Custom excerpt
 // https://gist.github.com/samjbmason/4050714
 
@@ -620,17 +610,6 @@ function fs_share_excerpt($count, $post_id){
   return $excerpt;
 }
 
-// Page excerpt
-
-function fs_page_excerpt() {
-	global $post;   
-    if( $post->post_excerpt ) {
-        $content = get_the_excerpt();
-    } else {
-		$content = null;
-	}
-    return $content;
-}
 
 // Image Sizes
 
