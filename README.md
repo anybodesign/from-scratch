@@ -17,6 +17,12 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.8.1 - 2024.02.06
+* Removed fullscreen function (mu-plugin)
+* Removed admin mail function (mu-plugin)
+* Byebyeblocks update
+* Some CSS update
+
 ### 5.8 - 2023.12.21
 * More template parts…
 
