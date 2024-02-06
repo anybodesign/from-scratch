@@ -183,6 +183,10 @@
 			right: 0;
 			
 			@include a11y-hide();
+			
+			&:focus {
+				outline: 2px var(--text_color) dotted;
+			}
 		}
 	}	
 }
