@@ -1,12 +1,14 @@
 wp.domReady( function() {
 
 	var allowedBlocks = [
-		'acf/posts-2',
+		'acf/posts-2', // ACF blocks 2
 		'acf/files-2',
 		'acf/anchor-2',
 		'acf/carousel-2',
 		'acf/counter-2',
 		'acf/pagebanner-2',
+		'acf/gallery-2',
+		
 	    'acf/gallery',	// ACF blocks
 		'acf/posts',
 		'acf/cta',
@@ -18,6 +20,7 @@ wp.domReady( function() {
 		'acf/anchor',
 		'acf/advanced-list',
 		'acf/pagebanner',
+		
         'core/block', // Include to show reusable blocks in the block inserter
 		'core/paragraph',
 		'core/heading',
@@ -49,6 +52,7 @@ wp.domReady( function() {
 		'core/text-columns',
 		'core/preformatted',
 		'core/details',
+		
 		'gravityforms/form', // Gravity & plugins
 		'contact-form-7/contact-form-selector', // CF7		
 	];
