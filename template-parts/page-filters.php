@@ -18,7 +18,7 @@
 								?>
 							</div>
 							<script>
-								var siteUrl = '<?php esc_url(bloginfo('url')); ?>';
+								var siteUrl = '<?php echo site_url(); ?>';
 								document.getElementById('cat').onchange = function(){
 									if( this.value !== '-1' ){
 										window.location=siteUrl +'/?cat='+this.value
