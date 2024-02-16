@@ -47,8 +47,12 @@
 	}
 
 	.post-block {
-		width: calc(50% - #{$grid-padding}*2);
+		width: calc(100% - #{$grid-padding}*2);
 		margin: $grid-padding;
+		
+		@include rwd(small) {
+			width: calc(50% - #{$grid-padding}*2);
+		}
 		
 		@include rwd(medium) {
 			width: calc(33.3333% - #{$grid-padding}*2);
