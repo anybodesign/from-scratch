@@ -53,8 +53,10 @@ wp.domReady( function() {
 		'core/preformatted',
 		'core/details',
 		
-		'gravityforms/form', // Gravity & plugins
-		'contact-form-7/contact-form-selector', // CF7		
+		'gravityforms/form', // Gravity & other plugins
+		'contact-form-7/contact-form-selector',
+		'wp-grid-builder/facet',
+		'wp-grid-builder/grid',		
 	];
 	
 	const allowedEmbedBlocks = [
