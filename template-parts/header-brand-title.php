@@ -7,9 +7,9 @@
 				
 				<?php } else { ?>
 				
-				<p class="site-title">
+				<span class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e('Go to Home Page', 'from-scratch'); ?>">
 					<?php get_template_part('template-parts/header', 'brand-logo'); ?>
 					</a>
-				</p>
+				</span>
 				<?php } ?>
