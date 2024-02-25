@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '5.8.2' );
+define( 'FS_THEME_VERSION', '5.9' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -551,28 +551,21 @@ include_once( FS_THEME_DIR . '/inc/fs-extended-search.php' );
 
 // Archives titles
 
-add_filter( 'get_the_archive_title', function ($title) {
-
-    if ( is_category() ) {
-
-        $title = single_cat_title( '', false );
-
-    } elseif ( is_tag() ) {
-
-        $title = single_tag_title( '', false );
-
-    } elseif ( is_post_type_archive() ) {
-
-        $title = post_type_archive_title( '', false );
-    
-    } elseif ( is_tax() ) {
-
-        $title = single_term_title( '', false );
-    } 
-
-    return $title;
-
-});
+function fs_theme_archive_title( $title ) {
+	
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	} elseif ( is_tax() ) {
+		$title = single_term_title( '', false );
+	}
+ 
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'fs_theme_archive_title', 10, 2 );
 
 
 // Excerpts lenght
