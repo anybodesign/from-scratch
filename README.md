@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 5.9 - 2024.02.25
+* Fancybox init fix
+* get_the_archive_title fix
+
 ### 5.8.2 - 2024.02.16
 * Site title tag
 * Page filter site_url
