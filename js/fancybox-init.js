@@ -13,7 +13,8 @@ jQuery(document).ready(function($) {
 		}
 	});
 	
-	//$('.page-wrap').find("a:has(img)").attr('data-fancybox', '');
-	$('.page-wrap').find('figure a:has(img)').addClass('fancypop');
-	
+	$('.page-wrap').find('figure a[href*=".jpeg"]').addClass('fancypop');
+	$('.page-wrap').find('figure a[href*=".jpg"]').addClass('fancypop');
+	$('.page-wrap').find('figure a[href*=".png"]').addClass('fancypop');
+	$('.page-wrap').find('figure a[href*=".webp"]').addClass('fancypop');
 });
