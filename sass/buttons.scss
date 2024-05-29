@@ -6,7 +6,8 @@
 
 .action-btn,
 .wp-block-button__link,
-.wp-block-file__button {
+.wp-block-file__button,
+.gform_next_button {
 	display: inline-block;
 	padding: $grid-padding $grid-padding*2;
 	font-size: 1.4rem;
