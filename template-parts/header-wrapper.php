@@ -16,16 +16,20 @@
 		<div class="row inner">	
 		<?php 
 			if ( ! $nav_group ) {
-				get_template_part('template-parts/header', 'toolbar');
+				if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+					get_template_part('template-parts/header', 'toolbar');
+				}
 			} 
 			get_template_part('template-parts/header', 'brand'); 
 			
-			if ( ! $nav_group ) {
-				get_template_part('template-parts/header', 'nav');
-			} else if ( $nav_group ) {
-				get_template_part('template-parts/header', 'nav-alt');
-			} else if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
-				// Nada :)
+			if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+				if ( ! $nav_group ) {
+					get_template_part('template-parts/header', 'nav');
+				} else if ( $nav_group ) {
+					get_template_part('template-parts/header', 'nav-alt');
+				} else if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+					// Nada :)
+				}
 			}
 		?>
 		</div>
