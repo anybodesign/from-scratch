@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die(); ?>
 			
-			<?php if ( has_nav_menu( 'toolbar_menu' ) || get_theme_mod('searchbar') ) : ?>
+			<?php if ( has_nav_menu( 'toolbar_menu' ) || get_theme_mod('searchbar') || get_theme_mod('contrast') ) : ?>
 			<div class="site-toolbar<?php if ( get_theme_mod('searchbar') ) { echo ' has-search'; } ?>">
 					
 				<?php if ( has_nav_menu( 'toolbar_menu' ) ) { ?>
