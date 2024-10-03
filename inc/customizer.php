@@ -24,6 +24,10 @@ function fs_customizer_scripts() {
 // Customizer Settings
  
 function fs_customize_register($fs_customize) {
+	
+	if (!current_user_can('edit_theme_options')) {
+		return;
+	}
 
 	// Title and Description
 	// -
@@ -182,7 +186,8 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default'			=> false,
 				'transport'			=> 'refresh',
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -199,7 +204,8 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default'			=> false,
 				'transport'			=> 'refresh',
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -295,7 +301,8 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default'			=> false,
 				'transport'			=> 'postMessage',
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -332,7 +339,8 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default'			=> false,
 				'transport'			=> 'postMessage',
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -356,7 +364,8 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'site_logo', 
 			array(
-				'sanitize_callback'	=> 'esc_url_raw'
+				'sanitize_callback'	=> 'esc_url_raw',
+				'capability' => 'edit_theme_options'
 			)
 		);
 		$fs_customize->add_control(
@@ -374,7 +383,8 @@ function fs_customize_register($fs_customize) {
 		
 		$fs_customize->add_setting('site_logo_height', array(
 			'transport'			=> 'postMessage',
-			'sanitize_callback'	=> 'sanitize_text_field',		
+			'sanitize_callback'	=> 'sanitize_text_field',
+			'capability'		=> 'edit_theme_options'		
 		));
 		$fs_customize->add_control('site_logo_height', array(
 			'type'			=> 'number',
@@ -388,7 +398,8 @@ function fs_customize_register($fs_customize) {
 		
 		$fs_customize->add_setting(
 			'site_logo_mobile', array(
-				'sanitize_callback'		=> 'esc_url_raw'
+				'sanitize_callback'		=> 'esc_url_raw',
+				'capability'		=> 'edit_theme_options'
 			)
 		);
 		$fs_customize->add_control( 
@@ -406,7 +417,8 @@ function fs_customize_register($fs_customize) {
 		
 		$fs_customize->add_setting('site_logo_mobile_height', array(
 			'transport'			=> 'postMessage',
-			'sanitize_callback'	=> 'sanitize_text_field',		
+			'sanitize_callback'	=> 'sanitize_text_field',
+			'capability'		=> 'edit_theme_options'		
 		));
 		$fs_customize->add_control('site_logo_mobile_height', array(
 			'type'			=> 'number',
@@ -443,7 +455,8 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default'			=> false,
 				'transport'			=> 'postMessage',
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -481,7 +494,8 @@ function fs_customize_register($fs_customize) {
 			'contrast', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -527,7 +541,8 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default'			=> false,
 				'transport'			=> 'postMessage',				
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -570,7 +585,8 @@ function fs_customize_register($fs_customize) {
 			'back2top', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -608,7 +624,8 @@ function fs_customize_register($fs_customize) {
 			'use_ias', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'	
 			)
 		);
 		$fs_customize->add_control(
@@ -627,7 +644,8 @@ function fs_customize_register($fs_customize) {
 			'use_scrollout', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -646,7 +664,8 @@ function fs_customize_register($fs_customize) {
 			'use_fancybox', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'	
 			)
 		);
 		$fs_customize->add_control(
@@ -665,7 +684,8 @@ function fs_customize_register($fs_customize) {
 			'disable_colors', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'	
 			)
 		);
 		$fs_customize->add_control(
@@ -684,7 +704,8 @@ function fs_customize_register($fs_customize) {
 			'disable_fontsizes', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'	
 			)
 		);
 		$fs_customize->add_control(
@@ -704,7 +725,8 @@ function fs_customize_register($fs_customize) {
 			'enable_customlogo', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -720,7 +742,8 @@ function fs_customize_register($fs_customize) {
 			'enable_custombg', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -736,7 +759,8 @@ function fs_customize_register($fs_customize) {
 			'enable_customheader', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -752,7 +776,8 @@ function fs_customize_register($fs_customize) {
 			'enable_postformats', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -768,7 +793,8 @@ function fs_customize_register($fs_customize) {
 			'enable_woocommerce', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -789,7 +815,8 @@ function fs_customize_register($fs_customize) {
 		// Banner text
 		
 		$fs_customize->add_setting('blog_excerpt', array(
-			'sanitize_callback'	=> 'sanitize_text_field',		
+			'sanitize_callback'	=> 'sanitize_text_field',
+			'capability'		=> 'edit_theme_options'		
 		));
 		$fs_customize->add_control('blog_excerpt', array(
 			'type'			=> 'textarea',
@@ -804,7 +831,8 @@ function fs_customize_register($fs_customize) {
 			'blog_sidebar', 
 			array(
 				'default'			=> true,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -821,7 +849,8 @@ function fs_customize_register($fs_customize) {
 			'post_sidebar', 
 			array(
 				'default'			=> true,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -859,7 +888,8 @@ function fs_customize_register($fs_customize) {
 			'ex_lenght', 
 			array(
 				'default'				=> 24,
-				'sanitize_callback'		=> 'sanitize_text_field'		
+				'sanitize_callback'		=> 'sanitize_text_field',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -894,7 +924,8 @@ function fs_customize_register($fs_customize) {
 			'meta_author', 
 			array(
 				'default'			=> true,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -910,7 +941,8 @@ function fs_customize_register($fs_customize) {
 			'meta_category', 
 			array(
 				'default'			=> true,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -929,7 +961,8 @@ function fs_customize_register($fs_customize) {
 			'share_box', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'
 			)
 		);
 		$fs_customize->add_control(
@@ -946,7 +979,8 @@ function fs_customize_register($fs_customize) {
 			'enable_posttags', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -971,6 +1005,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default' => 'version1',
 				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
+				'capability'		=> 'edit_theme_options'
 			)
 		);
 		$fs_customize->add_control(
@@ -992,7 +1027,8 @@ function fs_customize_register($fs_customize) {
 			'child_pages', 
 			array(
 				'default'			=> 'none',
-				'sanitize_callback' => 'fs_customizer_sanitize_radio_child_pages',		
+				'sanitize_callback' => 'fs_customizer_sanitize_radio_child_pages',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -1016,7 +1052,8 @@ function fs_customize_register($fs_customize) {
 			'show_desc', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -1038,6 +1075,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'default' => 'barlow',
 				'sanitize_callback' => 'fs_customizer_sanitize_font_layout',
+				'capability'		=> 'edit_theme_options'
 			)
 		);
 		$fs_customize->add_control(
@@ -1065,7 +1103,8 @@ function fs_customize_register($fs_customize) {
 			'has_bg', 
 			array(
 				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
 			)
 		);
 		$fs_customize->add_control(
@@ -1083,7 +1122,8 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'bg_default', 
 			array(
-				'sanitize_callback'	=> 'esc_url_raw'
+				'sanitize_callback'	=> 'esc_url_raw',
+				'capability'		=> 'edit_theme_options'
 			)
 		);
 		$fs_customize->add_control( 
@@ -1125,7 +1165,8 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'bg_404', 
 			array(
-				'sanitize_callback'	=> 'esc_url_raw'
+				'sanitize_callback'	=> 'esc_url_raw',
+				'capability'		=> 'edit_theme_options'
 			)
 		);
 		$fs_customize->add_control( 
