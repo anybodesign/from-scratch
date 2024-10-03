@@ -121,6 +121,17 @@ endif;
 add_action( 'after_setup_theme', 'fs_setup' );
 
 
+// Dark mode
+
+function fs_add_highcontrast_body_class($classes) {
+	if (isset($_COOKIE['highcontrast']) && $_COOKIE['highcontrast'] === 'yes') {
+		$classes[] = 'high-contrast';
+	}
+	return $classes;
+}
+add_filter('body_class', 'fs_add_highcontrast_body_class');
+
+
 // Disable Tags
 
 if ( get_theme_mod('enable_posttags') != true ) {
@@ -262,6 +273,14 @@ function fs_scripts_load() {
 				FS_THEME_VERSION, 
 				true
 			);
+			// Passer les URLs des images au script JS
+			wp_localize_script('high-contrast', 'contrastVars', array(
+				'contrastOn' => FS_THEME_URL . '/img/ui/contrast-on.svg',
+				'contrastOff' => FS_THEME_URL . '/img/ui/contrast-off.svg',
+				'restoreContrast' => __('Restore contrast', 'from-scratch'),
+				'highContrast' => __('Toggle high contrast', 'from-scratch')
+			));
+			
 			wp_register_script(
 				'cookie', 
 				FS_THEME_URL . '/js/jquery.cookie.js', 
