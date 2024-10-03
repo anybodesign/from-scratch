@@ -3,11 +3,11 @@ Theme Name: From Scratch
 Description: Have fun with Gutenberg style editor.
 */
 
-@import 'reset.scss';
-@import 'variables.scss';
-//@import 'variables-colors.scss';
-@import 'variables-fonts.scss';
-@import 'mixins.scss';
+@import '_reset.scss';
+@import '_variables.scss';
+//@import '_variables-colors.scss';
+@import '_variables-fonts.scss';
+@import '_mixins.scss';
 //@import 'webfonts.scss';
 @import 'webfonts-admin.scss';
 
