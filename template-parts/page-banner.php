@@ -12,5 +12,7 @@
 ?>
 					<?php 
 						get_template_part( 'template-parts/page-banner', 'content' );
-						get_template_part( 'template-parts/page-banner', 'breadcrumbs' );
+                        if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+						  get_template_part( 'template-parts/page-banner', 'breadcrumbs' );
+                        }
 					?>
