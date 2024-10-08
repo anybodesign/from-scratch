@@ -102,6 +102,7 @@ p#user_switching_switch_on {
 /* = Helpers
 /* ------------------------- */
 
+.screen-reader-text,
 .a11y-hidden {
 	@include a11y-hidden();
 }
