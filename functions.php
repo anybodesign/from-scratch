@@ -430,6 +430,14 @@ function fs_main_style() {
 add_action( 'wp_enqueue_scripts', 'fs_main_style' );
 
 
+// Security fix
+
+add_feed('rss2', 'fs_my_custom_feed');
+function fs_my_custom_feed() {  
+	load_template( FS_THEME_DIR . '/feed-rss2.php');  
+}
+
+
 // ------------------------
 // Theme Stuff
 // ------------------------
@@ -970,20 +978,6 @@ if( class_exists('acf') ) {
 	}
 	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
 	*/
-}
-
-
-// WP-Rocket
-
-if ( function_exists('rocket_load_textdomain') ) {
-	function fs_wp_rocket_add_purge_posts_to_author() {
-		// gets the author role object
-		$role = get_role('editor');
-		
-		// add a new capability
-		$role->add_cap('rocket_purge_cache', true);
-	}
-	add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
 }
 
 // Koko 
