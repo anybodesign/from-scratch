@@ -10,16 +10,14 @@ define( 'FS_THEME_URL', get_template_directory_uri() );
 
 if ( ! isset( $content_width ) )
 	$content_width = 2048;
-
-
+	
 if ( ! function_exists( 'fs_setup' ) ) :
 
 function fs_setup() {
 	
 	// I18n
 	
-	load_theme_textdomain( 'from-scratch', FS_THEME_DIR . '/languages' );
-	
+	load_theme_textdomain( 'from-scratch', FS_THEME_DIR . '/languages' );	
 	
 	// Theme Support
 	
@@ -66,7 +64,7 @@ function fs_setup() {
 	if ( get_theme_mod('enable_customheader') == true ) {
 		
 		add_theme_support( 'custom-header', array(
-			'default-image'          => get_template_directory_uri() . '/img/header.jpg',
+			'default-image'          => FS_THEME_URL . '/img/header.jpg',
 			'width'                  => 0,
 			'height'                 => 0,
 			'flex-height'            => false,
