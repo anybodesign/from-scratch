@@ -19,6 +19,9 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ### 6.1 - 2024.11.18
 * Load text domain fix
+* SCSS import fix
+* RSS security fix
+* Max-with mixin enhanced
 
 ### 6.0 - 2024.10.17
 * Breadcrumbs condition
