@@ -41,7 +41,12 @@ select {
 	@include focus2() {
 		background-color: var(--text_color);
 		color: #fff;
-		outline: none;	 	
+		outline: none;
+		
+		// Select Chrome bugfix
+		option {
+			color: var(--text_color);
+		}	 	
 	}	
 }
 

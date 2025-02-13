@@ -10,9 +10,9 @@
  * @version 1.0
  */
 ?>
-					<?php 
-						get_template_part( 'template-parts/page-banner', 'content' );
+				<?php
+                    get_template_part( 'template-parts/page-banner', 'content' );
                         if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
-						  get_template_part( 'template-parts/page-banner', 'breadcrumbs' );
+                            get_template_part( 'template-parts/page-banner', 'breadcrumbs' );
                         }
-					?>
+				?>
