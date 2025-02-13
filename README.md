@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://git
 
 ## Changelog
 
+### 6.2 - 2025.02.13
+* Text domain fix
+* CSS bugfix
+
 ### 6.1 - 2024.11.18
 * Load text domain fix
 * SCSS import fix
