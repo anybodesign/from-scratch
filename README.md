@@ -13,7 +13,7 @@ Documentation: <https://github.com/YahnisElsts/plugin-update-checker>
 ### ACF Option page and json output
 
 If you don’t need the ACF features, remove or edit the concerned ACF lines in the functions.php file. ACF Pro is required.\
-If you need custom ACF blocks, please install [AD ACF Blocks plugin](https://github.com/anybodesign/ad-acf-blocks).
+If you need custom ACF blocks, please install [AD ACF Blocks 2 plugin](https://github.com/anybodesign/ad-acf-blocks-2).
 
 ## Changelog
 
