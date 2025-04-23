@@ -17,6 +17,11 @@ If you need custom ACF blocks, please install [AD ACF Blocks 2 plugin](https://g
 
 ## Changelog
 
+### 6.3 - 2025.04.23
+* Function_exist fix
+* Removed tinyMCE styles
+* Readme fix
+
 ### 6.2 - 2025.02.13
 * Text domain fix
 * CSS bugfix
