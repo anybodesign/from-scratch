@@ -460,18 +460,21 @@ if ( get_theme_mod('disable_fontsizes') != true ) {
 
 // Register Navigation Menus
 
-function fs_custom_nav_menus() {
-
-	$locations = array(
-		'toolbar_menu' =>  esc_html__( 'Toolbar Menu', 'from-scratch' ),
-		'main_menu' =>  esc_html__( 'Main Menu', 'from-scratch' ),
-		'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' ),
-		'social_menu' => esc_html__( 'Social Menu', 'from-scratch' )
-	);
-	register_nav_menus( $locations );
-
+if ( !function_exists('fs_custom_nav_menus') ) {
+	
+	function fs_custom_nav_menus() {
+	
+		$locations = array(
+			'toolbar_menu' =>  esc_html__( 'Toolbar Menu', 'from-scratch' ),
+			'main_menu' =>  esc_html__( 'Main Menu', 'from-scratch' ),
+			'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' ),
+			'social_menu' => esc_html__( 'Social Menu', 'from-scratch' )
+		);
+		register_nav_menus( $locations );
+	
+	}
+	add_action( 'init', 'fs_custom_nav_menus' );
 }
-add_action( 'init', 'fs_custom_nav_menus' );
 
 // Subpages menu
 
@@ -631,205 +634,177 @@ function fs_share_excerpt($count, $post_id){
 
 // Image Sizes
 
-add_image_size( 'thumbnail-hd', 320, 320, true );
-add_image_size( 'medium-hd', 640, 640, false );
-add_image_size( 'large-hd', 2048, 2048, false );
-add_image_size( 'screen-md', 720, 450, true );
-add_image_size( 'screen-hd', 1440, 900, true );
-// add_image_size( 'video-md', 960, 540, true );
-// add_image_size( 'video-hd', 1920, 1080, true );
-
-function fs_custom_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'thumbnail-hd'	=> __( 'Thumbnail x2', 'from-scratch' ),
-        'medium-hd'		=> __( 'Medium x2', 'from-scratch' ),
-        'large-hd'		=> __( 'Large x2', 'from-scratch' ),
-        'screen-md'		=> __( 'Screen Medium', 'from-scratch' ),
-        'screen-hd'		=> __( 'Screen Full', 'from-scratch' ),
-        // 'video-md'		=> __( 'Video Medium', 'from-scratch' ),
-        // 'video-hd'		=> __( 'Video Full', 'from-scratch' ),
-    ) );
+if ( !function_exists('fs_custom_sizes') ) {
+	
+	add_image_size( 'thumbnail-hd', 320, 320, true );
+	add_image_size( 'medium-hd', 640, 640, false );
+	add_image_size( 'large-hd', 2048, 2048, false );
+	add_image_size( 'screen-md', 720, 450, true );
+	add_image_size( 'screen-hd', 1440, 900, true );
+	// add_image_size( 'video-md', 960, 540, true );
+	// add_image_size( 'video-hd', 1920, 1080, true );
+	
+	function fs_custom_sizes( $sizes ) {
+		return array_merge( $sizes, array(
+			'thumbnail-hd'	=> __( 'Thumbnail x2', 'from-scratch' ),
+			'medium-hd'		=> __( 'Medium x2', 'from-scratch' ),
+			'large-hd'		=> __( 'Large x2', 'from-scratch' ),
+			'screen-md'		=> __( 'Screen Medium', 'from-scratch' ),
+			'screen-hd'		=> __( 'Screen Full', 'from-scratch' ),
+			// 'video-md'		=> __( 'Video Medium', 'from-scratch' ),
+			// 'video-hd'		=> __( 'Video Full', 'from-scratch' ),
+		) );
+	}
+	add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
 }
-add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
-
 
 // Background image
 
-function fs_bg_img() {
+if ( !function_exists('fs_bg_img') ) {
 	
-	$default = get_theme_mod('bg_default');
-	$blog = get_theme_mod('bg_blog');
-	$error = get_theme_mod('bg_404');
-	
-	if ( is_404() && $error ) {
-		$bg = ' data-bg="has-bg" style="background-image: url('.$error.')"';
-	
-	} else if ( ( is_home() || is_category() ) && $blog ) {
-		$bg = ' data-bg="has-bg" style="background-image: url('.$blog.')"';
+	function fs_bg_img() {
 		
-	} else if ( '' != get_the_post_thumbnail() ) {
-		$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
-		$bg = ' data-bg="has-bg" style="background-image: url('.$img_url[0].')"';
-	
-	} else if ( $default ) {
-		$bg = ' data-bg="has-bg" style="background-image: url('.$default.')"';
-	
-	} else {
-		$bg = null;
+		$default = get_theme_mod('bg_default');
+		$blog = get_theme_mod('bg_blog');
+		$error = get_theme_mod('bg_404');
+		
+		if ( is_404() && $error ) {
+			$bg = ' data-bg="has-bg" style="background-image: url('.$error.')"';
+		
+		} else if ( ( is_home() || is_category() ) && $blog ) {
+			$bg = ' data-bg="has-bg" style="background-image: url('.$blog.')"';
+			
+		} else if ( '' != get_the_post_thumbnail() ) {
+			$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
+			$bg = ' data-bg="has-bg" style="background-image: url('.$img_url[0].')"';
+		
+		} else if ( $default ) {
+			$bg = ' data-bg="has-bg" style="background-image: url('.$default.')"';
+		
+		} else {
+			$bg = null;
+		}
+		
+		echo $bg;
 	}
 	
-	echo $bg;
 }
 
 // Widgets
 
-function fs_widgets_init() {
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Blog Widgets', 'from-scratch' ),
-		'id'			=>	'widgets_area1',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets #1', 'from-scratch' ),
-		'id'			=>	'widgets_footer1',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets #2', 'from-scratch' ),
-		'id'			=>	'widgets_footer2',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets #3', 'from-scratch' ),
-		'id'			=>	'widgets_footer3',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
+if ( !function_exists('fs_widgets_init') ) {
+	
+	function fs_widgets_init() {
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Blog Widgets', 'from-scratch' ),
+			'id'			=>	'widgets_area1',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Footer Widgets #1', 'from-scratch' ),
+			'id'			=>	'widgets_footer1',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Footer Widgets #2', 'from-scratch' ),
+			'id'			=>	'widgets_footer2',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Footer Widgets #3', 'from-scratch' ),
+			'id'			=>	'widgets_footer3',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+	}
+	add_action( 'widgets_init', 'fs_widgets_init' );
 }
-add_action( 'widgets_init', 'fs_widgets_init' );
-
-
-// Tinymce class
-
-function fs_mce_buttons_2($buttons) {
-    array_unshift($buttons, 'styleselect');
-    return $buttons;
-}
-add_filter('mce_buttons_2', 'fs_mce_buttons_2');
-
-function fs_tiny_formats($init_array) {
-
-    $style_formats = array(
-
-        array(
-            'title' => __( 'Text intro', 'from-scratch' ),
-            'selector' => 'p',
-            'classes' => 'text-intro',
-            'wrapper' => true,
-        ),
-        array(
-            'title' => __( 'Text mentions', 'from-scratch' ),
-            'selector' => 'p',
-            'classes' => 'text-mentions',
-            'wrapper' => true,
-        ),
-        array(
-            'title' => __( 'Action button', 'from-scratch' ),
-            'selector' => 'a',
-            'classes' => 'action-btn',
-        )
-    );
-    
-    // Filter
-    $style_formats = apply_filters( 'fs_tiny_formats', $style_formats ); 
-    
-    $init_array['style_formats'] = json_encode($style_formats);
-    return $init_array;
-
-}
-add_filter('tiny_mce_before_init', 'fs_tiny_formats');
 
 
 // Custom search form
 
-function fs_search_form( $form ) {
-    $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <label class="a11y-hidden" for="s">' . __( 'Search for:', 'from-scratch' ) . '</label>
-    <input type="search" value="' . get_search_query() . '" name="s" id="s">
-    <input type="submit" class="action-btn" id="searchsubmit" value="'. esc_attr__( 'Search', 'from-scratch' ) .'">
-    </form>';
- 
-    return $form;
+if ( !function_exists('fs_search_form') ) {
+	
+	function fs_search_form( $form ) {
+		$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+		<label class="a11y-hidden" for="s">' . __( 'Search for:', 'from-scratch' ) . '</label>
+		<input type="search" value="' . get_search_query() . '" name="s" id="s">
+		<input type="submit" class="action-btn" id="searchsubmit" value="'. esc_attr__( 'Search', 'from-scratch' ) .'">
+		</form>';
+	
+		return $form;
+	}
+	add_filter( 'get_search_form', 'fs_search_form' );
 }
-add_filter( 'get_search_form', 'fs_search_form' );
-
 
 // Custom comment HTML
 
-function fs_custom_comments($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-   
-   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
-			<div class="comment-author avatar">
-				<?php
-					echo get_avatar( $comment, 192 );
-				?>
-			</div>
-			
-			<div class="comment-content">
-				<div class="comment-author-name">
-					<?php 
-						printf( '<span class="fn">%s</span>', get_comment_author_link() );
+if ( !function_exists('fs_custom_comments') ) {
+	
+	function fs_custom_comments($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment; ?>
+	
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+			<article id="comment-<?php comment_ID(); ?>" class="comment">
+				<div class="comment-author avatar">
+					<?php
+						echo get_avatar( $comment, 192 );
 					?>
 				</div>
-				<div class="comment-date">
-					<?php 
-						printf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-							esc_url( get_comment_link( $comment->comment_ID ) ),
-							get_comment_time( 'c' ),
-							sprintf( __( '%1$s at %2$s', 'from-scratch' ), get_comment_date(), get_comment_time() )
-						);
-					?>
+				
+				<div class="comment-content">
+					<div class="comment-author-name">
+						<?php 
+							printf( '<span class="fn">%s</span>', get_comment_author_link() );
+						?>
+					</div>
+					<div class="comment-date">
+						<?php 
+							printf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+								esc_url( get_comment_link( $comment->comment_ID ) ),
+								get_comment_time( 'c' ),
+								sprintf( __( '%1$s at %2$s', 'from-scratch' ), get_comment_date(), get_comment_time() )
+							);
+						?>
+					</div>
+					<div class="comment-author-text">
+						<?php if ($comment->comment_approved == '0') : ?>
+							<em class="pending"><?php esc_html_e('Your comment is awaiting moderation.', 'from-scratch') ?></em>
+						<?php endif; ?>
+						
+						<?php comment_text(); ?>
+					</div>
 				</div>
-				<div class="comment-author-text">
-					<?php if ($comment->comment_approved == '0') : ?>
-						<em class="pending"><?php esc_html_e('Your comment is awaiting moderation.', 'from-scratch') ?></em>
-					<?php endif; ?>
-					
-					<?php comment_text(); ?>
+				
+				<div class="reply">
+					<?php comment_reply_link( array_merge($args, array(
+						'reply_text' => __('Reply', 'from-scratch'),
+						'depth'      => $depth,
+						'max_depth'  => $args['max_depth']
+						)
+					)); ?>
 				</div>
-			</div>
+				<?php edit_comment_link( __( 'Edit', 'from-scratch' ), '<span class="edit-link">', '</span>' ); ?>
+				
+			</article>
 			
-			<div class="reply">
-				<?php comment_reply_link( array_merge($args, array(
-				    'reply_text' => __('Reply', 'from-scratch'),
-				    'depth'      => $depth,
-				    'max_depth'  => $args['max_depth']
-				    )
-				)); ?>
-			</div>
-			<?php edit_comment_link( __( 'Edit', 'from-scratch' ), '<span class="edit-link">', '</span>' ); ?>
-			
-		</article>
-		
-<?php }
-
+	<?php }
+}
 
 // Custom loops 
 
