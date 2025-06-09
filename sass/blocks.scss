@@ -288,7 +288,8 @@ p.has-background,
 
 // Separators 
 
-hr {
+hr,
+.wp-block-separator {
 	height: 0; 
 	border: 0;
 	border-top: var(--text_color) 1px solid;
@@ -303,9 +304,6 @@ hr {
 	}
 }
 
-.wp-block-separator {
-	@extend hr;
-}
 .wp-block-separator {
 	
 	.page-content & {

@@ -147,7 +147,7 @@
 	
 	transform: translateX(-110%);
 	transition: transform .4s ease-in-out;
-	z-index: 80;
+	z-index: 3;
 	
 	.menu-opened + & {
 		transform: translateX(0);

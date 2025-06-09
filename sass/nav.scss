@@ -464,7 +464,7 @@
 	right: $grid-padding;
 	transform: translateY(-125%);
 	background-color: #fff;
-	z-index: 90;
+	z-index: 4;
 	
 	.burger-title {
 		@include a11y-hidden();
