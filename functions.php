@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '6.3' );
+define( 'FS_THEME_VERSION', '6.4' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -598,37 +598,45 @@ add_filter( 'get_the_archive_title', 'fs_theme_archive_title', 10, 2 );
 
 // Excerpts lenght
 
-function fs_custom_excerpt_length( $length ) {
-	$words = get_theme_mod('ex_lenght', 24);
-	return $words;
+if ( !function_exists('fs_custom_excerpt_length') ) {
+		
+	function fs_custom_excerpt_length( $length ) {
+		$words = get_theme_mod('ex_lenght', 24);
+		return $words;
+	}
+	add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
 }
-add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
-
 
 // Excerpt link
 
-function fs_excerpt_more( $more ) {
-    return sprintf( '&hellip; <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
-        get_permalink( get_the_ID() ),
-        __( 'Read More', 'from-scratch' ) . ' <span class="a11y-hidden">'.__( 'of ', 'from-scratch' ).get_the_title().'</span>'
-    );
+if ( !function_exists('fs_excerpt_more') ) {
+	
+	function fs_excerpt_more( $more ) {
+		return sprintf( '&hellip; <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
+			get_permalink( get_the_ID() ),
+			__( 'Read More', 'from-scratch' ) . ' <span class="a11y-hidden">'.__( 'of ', 'from-scratch' ).get_the_title().'</span>'
+		);
+	}
+	add_filter( 'excerpt_more', 'fs_excerpt_more' );
+	
 }
-add_filter( 'excerpt_more', 'fs_excerpt_more' );
-
 
 // Custom excerpt
 // https://gist.github.com/samjbmason/4050714
 
-function fs_share_excerpt($count, $post_id){
-  $permalink = get_permalink($post_id);
-  $excerpt = get_post($post_id);
-  $excerpt = $excerpt->post_content;
-  $excerpt = strip_tags($excerpt);
-  $excerpt = substr($excerpt, 0, $count);
-  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-
-  $excerpt = $excerpt.'...';
-  return $excerpt;
+if ( !function_exists('fs_share_excerpt') ) {
+		
+	function fs_share_excerpt($count, $post_id){
+	$permalink = get_permalink($post_id);
+	$excerpt = get_post($post_id);
+	$excerpt = $excerpt->post_content;
+	$excerpt = strip_tags($excerpt);
+	$excerpt = substr($excerpt, 0, $count);
+	$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+	
+	$excerpt = $excerpt.'...';
+	return $excerpt;
+	}
 }
 
 
