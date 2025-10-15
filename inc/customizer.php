@@ -955,6 +955,27 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		// Comments
+		
+		$fs_customize->add_setting(
+			'disable_comments', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
+				'capability'		=> 'edit_theme_options'		
+			)
+		);
+		$fs_customize->add_control(
+			'disable_comments', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Disable comment form', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'disable_comments',
+			)
+		);
+		
+		
 		// Sharing 
 		
 		$fs_customize->add_setting(

@@ -30,10 +30,11 @@ get_header(); ?>
 					?>
 				</div>
 				
-				<?php 
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				?>	
+				<?php if ( get_theme_mod('disable_comments') != false ) {
+						
+						if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						}
+				} ?>	
 				
 <?php get_footer(); ?>
