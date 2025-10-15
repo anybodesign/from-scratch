@@ -17,6 +17,11 @@ If you need custom ACF blocks, please install [AD ACF Blocks 2 plugin](https://g
 
 ## Changelog
 
+### 6.5 - 2025.10.15
+* Customizer: Disable comments form
+* Removed extra padding with sidebar
+* Luciole font update
+
 ### 6.4 - 2025.06.09
 * More Function_exist conditions
 * CSS nav fix
