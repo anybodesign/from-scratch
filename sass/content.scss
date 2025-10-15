@@ -89,6 +89,15 @@
 		
 		.has-sidebar & {
 			padding-right: 8.3333%;
+			
+			& > p,
+			& > [class*="contact-form-7"],
+			& .acf-block-text--1col,
+			& #comments,
+			& > p.has-text-align-center {
+				padding-right: 1rem;
+				padding-left: 1rem;
+			}
 		}
 	}
 	
