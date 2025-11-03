@@ -1,22 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2023-12-21 15:03+0100\n"
-"PO-Revision-Date: 2023-12-21 15:03+0100\n"
-"Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
+"POT-Creation-Date: 2025-11-03 16:05+0100\n"
+"PO-Revision-Date: 2025-11-03 16:05+0100\n"
+"Last-Translator: Thomas <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -36,109 +35,104 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: functions.php:452 template-parts/header-toolbar.php:7
+#: functions.php:278
+msgid "Restore contrast"
+msgstr "Retablir le contraste"
+
+#: functions.php:279
+msgid "Toggle high contrast"
+msgstr "Activation du contraste élevé"
+
+#: functions.php:468
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:453 template-parts/header-nav-alt.php:17
-#: template-parts/header-nav.php:6
+#: functions.php:469
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:454 template-parts/footer-copyright.php:16
+#: functions.php:470
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:455
+#: functions.php:471
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:496
+#: functions.php:513
 msgid "Secondary navigation"
 msgstr "Navigation secondaire"
 
-#: functions.php:515 template-parts/page-banner-title.php:12
+#: functions.php:532
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
-#: functions.php:603
+#: functions.php:617
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:603
+#: functions.php:617
 msgid "of "
 msgstr "de "
 
-#: functions.php:647
+#: functions.php:657
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:648
+#: functions.php:658
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:649
+#: functions.php:659
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:650
+#: functions.php:660
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:651
+#: functions.php:661
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:691
+#: functions.php:707
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:700
+#: functions.php:716
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:709
+#: functions.php:725
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:718
+#: functions.php:734
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:743
-msgid "Text intro"
-msgstr "Texte d’intro"
-
-#: functions.php:749
-msgid "Text mentions"
-msgstr "Mentions"
-
-#: functions.php:755
-msgid "Action button"
-msgstr "Bouton d’action"
-
-#: functions.php:775
+#: functions.php:753
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:777 template-parts/header-toolbar-search.php:6
+#: functions.php:755
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:809
+#: functions.php:789
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:815
+#: functions.php:795
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:824
+#: functions.php:804
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:830
+#: functions.php:810
 msgid "Edit"
 msgstr "Modifier"
 
@@ -150,11 +144,11 @@ msgstr "Icônes de réseaux sociaux"
 msgid "Icon"
 msgstr "Icône"
 
-#: inc/color-palettes.php:25 inc/customizer.php:125
+#: inc/color-palettes.php:25 inc/customizer.php:129
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: inc/color-palettes.php:30 inc/customizer.php:150
+#: inc/color-palettes.php:30 inc/customizer.php:154
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
@@ -162,11 +156,11 @@ msgstr "Couleur secondaire"
 msgid "Accent color"
 msgstr "Couleur d’accentuation"
 
-#: inc/color-palettes.php:40 inc/customizer.php:228
+#: inc/color-palettes.php:40 inc/customizer.php:234
 msgid "Text color"
 msgstr "Couleur du texte"
 
-#: inc/color-palettes.php:45 inc/customizer.php:248
+#: inc/color-palettes.php:45 inc/customizer.php:254
 msgid "Background color"
 msgstr "Couleur d’arrière-plan"
 
@@ -174,113 +168,113 @@ msgstr "Couleur d’arrière-plan"
 msgid "White"
 msgstr "Blanc"
 
-#: inc/customizer.php:53
+#: inc/customizer.php:57
 msgid "Header Options"
 msgstr "Options de l'en-tête"
 
-#: inc/customizer.php:60
+#: inc/customizer.php:64
 msgid "Footer Options"
 msgstr "Options du pied de page"
 
-#: inc/customizer.php:67
+#: inc/customizer.php:71
 msgid "Theme Options"
 msgstr "Options du thème"
 
-#: inc/customizer.php:74
+#: inc/customizer.php:78
 msgid "Blog Options"
 msgstr "Options du blog"
 
-#: inc/customizer.php:81
+#: inc/customizer.php:85
 msgid "Layout Options"
 msgstr "Options de mise en page"
 
-#: inc/customizer.php:82
+#: inc/customizer.php:86
 msgid "Choose the layout of the site header and main navigation."
 msgstr ""
 "Choisissez la mise en page pour l'en-tête du site et la navigation "
 "principale."
 
-#: inc/customizer.php:89
+#: inc/customizer.php:93
 msgid "Theme Pictures"
 msgstr "Images du thème"
 
-#: inc/customizer.php:90
+#: inc/customizer.php:94
 msgid "Select default banner pictures."
 msgstr "Sélection des images par défaut pour la bannière."
 
-#: inc/customizer.php:97
+#: inc/customizer.php:101
 msgid "Theme Fonts"
 msgstr "Polices du thème"
 
-#: inc/customizer.php:98
+#: inc/customizer.php:102
 msgid "Choose a font combination for the site."
 msgstr "Choisissez une combinaison de polices pour le site."
 
-#: inc/customizer.php:126
+#: inc/customizer.php:130
 msgid "Main color and titles color"
 msgstr "Couleur principale et couleur des titres"
 
-#: inc/customizer.php:170
+#: inc/customizer.php:174
 msgid "Contrast color"
 msgstr "Couleur de contraste"
 
-#: inc/customizer.php:171
+#: inc/customizer.php:175
 msgid "Links and contrast color"
 msgstr "Couleur des liens et de contraste"
 
-#: inc/customizer.php:192
+#: inc/customizer.php:197
 msgid "Buttons white text"
 msgstr "Texte blanc pour les boutons"
 
-#: inc/customizer.php:209
+#: inc/customizer.php:215
 msgid "Buttons white text on mouse over"
 msgstr "Texte blanc pour les boutons au survol de la souris"
 
-#: inc/customizer.php:249
+#: inc/customizer.php:255
 msgid "Used for components backgrounds"
 msgstr "Utilisé pour les arrière-plans de composants"
 
-#: inc/customizer.php:267
+#: inc/customizer.php:273
 msgid "Page background color"
 msgstr "Couleur de fond page"
 
-#: inc/customizer.php:287
+#: inc/customizer.php:293
 msgid "Header color"
 msgstr "Couleur de l'en-tête"
 
-#: inc/customizer.php:305
+#: inc/customizer.php:312
 msgid "White text in header"
 msgstr "Texte blanc dans l’en-tête"
 
-#: inc/customizer.php:324
+#: inc/customizer.php:331
 msgid "Footer color"
 msgstr "Couleur du pied de page"
 
-#: inc/customizer.php:342
+#: inc/customizer.php:350
 msgid "White text in footer"
 msgstr "Texte blanc dans le footer"
 
-#: inc/customizer.php:367
+#: inc/customizer.php:376
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:368
+#: inc/customizer.php:377
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:381
+#: inc/customizer.php:391
 msgid "Logo height"
 msgstr "Hauteur du logo"
 
-#: inc/customizer.php:382 inc/customizer.php:414
+#: inc/customizer.php:392 inc/customizer.php:426
 msgid "Set a maximum height in pixels."
 msgstr "Définir une hauteur maximale en pixels."
 
-#: inc/customizer.php:399
+#: inc/customizer.php:410
 msgid "Site Logo - Mobile"
 msgstr "Logo du site - mobile"
 
-#: inc/customizer.php:400
+#: inc/customizer.php:411
 msgid ""
 "Specific version of the logo for mobile devices. If none, the default logo "
 "will be used."
@@ -288,124 +282,128 @@ msgstr ""
 "Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
 "par défaut sera utilisé."
 
-#: inc/customizer.php:413
+#: inc/customizer.php:425
 msgid "Mobile logo height"
 msgstr "Hauteur du logo mobile"
 
-#: inc/customizer.php:433
+#: inc/customizer.php:445
 msgid "Hide the site title"
 msgstr "Masquer le titre du site"
 
-#: inc/customizer.php:453
+#: inc/customizer.php:466
 msgid "Hide the website tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:472
+#: inc/customizer.php:485
 msgid "Display search in toolbar"
 msgstr "Afficher la recherche dans la barre d’outils"
 
-#: inc/customizer.php:491
+#: inc/customizer.php:505
 msgid "Display high Contrast button in toolbar"
 msgstr "Afficher un bouton de contraste élevé dans la barre d’outils"
 
-#: inc/customizer.php:515
+#: inc/customizer.php:529
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:516
+#: inc/customizer.php:530
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:537
+#: inc/customizer.php:552
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:561
+#: inc/customizer.php:576
 msgid "Group toolbar and main menu in the same container"
 msgstr ""
 "Regrouper la barre d'outils et le menu principal dans le même conteneur"
 
-#: inc/customizer.php:580
+#: inc/customizer.php:596
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:599
+#: inc/customizer.php:615
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:618
+#: inc/customizer.php:635
 msgid "Load new posts on click"
 msgstr "Charger les nouveaux articles au clic"
 
-#: inc/customizer.php:637
+#: inc/customizer.php:655
 msgid "Use Scrollout to animate blocks on scroll"
 msgstr "Utilisez Scrollout pour animer les blocs au scroll"
 
-#: inc/customizer.php:656
+#: inc/customizer.php:675
 msgid "Use Fancybox to enlarge pictures"
 msgstr "Utilisez Fancybox pour agrandir les images"
 
-#: inc/customizer.php:675
+#: inc/customizer.php:695
 msgid "Disable custom color palette"
 msgstr "Désactiver la palette de couleurs personnalisée"
 
-#: inc/customizer.php:694
+#: inc/customizer.php:715
 msgid "Disable custom font sizes"
 msgstr "Désactiver les tailles de police personnalisées"
 
-#: inc/customizer.php:714
+#: inc/customizer.php:736
 msgid "Enable custom logo"
 msgstr "Activer le logo personnalisé"
 
-#: inc/customizer.php:730
+#: inc/customizer.php:753
 msgid "Enable custom background"
 msgstr "Activer l’arrière-plan personnalisé"
 
-#: inc/customizer.php:746
+#: inc/customizer.php:770
 msgid "Enable custom header"
 msgstr "Activer l’en-tête personnalisé"
 
-#: inc/customizer.php:762
+#: inc/customizer.php:787
 msgid "Enable post formats"
 msgstr "Activez les formats d’articles"
 
-#: inc/customizer.php:778
+#: inc/customizer.php:804
 msgid "Enable Woocommerce support"
 msgstr "Activer le support Woocommerce"
 
-#: inc/customizer.php:796
+#: inc/customizer.php:823
 msgid "Blog introduction text"
 msgstr "Texte d’introduction du blog"
 
-#: inc/customizer.php:814
+#: inc/customizer.php:842
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:831
+#: inc/customizer.php:860
 msgid "Show the sidebar on single posts"
 msgstr "Afficher la barre latérale sur les articles"
 
-#: inc/customizer.php:850
+#: inc/customizer.php:879
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:869
+#: inc/customizer.php:899
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:888
+#: inc/customizer.php:918
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:904
+#: inc/customizer.php:935
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:920
+#: inc/customizer.php:952
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:939
+#: inc/customizer.php:972
+msgid "Disable comment form"
+msgstr "Désactiver le formulaire de commentaire"
+
+#: inc/customizer.php:993
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -413,115 +411,115 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:956
+#: inc/customizer.php:1011
 msgid "Enable post tags"
 msgstr "Activer les étiquettes"
 
-#: inc/customizer.php:980
+#: inc/customizer.php:1036
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:983
+#: inc/customizer.php:1039
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:984
+#: inc/customizer.php:1040
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:1002
+#: inc/customizer.php:1059
 msgid "Child pages location"
 msgstr "Emplacement des pages enfants"
 
-#: inc/customizer.php:1006
+#: inc/customizer.php:1063
 msgid "Page banner"
 msgstr "Bannière de page"
 
-#: inc/customizer.php:1007
+#: inc/customizer.php:1064
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: inc/customizer.php:1008
+#: inc/customizer.php:1065
 msgid "Do not display child pages"
 msgstr "Ne pas afficher les pages enfants"
 
-#: inc/customizer.php:1026
+#: inc/customizer.php:1084
 msgid "Display page description or post metas in the banner"
 msgstr "Afficher la description de la page ou les post metas dans la bannière"
 
-#: inc/customizer.php:1047
+#: inc/customizer.php:1106
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:1050
+#: inc/customizer.php:1109
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:1051
+#: inc/customizer.php:1110
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:1052
+#: inc/customizer.php:1111
 msgid "Playfair & Atkinson"
 msgstr "Playfair & Atkinson"
 
-#: inc/customizer.php:1053
+#: inc/customizer.php:1112
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:1054
+#: inc/customizer.php:1113
 msgid "Miriam Libre & Asap"
 msgstr "Miriam Libre & Asap"
 
-#: inc/customizer.php:1055
+#: inc/customizer.php:1114
 msgid "Custom Child Theme Font"
 msgstr "Police personnalisée du thème enfant"
 
-#: inc/customizer.php:1075
+#: inc/customizer.php:1135
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:1094
+#: inc/customizer.php:1155
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:1095
+#: inc/customizer.php:1156
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:1115
+#: inc/customizer.php:1176
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:1116
+#: inc/customizer.php:1177
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:1136 template-parts/nothing.php:37
+#: inc/customizer.php:1198
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:1137
+#: inc/customizer.php:1199
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/font-sizes.php:6
+#: inc/font-sizes.php:8
 msgid "Small"
 msgstr "Petite"
 
-#: inc/font-sizes.php:11
+#: inc/font-sizes.php:13
 msgid "Regular"
 msgstr "Normale"
 
-#: inc/font-sizes.php:16
+#: inc/font-sizes.php:18
 msgid "Medium"
 msgstr "Moyenne"
 
-#: inc/font-sizes.php:21
+#: inc/font-sizes.php:23
 msgid "Large"
 msgstr "Grande"
 
@@ -597,18 +595,9 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: template-parts/header-toolbar-contrast.php:4
-msgid "Toggle high contrast"
-msgstr "Activation du contraste élevé"
-
 #: template-parts/header-toolbar-contrast.php:6
 msgid "High contrast"
 msgstr "Contraste élevé"
-
-#: template-parts/header-toolbar-contrast.php:8
-#: template-parts/header-toolbar-contrast.php:10
-msgid "Restore contrast"
-msgstr "Retablir le contraste"
 
 #: template-parts/header-toolbar-search.php:4
 msgid "Enter keyword"
@@ -773,6 +762,15 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid "Text intro"
+#~ msgstr "Texte d’intro"
+
+#~ msgid "Text mentions"
+#~ msgstr "Mentions"
+
+#~ msgid "Action button"
+#~ msgstr "Bouton d’action"
 
 #~ msgid "Restore high contrast"
 #~ msgstr "Retablir le contraste"
