@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks 2 plugin](https://g
 
 ## Changelog
 
+### 6.5.1 - 2025.11.03
+* Hot fix: Disable comments form in template
+* FR
+
 ### 6.5 - 2025.10.15
 * Customizer: Disable comments form
 * Removed extra padding with sidebar
