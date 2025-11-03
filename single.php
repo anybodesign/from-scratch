@@ -16,6 +16,9 @@
 	} else {
 		$sidebar = false;
 	}
+	
+	$no_comment = get_theme_mod('disable_comments');
+	
 get_header(); ?>
 
 				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
@@ -30,11 +33,10 @@ get_header(); ?>
 					?>
 				</div>
 				
-				<?php if ( get_theme_mod('disable_comments') != false ) {
-						
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-				} ?>	
+				<?php if ($no_comment != true) {
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					}
+				} ?>
 				
 <?php get_footer(); ?>

@@ -960,7 +960,7 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'disable_comments', 
 			array(
-				'default'			=> true,
+				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',
 				'capability'		=> 'edit_theme_options'		
 			)
