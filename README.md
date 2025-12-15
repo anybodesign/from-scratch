@@ -17,6 +17,11 @@ If you need custom ACF blocks, please install [AD ACF Blocks 2 plugin](https://g
 
 ## Changelog
 
+### 6.6 - 2025.12.15
+* PHP Mailer fix
+* SCSS vars: $half-view (half viewport)
+* PUC update (5.6)
+
 ### 6.5.1 - 2025.11.03
 * Hot fix: Disable comments form in template
 * FR
