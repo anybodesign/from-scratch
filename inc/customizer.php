@@ -1321,21 +1321,17 @@ function fs_admin_inline_styles() {
 		--font_italic: '{$fonts['italic']}', var(--font_stack);
 		--font_bold: '{$fonts['bold']}', var(--font_stack);
 		--font_bolditalic: '{$fonts['bolditalic']}', var(--font_stack);
-		
-		/* ??? */
 	}
 
 	";
 
 
 	wp_add_inline_style(
-		'wp-edit-blocks',
+		'fs_block_editor_styles',
 		$css
 	);
 
 }
 
-add_action(
-	'enqueue_block_editor_assets',
-	'fs_admin_inline_styles'
-);
+add_action( 'enqueue_block_editor_assets', 'fs_gutenberg_editor_assets', 10 );
+add_action( 'enqueue_block_editor_assets', 'fs_admin_inline_styles', 20 );

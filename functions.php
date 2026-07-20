@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '6.6' );
+define( 'FS_THEME_VERSION', '7.0' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -139,28 +139,12 @@ if ( get_theme_mod('enable_posttags') != true ) {
 	add_action( 'init', 'fs_unregister_tags' );
 }
 
-// Gutenberg editor styles
-
-// if ( !function_exists('fs_block_editor_styles') ) {
-// 	
-// 	function fs_block_editor_styles() {
-// 		wp_enqueue_style( 
-// 			'fs_block_editor_styles',
-// 			FS_THEME_URL .'/css/block-editor-style.css', 
-// 			false, 
-// 			FS_THEME_VERSION, 
-// 			'screen'
-// 		);
-// 	}
-// 	add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
-// }
-
 // Gutenberg editor assets
 
 function fs_gutenberg_editor_assets() {
 
 	wp_enqueue_style(
-		'fs-editor-style',
+		'fs_block_editor_styles',
 		FS_THEME_URL . '/css/block-editor-style.css',
 		array(),
 		FS_THEME_VERSION
