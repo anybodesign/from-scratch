@@ -1,121 +1,119 @@
 /*
 Theme Name: From Scratch
-Description: Have fun with Gutenberg style editor.
+Description: Gutenberg editor styles.
 */
 
 @import '_reset.scss';
 @import '_variables.scss';
-//@import '_variables-colors.scss';
 @import '_variables-fonts.scss';
 @import '_mixins.scss';
-//@import 'webfonts.scss';
 @import 'webfonts-admin.scss';
 
 
-// Global
+.block-editor-iframe__html {
+	font-size:62.5%;
+}
 
-html.block-editor-editor-skeleton__html-container,
-html.interface-interface-skeleton__html-container {
-	font-size: 62.5%;
+.editor-styles-wrapper {
 
-	.block-editor-block-list__layout {
-		font-size: 1.6rem;
-		line-height: 1.5;
-		color: var(--text_color);
+	box-sizing:border-box;
+
+	*,
+	*::before,
+	*::after {
+		box-sizing:inherit;
 	}
-}
-.edit-post-layout {
 
-	.interface-interface-skeleton__content {
-		background-color: transparent;		
+	font-family:var(--font_regular);
+	font-size:1.6rem;
+	line-height:1.5;
+	color:var(--text_color);
+
+	.wp-block {
+		max-width:960px;
 	}
+
+	.wp-block[data-align="wide"] {
+		max-width:1200px;
+	}
+
+	.wp-block[data-align="full"] {
+		max-width:none;
+	}
+
 }
 
-// Layout 
-
-.wp-block {
-	max-width: 960px;
-}
-.edit-post-layout__metaboxes:not(:empty) {
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
-	border-left: #ddd 1px solid;	
-	border-right: #ddd 1px solid;
-	
-	@include rwd(960px) {
-		margin-bottom: 40px;
-		border-bottom: #ddd 1px solid;
-	}	
-}
-.block-editor-block-list__block.is-selected[data-type*="acf"] {
-	max-width: 960px !important;
-	margin: 0 auto;
-}
-
-// Typography
-	
-.editor-post-title,
-.editor-post-title .-post-title__input {
-	font-family: var(--font_title);
-	color: var(--primary_color);
-	font-weight: normal;
-}
-
-.edit-post-visual-editor .wp-block,
 .block-editor-block-list__layout {
-	
-	// Import custom block styles in admin
+
+	font-family:var(--font_regular);
+	font-size:1.6rem;
+	line-height:1.5;
+	color:var(--text_color);
+
 	@import 'typography.scss';
 	@import 'buttons.scss';
-	@import 'posts.scss';	
+	@import 'posts.scss';
 	@import 'blocks.scss';
 	@import 'forms-custom.scss';
 
-	h1, h2, h3, h4, h5, h6,
-	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-		font-family: var(--font_title);
-		font-weight: normal;
-		color: var(--primary_color);
-	}
-	p, li, small, span {
-		font-family: var(--font_regular);
-		color: var(--text_color);
-	}
-	
-	i.mce-ico {
-		font-family: dashicons;	
-	}
-	i.mce-ico.mce-i-resize {
-		font-family: 'tinymce', Arial;
-	}
-	
-	figure {
-		width: 100%;
-	}
-	
-	.wp-block-quote	{
-		max-width: 960px;
-	}
-	
-	.wp-block-group__inner-container {
-		
-		& > * {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-	
-	.wp-block-button__link {	
-		&:hover,
-		&:focus {
-			background-color: var(--text_color);
-			color: #fff;
-		}
-	}	
 }
 
-// Blocks
+.editor-post-title__input {
+	font-family: var(--font_title);
+	color: var(--primary_color);
+}
+
+
+/* ---------------------------------
+   Content
+--------------------------------- */
+
+.editor-styles-wrapper {
+	
+	/* ---------------------------------
+	   Content width
+	--------------------------------- */
+	
+	.wp-block {
+	
+		max-width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	
+	.wp-block[data-align="wide"] {
+		max-width: 1200px;
+	}
+	
+	.wp-block[data-align="full"] {
+		max-width: none;
+	}
+
+// 	h1,
+// 	h2,
+// 	h3,
+// 	h4,
+// 	h5,
+// 	h6 {
+// 
+// 		font-family: var(--font_title);
+// 		font-weight: normal;
+// 		color: var(--primary_color);
+// 
+// 	}
+// 
+// 	p,
+// 	li {
+// 
+// 		font-family: var(--font_regular);
+// 		color: var(--text_color);
+// 
+// 	}
+
+}
+
+// Blocks visibility
 
 .wp-block-group,
 .wp-block-columns,
@@ -135,6 +133,7 @@ html.interface-interface-skeleton__html-container {
 		background: #ccc;
 		color: #666;
 		font-size: .85rem;
+		font-family: sans-serif;
 		text-transform: uppercase;
 		padding: 0 .5rem;
 	}
@@ -169,32 +168,4 @@ html.interface-interface-skeleton__html-container {
 }
 .block-editor-block-list__block[data-type="core/spacer"]::before {
 	content: 'Space';
-}
-
-
-
-// TinyMCE Custom
-	
-	
-p.text-intro {
-	font-size: 1.75em !important;
-	
-	.wp-block & {
-		font-size: 1.25em !important
-	}
-}
-p.text-mentions {
-	font-size: 0.8em !important;
-	
-	.wp-editor-container & {
-		font-size: 1em !important
-	}
-}
-a.action-btn {
-	background-color: var(--primary_color);
-	padding: 5px 15px;
-	text-decoration: none;
-}	
-.white-text * {
-	color: #fff;
 }

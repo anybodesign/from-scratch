@@ -2,20 +2,10 @@
 
 // COLORS 
 
-$primary = get_theme_mod('primary_color', '#23252b');
-$secondary = get_theme_mod('secondary_color', '#606060');
-$accent = get_theme_mod('accent_color', '#ceff00');
-$text_color = get_theme_mod('text_color', '#23252b');
-$bg = get_theme_mod('bg_color', '#f0f0f0');
-
 if ( ! function_exists( 'fs_palette_setup' ) ) :
 function fs_palette_setup() {
 	
-	global $primary;
-	global $secondary;
-	global $accent;
-	global $text_color;
-	global $bg;
+	$colors = fs_get_colors();
 	
 	add_theme_support( 'editor-color-palette', array(
 	    
@@ -24,27 +14,27 @@ function fs_palette_setup() {
 	    array(
 	        'name' => esc_html__( 'Primary color', 'from-scratch' ),
 	        'slug' => 'primary',
-	        'color' => $primary,
+	        'color' => $colors['primary'],
 	    ),
 	    array(
 	        'name' => esc_html__( 'Secondary color', 'from-scratch' ),
 	        'slug' => 'secondary',
-	        'color' => $secondary,
+	        'color' => $colors['secondary'],
 	    ),
 	    array(
 	        'name' => esc_html__( 'Accent color', 'from-scratch' ),
 	        'slug' => 'accent',
-	        'color' => $accent,
+	        'color' => $colors['accent'],
 	    ),
 		array(
 			'name' => esc_html__( 'Text color', 'from-scratch' ),
 			'slug' => 'text-color',
-			'color' => $text_color,
+			'color' => $colors['text'],
 		),
 	    array(
 	        'name' => esc_html__( 'Background color', 'from-scratch' ),
 	        'slug' => 'bg',
-	        'color' => $bg,
+	        'color' => $colors['background'],
 	    ),
 		array(
 	        'name' => esc_html__( 'White', 'from-scratch' ),
@@ -71,11 +61,11 @@ if( class_exists('acf') ) {
 
 	function fs_acf_colors_script() {
 
-		global $primary;
-		global $secondary;
-		global $accent;
-		global $text_color;
-		global $bg;
+		$primary = get_theme_mod('primary_color', '#23252b');
+		$secondary = get_theme_mod('secondary_color', '#606060');
+		$accent = get_theme_mod('accent_color', '#ceff00');
+		$text_color = get_theme_mod('text_color', '#23252b');
+		$bg = get_theme_mod('bg_color', '#f0f0f0');
 				
 		$colors = ' "'.$primary.'", "'.$secondary.'", "'.$accent.'", "'.$text_color.'", "'.$bg.'" ';
 	 ?>

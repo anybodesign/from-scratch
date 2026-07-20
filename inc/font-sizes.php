@@ -16,12 +16,12 @@ function fs_editor_fontsizes() {
         ),
         array(
             'name' => __( 'Medium', 'from-scratch' ),
-            'size' => 18,
+            'size' => 20,
             'slug' => 'medium'
         ),
         array(
             'name' => __( 'Large', 'from-scratch' ),
-            'size' => 22,
+            'size' => 32,
             'slug' => 'large'
         ),
     ));

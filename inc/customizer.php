@@ -1244,121 +1244,98 @@ function fs_customizer_sanitize_font_layout( $input ) {
 
 // Customizer Colors Output
 
-function fs_inline_styles() { ?>
+function fs_inline_styles() {
 
-	<style>
-		:root {
-			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#23252b')); ?>; 
-			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#606060')); ?>;
-			--accent_color: <?php echo esc_attr(get_theme_mod('accent_color', '#ceff00')); ?>;	
-			--bg_color: <?php echo esc_attr(get_theme_mod('bg_color', '#f0f0f0')); ?>;			
-			--page_color: <?php echo esc_attr(get_theme_mod('page_color', '#ffffff')); ?>;			
-			--text_color: <?php echo esc_attr(get_theme_mod('text_color', '#23252b')); ?>;				
-			
-			<?php if ( get_theme_mod('header_color') ) { ?>
-			--header_color: <?php echo esc_attr(get_theme_mod('header_color', '')); ?>;
-			<?php }
-				if ( get_theme_mod('footer_color') ) { ?>
-			--footer_color: <?php echo esc_attr(get_theme_mod('footer_color', '')); ?>;
-			<?php } ?>
-			
-			<?php if ( get_theme_mod('btn_text') ) { ?>
-			--btn_text: <?php echo esc_attr('#fff'); ?>;
-			<?php }
-				if ( get_theme_mod('btn_text_hover') ) { ?>
-			--btn_text_hover: <?php echo esc_attr('#fff'); ?>;
-			<?php } ?>
-			
-			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
-			--font_title: 'Title-Bebas', var(--font_stack);
-			--font_regular: 'Regular-Bebas', var(--font_stack);
-			--font_italic: 'Italic-Bebas', var(--font_stack);
-			--font_bold: 'Bold-Bebas', var(--font_stack);
-			--font_bolditalic: 'BoldItalic-Bebas', var(--font_stack);
-			<?php }
-				if ( get_theme_mod('webfont') == 'playfair' ) { ?>
-			--font_title: 'Title-Playfair', var(--font_stack);
-			--font_regular: 'Regular-Playfair', var(--font_stack);
-			--font_italic: 'Italic-Playfair', var(--font_stack);
-			--font_bold: 'Bold-Playfair', var(--font_stack);
-			--font_bolditalic: 'BoldItalic-Playfair', var(--font_stack);
-			<?php }
-				if ( get_theme_mod('webfont') == 'luciole' ) { ?>
-			--font_title: 'Title-Luciole', var(--font_stack);
-			--font_regular: 'Regular-Luciole', var(--font_stack);
-			--font_italic: 'Italic-Luciole', var(--font_stack);
-			--font_bold: 'Bold-Luciole', var(--font_stack);
-			--font_bolditalic: 'BoldItalic-Luciole', var(--font_stack);
-			<?php }
-				if ( get_theme_mod('webfont') == 'miriam' ) { ?>
-			--font_title: 'Title-Miriam', var(--font_stack);
-			--font_regular: 'Regular-Miriam', var(--font_stack);
-			--font_italic: 'Italic-Miriam', var(--font_stack);
-			--font_bold: 'Bold-Miriam', var(--font_stack);
-			--font_bolditalic: 'BoldItalic-Miriam', var(--font_stack);
-			<?php } ?>
-		}
-	</style>
+	$colors = fs_get_colors();
+	$fonts = fs_get_fonts();
+?>
 
-<?php }
+<style id="fs-theme-vars">
+	:root {
+		
+		--primary_color: <?php echo esc_attr($colors['primary']); ?>;
+		--secondary_color: <?php echo esc_attr($colors['secondary']); ?>;
+		--accent_color: <?php echo esc_attr($colors['accent']); ?>;
+		
+		--text_color: <?php echo esc_attr($colors['text']); ?>;
+		
+		--bg_color: <?php echo esc_attr($colors['background']); ?>;
+		--page_color: <?php echo esc_attr($colors['page']); ?>;
+		
+		--font_title: '<?php echo esc_attr($fonts['title']); ?>', var(--font_stack);
+		--font_regular: '<?php echo esc_attr($fonts['regular']); ?>', var(--font_stack);
+		--font_italic: '<?php echo esc_attr($fonts['italic']); ?>', var(--font_stack);
+		--font_bold: '<?php echo esc_attr($fonts['bold']); ?>', var(--font_stack);
+		--font_bolditalic: '<?php echo esc_attr($fonts['bolditalic']); ?>', var(--font_stack);
+	
+	<?php if ( get_theme_mod('header_color') ) { ?>
+		--header_color: <?php echo esc_attr(get_theme_mod('header_color')); ?>;
+	<?php } ?>
+	
+	<?php if ( get_theme_mod('footer_color') ) { ?>
+		--footer_color: <?php echo esc_attr(get_theme_mod('footer_color')); ?>;
+	<?php } ?>
+	
+	<?php if ( get_theme_mod('btn_text') ) { ?>
+		--btn_text: #fff;
+	<?php } ?>
+	
+	<?php if ( get_theme_mod('btn_text_hover') ) { ?>
+		--btn_text_hover: #fff;
+	<?php } ?>
+	
+	}
+
+</style>
+
+<?php
+}
 add_action('wp_head','fs_inline_styles');
 
-// Admin fonts
 
-add_action('admin_print_styles', 'fs_admin_inline_styles' );
-function fs_admin_inline_styles() { ?>
-	
-	<style>
-		:root {
-			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#23252b')); ?>; 
-			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#606060')); ?>;
-			--accent_color: <?php echo esc_attr(get_theme_mod('accent_color', '#ceff00')); ?>;	
-			--bg_color: <?php echo esc_attr(get_theme_mod('bg_color', '#f0f0f0')); ?>;			
-			--page_color: <?php echo esc_attr(get_theme_mod('page_color', '#ffffff')); ?>;			
-			--text_color: <?php echo esc_attr(get_theme_mod('text_color', '#23252b')); ?>;
-			
-			<?php if ( get_theme_mod('btn_text') ) { ?>
-			--btn_text: <?php echo esc_attr('#fff'); ?>;
-			<?php }
-				if ( get_theme_mod('btn_text_hover') ) { ?>
-			--btn_text_hover: <?php echo esc_attr('#fff'); ?>;
-			<?php } ?>	
-			
-			<?php if ( get_theme_mod('webfont') == 'bebas' ) { ?>
-			--font_title: 'Title-Bebas', var(--font_stack) !important;
-			--font_regular: 'Regular-Bebas', var(--font_stack) !important;
-			--font_italic: 'Italic-Bebas', var(--font_stack) !important;
-			--font_bold: 'Bold-Bebas', var(--font_stack) !important;
-			--font_bolditalic: 'BoldItalic-Bebas', var(--font_stack) !important;
-			<?php }
-				if ( get_theme_mod('webfont') == 'playfair' ) { ?>
-			--font_title: 'Title-Playfair', var(--font_stack) !important;
-			--font_regular: 'Regular-Playfair', var(--font_stack) !important;
-			--font_italic: 'Italic-Playfair', var(--font_stack) !important;
-			--font_bold: 'Bold-Playfair', var(--font_stack) !important;
-			--font_bolditalic: 'BoldItalic-Playfair', var(--font_stack) !important;
-			<?php }
-				if ( get_theme_mod('webfont') == 'luciole' ) { ?>
-			--font_title: 'Title-Luciole', var(--font_stack) !important;
-			--font_regular: 'Regular-Luciole', var(--font_stack) !important;
-			--font_italic: 'Italic-Luciole', var(--font_stack) !important;
-			--font_bold: 'Bold-Luciole', var(--font_stack) !important;
-			--font_bolditalic: 'BoldItalic-Luciole', var(--font_stack) !important;
-			<?php }
-				if ( get_theme_mod('webfont') == 'miriam' ) { ?>
-			--font_title: 'Title-Miriam', var(--font_stack) !important;
-			--font_regular: 'Regular-Miriam', var(--font_stack) !important;
-			--font_italic: 'Italic-Miriam', var(--font_stack) !important;
-			--font_bold: 'Bold-Miriam', var(--font_stack) !important;
-			--font_bolditalic: 'BoldItalic-Miriam', var(--font_stack) !important;
-			<?php }
-				else { ?>
-			--font_title: 'Title', var(--font_stack) !important;
-			--font_regular: 'Regular', var(--font_stack) !important;
-			--font_italic: 'Italic', var(--font_stack) !important;
-			--font_bold: 'Bold', var(--font_stack) !important;
-			--font_bolditalic: 'BoldItalic', var(--font_stack) !important;
-			<?php } ?>
-		}
-	</style>
-<?php }
+
+// Admin Styles
+
+function fs_admin_inline_styles() {
+
+	$colors = fs_get_colors();
+	$fonts  = fs_get_fonts();
+
+
+	$css = "
+
+	:root {
+
+		--primary_color: {$colors['primary']};
+		--secondary_color: {$colors['secondary']};
+		--accent_color: {$colors['accent']};
+
+		--text_color: {$colors['text']};
+
+		--bg_color: {$colors['background']};
+		--page_color: {$colors['page']};
+
+
+		--font_title: '{$fonts['title']}', var(--font_stack);
+		--font_regular: '{$fonts['regular']}', var(--font_stack);
+		--font_italic: '{$fonts['italic']}', var(--font_stack);
+		--font_bold: '{$fonts['bold']}', var(--font_stack);
+		--font_bolditalic: '{$fonts['bolditalic']}', var(--font_stack);
+		
+		/* ??? */
+	}
+
+	";
+
+
+	wp_add_inline_style(
+		'wp-edit-blocks',
+		$css
+	);
+
+}
+
+add_action(
+	'enqueue_block_editor_assets',
+	'fs_admin_inline_styles'
+);
