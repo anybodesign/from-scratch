@@ -17,6 +17,9 @@ If you need custom ACF blocks, please install [AD ACF Blocks 2 plugin](https://g
 
 ## Changelog
 
+### 7.0 - 2026.07.20
+* Editor styles and Customizer fix
+
 ### 6.6 - 2025.12.15
 * PHP Mailer fix
 * SCSS vars: $half-view (half viewport)
