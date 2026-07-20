@@ -109,29 +109,7 @@ jQuery(document).ready(function($) {
 		    	$('.page-sidebar').show().removeAttr('style').removeAttr('aria-hidden');
 		    	$('#sidebar_toggle').removeClass('menu-opened').removeAttr('aria-expanded');
 			}
-		});
-		
-
-	// Responsive Video Players (Youtube, Vimeo)
-			
-	function resizevid(){
-
-		$("iframe").each(function() {
-			
-			if($(this).is("[src*=youtube], [src*=vimeo]")) {
-				var yt_width = $(this).width();
-				$( this ).attr('style','height: '+yt_width/1.77+'px');
-			}
-		});
-	}
-				
-	$(window).on('load',function() {		
-		resizevid();
-	});	
-
-	$(window).on('resize',function() {
-		resizevid();
-	});	
+		});	
 	
 	
 
