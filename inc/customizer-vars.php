@@ -89,6 +89,17 @@ function fs_get_fonts() {
 				'bolditalic' => 'BoldItalic-Miriam',
 
 			);
+		
+		
+		case 'custom':
+		
+			return array(
+				'title'      => 'Custom-Title',
+				'regular'    => 'Custom-Regular',
+				'italic'     => 'Custom-Italic',
+				'bold'       => 'Custom-Bold',
+				'bolditalic' => 'Custom-BoldItalic',
+			);
 
 
 
