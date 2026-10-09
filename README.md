@@ -17,6 +17,10 @@ If you need custom ACF blocks, please install [AD ACF Blocks 2 plugin](https://g
 
 ## Changelog
 
+### 7.1 - 2026.10.9
+* Block editor styles update
+* PUC update
+
 ### 7.0.1 - 2026.07.22
 * Custom child fonts fix
 
