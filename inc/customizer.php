@@ -1296,42 +1296,49 @@ add_action('wp_head','fs_inline_styles');
 
 // Admin Styles
 
-function fs_admin_inline_styles() {
+function fs_editor_css_variables( $settings ) {
 
 	$colors = fs_get_colors();
 	$fonts  = fs_get_fonts();
-
+	
+	if ( get_theme_mod('btn_text') ) {
+		$btn = '#fff';
+	} else {
+		$btn = '#23252b';
+	}
+	if ( get_theme_mod('btn_text_hover') ) {
+		$btn_hover = '#fff';
+	} else {
+		$btn_hover = '#23252b';
+	}
 
 	$css = "
-
 	:root {
-
 		--primary_color: {$colors['primary']};
 		--secondary_color: {$colors['secondary']};
 		--accent_color: {$colors['accent']};
-
+		
 		--text_color: {$colors['text']};
-
+		
 		--bg_color: {$colors['background']};
-		--page_color: {$colors['page']};
-
-
+		--page_color: {$btn_hover};
+		
+		--btn_text: {$btn};
+		--btn_text_hover: {$btn_hover};
+		
 		--font_title: '{$fonts['title']}', var(--font_stack);
 		--font_regular: '{$fonts['regular']}', var(--font_stack);
 		--font_italic: '{$fonts['italic']}', var(--font_stack);
 		--font_bold: '{$fonts['bold']}', var(--font_stack);
 		--font_bolditalic: '{$fonts['bolditalic']}', var(--font_stack);
 	}
-
 	";
 
-
-	wp_add_inline_style(
-		'fs_block_editor_styles',
-		$css
+	$settings['styles'][] = array(
+		'css'            => $css,
+		'__unstableType' => 'theme',
 	);
 
+	return $settings;
 }
-
-add_action( 'enqueue_block_editor_assets', 'fs_gutenberg_editor_assets', 10 );
-add_action( 'enqueue_block_editor_assets', 'fs_admin_inline_styles', 20 );
+add_filter( 'block_editor_settings_all', 'fs_editor_css_variables' );

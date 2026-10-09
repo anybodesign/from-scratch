@@ -10,17 +10,22 @@ define( 'FS_THEME_URL', get_template_directory_uri() );
 
 if ( ! isset( $content_width ) )
 	$content_width = 2048;
-	
+
+// I18n
+
+function fs_lang() {
+	load_theme_textdomain( 'from-scratch', FS_THEME_DIR . '/languages' );	
+}
+add_action( 'after_setup_theme', 'fs_lang', 5 );	
+
+
 if ( ! function_exists( 'fs_setup' ) ) :
 
 function fs_setup() {
 	
-	// I18n
-	
-	load_theme_textdomain( 'from-scratch', FS_THEME_DIR . '/languages' );	
-	
 	// Theme Support
 	
+	add_theme_support( 'editor-styles' );
 	add_editor_style( 'css/block-editor-style.css' );
 	
 	add_theme_support( 'automatic-feed-links' );
@@ -142,19 +147,28 @@ if ( get_theme_mod('enable_posttags') != true ) {
 // Gutenberg editor assets
 
 function fs_gutenberg_editor_assets() {
-
 	wp_enqueue_style(
-		'fs_block_editor_styles',
-		FS_THEME_URL . '/css/block-editor-style.css',
+		'theme-editor-root-fontsize',
+		FS_THEME_URL . '/css/block-editor-admin.css',
 		array(),
-		FS_THEME_VERSION
+		filemtime( FS_THEME_DIR . '/css/block-editor-admin.css' )
 	);
-
 }
-add_action(
-	'enqueue_block_editor_assets',
-	'fs_gutenberg_editor_assets'
-);
+add_action( 'enqueue_block_editor_assets', 'fs_gutenberg_editor_assets' );
+
+// Gutenberg editor assets - JS version 
+
+function fs_editor_root_font_size_script() {
+	wp_enqueue_script(
+		'fs-editor-root-fontsize',
+		FS_THEME_URL . '/js/block-editor-root-fontsize.js',
+		array(),
+		filemtime( FS_THEME_DIR . '/js/block-editor-root-fontsize.js' ),
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'fs_editor_root_font_size_script' );
+
 
 // Gutenberg allowed blocks
 

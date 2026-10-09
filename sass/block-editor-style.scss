@@ -10,45 +10,41 @@ Description: Gutenberg editor styles.
 @import 'webfonts-admin.scss';
 
 
-.block-editor-iframe__html {
-	font-size:62.5%;
-}
-
 .editor-styles-wrapper {
 
-	box-sizing:border-box;
+	box-sizing: border-box;
 
 	*,
 	*::before,
 	*::after {
-		box-sizing:inherit;
+		box-sizing: inherit;
 	}
 
-	font-family:var(--font_regular);
-	font-size:1.6rem;
-	line-height:1.5;
-	color:var(--text_color);
+	font-family: var(--font_regular);
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: var(--text_color);
 
 	.wp-block {
-		max-width:960px;
+		max-width: 960px;
 	}
 
 	.wp-block[data-align="wide"] {
-		max-width:1200px;
+		max-width: 1200px;
 	}
 
 	.wp-block[data-align="full"] {
-		max-width:none;
+		max-width: none;
 	}
 
 }
 
 .block-editor-block-list__layout {
 
-	font-family:var(--font_regular);
-	font-size:1.6rem;
-	line-height:1.5;
-	color:var(--text_color);
+	font-family: var(--font_regular);
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: var(--text_color);
 
 	@import 'typography.scss';
 	@import 'buttons.scss';
@@ -61,7 +57,6 @@ Description: Gutenberg editor styles.
 .editor-post-title__input {
 	font-weight: normal;
 	font-family: var(--font_title);
-	color: var(--primary_color);
 }
 
 
